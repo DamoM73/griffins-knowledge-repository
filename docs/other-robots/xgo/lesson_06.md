@@ -47,8 +47,8 @@ Before the arm can move, we **load** its servo motors. Then we set clampX and cl
     - **line 10** → tells the micro:bit which pins to use to talk to the dog.
     - **line 11** → loads the arm's servo motors so they can move.
 
-!!! warning "Check the Python names in MakeCode"
-    The Python names of the arm blocks (such as `manipulator_clamp_x`) haven't been checked in MakeCode yet. Build the program in Blocks, then switch to Python to see the exact names.
+!!! warning "Watch the capital letters"
+    The Python names of the arm blocks have capital letters in unusual places: `Manipulator_clampX`, `Manipulator_clampZ`, `Manipulator_clamp` and `servo_setting_robotArm`. Python treats capital and lower-case letters as different letters, so we need to type these names exactly as shown.
 
 ## Open and close the gripper
 

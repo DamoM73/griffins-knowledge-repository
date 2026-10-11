@@ -54,9 +54,6 @@ Run the program in this order:
 !!! warning "Move the leg gently"
     An unloaded leg moves freely, but it's still connected to gears inside the servo motor. Move it slowly and don't force it past where it wants to stop.
 
-!!! tip "Check the Python names in MakeCode"
-    The Python names of the pose blocks (`get_posestate` and `set_posestate`) haven't been checked in MakeCode yet. If MakeCode shows a different name, use MakeCode's.
-
 ## Exercises
 
 !!! primm "PRIMM"
