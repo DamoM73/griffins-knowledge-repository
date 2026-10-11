@@ -5,10 +5,6 @@
     - why a variable used in an event handler is a global variable
     - how to find the angle at which each finger is fully curled
 
-!!! terms "Terminology"
-    - **variable** – a named place, like a labelled box, that stores a value our program can use and change.
-    - **global variable** – a variable that can be used anywhere in the program and keeps its value for as long as the program runs.
-
 A servo motor can turn to 180 degrees, but our finger might be fully curled well before that, depending on how tight its thread is. If we keep turning past that point, the servo motor strains. So let's find each finger's real range.
 
 ## A variable for the angle

@@ -6,8 +6,8 @@ Before starting any robot, work through [Using MakeCode](using-makecode.md). It 
 
 | Robot | What it is | Lessons |
 | --- | --- | --- |
-| [PU Robot](pu-robot/index.md) | a walking robot with a moving head, coloured lights and an ultrasonic sensor | 9 |
-| [XGO Robot Dog](xgo/index.md) | a four-legged robot dog with a robotic arm | 9 |
+| [PU Robot](pu-robot/index.md) | a walking robot with a moving head, coloured lights and an ultrasonic sensor | 15 |
+| [XGO Robot Dog](xgo/index.md) | a four-legged robot dog with a robotic arm | 13 |
 | [WuKong Manipulator](wukong/index.md) | a robotic hand we build from straws, thread and servo motors | 11 |
 
 ## Blocks and Python

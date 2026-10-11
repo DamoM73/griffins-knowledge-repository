@@ -1,82 +1,72 @@
-# Lesson 9: Radio Remote
+# Lesson 9: Shy PU
 
 !!! learn "In this lesson we will learn"
-    - how two micro:bits send messages to each other by radio
-    - how to program a second micro:bit as a joystick remote control
-    - how to make the robot respond to messages from the remote
+    - how to use **elif** to choose between more than two actions
+    - how thresholds split a sensor reading into zones
+    - how to give the robot a personality from its sensor readings
 
 !!! terms "Terminology"
-    - **radio** – a way of sending and receiving messages without wires, using invisible radio waves.
-    - **radio group** – a number from 0 to 255 that sets which micro:bits can hear each other's radio messages.
-    - **joystick** – a stick that we push in different directions to control something, which gives a number for how far it's pushed.
+    - **elif** – short for else if, a part of an `if` statement that checks another condition when the conditions before it were `False`.
+    - **threshold** – a set value that a reading must reach before the program counts it, such as the distance that counts as too close.
 
-The PU Robot kit comes with a remote controller shell that holds a second micro:bit V2. The two micro:bits talk to each other by **radio**. In this lesson we write two programs: one for the remote and one for the robot.
+In Lesson 7, the robot had two choices: red if something was close, green if not. Let's give it a shy personality instead, with three ways to behave depending on how close we are:
 
-## What we need
+| Distance | Mood | What the robot does |
+| --- | --- | --- |
+| more than 30 cm | brave | green lights, walks forward |
+| 10 to 30 cm | nervous | amber lights, shakes its head |
+| less than 10 cm | scared | red lights, steps backward |
 
-- the PU Robot
-- the remote controller shell, with a second micro:bit V2 inside it
+The numbers 30 and 10 are **thresholds**. They split the distance into three zones.
 
-!!! warning "Each pair needs its own radio group"
-    Every micro:bit on the same **radio group** hears the same messages. If two pairs in the class use the same group, one remote will control both robots. Each pair needs a different group number, used in both programs.
+## If, elif, else
 
-## The remote
-
-The remote reads how far the **joystick** is pushed forwards or backwards, and sends that number to the robot. The number goes from -1 to 1, with 0 in the middle.
+To choose between three actions, we add **elif** between the if and the else. Python checks each condition in order and runs the first one that's `True`. If none are `True`, it runs the else.
 
 === "Blocks"
 
-    ![Blocks for the remote controller](../../assets/blocks/pu-robot/lesson_09_controller.png){ .blocks }
+    ![Blocks for the shy PU example](../../assets/blocks/pu-robot/lesson_09_shy_pu.png){ .blocks }
 
-    Blocks used: **set controller radio group**, **send value** and **read joystick value** (robot PU > Controller), **forever** and **pause (ms)** (Basic).
+    Blocks used: **forever** and **pause (ms)** (Basic), **set distance to** and **distance** (Variables), **ultrasonic sensor distance in cm** (robot PU > Sensors), **if then else if then else** and **0 > 0** (Logic), **set ambience light to RGB** (robot PU > Actuators), **walk for steps at speed** and **set servo to** (robot PU > Actions).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_09/controller/main.py"
+    --8<-- "examples/other/pu_robot/lesson_09/shy_pu/main.py"
     ```
 
-??? note "Code explanation"
-    - **line 1** → sets the remote's radio group to 160 and shows the number on the display.
-    - **line 3** → defines the function that the forever loop repeats.
-    - **line 4** → reads how far the joystick is pushed forwards or backwards and sends that number to the robot as a speed value.
-    - **line 5** → waits 50 milliseconds, so the remote sends about 20 messages a second.
-    - **line 6** → tells the micro:bit to run `on_forever` again and again.
-
-## The robot
-
-The robot listens for speed values. Each time one arrives, an event handler decides what to do with it.
-
-=== "Blocks"
-
-    ![Blocks for the robot receiver](../../assets/blocks/pu-robot/lesson_09_robot.png){ .blocks }
-
-    Blocks used: **enable remote control on group** and **on value received** (robot PU > Remote Control), **if then else** and **0 > 0** (Logic), **set robot move direction** and **stop action** (robot PU > Actions).
-
-=== "Python"
-
-    ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_09/robot/main.py"
-    ```
-
-Download each program to its own micro:bit. Put one in the robot and one in the remote, then switch both on.
+Place the robot on the floor with clear space in front, then slowly walk towards it.
 
 !!! primm "PRIMM"
-    1. **Predict** what the robot will do when you push the joystick forwards, and when you let go.
-    2. **Run** both programs.
+    1. **Predict** what the robot will do as you get closer and closer.
+    2. **Run** the program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → turns on remote control and sets the robot's radio group to 160.
-    - **line 3** → defines a function called `on_speed_received`, which gets the speed value in `value`.
-    - **line 4** → checks whether the joystick is pushed more than halfway forwards…
-    - **line 5** → …and if it is, starts the robot walking forward.
-    - **line 6** → otherwise…
-    - **line 7** → …stops the robot.
-    - **line 8** → connects `on_speed_received` to the event of a speed value arriving.
+    - **line 1** → defines the function that the forever loop repeats.
+    - **line 2** → tells Python to use the `distance` variable from the main program.
+    - **line 3** → measures the distance once and stores it in `distance`.
+    - **line 4** → checks whether we're further than 30 cm away…
+    - **line 5** → …and if we are, turns the lights green…
+    - **line 6** → …and walks forward 1 step.
+    - **line 7** → otherwise, checks whether we're further than 10 cm away…
+    - **line 8** → …and if we are, turns the lights amber…
+    - **line 9** → …and turns the head to one side.
+    - **line 10** → waits 300 milliseconds.
+    - **line 11** → turns the head to the other side.
+    - **line 12** → waits 300 milliseconds.
+    - **line 13** → turns the head back to the centre.
+    - **line 14** → otherwise (closer than 10 cm)…
+    - **line 15** → …turns the lights red…
+    - **line 16** → …and steps backward 2 steps.
+    - **line 17** → tells the micro:bit to run `on_forever` again and again.
+    - **line 19** → creates the `distance` variable and sets it to 0 when the program starts.
 
-!!! tip "Putting the factory program back"
-    Once we download our own program, the remote's buttons no longer do what the PU Robot's instructions say. Our teacher can put the factory program back on both micro:bits.
+!!! tip "Why store the distance in a variable?"
+    If we read the sensor in each condition, the robot would measure three times, and each reading could be slightly different. Measuring once and storing the result means every condition checks the same number.
+
+!!! warning "The order of the conditions matters"
+    Python stops at the first condition that's `True`. If we checked `distance > 10` first, a distance of 50 would match it, and the robot would never reach the brave zone.
 
 ## Exercises
 
@@ -87,44 +77,30 @@ Each exercise has starter code. Copy it into MakeCode's Python view, or build th
 
 ### Exercise 1
 
-Can you change 160 to your pair's radio group in both programs, and test that your remote only controls your robot?
+Can you change the thresholds to make the robot braver (it only gets nervous when we're much closer)? Test your new thresholds with a ruler.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_09/ex1_group/main.py"
+--8<-- "examples/other/pu_robot/lesson_09/ex1_zones/main.py"
 ```
 
 ### Exercise 2
 
-What happens if you pull the joystick backwards? If the robot walks forward when you pull back, the joystick values are the other way around. Can you fix it?
+Can you make the robot's eyes show its mood too: both on when brave, one on when nervous, and both off when scared?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_09/ex2_reverse/main.py"
+--8<-- "examples/other/pu_robot/lesson_09/ex2_eyes/main.py"
 ```
 
 ### Exercise 3
 
-Can you add walking backward, and turning left and right? It should:
-
-- walk backward when the joystick is pulled more than halfway back
-- send the joystick's turn value from the remote as well
-- turn left or right when the turn value is past halfway
+Can you add a fourth zone, closer than 5 cm, where the robot covers its eyes by turning them off and tilting its head down?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_09/ex3_full_control/main.py"
-```
-
-### Exercise 4
-
-Can you use the remote's B1 to B4 buttons to start modes such as dance and kick? Hint: on the remote, use **initialize controller buttons** and **B1 pressed** (robot PU > Controller), and send a button value. On the robot, use **on button value received**.
-
-Starter code:
-
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_09/ex4_buttons/main.py"
+--8<-- "examples/other/pu_robot/lesson_09/ex3_four_zones/main.py"
 ```

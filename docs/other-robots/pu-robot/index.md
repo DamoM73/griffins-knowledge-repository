@@ -13,8 +13,16 @@ Work through the lessons in order. Each lesson adds one new part of the robot.
 | [Lesson 5: Walking](lesson_05.md) | walk a set number of steps, and keep walking until we say stop |
 | [Lesson 6: Moving Joints](lesson_06.md) | move the head one servo at a time |
 | [Lesson 7: Ultrasonic Sensor](lesson_07.md) | measure distance and react to a hand wave |
-| [Lesson 8: Balance and Sound](lesson_08.md) | read the robot's tilt and react to a clap |
-| [Lesson 9: Radio Remote](lesson_09.md) | drive the robot from a second micro:bit |
+| [Lesson 8: Variables](lesson_08.md) | store settings in variables and count hand waves |
+| [Lesson 9: Shy PU](lesson_09.md) | behave three different ways depending on how close we are |
+| [Lesson 10: Balance and Sound](lesson_10.md) | read the robot's tilt and react to a clap |
+| [Lesson 11: Dance to the Beat](lesson_11.md) | time the robot's moves to music |
+| [Lesson 12: Moods](lesson_12.md) | switch the robot between moods with a clap |
+| [Lesson 13: Radio Remote](lesson_13.md) | drive the robot from a second micro:bit |
+| [Lesson 14: Parking Challenge](lesson_14.md) | stop as close to a wall as possible |
+| [Lesson 15: Final Project](lesson_15.md) | design, build and test our own robot behaviour |
+
+Lessons 8, 9, 11, 12, 14 and 15 are based on activities from the [ELECFREAKS PU Robot wiki](https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/).
 
 !!! warning "The micro:bit buttons are inside the head"
     Once the micro:bit is closed inside the robot's head, we can't press buttons A and B. So PU Robot programs start in **on start**, or react to the robot's sensors (a hand wave or a clap) instead of the buttons.

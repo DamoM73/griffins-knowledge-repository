@@ -1,73 +1,86 @@
-# Lesson 9: Radio Remote
+# Lesson 9: Magnet-controlled Dog
 
 !!! learn "In this lesson we will learn"
-    - how to send numbers by radio from one micro:bit to another
-    - how to program a second micro:bit as a remote control for the dog
-    - how the dog decides what to do with each number
+    - how the micro:bit measures magnetic fields
+    - why we measure a baseline before choosing a threshold
+    - how to make the dog back away from a magnet
 
-In the PU Robot lessons, the extension had its own remote control blocks. The XGO doesn't, so we use the micro:bit's own **Radio** blocks. The remote sends a number, and the dog decides what to do with it.
+!!! terms "Terminology"
+    - **magnetometer** – a sensor that measures magnetic fields, used by the micro:bit as a compass.
+    - **magnetic field** – the invisible area of magnetic force around a magnet or the Earth.
+    - **microtesla** – a unit for measuring how strong a magnetic field is; the Earth's magnetic field is about 50 microteslas.
+
+The micro:bit has a **magnetometer**, which measures the **magnetic field** around it. When we bring a magnet close, the reading jumps. Let's use that to control the dog without touching it.
 
 ## What we need
 
 - the XGO, with its micro:bit
-- a second micro:bit V2 to use as the remote, with a battery pack
+- a small magnet, such as a fridge magnet
 
-!!! warning "Each pair needs its own radio group"
-    Every pair needs a different radio group number, used in both programs. Otherwise one remote will control several dogs.
+## Measure the magnetic field
 
-## The remote
+The **magnetic force** block gives the strength of the magnetic field in **microteslas** (µT).
 
 === "Blocks"
 
-    ![Blocks for the XGO remote](../../assets/blocks/xgo/lesson_09_remote.png){ .blocks }
+    ![Blocks for the show strength example](../../assets/blocks/xgo/lesson_09_show_strength.png){ .blocks }
 
-    Blocks used: **on button pressed** (Input), **radio send number** and **radio set group** (Radio).
+    Blocks used: **forever**, **show number** and **pause (ms)** (Basic), **magnetic force (µT) strength** (Input > more), **set XGO TX RX** (xgo > Basic).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_09/remote/main.py"
+    --8<-- "examples/other/xgo/lesson_09/show_strength/main.py"
     ```
-
-??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → sends the number 1 by radio.
-    - **line 3** → connects `on_button_pressed_a` to button A.
-    - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 6** → sends the number 0 by radio.
-    - **line 7** → connects `on_button_pressed_b` to button B.
-    - **line 9** → sets the remote's radio group to 42.
-
-## The dog
-
-=== "Blocks"
-
-    ![Blocks for the XGO dog receiver](../../assets/blocks/xgo/lesson_09_dog.png){ .blocks }
-
-    Blocks used: **on radio received receivedNumber** and **radio set group** (Radio), **if then else** and **0 = 0** (Logic), **move speed** (xgo > Sports), **set XGO TX RX** (xgo > Basic).
-
-=== "Python"
-
-    ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_09/dog/main.py"
-    ```
-
-Download each program to its own micro:bit, then switch the dog on.
 
 !!! primm "PRIMM"
-    1. **Predict** what the dog will do when you press A on the remote, then B.
-    2. **Run** both programs.
+    1. **Predict** what will happen to the number as you bring the magnet closer to the micro:bit.
+    2. **Run** the program. If the display asks you to tilt the micro:bit to fill the screen, do that first.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_received_number`, which gets the number that arrived in `receivedNumber`.
-    - **line 2** → checks whether the number is 1…
-    - **line 3** → …and if it is, walks the dog forward at 50% speed.
+    - **line 1** → defines the function that the forever loop repeats.
+    - **line 2** → reads the strength of the magnetic field in microteslas and shows it on the display.
+    - **line 3** → waits half a second before reading it again.
+    - **line 4** → tells the micro:bit to run `on_forever` again and again.
+    - **line 6** → tells the micro:bit which pins to use to talk to the dog.
+
+!!! tip "Tilt to fill the screen"
+    The first time a program uses the magnetometer, the micro:bit may ask us to tilt it until every LED lights up. This is calibration: it lets the micro:bit measure the Earth's magnetic field so its readings are accurate. With the micro:bit in the dog, tilt the whole dog gently, or calibrate the micro:bit before putting it in the slot.
+
+## Scared of magnets
+
+When the reading goes above a threshold, the dog walks backward, away from the magnet. As it moves away, the reading drops, and the dog stops.
+
+=== "Blocks"
+
+    ![Blocks for the scared of magnet example](../../assets/blocks/xgo/lesson_09_scared_of_magnet.png){ .blocks }
+
+    Blocks used: **forever** and **pause (ms)** (Basic), **if then else** and **0 > 0** (Logic), **magnetic force (µT) strength** (Input > more), **move speed** (xgo > Sports), **set XGO TX RX** (xgo > Basic).
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_09/scared_of_magnet/main.py"
+    ```
+
+!!! primm "PRIMM"
+    1. **Predict** what the dog will do when you hold the magnet near its head, then take it away.
+    2. **Run** the program.
+    3. Time to **investigate** the code. What does each line do?
+
+??? note "Code explanation"
+    - **line 1** → defines the function that the forever loop repeats.
+    - **line 2** → checks whether the magnetic field is stronger than 200 microteslas…
+    - **line 3** → …and if it is, walks the dog backward at 30% speed.
     - **line 4** → otherwise…
     - **line 5** → …stops the dog.
-    - **line 6** → connects `on_received_number` to the event of a number arriving by radio.
-    - **line 8** → tells the micro:bit which pins to use to talk to the dog.
-    - **line 9** → sets the dog's radio group to 42, the same as the remote.
+    - **line 6** → waits 200 milliseconds before checking again.
+    - **line 7** → tells the micro:bit to run `on_forever` again and again.
+    - **line 9** → tells the micro:bit which pins to use to talk to the dog.
+
+!!! warning "Motors are magnets too"
+    The dog's servo motors contain magnets, so the reading changes when the dog moves. Measure the reading with the dog standing still and walking, then choose a threshold well above both.
 
 ## Exercises
 
@@ -78,40 +91,30 @@ Each exercise has starter code. Copy it into MakeCode's Python view, or build th
 
 ### Exercise 1
 
-Can you change 42 to your pair's radio group in both programs, and test that your remote only controls your dog?
+What's the reading with no magnet near, and how much does it change while the dog walks? Record both, then choose a better threshold. This starting reading is called a baseline.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/xgo/lesson_09/ex1_group/main.py"
+--8<-- "examples/other/xgo/lesson_09/ex1_baseline/main.py"
 ```
 
 ### Exercise 2
 
-Can you add turning left and right? Send 2 when A and B are pressed together, and 3 when the logo is touched. Hint: on the dog, add **else if** for each new number.
+Can you make the dog sit down when the magnet is held above its head, and stand up when it's taken away?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/xgo/lesson_09/ex2_turning/main.py"
+--8<-- "examples/other/xgo/lesson_09/ex2_follow/main.py"
 ```
 
 ### Exercise 3
 
-Can you steer the dog by tilting the remote? Hint: send the remote's **acceleration (mg) x** as a number, and turn the dog left or right when it's past a threshold.
+The magnetic force block can also measure in the x and y directions. Can you make the dog turn away from a magnet held on its left or its right? Hint: try **magnetic force (µT) x** and see whether it goes up or down on each side.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/xgo/lesson_09/ex3_tilt/main.py"
-```
-
-### Exercise 4
-
-Can you add a gesture on the remote, such as shaking it, that makes the dog do a built-in action?
-
-Starter code:
-
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_09/ex4_action/main.py"
+--8<-- "examples/other/xgo/lesson_09/ex3_sides/main.py"
 ```

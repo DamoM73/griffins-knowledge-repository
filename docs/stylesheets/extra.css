@@ -1,78 +1,82 @@
 /* Griffins' Knowledge Repository colour scheme, taken from the Griffins logo.
-   cyan    #00ADEF  banner (header and tabs), dark-mode headings
-   crimson #BA004C  active tab, light-mode links
-   slate   #545F65  light-mode headings
-   ink     #0B1F2A  text on the cyan banner (6.6:1)
-   sky     #7FD6F7  dark-mode links (9.9:1 on the dark background)
-   White text can't go on the cyan (2.6:1), so the banner uses ink text. */
+   slate       #545F65  banner (header and tabs) with white text (6.6:1)
+   pale cyan   #B3E9FC  active and hovered tab text on the banner (5.0:1)
+   magenta     #BA004C  light-mode page titles (h1) and links (6.6:1 on white)
+   deep cyan   #0077A8  light-mode section headings (5.0:1 on white)
+   cyan        #00ADEF  dark-mode page titles (6.3:1 on the dark background)
+   pink        #FF4D94  dark-mode section headings (5.2:1)
+   sky         #7FD6F7  dark-mode links (9.9:1)
+   The logo cyan is too light for text on white (2.6:1) or on the grey
+   banner (2.6:1), so lighter and darker versions of it are used there. */
 :root {
-  --griffin-cyan: #00adef;
-  --griffin-crimson: #ba004c;
   --griffin-slate: #545f65;
-  --griffin-ink: #0b1f2a;
+  --griffin-pale-cyan: #b3e9fc;
+  --griffin-magenta: #ba004c;
+  --griffin-deep-cyan: #0077a8;
+  --griffin-cyan: #00adef;
+  --griffin-pink: #ff4d94;
   --griffin-sky: #7fd6f7;
 }
 
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: var(--griffin-cyan);
-  --md-primary-fg-color--light: var(--griffin-cyan);
-  --md-primary-fg-color--dark: var(--griffin-cyan);
-  --md-primary-bg-color: var(--griffin-ink);
-  --md-primary-bg-color--light: rgba(11, 31, 42, 0.7);
-  --md-accent-fg-color: var(--griffin-crimson);
+  --md-primary-fg-color: var(--griffin-slate);
+  --md-primary-fg-color--light: var(--griffin-slate);
+  --md-primary-fg-color--dark: var(--griffin-slate);
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+  --md-accent-fg-color: var(--griffin-magenta);
   --md-accent-fg-color--transparent: rgba(186, 0, 76, 0.1);
-  --md-typeset-a-color: var(--griffin-crimson);
-  --heading-colour: var(--griffin-slate);
+  --md-typeset-a-color: var(--griffin-magenta);
+  --title-colour: var(--griffin-magenta);
+  --heading-colour: var(--griffin-deep-cyan);
 }
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: var(--griffin-cyan);
-  --md-primary-fg-color--light: var(--griffin-cyan);
-  --md-primary-fg-color--dark: var(--griffin-cyan);
-  --md-primary-bg-color: var(--griffin-ink);
-  --md-primary-bg-color--light: rgba(11, 31, 42, 0.7);
+  --md-primary-fg-color: var(--griffin-slate);
+  --md-primary-fg-color--light: var(--griffin-slate);
+  --md-primary-fg-color--dark: var(--griffin-slate);
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
   --md-accent-fg-color: var(--griffin-sky);
   --md-accent-fg-color--transparent: rgba(127, 214, 247, 0.1);
   --md-typeset-a-color: var(--griffin-sky);
-  --heading-colour: var(--griffin-cyan);
+  --title-colour: var(--griffin-cyan);
+  --heading-colour: var(--griffin-pink);
 }
 
-/* Headings */
+/* Page titles in magenta (cyan in dark mode); section headings in cyan
+   (pink in dark mode) */
 .md-typeset h1,
+.md-typeset h1 code {
+  color: var(--title-colour);
+}
+
 .md-typeset h2,
 .md-typeset h3,
 .md-typeset h4,
-.md-typeset h1 code,
 .md-typeset h2 code,
 .md-typeset h3 code,
 .md-typeset h4 code {
   color: var(--heading-colour);
 }
 
-/* Header and tabs: cyan banner with ink text */
+/* Header and tabs: slate banner with white text. Only the text colour
+   changes on the active or hovered tab. */
 .md-header,
 .md-tabs {
-  background-color: var(--griffin-cyan);
-  color: var(--griffin-ink);
+  background-color: var(--griffin-slate);
+  color: #ffffff;
 }
 
 .md-tabs__link {
-  color: var(--griffin-ink);
+  color: #ffffff;
   opacity: 1;
-  padding: 0 0.6rem;
-  border-radius: 0.2rem 0.2rem 0 0;
 }
 
 .md-tabs__item--active .md-tabs__link,
 .md-tabs__link:hover,
 .md-tabs__link:focus {
-  background-color: var(--griffin-crimson);
-  color: #ffffff;
-}
-
-.md-tabs__item {
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
+  color: var(--griffin-pale-cyan);
 }
 
 /* Active side-nav link in bold */

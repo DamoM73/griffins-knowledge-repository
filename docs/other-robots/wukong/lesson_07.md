@@ -7,7 +7,6 @@
 
 !!! terms "Terminology"
     - **random number** – a number picked by chance, such as a whole number from 1 to 3.
-    - **elif** – short for else if, a part of an `if` statement that checks another condition when the conditions before it were `False`.
 
 Let's put our gestures to work in a game. When we shake the micro:bit, the hand picks rock, paper or scissors at random, and we play against it.
 

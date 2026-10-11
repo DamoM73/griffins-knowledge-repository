@@ -7,7 +7,6 @@
 
 !!! terms "Terminology"
     - **prototype** – an early version of a product, built so we can test an idea and improve it.
-    - **testing table** – a table that lists each test with its expected result and actual result, so we can spot any differences.
 
 Our hand can make gestures, but can it hold something? Our hand is a **prototype**: a first version we can test and improve. In this challenge, we test how well it grips, make one design change, then test again to see if the change helped.
 

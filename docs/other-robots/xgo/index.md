@@ -13,8 +13,14 @@ Work through the lessons in order. Each lesson adds one new part of the dog.
 | [Lesson 5: Body Posture](lesson_05.md) | raise, lower and tilt the body without walking |
 | [Lesson 6: Robotic Arm](lesson_06.md) | move the arm and open and close the gripper |
 | [Lesson 7: Sensor-controlled Dog](lesson_07.md) | react to sound and light |
-| [Lesson 8: Teach a Pose](lesson_08.md) | move a leg by hand, record the pose and replay it |
-| [Lesson 9: Radio Remote](lesson_09.md) | drive the dog from a second micro:bit |
+| [Lesson 8: Trembling Dog](lesson_08.md) | tremble when the temperature drops |
+| [Lesson 9: Magnet-controlled Dog](lesson_09.md) | back away from a magnet |
+| [Lesson 10: Compass and Treasure Hunt](lesson_10.md) | turn to face north and follow compass directions |
+| [Lesson 11: Teach a Pose](lesson_11.md) | move a leg by hand, record the pose and replay it |
+| [Lesson 12: Radio Remote](lesson_12.md) | drive the dog from a second micro:bit |
+| [Lesson 13: Sense the Feelings](lesson_13.md) | log and graph the dog's movement data (extension) |
+
+Lessons 8, 9, 10 and 13 are based on activities from the [ELECFREAKS XGO Robot Kit wiki](https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit/), written for the first XGO kit and updated here for the V2 dog.
 
 !!! warning "Every program starts with set XGO"
     Every XGO program must start with **set XGO TX P14 RX P13** in **on start**. Without it, the dog ignores every command. Lesson 2 explains why.

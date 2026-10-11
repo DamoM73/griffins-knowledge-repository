@@ -5,14 +5,16 @@ The first build of this site was made in a cloud session that could write files 
 ## Context
 
 - **Generator:** Zensical 0.0.69 (pinned in `requirements.txt`). Preview with `zensical serve`, build with `zensical build --clean`.
-- **Hosting:** GitHub Pages at <https://damom73.github.io/griffins-knowledge-repository/>, deployed by `.github/workflows/docs.yml` (created in task 4) on every push to `main`.
+- **Hosting:** GitHub Pages at <https://damom73.github.io/griffins-knowledge-repository/>, deployed by `.github/workflows/docs.yml` (created in task 5) on every push to `main`.
 - **Audience:** Years 7–10, written at a Year 7/8 level. Australian English.
-- **Sections:** OnStage, Rescue Line, Rescue Maze, Soccer and Tips are stubs for now. Other Robots holds the Using MakeCode guide and sequential lessons for the PU Robot (9), XGO Robot Dog (9) and WuKong Manipulator (11). The site plan is the `site-plan.md` doc in the user's "RobocupJr Website" Claude project.
+- **Sections:** OnStage, Rescue Line, Rescue Maze, Soccer and Tips are stubs for now. Other Robots holds the Using MakeCode guide and sequential lessons for the PU Robot (15), XGO Robot Dog (13) and WuKong Manipulator (11). PU Lessons 8, 9, 11, 12, 14 and 15 are based on ELECFREAKS PU wiki cases (with hand-wave or clap triggers instead of button A, which can't be reached inside the head). XGO Lessons 8, 9, 10 and 13 are based on the original XGO kit's wiki cases, updated for the V2 dog. The site plan is the `site-plan.md` doc in the user's "RobocupJr Website" Claude project.
 - **Colour scheme** (from the Griffins logo, in `docs/stylesheets/extra.css`):
-    - cyan `#00ADEF`: banner (header and tabs) in both modes, and dark-mode headings
-    - ink `#0B1F2A`: text and logo on the cyan banner (6.6:1). White can't go on the cyan (2.6:1).
-    - crimson `#BA004C`: active or hovered tab (white text, 6.6:1) and light-mode links
-    - slate `#545F65`: light-mode headings
+    - slate `#545F65`: banner (header and tabs) in both modes, with white text (6.6:1) and a white griffin logo
+    - pale cyan `#B3E9FC`: text of the active or hovered tab (only the text colour changes, like the other tutorial sites)
+    - magenta `#BA004C`: light-mode page titles (h1) and links
+    - deep cyan `#0077A8`: light-mode section headings (h2–h4)
+    - cyan `#00ADEF`: dark-mode page titles
+    - pink `#FF4D94`: dark-mode section headings
     - sky `#7FD6F7`: dark-mode links
 - **Callouts and code blocks:** the standard style shared by all the user's tutorial sites (six callout types: learn, terms, primm, note for Code explanation only, tip, warning).
 - **Lesson template:** `learn` callout, `terms` callout (if new terms), short intro, then concept sections. Each example has `=== "Blocks"` and `=== "Python"` content tabs, then a PRIMM callout, then a collapsed `??? note "Code explanation"` that explains every Python line. Lessons end with `## Exercises`: a PRIMM modify callout, then question-style exercises, each with `Starter code:` and a snippet.
@@ -34,6 +36,9 @@ Names most likely to differ:
 - XGO: `xgo.manipulator_clamp_x`, `xgo.manipulator_clamp_z`, `xgo.manipulator_clamp`, `xgo.servo_setting_robot_arm`, `xgo.get_posestate`, `xgo.set_posestate` (TypeScript: `Manipulator_clampX`, `Manipulator_clampZ`, `Manipulator_clamp`, `servo_setting_robotArm`, `GetPosestate`, `SetPosestate`), and the enum members `xgo.action_enum.SIT_DOWN`, `STRETCH_ONESELF`, `xgo.body_parts_enum.LEFT_FRONT`, `xgo.pose_enum.POSE1`.
 - PU Robot: `robotPu.MoveDirection.RIGHT_TURN`, `robotPu.LightSelection.LIGHT1`, `robotPu.smooth_set_servo_angle`, `robotPu.enable_remote_control_with_group`, `robotPu.on_control_value_received`.
 - WuKong: `wuKong.ServoTypeList._180`.
+- Music (PU Lesson 11): `music.builtin_playable_melody(Melodies.ENTERTAINER)`, `music.PlaybackMode.IN_BACKGROUND`, `music.beat(BeatFraction.HALF)`, `music.set_tempo(120)`.
+- Sensors and radio (XGO Lessons 9 and 13): `input.magnetic_force(Dimension.STRENGTH)`, `radio.send_value`, `radio.on_received_value`, `serial.write_value`.
+- Local variables: some examples assign a variable inside a function without `global` (`angle` in WuKong Lessons 8 and 9, `choice` in WuKong Lesson 7). Blocks variables are always global, so check that these convert to Blocks. If not, add `global` and a starting value at the bottom of the program, the way PU Lesson 9 does with `distance`.
 
 If a name changes, update the example, then search the pages for the old name (the XGO Lesson 6 and Lesson 8 warnings mention some by name). Re-run both checks.
 
@@ -41,11 +46,52 @@ If a name changes, update the example, then search the pages for the old name (t
 
 Each placeholder image names its program. For each one, the user builds or pastes the program in MakeCode, switches to Blocks, and takes a screenshot of just the blocks. Save it over the placeholder with the same file name. List any placeholders still left at the end of each session. The three WuKong build photos in `docs/assets/wukong/` are also placeholders.
 
-### 3. Check the licence (Confirm first)
+### 3. Delete leftover files from the renumbering
+
+The user has given permission to delete these files without asking again. PU Lessons 8 and 9 became Lessons 10 and 13, and XGO Lessons 8 and 9 became Lessons 11 and 12. The files below are the old copies the cloud session couldn't delete. Nothing links to them. Check with `git grep` that nothing references them, then `git rm -r` each path and commit with the message `Remove leftover files from lesson renumbering`. If `git grep` finds a reference, stop and report it instead of deleting that path.
+
+```
+docs/examples/other/pu_robot/lesson_08/body_pitch/
+docs/examples/other/pu_robot/lesson_08/clap/
+docs/examples/other/pu_robot/lesson_08/music_tempo/
+docs/examples/other/pu_robot/lesson_08/ex1_body_roll/
+docs/examples/other/pu_robot/lesson_08/ex2_tilt_alarm/
+docs/examples/other/pu_robot/lesson_08/ex3_wave_and_clap/
+docs/examples/other/pu_robot/lesson_08/ex4_tempo_test/
+docs/examples/other/pu_robot/lesson_09/controller/
+docs/examples/other/pu_robot/lesson_09/robot/
+docs/examples/other/pu_robot/lesson_09/ex1_group/
+docs/examples/other/pu_robot/lesson_09/ex2_reverse/
+docs/examples/other/pu_robot/lesson_09/ex3_full_control/
+docs/examples/other/pu_robot/lesson_09/ex4_buttons/
+docs/examples/other/xgo/lesson_07/ex3_compass/
+docs/examples/other/xgo/lesson_08/teach_pose/
+docs/examples/other/xgo/lesson_08/ex1_two_legs/
+docs/examples/other/xgo/lesson_08/ex2_animation/
+docs/examples/other/xgo/lesson_08/ex3_memory/
+docs/examples/other/xgo/lesson_09/dog/
+docs/examples/other/xgo/lesson_09/remote/
+docs/examples/other/xgo/lesson_09/ex1_group/
+docs/examples/other/xgo/lesson_09/ex2_turning/
+docs/examples/other/xgo/lesson_09/ex3_tilt/
+docs/examples/other/xgo/lesson_09/ex4_action/
+docs/assets/blocks/pu-robot/lesson_08_body_pitch.png
+docs/assets/blocks/pu-robot/lesson_08_clap.png
+docs/assets/blocks/pu-robot/lesson_08_music_tempo.png
+docs/assets/blocks/pu-robot/lesson_09_controller.png
+docs/assets/blocks/pu-robot/lesson_09_robot.png
+docs/assets/blocks/xgo/lesson_08_teach_pose.png
+docs/assets/blocks/xgo/lesson_09_dog.png
+docs/assets/blocks/xgo/lesson_09_remote.png
+```
+
+Don't delete the folders `pu_robot/lesson_08`, `pu_robot/lesson_09`, `xgo/lesson_08` or `xgo/lesson_09` themselves: they now hold the new lessons' examples.
+
+### 4. Check the licence (Confirm first)
 
 `LICENSE` is MIT, but the site footer (`copyright` in `zensical.toml`) and README say "Code licensed under GPLv3", which matches the user's other tutorial sites. Ask the user which licence to use, then either replace `LICENSE` with GPLv3 and add the CC BY-NC-SA 4.0 notice for content, or change the footer and README to match MIT.
 
-### 4. Create the deploy workflow
+### 5. Create the deploy workflow
 
 The cloud session couldn't write inside `.github/`, so create `.github/workflows/docs.yml` with this content. Before committing, confirm that each action version exists (they're the versions `zensical new` generated):
 
@@ -80,14 +126,14 @@ jobs:
         id: deployment
 ```
 
-### 5. Final checks, commit and push
+### 6. Final checks, commit and push
 
 1. Run the scripts in this order: `make_starter_comments.py`, `build_glossary.py`, `check_explanations.py`, then `zensical build --clean`.
 2. Check external links (makecode.microbit.org and the three GitHub extension addresses). Report broken links; don't guess replacements.
 3. Spell-check for Australian English.
 4. Commit and push to `main`.
 
-### 6. Go live (Confirm first)
+### 7. Go live (Confirm first)
 
 1. Set Pages to deploy from GitHub Actions: **Settings** → **Pages** → **Source** → **GitHub Actions**, or `gh api -X PUT repos/DamoM73/griffins-knowledge-repository/pages -f build_type=workflow` (use `-X POST` if Pages hasn't been set up yet).
 2. Watch the **Deploy site** run, then open the live URL and check a lesson page.
@@ -99,4 +145,4 @@ These are also in `todo.md`, which is the user's own list. Keep `todo.md`, and d
 - Test every example on the real robots (see `todo.md` for the specific things to check).
 - Take the Blocks screenshots and WuKong build photos.
 - Decide on the licence.
-- Decide whether the Terminology definitions that differ from the glossary record are OK (`calibration`, `event`, `event handler`, `port`, `random number`, `threshold`, `radio group`).
+- Decide whether the Terminology definitions that differ from the glossary record are OK (`calibration`, `event`, `event handler`, `port`, `random number`, `threshold`, `radio group`, `state`, `requirement`).

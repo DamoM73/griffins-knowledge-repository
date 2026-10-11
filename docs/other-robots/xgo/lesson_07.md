@@ -7,7 +7,6 @@
 
 !!! terms "Terminology"
     - **light sensor** – a sensor that measures how much light is shining on it; on the micro:bit, the display LEDs do this job.
-    - **threshold** – a set value that a reading must reach before the program counts it, such as the light level that counts as bright.
 
 So far, we've controlled the dog with buttons. The micro:bit also has sensors, so the dog can react to what's happening around it.
 
@@ -96,14 +95,4 @@ Starter code:
 
 ```python linenums="1"
 --8<-- "examples/other/xgo/lesson_07/ex2_bedtime/main.py"
-```
-
-### Exercise 3
-
-Can you use the micro:bit's compass heading to make the dog turn until it faces north? Hint: north is a heading close to 0 or 360 degrees.
-
-Starter code:
-
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_07/ex3_compass/main.py"
 ```
