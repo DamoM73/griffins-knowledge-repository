@@ -47,4 +47,4 @@ scripts/                            check and build scripts
 
 ## Licences
 
-Content licensed under CC BY-NC-SA 4.0. Code licensed under GPLv3.
+Content licensed under CC BY-NC-SA 4.0 (see [LICENSE-CONTENT.md](LICENSE-CONTENT.md)). Code licensed under GPLv3 (see [LICENSE](LICENSE)).
