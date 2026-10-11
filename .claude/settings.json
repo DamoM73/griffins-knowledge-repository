@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/Scripts/python --version)",
+      "Bash(.venv/Scripts/python scripts/check_explanations.py)",
+      "Bash(.venv/Scripts/zensical build *)",
+      "Bash(awk -F/ '{print $4\"/\"$5\"/\"$6}')",
+      "Bash(mkdir -p /c/Users/DamoM/AppData/Local/Temp/claude/d--GIT-griffins-knowledge-repository/10f17468-91a5-4d4d-9500-cfefd2c6862e/scratchpad/mkc)",
+      "Read(//c/Users/DamoM/AppData/Local/Temp/claude/d--GIT-griffins-knowledge-repository/10f17468-91a5-4d4d-9500-cfefd2c6862e/scratchpad/**)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(npx mkc *)",
+      "Bash(S=\"/c/Users/DamoM/AppData/Local/Temp/claude/d--GIT-griffins-knowledge-repository/10f17468-91a5-4d4d-9500-cfefd2c6862e/scratchpad\"; cd \"$S/mkc\" && ls node_modules/makecode-core/built 2>/dev/null | grep -v map | grep -v d.ts; grep -rnoiE '.{60}\\(py2ts|pyToTs|decompile|\\\\.py\\\\b|python\\).{60}' node_modules/makecode-core/built/*.js node_modules/makecode/built/*.js | grep -v '\\\\.map' | head -40)",
+      "Read(//c/Users/DamoM/AppData/Local/Temp/claude/d--GIT-griffins-knowledge-repository/10f17468-91a5-4d4d-9500-cfefd2c6862e/scratchpad/mkc/**)",
+      "Bash(S=\"/c/Users/DamoM/AppData/Local/Temp/claude/d--GIT-griffins-knowledge-repository/10f17468-91a5-4d4d-9500-cfefd2c6862e/scratchpad\"; cd \"$S/mkc\" && wc -l node_modules/makecode-core/built/service.js node_modules/makecode-core/built/mkc.js node_modules/makecode-core/built/commands.js && cat node_modules/makecode-core/built/service.js)",
+      "Bash(S=\"/c/Users/DamoM/AppData/Local/Temp/claude/d--GIT-griffins-knowledge-repository/10f17468-91a5-4d4d-9500-cfefd2c6862e/scratchpad\"; cd \"$S/mkc\" && cat node_modules/makecode-core/built/mkc.js | sed -n 1,290p; echo ======; cat node_modules/makecode/built/languageService.js; echo =====; grep -n \"async function\\\\|resolveProject\\\\|new mkc.Project\\\\|loadEditorAsync\\\\|buildOnePrj\" node_modules/makecode-core/built/commands.js | head -60)",
+      "Bash(node roundtrip.js prj_wukong \"D:/GIT/griffins-knowledge-repository/docs/examples/other/wukong\" out_wukong.json)",
+      "Bash(S=\"/c/Users/DamoM/AppData/Local/Temp/claude/d--GIT-griffins-knowledge-repository/10f17468-91a5-4d4d-9500-cfefd2c6862e/scratchpad\"; cd \"$S/mkc\" && sed -n 105,170p node_modules/makecode-core/built/commands.js)",
+      "Bash(sed -i 's|    await prj.loadEditorAsync\\(\\)|    await prj.loadEditorAsync\\(\\)\\\\n    await prj.service.initAsync\\(\\)\\\\n    const tgt = await prj.service.languageService.getAppTargetAsync\\(\\)\\\\n    console.log\\(\"editor: \" + prj.mainPkg.mkcConfig.targetWebsite + \" v\" + tgt.versions.target + \" \\(pxt \" + tgt.versions.pxt + \"\\)\"\\)|' roundtrip.js)",
+      "Bash(node -e ' *)",
+      "Bash(mkdir -p neg/bad)",
+      "Bash(node roundtrip.js prj_wukong neg)",
+      "Bash(curl -s https://makecode.microbit.org/)",
+      "Bash(curl -s https://makecode.microbit.org/beta)",
+      "Bash(.venv/Scripts/python -c \"import tomllib,sys; print\\('toml ok'\\)\")",
+      "Bash(.venv/Scripts/python -)",
+      "Bash(.venv/Scripts/python scripts/make_starter_comments.py)",
+      "Bash(.venv/Scripts/python scripts/build_glossary.py)",
+      "Bash(git push *)",
+      "Bash(gh api *)",
+      "Bash(gh run *)",
+      "Bash([ -f \"$M\" ])",
+      "Read(//c/Users/DamoM/.claude/projects/d--GIT-griffins-knowledge-repository/memory/**)",
+      "Bash(echo '- [MakeCode local compiler check]\\(makecode-local-compiler-check.md\\) — check MakeCode Python names from Node without a browser')"
+    ]
+  }
+}
