@@ -1,0 +1,121 @@
+[project]
+site_name = "Griffins' Knowledge Repository"
+site_description = "Build and programming tutorials for RoboCup Junior challenges and the other robots we use in class."
+site_author = "DamoM73"
+site_url = "https://damom73.github.io/griffins-knowledge-repository/"
+repo_url = "https://github.com/DamoM73/griffins-knowledge-repository"
+repo_name = "griffins-knowledge-repository"
+copyright = "Content licensed under CC BY-NC-SA 4.0. Code licensed under GPLv3."
+docs_dir = "docs"
+extra_css = ["stylesheets/extra.css"]
+
+nav = [
+  { "Home" = "index.md" },
+  { "OnStage" = ["onstage/index.md"] },
+  { "Rescue Line" = ["rescue-line/index.md"] },
+  { "Rescue Maze" = ["rescue-maze/index.md"] },
+  { "Soccer" = ["soccer/index.md"] },
+  { "Tips" = ["tips/index.md"] },
+  { "Other Robots" = [
+    "other-robots/index.md",
+    { "Using MakeCode" = "other-robots/using-makecode.md" },
+    { "PU Robot" = [
+      "other-robots/pu-robot/index.md",
+      { "Lesson 1: Meet the PU Robot" = "other-robots/pu-robot/lesson_01.md" },
+      { "Lesson 2: First Program" = "other-robots/pu-robot/lesson_02.md" },
+      { "Lesson 3: Lights and Eyes" = "other-robots/pu-robot/lesson_03.md" },
+      { "Lesson 4: Built-in Modes" = "other-robots/pu-robot/lesson_04.md" },
+      { "Lesson 5: Walking" = "other-robots/pu-robot/lesson_05.md" },
+      { "Lesson 6: Moving Joints" = "other-robots/pu-robot/lesson_06.md" },
+      { "Lesson 7: Ultrasonic Sensor" = "other-robots/pu-robot/lesson_07.md" },
+      { "Lesson 8: Balance and Sound" = "other-robots/pu-robot/lesson_08.md" },
+      { "Lesson 9: Radio Remote" = "other-robots/pu-robot/lesson_09.md" },
+    ] },
+    { "XGO Robot Dog" = [
+      "other-robots/xgo/index.md",
+      { "Lesson 1: Meet the XGO" = "other-robots/xgo/lesson_01.md" },
+      { "Lesson 2: First Program" = "other-robots/xgo/lesson_02.md" },
+      { "Lesson 3: Built-in Actions" = "other-robots/xgo/lesson_03.md" },
+      { "Lesson 4: Walking and Turning" = "other-robots/xgo/lesson_04.md" },
+      { "Lesson 5: Body Posture" = "other-robots/xgo/lesson_05.md" },
+      { "Lesson 6: Robotic Arm" = "other-robots/xgo/lesson_06.md" },
+      { "Lesson 7: Sensor-controlled Dog" = "other-robots/xgo/lesson_07.md" },
+      { "Lesson 8: Teach a Pose" = "other-robots/xgo/lesson_08.md" },
+      { "Lesson 9: Radio Remote" = "other-robots/xgo/lesson_09.md" },
+    ] },
+    { "WuKong Manipulator" = [
+      "other-robots/wukong/index.md",
+      { "Lesson 1: Build the Frame" = "other-robots/wukong/lesson_01.md" },
+      { "Lesson 2: Zero the Servos" = "other-robots/wukong/lesson_02.md" },
+      { "Lesson 3: Finish the Hand" = "other-robots/wukong/lesson_03.md" },
+      { "Lesson 4: Finger Range" = "other-robots/wukong/lesson_04.md" },
+      { "Lesson 5: Count to Five" = "other-robots/wukong/lesson_05.md" },
+      { "Lesson 6: Hand Gestures" = "other-robots/wukong/lesson_06.md" },
+      { "Lesson 7: Rock, Paper, Scissors" = "other-robots/wukong/lesson_07.md" },
+      { "Lesson 8: Smooth Movement" = "other-robots/wukong/lesson_08.md" },
+      { "Lesson 9: Tilt Control" = "other-robots/wukong/lesson_09.md" },
+      { "Lesson 10: Grip Challenge" = "other-robots/wukong/lesson_10.md" },
+      { "Lesson 11: Radio Remote" = "other-robots/wukong/lesson_11.md" },
+    ] },
+  ] },
+  { "Reference" = [
+    { "Glossary" = "reference/glossary.md" },
+  ] },
+]
+
+[project.theme]
+language = "en"
+logo = "assets/griffin.png"
+favicon = "assets/favicon.png"
+features = [
+  "content.code.copy",
+  "content.code.select",
+  "content.tabs.link",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[project.markdown_extensions]
+admonition = {}
+attr_list = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.snippets.base_path = ["docs"]
+pymdownx.snippets.check_paths = true
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true
