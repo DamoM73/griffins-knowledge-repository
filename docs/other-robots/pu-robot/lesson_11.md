@@ -1,84 +1,103 @@
-# Lesson 11: Dance to the Beat
+# Lesson 11: Balance and Sound
 
 !!! learn "In this lesson we will learn"
-    - how the tempo sets the length of each beat
-    - how to time the robot's moves to the beat
-    - how to play music in the background while the robot dances
+    - how to read how far the robot's body is tilted
+    - how to start an action with a clap, using an event
+    - how to read the tempo of music playing nearby
 
 !!! terms "Terminology"
-    - **beat** – one of the regular pulses in a piece of music that we would tap our foot to.
+    - **roll** – turning around the x-axis, like a plane dipping one wing.
+    - **event** – something that happens which the program needs to respond to, such as a loud sound.
+    - **event handler** – the code that responds to a particular event, such as making the robot jump when it hears a clap.
+    - **microphone** – an input device that detects sound and measures how loud it is.
+    - **tempo** – the speed of a tune, measured in beats per minute.
 
-In Lesson 10, the robot listened to music and worked out its tempo. Now the robot gets to make the music and dance to it. The trick is timing: every move needs to last exactly one **beat**.
+The PU Robot can feel how its body is tilted, so it knows if it's leaning or has fallen over. The micro:bit V2 inside it also has a **microphone**, so the robot can hear us too.
 
-## Moves on the beat
+## Body tilt
 
-At a tempo of 120 beats per minute, there are 2 beats every second, so each beat lasts 500 milliseconds. Instead of working this out ourselves, the **beat** block gives us the length of a beat (or half a beat) at the current tempo.
+The robot measures two kinds of tilt. **Body pitch** is tilting forwards and backwards. **Body roll** is tilting from side to side.
 
 === "Blocks"
 
-    ![Blocks for the beat nod example](../../assets/blocks/pu-robot/lesson_11_beat_nod.png){ .blocks }
+    ![Blocks for the body pitch example](../../assets/blocks/pu-robot/lesson_11_body_pitch.png){ .blocks }
 
-    Blocks used: **set tempo to (bpm)** and **1 beat** (Music), **repeat** (Loops), **set servo to** (robot PU > Actions), **pause (ms)** (Basic).
+    Blocks used: **forever**, **show number** and **pause (ms)** (Basic), **body pitch** (robot PU > Sensors).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_11/beat_nod/main.py"
+    --8<-- "examples/other/pu_robot/lesson_11/body_pitch/main.py"
     ```
 
-!!! primm "PRIMM"
-    1. **Predict** how many times the robot will nod, and how long the whole program will take.
-    2. **Run** the program. Tap your foot along with the nods.
-    3. Time to **investigate** the code. What does each line do?
-
-??? note "Code explanation"
-    - **line 1** → sets the tempo to 120 beats per minute.
-    - **line 2** → starts a loop that runs 8 times.
-    - **line 3** → tilts the head to 70 degrees.
-    - **line 4** → waits for half a beat.
-    - **line 5** → tilts the head the other way, to 110 degrees.
-    - **line 6** → waits for half a beat, so each nod takes exactly one beat.
-    - **line 7** → moves the head back to the centre when the loop finishes.
-
-!!! tip "Why use the beat block instead of a number?"
-    If we change the tempo on line 1, every pause changes with it. With numbers typed into each pause, we'd have to work out and change every one.
-
-## Dance to music
-
-The **play** block can play a melody in the background. The music starts, and the program carries straight on to the dance moves, so both happen at once. This dance starts when we wave our hand in front of the robot.
-
-=== "Blocks"
-
-    ![Blocks for the dance with music example](../../assets/blocks/pu-robot/lesson_11_dance_with_music.png){ .blocks }
-
-    Blocks used: **forever** and **pause (ms)** (Basic), **if then** and **0 < 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **play melody in background**, **1 beat** and **set tempo to (bpm)** (Music), **repeat** (Loops), **set servo to** (robot PU > Actions).
-
-=== "Python"
-
-    ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_11/dance_with_music/main.py"
-    ```
+Switch the robot on, then gently tilt the whole robot forwards and backwards. Don't bend its joints.
 
 !!! primm "PRIMM"
-    1. **Predict** what will happen when you wave your hand in front of the robot.
+    1. **Predict** what numbers will appear as you tilt the robot forwards, then backwards.
     2. **Run** the program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
     - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → checks whether something is closer than 10 cm…
-    - **line 3** → …and if it is, starts playing The Entertainer in the background.
-    - **line 4** → starts a loop that runs 4 times.
-    - **line 5** → turns the head to one side.
-    - **line 6** → waits for one beat.
-    - **line 7** → turns the head to the other side.
-    - **line 8** → waits for one beat.
-    - **line 9** → turns the head back to the centre when the loop finishes.
-    - **line 10** → tells the micro:bit to run `on_forever` again and again.
-    - **line 12** → sets the tempo to 120 beats per minute when the program starts.
+    - **line 2** → reads the body pitch and shows it on the display.
+    - **line 3** → waits half a second, so the number is easier to read.
+    - **line 4** → tells the micro:bit to run `on_forever` again and again.
 
-!!! tip "Plan the dance first"
-    Before coding a longer dance, draw a beat chart: a row of boxes, one per beat, with the move for each beat written in its box. Then each box becomes a move and a one-beat pause in our code.
+## React to a clap
+
+A clap is an **event**. Instead of checking for it in a forever loop, we give MakeCode an **event handler**: code that runs by itself whenever the event happens. In Blocks, it's the **on loud sound** block. In Python, it's a function plus a line that connects it to the event.
+
+=== "Blocks"
+
+    ![Blocks for the clap example](../../assets/blocks/pu-robot/lesson_11_clap.png){ .blocks }
+
+    Blocks used: **on loud sound** (Input), **set mode** (robot PU > Actions).
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_11/clap/main.py"
+    ```
+
+!!! primm "PRIMM"
+    1. **Predict** what will happen when you clap near the robot.
+    2. **Run** the program.
+    3. Time to **investigate** the code. What does each line do?
+
+??? note "Code explanation"
+    - **line 1** → defines a function called `on_sound_loud`, which will run when there's a loud sound.
+    - **line 2** → starts the robot's jump mode.
+    - **line 3** → connects `on_sound_loud` to the loud sound event.
+
+!!! warning "Test the clap first"
+    The head cover can muffle sound, and the robot's own servo motors make noise. Test how loud a clap needs to be, and check that the robot moving doesn't set off the event by itself.
+
+## Music tempo
+
+The robot can listen to music and work out its **tempo** in beats per minute (BPM). This is how the dance mode keeps time.
+
+=== "Blocks"
+
+    ![Blocks for the music tempo example](../../assets/blocks/pu-robot/lesson_11_music_tempo.png){ .blocks }
+
+    Blocks used: **forever**, **show number** and **pause (ms)** (Basic), **music tempo** (robot PU > Sensors).
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_11/music_tempo/main.py"
+    ```
+
+!!! primm "PRIMM"
+    1. **Predict** what the display will show with no music, and with music playing.
+    2. **Run** the program, then play a song with a steady beat nearby.
+    3. Time to **investigate** the code. What does each line do?
+
+??? note "Code explanation"
+    - **line 1** → defines the function that the forever loop repeats.
+    - **line 2** → reads the music tempo and shows it on the display.
+    - **line 3** → waits 1 second before reading it again.
+    - **line 4** → tells the micro:bit to run `on_forever` again and again.
 
 ## Exercises
 
@@ -89,30 +108,40 @@ Each exercise has starter code. Copy it into MakeCode's Python view, or build th
 
 ### Exercise 1
 
-What happens to the dance if we change the tempo to 60, then to 180? Why does one change make the moves faster or slower?
+What range of values does body roll give? Change the example to show body roll, tilt the robot gently from side to side, and record the lowest and highest numbers.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_11/ex1_tempo/main.py"
+--8<-- "examples/other/pu_robot/lesson_11/ex1_body_roll/main.py"
 ```
 
 ### Exercise 2
 
-Can you draw a beat chart for 8 beats of moves (nod, shake, wink and so on), then program it?
+Can you make the lights turn red when the robot is tilted too far forwards or backwards, and green when it's level? Use your numbers from the first example to choose how far is too far.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_11/ex2_beat_chart/main.py"
+--8<-- "examples/other/pu_robot/lesson_11/ex2_tilt_alarm/main.py"
 ```
 
 ### Exercise 3
 
-Can you make a dance with at least three different moves and changing light colours, timed to a melody of your choice?
+Can you make the robot greet you when you wave your hand, and jump when you clap?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_11/ex3_my_dance/main.py"
+--8<-- "examples/other/pu_robot/lesson_11/ex3_wave_and_clap/main.py"
+```
+
+### Exercise 4
+
+How accurate is the music tempo? Play three songs whose BPM you can look up online, and compare the robot's tempo with the real one.
+
+Starter code:
+
+```python linenums="1"
+--8<-- "examples/other/pu_robot/lesson_11/ex4_tempo_test/main.py"
 ```

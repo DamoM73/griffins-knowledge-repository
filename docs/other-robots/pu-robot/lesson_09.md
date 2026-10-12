@@ -1,72 +1,80 @@
-# Lesson 9: Shy PU
+# Lesson 9: Variables
 
 !!! learn "In this lesson we will learn"
-    - how to use **elif** to choose between more than two actions
-    - how thresholds split a sensor reading into zones
-    - how to give the robot a personality from its sensor readings
+    - how to store a value in a variable and use it in our program
+    - how one variable can change a setting everywhere it's used
+    - how to change a variable while the program runs, such as counting hand waves
 
 !!! terms "Terminology"
-    - **elif** – short for else if, a part of an `if` statement that checks another condition when the conditions before it were `False`.
-    - **threshold** – a set value that a reading must reach before the program counts it, such as the distance that counts as too close.
+    - **variable** – a named place, like a labelled box, that stores a value our program can use and change.
+    - **global variable** – a variable that can be used anywhere in the program and keeps its value for as long as the program runs.
 
-In Lesson 7, the robot had two choices: red if something was close, green if not. Let's give it a shy personality instead, with three ways to behave depending on how close we are:
+So far, we've typed numbers straight into our blocks: 4 steps, speed 5, a pause of 1000. If we want to change how far the robot walks, we have to find and change every one of those numbers. A **variable** lets us store a number once, give it a name, and use the name wherever we need the number.
 
-| Distance | Mood | What the robot does |
-| --- | --- | --- |
-| more than 30 cm | brave | green lights, walks forward |
-| 10 to 30 cm | nervous | amber lights, shakes its head |
-| less than 10 cm | scared | red lights, steps backward |
+## Variables for settings
 
-The numbers 30 and 10 are **thresholds**. They split the distance into three zones.
-
-## If, elif, else
-
-To choose between three actions, we add **elif** between the if and the else. Python checks each condition in order and runs the first one that's `True`. If none are `True`, it runs the else.
+Here the number of steps and the speed are stored in two variables, then both walk blocks use them.
 
 === "Blocks"
 
-    ![Blocks for the shy PU example](../../assets/blocks/pu-robot/lesson_09_shy_pu.png){ .blocks }
+    ![Blocks for the walk settings example](../../assets/blocks/pu-robot/lesson_09_walk_settings.png){ .blocks }
 
-    Blocks used: **forever** and **pause (ms)** (Basic), **set distance to** and **distance** (Variables), **ultrasonic sensor distance in cm** (robot PU > Sensors), **if then else if then else** and **0 > 0** (Logic), **set ambience light to RGB** (robot PU > Actuators), **walk for steps at speed** and **set servo to** (robot PU > Actions).
+    Blocks used: **set steps to** and **set speed to** (Variables, after **Make a Variable**), **walk for steps at speed** (robot PU > Actions), **pause (ms)** (Basic).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_09/shy_pu/main.py"
+    --8<-- "examples/other/pu_robot/lesson_09/walk_settings/main.py"
     ```
 
-Place the robot on the floor with clear space in front, then slowly walk towards it.
+!!! primm "PRIMM"
+    1. **Predict** where the robot will end up. Be specific.
+    2. **Run** the program.
+    3. Time to **investigate** the code. What does each line do?
+
+??? note "Code explanation"
+    - **line 1** → creates a variable called `steps` and stores 4 in it.
+    - **line 2** → creates a variable called `speed` and stores 5 in it.
+    - **line 3** → walks the robot forward, using the values in `steps` and `speed`.
+    - **line 4** → waits for 1 second.
+    - **line 5** → walks the robot backward, using the same two variables.
+
+!!! tip "Change one place, change the whole program"
+    To make the robot walk further both ways, we only change line 1. Every block that uses `steps` gets the new value.
+
+## Counting with a variable
+
+A variable can also change while the program runs. Here `waves` starts at 0, and each time we wave our hand in front of the robot, it goes up by 1.
+
+=== "Blocks"
+
+    ![Blocks for the count waves example](../../assets/blocks/pu-robot/lesson_09_count_waves.png){ .blocks }
+
+    Blocks used: **forever**, **show number** and **pause (ms)** (Basic), **if then** and **0 < 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **set waves to** and **change waves by** (Variables).
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_09/count_waves/main.py"
+    ```
 
 !!! primm "PRIMM"
-    1. **Predict** what the robot will do as you get closer and closer.
+    1. **Predict** what the display will show after you wave your hand three times.
     2. **Run** the program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
     - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → tells Python to use the `distance` variable from the main program.
-    - **line 3** → measures the distance once and stores it in `distance`.
-    - **line 4** → checks whether we're further than 30 cm away…
-    - **line 5** → …and if we are, turns the lights green…
-    - **line 6** → …and walks forward 1 step.
-    - **line 7** → otherwise, checks whether we're further than 10 cm away…
-    - **line 8** → …and if we are, turns the lights amber…
-    - **line 9** → …and turns the head to one side.
-    - **line 10** → waits 300 milliseconds.
-    - **line 11** → turns the head to the other side.
-    - **line 12** → waits 300 milliseconds.
-    - **line 13** → turns the head back to the centre.
-    - **line 14** → otherwise (closer than 10 cm)…
-    - **line 15** → …turns the lights red…
-    - **line 16** → …and steps backward 2 steps.
-    - **line 17** → tells the micro:bit to run `on_forever` again and again.
-    - **line 19** → creates the `distance` variable and sets it to 0 when the program starts.
+    - **line 2** → tells Python to use the `waves` variable from the main program, not a new one.
+    - **line 3** → checks whether something is closer than 10 cm…
+    - **line 4** → …and if it is, adds 1 to `waves`.
+    - **line 5** → shows the number of waves on the display.
+    - **line 6** → waits 1 second, so one wave is only counted once.
+    - **line 7** → tells the micro:bit to run `on_forever` again and again.
+    - **line 9** → creates the `waves` variable and sets it to 0 when the program starts.
 
-!!! tip "Why store the distance in a variable?"
-    If we read the sensor in each condition, the robot would measure three times, and each reading could be slightly different. Measuring once and storing the result means every condition checks the same number.
-
-!!! warning "The order of the conditions matters"
-    Python stops at the first condition that's `True`. If we checked `distance > 10` first, a distance of 50 would match it, and the robot would never reach the brave zone.
+!!! tip "What does global do?"
+    `waves` is created in the main program (line 9), so it's a **global variable**. Inside a function, Python needs the line `global waves` before it can change it. In Blocks, MakeCode adds this for us.
 
 ## Exercises
 
@@ -77,30 +85,30 @@ Each exercise has starter code. Copy it into MakeCode's Python view, or build th
 
 ### Exercise 1
 
-Can you change the thresholds to make the robot braver (it only gets nervous when we're much closer)? Test your new thresholds with a ruler.
+Can you make the robot kick the number of times stored in a variable called `kicks`, with a 3-second pause after each kick? Hint: put the variable in a repeat loop.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_09/ex1_zones/main.py"
+--8<-- "examples/other/pu_robot/lesson_09/ex1_kicks/main.py"
 ```
 
 ### Exercise 2
 
-Can you make the robot's eyes show its mood too: both on when brave, one on when nervous, and both off when scared?
+Can you add a third variable called `rest` for the length of the pause, and use it in the walk settings program?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_09/ex2_eyes/main.py"
+--8<-- "examples/other/pu_robot/lesson_09/ex2_settings/main.py"
 ```
 
 ### Exercise 3
 
-Can you add a fourth zone, closer than 5 cm, where the robot covers its eyes by turning them off and tilting its head down?
+Can you change the wave counter so it counts down from 5, and the robot greets us when it reaches 0?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_09/ex3_four_zones/main.py"
+--8<-- "examples/other/pu_robot/lesson_09/ex3_countdown/main.py"
 ```

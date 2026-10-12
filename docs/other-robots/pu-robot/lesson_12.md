@@ -1,77 +1,84 @@
-# Lesson 12: Moods
+# Lesson 12: Dance to the Beat
 
 !!! learn "In this lesson we will learn"
-    - how a variable can store the state a program is in
-    - how a state machine chooses behaviour from the current state
-    - how an event can switch the robot from one mood to the next
+    - how the tempo sets the length of each beat
+    - how to time the robot's moves to the beat
+    - how to play music in the background while the robot dances
 
 !!! terms "Terminology"
-    - **state** – the situation a program is in at a particular moment, such as which mood the robot is in.
-    - **state machine** – a way of thinking about a program as always being in one state, with rules that decide the next state when an event happens.
+    - **beat** – one of the regular pulses in a piece of music that we would tap our foot to.
 
-Let's give the robot moods. It will always be in one of three moods: happy, sleepy or grumpy. Each mood has its own lights, eyes and head movement. Clapping switches the robot to the next mood.
+In Lesson 11, the robot listened to music and worked out its tempo. Now the robot gets to make the music and dance to it. The trick is timing: every move needs to last exactly one **beat**.
 
-This kind of program is called a **state machine**. The robot is always in one **state** (its mood), the state decides what it does, and an event (a clap) moves it to the next state.
+## Moves on the beat
 
-| Mood | Number | Lights | What the robot does |
-| --- | --- | --- | --- |
-| happy | 1 | yellow | eyes on, head tilted up |
-| sleepy | 2 | blue | eyes dimmed, head tilted down |
-| grumpy | 3 | red | eyes on, shakes its head |
-
-## A mood state machine
+At a tempo of 120 beats per minute, there are 2 beats every second, so each beat lasts 500 milliseconds. Instead of working this out ourselves, the **beat** block gives us the length of a beat (or half a beat) at the current tempo.
 
 === "Blocks"
 
-    ![Blocks for the moods example](../../assets/blocks/pu-robot/lesson_12_moods.png){ .blocks }
+    ![Blocks for the beat nod example](../../assets/blocks/pu-robot/lesson_12_beat_nod.png){ .blocks }
 
-    Blocks used: **on loud sound** (Input), **set mood to**, **change mood by** and **mood** (Variables), **if then**, **if then else if then else**, **0 > 0** and **0 = 0** (Logic), **forever**, **show number** and **pause (ms)** (Basic), **set ambience light to RGB**, **set left eye right eye** and **set eye brightness** (robot PU > Actuators), **set servo to** (robot PU > Actions).
+    Blocks used: **set tempo to (bpm)** and **1 beat** (Music), **repeat** (Loops), **set servo to** (robot PU > Actions), **pause (ms)** (Basic).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_12/moods/main.py"
+    --8<-- "examples/other/pu_robot/lesson_12/beat_nod/main.py"
     ```
 
 !!! primm "PRIMM"
-    1. **Predict** what the robot will do when it starts, and after each clap.
-    2. **Run** the program. Clap four times, waiting a few seconds between claps.
+    1. **Predict** how many times the robot will nod, and how long the whole program will take.
+    2. **Run** the program. Tap your foot along with the nods.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_sound_loud`, which will run when there's a loud sound.
-    - **line 2** → tells Python to use the `mood` variable from the main program.
-    - **line 3** → moves to the next mood by adding 1.
-    - **line 4** → checks whether the mood has gone past 3…
-    - **line 5** → …and if it has, goes back to mood 1.
-    - **line 6** → shows the new mood number on the display.
-    - **line 7** → connects `on_sound_loud` to the loud sound event.
-    - **line 9** → defines the function that the forever loop repeats.
-    - **line 10** → checks whether the robot is happy (mood 1)…
-    - **line 11** → …and if it is, turns the lights yellow…
-    - **line 12** → …turns both eyes on…
-    - **line 13** → …and tilts the head to 110 degrees.
-    - **line 14** → otherwise, checks whether the robot is sleepy (mood 2)…
-    - **line 15** → …and if it is, turns the lights blue…
-    - **lines 16–17** → …dims both eyes to brightness 10…
-    - **line 18** → …and tilts the head to 70 degrees.
-    - **line 19** → otherwise (mood 3, grumpy)…
-    - **line 20** → …turns the lights red…
-    - **line 21** → …turns the head to one side.
-    - **line 22** → waits 150 milliseconds.
-    - **line 23** → turns the head to the other side.
-    - **line 24** → waits 150 milliseconds.
-    - **line 25** → turns the head back to the centre.
-    - **line 26** → waits half a second before checking the mood again.
-    - **line 27** → tells the micro:bit to run `on_forever` again and again.
-    - **line 29** → creates the `mood` variable and starts the robot happy.
-    - **line 30** → shows the starting mood number.
+    - **line 1** → sets the tempo to 120 beats per minute.
+    - **line 2** → starts a loop that runs 8 times.
+    - **line 3** → tilts the head to 70 degrees.
+    - **line 4** → waits for half a beat.
+    - **line 5** → tilts the head the other way, to 110 degrees.
+    - **line 6** → waits for half a beat, so each nod takes exactly one beat.
+    - **line 7** → moves the head back to the centre when the loop finishes.
 
-!!! tip "Two jobs, two parts"
-    The event handler (lines 1 to 7) only changes the state. The forever loop (lines 9 to 27) only acts on the state. Keeping these jobs separate makes it easy to add more moods later.
+!!! tip "Why use the beat block instead of a number?"
+    If we change the tempo on line 1, every pause changes with it. With numbers typed into each pause, we'd have to work out and change every one.
 
-!!! warning "Test the clap first"
-    Remember from Lesson 10: the head cover can muffle sound, and the servo motors make noise. If the grumpy head shake keeps switching the mood by itself, make the clap louder or move the head more slowly.
+## Dance to music
+
+The **play** block can play a melody in the background. The music starts, and the program carries straight on to the dance moves, so both happen at once. This dance starts when we wave our hand in front of the robot.
+
+=== "Blocks"
+
+    ![Blocks for the dance with music example](../../assets/blocks/pu-robot/lesson_12_dance_with_music.png){ .blocks }
+
+    Blocks used: **forever** and **pause (ms)** (Basic), **if then** and **0 < 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **play melody in background**, **1 beat** and **set tempo to (bpm)** (Music), **repeat** (Loops), **set servo to** (robot PU > Actions).
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_12/dance_with_music/main.py"
+    ```
+
+!!! primm "PRIMM"
+    1. **Predict** what will happen when you wave your hand in front of the robot.
+    2. **Run** the program.
+    3. Time to **investigate** the code. What does each line do?
+
+??? note "Code explanation"
+    - **line 1** → defines the function that the forever loop repeats.
+    - **line 2** → checks whether something is closer than 10 cm…
+    - **line 3** → …and if it is, starts playing The Entertainer in the background.
+    - **line 4** → starts a loop that runs 4 times.
+    - **line 5** → turns the head to one side.
+    - **line 6** → waits for one beat.
+    - **line 7** → turns the head to the other side.
+    - **line 8** → waits for one beat.
+    - **line 9** → turns the head back to the centre when the loop finishes.
+    - **line 10** → tells the micro:bit to run `on_forever` again and again.
+    - **line 12** → sets the tempo to 120 beats per minute when the program starts.
+
+!!! tip "Plan the dance first"
+    Before coding a longer dance, draw a beat chart: a row of boxes, one per beat, with the move for each beat written in its box. Then each box becomes a move and a one-beat pause in our code.
 
 ## Exercises
 
@@ -82,30 +89,30 @@ Each exercise has starter code. Copy it into MakeCode's Python view, or build th
 
 ### Exercise 1
 
-Can you add a fourth mood, surprised, with its own lights, eyes and head movement?
+What happens to the dance if we change the tempo to 60, then to 180? Why does one change make the moves faster or slower?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_12/ex1_fourth_mood/main.py"
+--8<-- "examples/other/pu_robot/lesson_12/ex1_tempo/main.py"
 ```
 
 ### Exercise 2
 
-Can you switch moods with a hand wave instead of a clap? Hint: check the distance in the forever loop, and remember to pause after a wave.
+Can you draw a beat chart for 8 beats of moves (nod, shake, wink and so on), then program it?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_12/ex2_wave_switch/main.py"
+--8<-- "examples/other/pu_robot/lesson_12/ex2_beat_chart/main.py"
 ```
 
 ### Exercise 3
 
-Can you play a different sound each time the robot changes mood? Hint: look in the Music category for **play sound** or **play melody**.
+Can you make a dance with at least three different moves and changing light colours, timed to a melody of your choice?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_12/ex3_mood_sounds/main.py"
+--8<-- "examples/other/pu_robot/lesson_12/ex3_my_dance/main.py"
 ```

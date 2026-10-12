@@ -1,142 +1,145 @@
-# Lesson 15: Final Project
+# Lesson 15: Parking Challenge
 
 !!! learn "On this page we will learn"
-    - how to write requirements for our own robot program
-    - how to plan, build and test a program in small stages
-    - how to evaluate whether our program meets its requirements
+    - how to plan a program with an input, process, output table
+    - how to use variables for values we will tune
+    - how to improve a program by testing it, changing one value and testing again
 
 !!! terms "Terminology"
-    - **requirement** – something specific that a system needs to do, such as greeting someone who comes within 20 cm.
-    - **testing table** – a table that lists each test with its expected result and actual result, so we can spot any differences.
-    - **evaluation** – checking that a program does what it was meant to do by comparing each requirement against our test results.
+    - **IPO table** – an Input, Process, Output table that maps out what a system takes in, what it decides and what it does.
+    - **tuning** – adjusting a value such as a distance or a speed, testing it, and adjusting it again until the program works well.
 
-Now it's our turn to design a robot program from scratch. In groups, we'll design a robot behaviour that uses at least four of the things we've learnt: movement, lights, sound, variables, if statements, loops, sensors and moods.
+The challenge: program the robot to walk towards a wall and stop as close to it as possible, without touching it. The closest robot in the class wins.
 
-First, let's work through a small example together: a greeter robot for the classroom door. The same four steps will work for any project.
+## What we need
 
-## 1. Define the problem
+- the PU Robot
+- a wall, or a heavy book standing on its end
+- a ruler or tape measure
+- Lesson 8 (ultrasonic sensor), Lesson 9 (variables) and Lesson 10 (elif)
 
-We start by writing down exactly what the program needs to do. Each **requirement** gets an ID, so we can check it off later.
-
-| ID | Requirement |
-| --- | --- |
-| R1 | When nobody is near, the robot waits with green lights. |
-| R2 | When someone comes within 20 cm, the lights turn blue and the robot greets them. |
-| R3 | The robot counts every visitor and shows the total on the display. |
-
-!!! tip "Write requirements we can test"
-    "The robot is friendly" is hard to test. "The robot greets anyone within 20 cm" is easy: we stand at 20 cm and see what happens.
-
-## 2. Design the solution
+## Plan
 
 | Input | Process | Output |
 | --- | --- | --- |
-| distance (ultrasonic sensor) | Is someone closer than 20 cm? | yes: blue lights, greet, add 1 to visitors, show visitors |
-| | | no: green lights |
+| distance to the wall (ultrasonic sensor) | Is the wall further away than the stopping distance? | yes: walk forward 1 step |
+| | | no: stop and show a tick |
 
-We'll build it in two stages: first R1 and R2, then R3.
+## Build it
 
-## 3. Build in small stages
+### Step 1: walk until close
 
-### Stage 1: wait and greet (R1, R2)
+The stopping distance is stored in a variable, `stop_distance`, because it's the number we'll tune. The robot walks one step at a time, checking the distance before each step.
 
 === "Blocks"
 
-    ![Blocks for the final project step 1](../../assets/blocks/pu-robot/lesson_15_step1.png){ .blocks }
+    ![Blocks for the park example](../../assets/blocks/pu-robot/lesson_15_park.png){ .blocks }
 
-    Blocks used: **forever** and **pause (ms)** (Basic), **if then else** and **0 < 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **set ambience light to RGB** (robot PU > Actuators), **set mode** (robot PU > Actions).
+    Blocks used: **forever** and **show icon** (Basic), **if then else** and **0 > 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **walk for steps at speed** (robot PU > Actions), **set stop_distance to** and **stop_distance** (Variables).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_15/step1/main.py"
+    --8<-- "examples/other/pu_robot/lesson_15/park/main.py"
     ```
 
+Place the robot about 1 metre from the wall, facing it, then switch it on.
+
 !!! primm "PRIMM"
-    1. **Predict** what the robot will do when you walk up to it.
-    2. **Run** the program.
+    1. **Predict** how far from the wall the robot will stop.
+    2. **Run** the program, then measure the gap between the robot and the wall.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
     - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → checks whether someone is closer than 20 cm…
-    - **line 3** → …and if they are, turns the lights blue (R2)…
-    - **line 4** → …greets them (R2)…
-    - **line 5** → …and waits 3 seconds, so one visitor is only greeted once.
-    - **line 6** → otherwise…
-    - **line 7** → …turns the lights green while the robot waits (R1).
-    - **line 8** → tells the micro:bit to run `on_forever` again and again.
+    - **line 2** → checks whether the wall is further away than `stop_distance`…
+    - **line 3** → …and if it is, walks forward 1 step at speed 4.
+    - **line 4** → otherwise…
+    - **line 5** → …shows a tick, because the robot has parked.
+    - **line 6** → tells the micro:bit to run `on_forever` again and again.
+    - **line 8** → creates the `stop_distance` variable and sets it to 15 cm.
 
-### Stage 2: count the visitors (R3)
+### Step 2: slow down near the wall
 
-Now we add a variable, `visitors`, that goes up by 1 for each greeting.
+A fast robot can overshoot, because it measures, then takes a whole step. Real cars slow down as they park, so let's do the same: walk fast when the wall is far away, and slowly when it's close.
 
 === "Blocks"
 
-    ![Blocks for the final project step 2](../../assets/blocks/pu-robot/lesson_15_step2.png){ .blocks }
+    ![Blocks for the slow down example](../../assets/blocks/pu-robot/lesson_15_slow_down.png){ .blocks }
 
-    Blocks used: the stage 1 blocks, plus **set visitors to** and **change visitors by** (Variables) and **show number** (Basic).
+    Blocks used: **forever** and **show icon** (Basic), **if then else if then else** and **0 > 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **walk for steps at speed** (robot PU > Actions), **set distance to**, **set slow_distance to**, **set stop_distance to** and their variable blocks (Variables).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_15/step2/main.py"
+    --8<-- "examples/other/pu_robot/lesson_15/slow_down/main.py"
     ```
 
 !!! primm "PRIMM"
-    1. **Predict** what the display will show after three visitors.
-    2. **Run** the program.
-    3. Time to **investigate** the code. What does each new line do?
+    1. **Predict** whether this version will stop closer to the wall than step 1.
+    2. **Run** the program and measure the gap.
+    3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
     - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → tells Python to use the `visitors` variable from the main program.
-    - **line 3** → checks whether someone is closer than 20 cm…
-    - **line 4** → …and if they are, turns the lights blue…
-    - **line 5** → …greets them…
-    - **line 6** → …adds 1 to the number of visitors (R3)…
-    - **line 7** → …shows the total on the display (R3)…
-    - **line 8** → …and waits 3 seconds.
-    - **line 9** → otherwise…
-    - **line 10** → …turns the lights green.
-    - **line 11** → tells the micro:bit to run `on_forever` again and again.
-    - **line 13** → creates the `visitors` variable and sets it to 0 when the program starts.
+    - **line 2** → tells Python to use the `distance` variable from the main program.
+    - **line 3** → measures the distance once and stores it in `distance`.
+    - **line 4** → checks whether the wall is further away than `slow_distance`…
+    - **line 5** → …and if it is, walks forward 1 step at speed 6.
+    - **line 6** → otherwise, checks whether the wall is further away than `stop_distance`…
+    - **line 7** → …and if it is, walks forward 1 step at speed 2.
+    - **line 8** → otherwise…
+    - **line 9** → …shows a tick, because the robot has parked.
+    - **line 10** → tells the micro:bit to run `on_forever` again and again.
+    - **line 12** → creates the `distance` variable and sets it to 0.
+    - **line 13** → sets the distance where the robot starts to slow down to 30 cm.
+    - **line 14** → sets the stopping distance to 8 cm.
 
-## 4. Test and evaluate
+## Test it
 
-A **testing table** checks every path through the program.
+Run each version 3 times from the same starting spot, and record the gap each time.
 
-| Test | Expected result | Actual result |
-| --- | --- | --- |
-| nobody near | green lights, nothing on the display | |
-| walk up to 15 cm | blue lights, greeting, display shows 1 | |
-| step back, then walk up again | display shows 2 | |
-| stand at 25 cm | green lights, no greeting | |
+| Version | Stop distance | Run 1 | Run 2 | Run 3 | Touched the wall? |
+| --- | --- | --- | --- | --- | --- |
+| step 1 | 15 cm | | | | |
+| step 2 | 8 cm | | | | |
 
-Then the **evaluation** compares each requirement with the results.
+!!! tip "Change one value at a time"
+    When **tuning**, change only one variable between tests. If we change two at once and the result gets better, we can't tell which change helped.
 
-| ID | Requirement | Met? | Evidence |
-| --- | --- | --- | --- |
-| R1 | waits with green lights | | |
-| R2 | greets anyone within 20 cm | | |
-| R3 | counts and shows visitors | | |
+## Extend it
 
-Possible improvements: a different greeting for every tenth visitor, or a clap that resets the count.
+!!! primm "PRIMM"
+    Time to **modify** the code and see what happens.
 
-## Your turn
+Each challenge has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
 
-Work through these steps for your own robot behaviour:
+### Exercise 1
 
-1. Choose an idea and write at least 4 requirements, each with an ID.
-2. Fill in an IPO table for your program.
-3. List which lessons' skills you'll use (you need at least four).
-4. Build it in stages, testing after each stage.
-5. Write a testing table that covers every path through your program.
-6. Evaluate each requirement with evidence from your tests, and list two improvements.
-7. Present your robot to the class.
+Can you tune `slow_distance`, `stop_distance` and the two speeds to stop as close to the wall as possible without touching it? Record each change and its result.
 
-!!! tip "Project ideas"
-    - a guard robot that gets suspicious when someone comes near
-    - a dance performance with music, lights and moods
-    - a robot pet that gets sleepy if nobody plays with it
-    - a parking robot that celebrates when it parks perfectly
+Starter code:
+
+```python linenums="1"
+--8<-- "examples/other/pu_robot/lesson_15/ex1_tune/main.py"
+```
+
+### Exercise 2
+
+Can you make the lights show how close the robot is: green when far, amber when slowing down, and red when parked?
+
+Starter code:
+
+```python linenums="1"
+--8<-- "examples/other/pu_robot/lesson_15/ex2_lights/main.py"
+```
+
+### Exercise 3
+
+Can you make the robot back away if it ends up too close (less than 4 cm), then park again?
+
+Starter code:
+
+```python linenums="1"
+--8<-- "examples/other/pu_robot/lesson_15/ex3_reverse/main.py"
+```

@@ -1,76 +1,70 @@
-# Lesson 6: Moving Joints
+# Lesson 6: Walking
 
 !!! learn "In this lesson we will learn"
-    - how to turn one servo motor to an exact angle
-    - how to move a servo motor smoothly
-    - how to make the robot nod and shake its head
+    - how to walk a set number of steps in any direction
+    - how to make the robot keep walking until we tell it to stop
+    - how the walk speed range changes continuous walking
 
-!!! terms "Terminology"
-    - **degree** – the unit for measuring angles, where a full turn is 360 degrees and a quarter turn is 90 degrees.
-    - **running in the background** – carrying on by itself once started while the rest of the program keeps running.
+In Lesson 3, the robot walked forward 3 steps. The walk block can also walk backward, step sideways and turn. There's also a second way to walk: set a direction and let the robot keep going until we stop it.
 
-So far, the robot's built-in blocks have moved all its servo motors for us. Now let's move one joint at a time. The robot has six joints we can move: left foot, left leg, right foot, right leg, head offset (turning the head side to side) and head pitch (tilting the head up and down).
+## Walk a set number of steps
 
-## Set a servo angle
-
-Each servo motor turns to an angle from 0 to 180 **degrees**. For every joint, 90 is the centre position.
+The **walk** block takes three things: the direction, the number of steps and the speed (1 to 10). The robot finishes all its steps before the program moves on to the next block.
 
 === "Blocks"
 
-    ![Blocks for the set servo example](../../assets/blocks/pu-robot/lesson_06_set_servo.png){ .blocks }
+    ![Blocks for the walk steps example](../../assets/blocks/pu-robot/lesson_06_walk_steps.png){ .blocks }
 
-    Blocks used: **set servo to** (robot PU > Actions), **pause (ms)** (Basic).
+    Blocks used: **walk for steps at speed** (robot PU > Actions), **pause (ms)** (Basic).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_06/set_servo/main.py"
+    --8<-- "examples/other/pu_robot/lesson_06/walk_steps/main.py"
     ```
 
 !!! primm "PRIMM"
-    1. **Predict** what the robot's head will do. Be specific.
+    1. **Predict** where the robot will end up. Be specific.
     2. **Run** the program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → tilts the head to 70 degrees.
-    - **line 2** → waits for half a second.
-    - **line 3** → tilts the head the other way, to 110 degrees.
-    - **line 4** → waits for half a second.
-    - **line 5** → moves the head back to the centre, 90 degrees.
+    - **line 1** → walks the robot forward 5 steps at speed 5.
+    - **line 2** → waits for 1 second.
+    - **line 3** → turns the robot right on the spot for 4 steps at speed 5.
 
-!!! warning "Stay between 60 and 120"
-    The servo motors can turn from 0 to 180 degrees, but the robot's body gets in the way at the ends. Keep angles between 60 and 120 to protect the servo motors.
+The directions are `FORWARD`, `BACKWARD`, `SIDE_LEFT`, `SIDE_RIGHT`, `LEFT_TURN` and `RIGHT_TURN`.
 
-## Smooth movement
+## Keep walking
 
-**Set servo** jumps straight to the new angle. **Smooth move** turns the servo a few degrees at a time, so the movement looks more natural. The step value (1 to 20) sets how many degrees it moves each time: small steps are slow and smooth, big steps are quick.
-
-Smooth move is **running in the background**. It starts the servo moving and the program carries straight on, so we add a pause to give the head time to get there.
+The **set robot move direction** block starts the robot walking and lets the program carry on straight away. The robot keeps walking until we use **stop action**. Its speed comes from the walk speed range we set in Lesson 3.
 
 === "Blocks"
 
-    ![Blocks for the smooth move example](../../assets/blocks/pu-robot/lesson_06_smooth_move.png){ .blocks }
+    ![Blocks for the continuous walk example](../../assets/blocks/pu-robot/lesson_06_continuous_walk.png){ .blocks }
 
-    Blocks used: **smooth move servo to with step** (robot PU > Actions), **pause (ms)** (Basic).
+    Blocks used: **set walk speed range** (robot PU > Setup), **set robot move direction** and **stop action** (robot PU > Actions), **pause (ms)** (Basic).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_06/smooth_move/main.py"
+    --8<-- "examples/other/pu_robot/lesson_06/continuous_walk/main.py"
     ```
 
 !!! primm "PRIMM"
-    1. **Predict** how this movement will look different from the first example.
+    1. **Predict** how long the robot will walk for.
     2. **Run** the program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → starts turning the head to 60 degrees, 2 degrees at a time.
-    - **line 2** → waits 2 seconds while the head turns.
-    - **line 3** → starts turning the head the other way, to 120 degrees.
-    - **line 4** → waits 2 seconds while the head turns.
-    - **line 5** → turns the head back to the centre, 90 degrees.
+    - **line 1** → sets the fastest forward and backward walking speeds to level 2.
+    - **line 2** → starts the robot walking forward.
+    - **line 3** → waits 3 seconds while the robot keeps walking.
+    - **line 4** → stops the robot.
+
+!!! tip "Which walking block should we use?"
+    - Use **walk for steps** when we know how far we want to go. The program waits until the steps are done.
+    - Use **set robot move direction** when we want the robot to keep going while the program does something else, such as checking a sensor. We'll need this in Lesson 8.
 
 ## Exercises
 
@@ -81,40 +75,46 @@ Each exercise has starter code. Copy it into MakeCode's Python view, or build th
 
 ### Exercise 1
 
-Can you make the robot nod "yes" 3 times using a repeat loop?
+How does the speed setting change how far the robot walks? It should:
+
+1. walk forward 5 steps at speed 2, then measure the distance from a tape start line in centimetres
+2. repeat at speeds 5 and 8, running each speed 3 times
+3. record the results in a table
+
+What's the relationship between speed and distance travelled?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_06/ex1_nod/main.py"
+--8<-- "examples/other/pu_robot/lesson_06/ex1_speed_test/main.py"
 ```
 
 ### Exercise 2
 
-Can you make the robot shake its head "no" by moving the head offset joint?
+Does the robot move the same distance when it steps side left as when it steps side right? Test each way 3 times and compare.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_06/ex2_shake/main.py"
+--8<-- "examples/other/pu_robot/lesson_06/ex2_side_steps/main.py"
 ```
 
 ### Exercise 3
 
-What difference does the step value make in smooth move? Try steps of 1, 5 and 20, and describe how each one looks.
+Can you make the robot walk in a square and finish close to where it started? Hint: use a repeat loop, and test how many turning steps make a quarter turn.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_06/ex3_step_value/main.py"
+--8<-- "examples/other/pu_robot/lesson_06/ex3_square/main.py"
 ```
 
 ### Exercise 4
 
-What happens if we take the pauses out of the smooth move example? Why do you think this happens?
+Can you change the walk speed range so the robot walks faster forward than backward? Test it with **set robot move direction**. The forward level goes from 0 to 4, and the backward level from 0 to 3.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_06/ex4_no_pauses/main.py"
+--8<-- "examples/other/pu_robot/lesson_06/ex4_speed_range/main.py"
 ```

@@ -1,80 +1,105 @@
-# Lesson 8: Variables
+# Lesson 8: Ultrasonic Sensor
 
 !!! learn "In this lesson we will learn"
-    - how to store a value in a variable and use it in our program
-    - how one variable can change a setting everywhere it's used
-    - how to change a variable while the program runs, such as counting hand waves
+    - how the ultrasonic sensor measures distance
+    - how to use an **if** statement to react to a hand wave
+    - how to use **if … else** to choose between two actions
 
 !!! terms "Terminology"
-    - **variable** – a named place, like a labelled box, that stores a value our program can use and change.
-    - **global variable** – a variable that can be used anywhere in the program and keeps its value for as long as the program runs.
+    - **ultrasound** – sound that is too high-pitched for people to hear.
+    - **ultrasonic sensor** – a sensor that measures distance by sending out ultrasound and timing how long its echo takes to come back.
+    - **condition** – a check that gives back either `True` or `False`.
+    - **comparison operator** – a symbol such as `==`, `!=`, `>` or `<` that compares two values and gives back `True` or `False`.
+    - **if statement** – code that makes a decision by running its indented block only when its condition is `True`.
+    - **else** – the part of an `if` statement that runs when none of the conditions are `True`.
 
-So far, we've typed numbers straight into our blocks: 4 steps, speed 5, a pause of 1000. If we want to change how far the robot walks, we have to find and change every one of those numbers. A **variable** lets us store a number once, give it a name, and use the name wherever we need the number.
+The robot's "eyes" are really an **ultrasonic sensor**. One side sends out a burst of **ultrasound**, and the other side listens for the echo. The longer the echo takes to come back, the further away the object is.
 
-## Variables for settings
+Since we can't press the micro:bit buttons inside the head, the ultrasonic sensor gives us a way to start actions: we wave our hand in front of the robot.
 
-Here the number of steps and the speed are stored in two variables, then both walk blocks use them.
+## Read the distance
 
 === "Blocks"
 
-    ![Blocks for the walk settings example](../../assets/blocks/pu-robot/lesson_08_walk_settings.png){ .blocks }
+    ![Blocks for the show distance example](../../assets/blocks/pu-robot/lesson_08_show_distance.png){ .blocks }
 
-    Blocks used: **set steps to** and **set speed to** (Variables, after **Make a Variable**), **walk for steps at speed** (robot PU > Actions), **pause (ms)** (Basic).
+    Blocks used: **forever**, **show number** (Basic), **ultrasonic sensor distance in cm** (robot PU > Sensors).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_08/walk_settings/main.py"
+    --8<-- "examples/other/pu_robot/lesson_08/show_distance/main.py"
     ```
 
 !!! primm "PRIMM"
-    1. **Predict** where the robot will end up. Be specific.
-    2. **Run** the program.
-    3. Time to **investigate** the code. What does each line do?
-
-??? note "Code explanation"
-    - **line 1** → creates a variable called `steps` and stores 4 in it.
-    - **line 2** → creates a variable called `speed` and stores 5 in it.
-    - **line 3** → walks the robot forward, using the values in `steps` and `speed`.
-    - **line 4** → waits for 1 second.
-    - **line 5** → walks the robot backward, using the same two variables.
-
-!!! tip "Change one place, change the whole program"
-    To make the robot walk further both ways, we only change line 1. Every block that uses `steps` gets the new value.
-
-## Counting with a variable
-
-A variable can also change while the program runs. Here `waves` starts at 0, and each time we wave our hand in front of the robot, it goes up by 1.
-
-=== "Blocks"
-
-    ![Blocks for the count waves example](../../assets/blocks/pu-robot/lesson_08_count_waves.png){ .blocks }
-
-    Blocks used: **forever**, **show number** and **pause (ms)** (Basic), **if then** and **0 < 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **set waves to** and **change waves by** (Variables).
-
-=== "Python"
-
-    ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_08/count_waves/main.py"
-    ```
-
-!!! primm "PRIMM"
-    1. **Predict** what the display will show after you wave your hand three times.
+    1. **Predict** what the display will show as you move your hand towards the robot.
     2. **Run** the program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
     - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → tells Python to use the `waves` variable from the main program, not a new one.
-    - **line 3** → checks whether something is closer than 10 cm…
-    - **line 4** → …and if it is, adds 1 to `waves`.
-    - **line 5** → shows the number of waves on the display.
-    - **line 6** → waits 1 second, so one wave is only counted once.
-    - **line 7** → tells the micro:bit to run `on_forever` again and again.
-    - **line 9** → creates the `waves` variable and sets it to 0 when the program starts.
+    - **line 2** → measures the distance to the nearest object in centimetres and shows it on the display.
+    - **line 3** → tells the micro:bit to run `on_forever` again and again.
 
-!!! tip "What does global do?"
-    `waves` is created in the main program (line 9), so it's a **global variable**. Inside a function, Python needs the line `global waves` before it can change it. In Blocks, MakeCode adds this for us.
+## React to a hand wave
+
+An **if statement** checks a **condition**. If the condition is `True`, the code inside the if runs. If it's `False`, that code is skipped. Here the condition uses the `<` **comparison operator** to check whether the distance is less than 10 cm.
+
+=== "Blocks"
+
+    ![Blocks for the hand wave example](../../assets/blocks/pu-robot/lesson_08_hand_wave.png){ .blocks }
+
+    Blocks used: **forever**, **pause (ms)** (Basic), **if then** and **0 < 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **set mode** (robot PU > Actions).
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_08/hand_wave/main.py"
+    ```
+
+!!! primm "PRIMM"
+    1. **Predict** what will happen when you hold your hand about 5 cm in front of the robot's eyes.
+    2. **Run** the program.
+    3. Time to **investigate** the code. What does each line do?
+
+??? note "Code explanation"
+    - **line 1** → defines the function that the forever loop repeats.
+    - **line 2** → checks whether something is closer than 10 cm…
+    - **line 3** → …and if it is, starts the greet mode.
+    - **line 4** → waits 1 second, so one wave doesn't start the greeting several times.
+    - **line 5** → tells the micro:bit to run `on_forever` again and again.
+
+!!! tip "Why the pause?"
+    The forever loop checks the distance many times each second. Without the pause, one wave of our hand would be seen several times and start the greeting again and again.
+
+## If … else
+
+Adding **else** gives the if statement a second path. When the condition is `False`, the code under else runs instead.
+
+=== "Blocks"
+
+    ![Blocks for the obstacle alarm example](../../assets/blocks/pu-robot/lesson_08_obstacle_alarm.png){ .blocks }
+
+    Blocks used: **forever** (Basic), **if then else** and **0 < 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **set ambience light to RGB** (robot PU > Actuators).
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_08/obstacle_alarm/main.py"
+    ```
+
+!!! primm "PRIMM"
+    1. **Predict** what colour the lights will be when nothing is near, and when your hand is close.
+    2. **Run** the program.
+    3. Time to **investigate** the code. What does each line do?
+
+??? note "Code explanation"
+    - **line 1** → defines the function that the forever loop repeats.
+    - **line 2** → checks whether something is closer than 15 cm…
+    - **line 3** → …and if it is, turns all the lights red.
+    - **line 4** → otherwise…
+    - **line 5** → …turns all the lights green.
+    - **line 6** → tells the micro:bit to run `on_forever` again and again.
 
 ## Exercises
 
@@ -85,30 +110,40 @@ Each exercise has starter code. Copy it into MakeCode's Python view, or build th
 
 ### Exercise 1
 
-Can you make the robot kick the number of times stored in a variable called `kicks`, with a 3-second pause after each kick? Hint: put the variable in a repeat loop.
+How accurate is the ultrasonic sensor? Hold a book at 10, 20 and 30 cm from the robot (measure with a ruler) and record what the display shows each time.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_08/ex1_kicks/main.py"
+--8<-- "examples/other/pu_robot/lesson_08/ex1_accuracy/main.py"
 ```
 
 ### Exercise 2
 
-Can you add a third variable called `rest` for the length of the pause, and use it in the walk settings program?
+Can you make the robot nod its head when you wave your hand in front of it?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_08/ex2_settings/main.py"
+--8<-- "examples/other/pu_robot/lesson_08/ex2_wave_nod/main.py"
 ```
 
 ### Exercise 3
 
-Can you change the wave counter so it counts down from 5, and the robot greets us when it reaches 0?
+Can you make the lights show three colours: red when something is closer than 10 cm, amber between 10 and 20 cm, and green when it's further away? Hint: an if block can have more than one condition. Select the plus sign on the if block to add an **else if**.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_08/ex3_countdown/main.py"
+--8<-- "examples/other/pu_robot/lesson_08/ex3_three_colours/main.py"
+```
+
+### Exercise 4
+
+Can you make the robot walk forward until something is closer than 15 cm, then stop? Hint: start the robot walking with **set robot move direction** before the forever loop.
+
+Starter code:
+
+```python linenums="1"
+--8<-- "examples/other/pu_robot/lesson_08/ex4_stop_at_wall/main.py"
 ```

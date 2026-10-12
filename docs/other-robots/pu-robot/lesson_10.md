@@ -1,103 +1,72 @@
-# Lesson 10: Balance and Sound
+# Lesson 10: Shy PU
 
 !!! learn "In this lesson we will learn"
-    - how to read how far the robot's body is tilted
-    - how to start an action with a clap, using an event
-    - how to read the tempo of music playing nearby
+    - how to use **elif** to choose between more than two actions
+    - how thresholds split a sensor reading into zones
+    - how to give the robot a personality from its sensor readings
 
 !!! terms "Terminology"
-    - **roll** – turning around the x-axis, like a plane dipping one wing.
-    - **event** – something that happens which the program needs to respond to, such as a loud sound.
-    - **event handler** – the code that responds to a particular event, such as making the robot jump when it hears a clap.
-    - **microphone** – an input device that detects sound and measures how loud it is.
-    - **tempo** – the speed of a tune, measured in beats per minute.
+    - **elif** – short for else if, a part of an `if` statement that checks another condition when the conditions before it were `False`.
+    - **threshold** – a set value that a reading must reach before the program counts it, such as the distance that counts as too close.
 
-The PU Robot can feel how its body is tilted, so it knows if it's leaning or has fallen over. The micro:bit V2 inside it also has a **microphone**, so the robot can hear us too.
+In Lesson 8, the robot had two choices: red if something was close, green if not. Let's give it a shy personality instead, with three ways to behave depending on how close we are:
 
-## Body tilt
+| Distance | Mood | What the robot does |
+| --- | --- | --- |
+| more than 30 cm | brave | green lights, walks forward |
+| 10 to 30 cm | nervous | amber lights, shakes its head |
+| less than 10 cm | scared | red lights, steps backward |
 
-The robot measures two kinds of tilt. **Body pitch** is tilting forwards and backwards. **Body roll** is tilting from side to side.
+The numbers 30 and 10 are **thresholds**. They split the distance into three zones.
+
+## If, elif, else
+
+To choose between three actions, we add **elif** between the if and the else. Python checks each condition in order and runs the first one that's `True`. If none are `True`, it runs the else.
 
 === "Blocks"
 
-    ![Blocks for the body pitch example](../../assets/blocks/pu-robot/lesson_10_body_pitch.png){ .blocks }
+    ![Blocks for the shy PU example](../../assets/blocks/pu-robot/lesson_10_shy_pu.png){ .blocks }
 
-    Blocks used: **forever**, **show number** and **pause (ms)** (Basic), **body pitch** (robot PU > Sensors).
+    Blocks used: **forever** and **pause (ms)** (Basic), **set distance to** and **distance** (Variables), **ultrasonic sensor distance in cm** (robot PU > Sensors), **if then else if then else** and **0 > 0** (Logic), **set ambience light to RGB** (robot PU > Actuators), **walk for steps at speed** and **set servo to** (robot PU > Actions).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_10/body_pitch/main.py"
+    --8<-- "examples/other/pu_robot/lesson_10/shy_pu/main.py"
     ```
 
-Switch the robot on, then gently tilt the whole robot forwards and backwards. Don't bend its joints.
+Place the robot on the floor with clear space in front, then slowly walk towards it.
 
 !!! primm "PRIMM"
-    1. **Predict** what numbers will appear as you tilt the robot forwards, then backwards.
+    1. **Predict** what the robot will do as you get closer and closer.
     2. **Run** the program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
     - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → reads the body pitch and shows it on the display.
-    - **line 3** → waits half a second, so the number is easier to read.
-    - **line 4** → tells the micro:bit to run `on_forever` again and again.
+    - **line 2** → tells Python to use the `distance` variable from the main program.
+    - **line 3** → measures the distance once and stores it in `distance`.
+    - **line 4** → checks whether we're further than 30 cm away…
+    - **line 5** → …and if we are, turns the lights green…
+    - **line 6** → …and walks forward 1 step.
+    - **line 7** → otherwise, checks whether we're further than 10 cm away…
+    - **line 8** → …and if we are, turns the lights amber…
+    - **line 9** → …and turns the head to one side.
+    - **line 10** → waits 300 milliseconds.
+    - **line 11** → turns the head to the other side.
+    - **line 12** → waits 300 milliseconds.
+    - **line 13** → turns the head back to the centre.
+    - **line 14** → otherwise (closer than 10 cm)…
+    - **line 15** → …turns the lights red…
+    - **line 16** → …and steps backward 2 steps.
+    - **line 17** → tells the micro:bit to run `on_forever` again and again.
+    - **line 19** → creates the `distance` variable and sets it to 0 when the program starts.
 
-## React to a clap
+!!! tip "Why store the distance in a variable?"
+    If we read the sensor in each condition, the robot would measure three times, and each reading could be slightly different. Measuring once and storing the result means every condition checks the same number.
 
-A clap is an **event**. Instead of checking for it in a forever loop, we give MakeCode an **event handler**: code that runs by itself whenever the event happens. In Blocks, it's the **on loud sound** block. In Python, it's a function plus a line that connects it to the event.
-
-=== "Blocks"
-
-    ![Blocks for the clap example](../../assets/blocks/pu-robot/lesson_10_clap.png){ .blocks }
-
-    Blocks used: **on loud sound** (Input), **set mode** (robot PU > Actions).
-
-=== "Python"
-
-    ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_10/clap/main.py"
-    ```
-
-!!! primm "PRIMM"
-    1. **Predict** what will happen when you clap near the robot.
-    2. **Run** the program.
-    3. Time to **investigate** the code. What does each line do?
-
-??? note "Code explanation"
-    - **line 1** → defines a function called `on_sound_loud`, which will run when there's a loud sound.
-    - **line 2** → starts the robot's jump mode.
-    - **line 3** → connects `on_sound_loud` to the loud sound event.
-
-!!! warning "Test the clap first"
-    The head cover can muffle sound, and the robot's own servo motors make noise. Test how loud a clap needs to be, and check that the robot moving doesn't set off the event by itself.
-
-## Music tempo
-
-The robot can listen to music and work out its **tempo** in beats per minute (BPM). This is how the dance mode keeps time.
-
-=== "Blocks"
-
-    ![Blocks for the music tempo example](../../assets/blocks/pu-robot/lesson_10_music_tempo.png){ .blocks }
-
-    Blocks used: **forever**, **show number** and **pause (ms)** (Basic), **music tempo** (robot PU > Sensors).
-
-=== "Python"
-
-    ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_10/music_tempo/main.py"
-    ```
-
-!!! primm "PRIMM"
-    1. **Predict** what the display will show with no music, and with music playing.
-    2. **Run** the program, then play a song with a steady beat nearby.
-    3. Time to **investigate** the code. What does each line do?
-
-??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → reads the music tempo and shows it on the display.
-    - **line 3** → waits 1 second before reading it again.
-    - **line 4** → tells the micro:bit to run `on_forever` again and again.
+!!! warning "The order of the conditions matters"
+    Python stops at the first condition that's `True`. If we checked `distance > 10` first, a distance of 50 would match it, and the robot would never reach the brave zone.
 
 ## Exercises
 
@@ -108,40 +77,30 @@ Each exercise has starter code. Copy it into MakeCode's Python view, or build th
 
 ### Exercise 1
 
-What range of values does body roll give? Change the example to show body roll, tilt the robot gently from side to side, and record the lowest and highest numbers.
+Can you change the thresholds to make the robot braver (it only gets nervous when we're much closer)? Test your new thresholds with a ruler.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_10/ex1_body_roll/main.py"
+--8<-- "examples/other/pu_robot/lesson_10/ex1_zones/main.py"
 ```
 
 ### Exercise 2
 
-Can you make the lights turn red when the robot is tilted too far forwards or backwards, and green when it's level? Use your numbers from the first example to choose how far is too far.
+Can you make the robot's eyes show its mood too: both on when brave, one on when nervous, and both off when scared?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_10/ex2_tilt_alarm/main.py"
+--8<-- "examples/other/pu_robot/lesson_10/ex2_eyes/main.py"
 ```
 
 ### Exercise 3
 
-Can you make the robot greet you when you wave your hand, and jump when you clap?
+Can you add a fourth zone, closer than 5 cm, where the robot covers its eyes by turning them off and tilting its head down?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_10/ex3_wave_and_clap/main.py"
-```
-
-### Exercise 4
-
-How accurate is the music tempo? Play three songs whose BPM you can look up online, and compare the robot's tempo with the real one.
-
-Starter code:
-
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_10/ex4_tempo_test/main.py"
+--8<-- "examples/other/pu_robot/lesson_10/ex3_four_zones/main.py"
 ```

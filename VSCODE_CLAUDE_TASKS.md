@@ -7,7 +7,7 @@ The first build of this site was made in a cloud session that could write files 
 - **Generator:** Zensical 0.0.69 (pinned in `requirements.txt`). Preview with `zensical serve`, build with `zensical build --clean`.
 - **Hosting:** GitHub Pages at <https://damom73.github.io/griffins-knowledge-repository/>, deployed by `.github/workflows/docs.yml` (created in task 5) on every push to `main`.
 - **Audience:** Years 7–10, written at a Year 7/8 level. Australian English.
-- **Sections:** OnStage, Rescue Line, Rescue Maze, Soccer and Tips are stubs for now. Other Robots holds the Using MakeCode guide and sequential lessons for the PU Robot (15), XGO Robot Dog (13) and WuKong Manipulator (11). PU Lessons 8, 9, 11, 12, 14 and 15 are based on ELECFREAKS PU wiki cases (with hand-wave or clap triggers instead of button A, which can't be reached inside the head). XGO Lessons 8, 9, 10 and 13 are based on the original XGO kit's wiki cases, updated for the V2 dog. The site plan is the `site-plan.md` doc in the user's "RobocupJr Website" Claude project.
+- **Sections:** OnStage, Rescue Line, Rescue Maze, Soccer and Tips are stubs for now. Other Robots holds the Using MakeCode guide and sequential lessons for the PU Robot (16), XGO Robot Dog (13) and WuKong Manipulator (11). PU Lessons 2, 9, 10, 12, 13, 15 and 16 are based on ELECFREAKS PU wiki cases (with hand-wave or clap triggers instead of button A, which can't be reached inside the head). PU Lesson 2 (Remote Control Show) has no code and uses three ELECFREAKS diagrams in `docs/assets/pu-robot/`, credited in their captions. XGO Lessons 8, 9, 10 and 13 are based on the original XGO kit's wiki cases, updated for the V2 dog. The site plan is the `site-plan.md` doc in the user's "RobocupJr Website" Claude project.
 - **Colour scheme** (from the Griffins logo, in `docs/stylesheets/extra.css`):
     - slate `#545F65`: banner (header and tabs) in both modes, with white text (6.6:1) and a white griffin logo
     - pale cyan `#B3E9FC`: text of the active or hovered tab (only the text colour changes, like the other tutorial sites)
@@ -36,9 +36,9 @@ Names most likely to differ:
 - XGO: `xgo.manipulator_clamp_x`, `xgo.manipulator_clamp_z`, `xgo.manipulator_clamp`, `xgo.servo_setting_robot_arm`, `xgo.get_posestate`, `xgo.set_posestate` (TypeScript: `Manipulator_clampX`, `Manipulator_clampZ`, `Manipulator_clamp`, `servo_setting_robotArm`, `GetPosestate`, `SetPosestate`), and the enum members `xgo.action_enum.SIT_DOWN`, `STRETCH_ONESELF`, `xgo.body_parts_enum.LEFT_FRONT`, `xgo.pose_enum.POSE1`.
 - PU Robot: `robotPu.MoveDirection.RIGHT_TURN`, `robotPu.LightSelection.LIGHT1`, `robotPu.smooth_set_servo_angle`, `robotPu.enable_remote_control_with_group`, `robotPu.on_control_value_received`.
 - WuKong: `wuKong.ServoTypeList._180`.
-- Music (PU Lesson 11): `music.builtin_playable_melody(Melodies.ENTERTAINER)`, `music.PlaybackMode.IN_BACKGROUND`, `music.beat(BeatFraction.HALF)`, `music.set_tempo(120)`.
+- Music (PU Lesson 12): `music.built_in_playable_melody(Melodies.ENTERTAINER)`, `music.PlaybackMode.IN_BACKGROUND`, `music.beat(BeatFraction.HALF)`, `music.set_tempo(120)`.
 - Sensors and radio (XGO Lessons 9 and 13): `input.magnetic_force(Dimension.STRENGTH)`, `radio.send_value`, `radio.on_received_value`, `serial.write_value`.
-- Local variables: some examples assign a variable inside a function without `global` (`angle` in WuKong Lessons 8 and 9, `choice` in WuKong Lesson 7). Blocks variables are always global, so check that these convert to Blocks. If not, add `global` and a starting value at the bottom of the program, the way PU Lesson 9 does with `distance`.
+- Local variables: some examples assign a variable inside a function without `global` (`angle` in WuKong Lessons 8 and 9, `choice` in WuKong Lesson 7). Blocks variables are always global, so check that these convert to Blocks. If not, add `global` and a starting value at the bottom of the program, the way PU Lesson 10 does with `distance`.
 
 If a name changes, update the example, then search the pages for the old name (the XGO Lesson 6 and Lesson 8 warnings mention some by name). Re-run both checks.
 
@@ -48,44 +48,16 @@ Each placeholder image names its program. For each one, the user builds or paste
 
 ### 3. Delete leftover files from the renumbering
 
-The user has given permission to delete these files without asking again. PU Lessons 8 and 9 became Lessons 10 and 13, and XGO Lessons 8 and 9 became Lessons 11 and 12. The files below are the old copies the cloud session couldn't delete. Nothing links to them. Check with `git grep` that nothing references them, then `git rm -r` each path and commit with the message `Remove leftover files from lesson renumbering`. If `git grep` finds a reference, stop and report it instead of deleting that path.
+The user has given permission to delete these files without asking again. A new PU Lesson 2 (Remote Control Show) was added, so PU Lessons 2–15 became Lessons 3–16, with their example folders and Blocks screenshots. The cloud session couldn't delete the old copies.
 
-```
-docs/examples/other/pu_robot/lesson_08/body_pitch/
-docs/examples/other/pu_robot/lesson_08/clap/
-docs/examples/other/pu_robot/lesson_08/music_tempo/
-docs/examples/other/pu_robot/lesson_08/ex1_body_roll/
-docs/examples/other/pu_robot/lesson_08/ex2_tilt_alarm/
-docs/examples/other/pu_robot/lesson_08/ex3_wave_and_clap/
-docs/examples/other/pu_robot/lesson_08/ex4_tempo_test/
-docs/examples/other/pu_robot/lesson_09/controller/
-docs/examples/other/pu_robot/lesson_09/robot/
-docs/examples/other/pu_robot/lesson_09/ex1_group/
-docs/examples/other/pu_robot/lesson_09/ex2_reverse/
-docs/examples/other/pu_robot/lesson_09/ex3_full_control/
-docs/examples/other/pu_robot/lesson_09/ex4_buttons/
-docs/examples/other/xgo/lesson_07/ex3_compass/
-docs/examples/other/xgo/lesson_08/teach_pose/
-docs/examples/other/xgo/lesson_08/ex1_two_legs/
-docs/examples/other/xgo/lesson_08/ex2_animation/
-docs/examples/other/xgo/lesson_08/ex3_memory/
-docs/examples/other/xgo/lesson_09/dog/
-docs/examples/other/xgo/lesson_09/remote/
-docs/examples/other/xgo/lesson_09/ex1_group/
-docs/examples/other/xgo/lesson_09/ex2_turning/
-docs/examples/other/xgo/lesson_09/ex3_tilt/
-docs/examples/other/xgo/lesson_09/ex4_action/
-docs/assets/blocks/pu-robot/lesson_08_body_pitch.png
-docs/assets/blocks/pu-robot/lesson_08_clap.png
-docs/assets/blocks/pu-robot/lesson_08_music_tempo.png
-docs/assets/blocks/pu-robot/lesson_09_controller.png
-docs/assets/blocks/pu-robot/lesson_09_robot.png
-docs/assets/blocks/xgo/lesson_08_teach_pose.png
-docs/assets/blocks/xgo/lesson_09_dog.png
-docs/assets/blocks/xgo/lesson_09_remote.png
-```
+1. Run `python scripts/find_unused_files.py`. It lists every example folder that no page includes and every Blocks screenshot that no page shows. Expect about 103 paths, all under `docs/examples/other/pu_robot/` or `docs/assets/blocks/pu-robot/`.
+2. If any listed path is outside those two folders, stop and report it instead of deleting it.
+3. `git rm -r` each listed path, then run the script again (expect `0 unused path(s) found`).
+4. Run both checks, then commit with the message `Remove leftover files from PU lesson renumbering` and push.
 
-Don't delete the folders `pu_robot/lesson_08`, `pu_robot/lesson_09`, `xgo/lesson_08` or `xgo/lesson_09` themselves: they now hold the new lessons' examples.
+Don't delete the lesson folders themselves (`pu_robot/lesson_03` to `lesson_16`): they hold the renumbered lessons' examples. `pu_robot/lesson_02` should end up empty and disappear, because Lesson 2 has no code.
+
+If the user has saved real Blocks screenshots over any placeholders since this renumbering, check the listed PNGs before deleting: a real screenshot listed here belongs to the lesson one number higher.
 
 ### 4. Check the licence (Confirm first)
 

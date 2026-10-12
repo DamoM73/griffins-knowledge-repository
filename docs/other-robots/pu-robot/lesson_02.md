@@ -1,123 +1,145 @@
-# Lesson 2: First Program
+# Lesson 2: Remote Control Show
 
 !!! learn "In this lesson we will learn"
-    - how to use PRIMM to learn from example programs
-    - how code in **on start** runs once, in order
-    - how to make the PU Robot show a face and walk
-    - how a **forever** loop repeats code
+    - the names of the PU Robot's main parts and what each one does
+    - how servo motors let the robot move a bit like a person
+    - how to drive the robot and start its actions with the remote controller
 
 !!! terms "Terminology"
-    - **PRIMM** – a five-step way of learning to code: Predict, Run, Investigate, Modify and Make.
-    - **on start** – the block whose code runs once, as soon as the micro:bit is switched on.
-    - **sequence** – code running one line after the other, from the top of the program to the bottom.
-    - **millisecond** – one thousandth of a second, so 1000 milliseconds make 1 second.
-    - **forever loop** – a loop that repeats the code inside it again and again for as long as the micro:bit is switched on.
-    - **function** – a named block of code that we can run again and again whenever we need it.
+    - **degrees of freedom** – the number of separate ways a robot can move. Each servo motor adds one, so the PU Robot has six.
+    - **joystick** – a stick that we push in different directions to control something, which gives a number for how far it's pushed.
+    - **autonomous** – able to work by itself, without a person controlling each move.
 
-Now that we can get a program onto the robot, let's write our first one. It checks that everything works: the robot shows a smiley face, then walks forward.
+Before we write our own programs, let's get to know the robot. In this lesson we look closely at its parts, then drive it with the remote controller and put on an imitation show.
 
-## Learning with PRIMM
+## What we need
 
-Every example on this site follows the **PRIMM** steps. Before we run an example, we **predict** what it will do. Then we **run** it to check, and **investigate** how each line works. The Exercises at the end of each lesson ask us to **modify** the code and **make** our own programs. The [home page](../../index.md#primm) explains each step.
+- a PU Robot, charged and still running its factory program
+- the remote controller, with a micro:bit V2 inside it running the remote's factory program, and batteries fitted
+- a clear space on the floor
 
-## On start
+!!! warning "Do this lesson before downloading our own program"
+    The remote controller only works with the factory program. Once we download our own program to the robot, the remote stops working until our teacher puts the factory program back.
 
-Code in the **on start** block runs once, as soon as the micro:bit is switched on. It runs as a **sequence**: the first block, then the next, all the way to the bottom.
+## Parts of the robot
 
-=== "Blocks"
+The PU Robot has six servo motors: one in each leg, one in each foot, one in the neck and one in the head. Each servo motor moves one joint, so the robot has six **degrees of freedom**. Our arms and legs work the same way, with joints that bend and turn, but we have many more degrees of freedom than the robot.
 
-    ![Blocks for the first program](../../assets/blocks/pu-robot/lesson_02_first_program.png){ .blocks }
+<figure markdown="span">
+  ![The outside parts of the PU Robot, numbered 1 to 16](../../assets/pu-robot/lesson_02_parts.png){ width="420" }
+  <figcaption>The outside of the PU Robot. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-case-01">ELECFREAKS</a>.</figcaption>
+</figure>
 
-    Blocks used: **set walk speed range** (robot PU > Setup), **show icon** (Basic), **walk forward for 3 steps at speed 5** (robot PU > Actions).
+| No. | Part | What it does |
+| --- | --- | --- |
+| 1 | head shell | holds the circuit board, battery and head servo motor, and has holes for building block pins |
+| 2 | lamp holder brackets (2) | hold the lamp heads on the head shell |
+| 3 | lamp heads (2) | light up in different colours |
+| 4 | shoulder bracket | holds the neck servo motor and joins the neck to the chest |
+| 5 | chest bracket | holds the leg servo motors and joins the shoulders to the legs |
+| 6 | front cover | holds the ultrasonic sensor on the chest |
+| 7 | rear cover | keeps the wires tidy, and has pin holes for the backpack and other building blocks |
+| 8 | left leg bracket | holds the left foot servo motor |
+| 9 | left leg cover | protects the left foot servo motor and joins the leg to the foot |
+| 10 | right leg bracket | holds the right foot servo motor |
+| 11 | right leg cover | protects the right foot servo motor and joins the leg to the foot |
+| 12 | left foot | turned by the left foot servo motor |
+| 13 | right foot | turned by the right foot servo motor |
+| 14 | backpack | clips onto the rear cover and can carry small things |
+| 15 | ultrasonic sensor | measures how far away things are |
+| 16 | building block pin adapters (5) | join building block parts to the top of the head |
 
-=== "Python"
+Inside the head we find the parts that control the robot.
 
-    ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_02/first_program/main.py"
-    ```
+<figure markdown="span">
+  ![Inside the PU Robot's head, with parts numbered 1 to 10](../../assets/pu-robot/lesson_02_inside_parts.png){ width="420" }
+  <figcaption>Inside the head, with the cover off. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-case-01">ELECFREAKS</a>.</figcaption>
+</figure>
 
-Download the program and put the micro:bit back in the robot. Place the robot on the floor with clear space in front of it, because it walks as soon as its calibration is finished. Then switch it on.
+| No. | Part | What it does |
+| --- | --- | --- |
+| 1 | head shell | holds everything inside the head |
+| 2 | micro:bit | the robot's brain, which runs the program |
+| 3 | head servo motor | tilts the head up and down |
+| 4 | head servo bracket | holds the head servo motor in place |
+| 5 | neck bracket | joins the neck and head servo motors to the head shell |
+| 6 | rear cover | keeps the wires tidy |
+| 7 | left leg bracket | holds the left foot servo motor |
+| 8 | right leg bracket | holds the right foot servo motor |
+| 9 | left foot | turned by the left foot servo motor |
+| 10 | right foot | turned by the right foot servo motor |
 
-!!! primm "PRIMM"
-    1. **Predict** what you think the robot will do. Be specific.
-    2. **Run** the program.
-    3. Time to **investigate** the code. What does each line do?
+!!! warning "Look, don't twist"
+    We can look at every part, but never twist the joints by hand, especially while the robot is switched on. This damages the servo motors.
 
-??? note "Code explanation"
-    - **line 1** → sets the fastest forward and backward walking speeds to level 2.
-    - **line 2** → shows a happy face on the micro:bit's display.
-    - **line 3** → makes the robot walk forward 3 steps at speed 5.
+## The remote controller
 
-!!! tip "Why set the walk speed range?"
-    The walk speed range sets how fast the robot is allowed to walk. Setting it at the start of every program means the robot always walks at a speed we know, instead of whatever was used last.
+The remote controller holds a second micro:bit, which sends commands to the robot by radio. We drive with the **joystick** and start actions with buttons B1 to B4. B1 makes the robot **autonomous**: it walks and explores by itself until we take control again.
 
-## Forever loop
+<figure markdown="span">
+  ![The front and back of the remote controller, with controls numbered 1 to 12](../../assets/pu-robot/lesson_02_remote.png)
+  <figcaption>The front and back of the remote controller. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-case-01">ELECFREAKS</a>.</figcaption>
+</figure>
 
-The **forever** block repeats the code inside it for as long as the micro:bit is on. When the last block inside it finishes, it goes back to the first one.
+| No. | Control | What it does |
+| --- | --- | --- |
+| 1 | joystick | push forwards or backwards to walk (the further we push, the faster it goes), tilt left or right to turn (the further we tilt, the sharper the turn), tilt a long way left or right to step sideways, and press it down to rest |
+| 2 | tilting the remote | while we use the joystick, tilt the whole remote forwards or backwards to nod the head, or left or right to turn the head |
+| 3 | B1 | starts autonomous mode, where the robot walks and explores by itself |
+| 4 | B2 | jumps |
+| 5 | B3 | dances to music, with the lights changing colour on the beat |
+| 6 | B4 | kicks a ball |
+| 7 | micro:bit logo | touch it and the robot talks or sings, depending on what it has been doing |
+| 8 | micro:bit button A | changes the radio channel up by one and shows it on the display |
+| 9 | micro:bit button B | changes the radio channel down by one and shows it on the display |
+| 10 | micro:bit reset button | restarts the remote and sets the channel back to 6 |
+| 11 | buttons A and B together | shows the real channel number, which is the number on the display plus 160 |
+| 12 | power switch | switches the remote on and off |
 
-=== "Blocks"
+!!! tip "Wait for each jump and kick to finish"
+    Pressing B2 or B4 again before the robot finishes the last jump or kick can make it fall over. Wait until it stands still before pressing again.
 
-    ![Blocks for the forever loop example](../../assets/blocks/pu-robot/lesson_02_forever_loop.png){ .blocks }
+!!! warning "Each pair needs its own channel"
+    If several robots and remotes in the room are on the same channel, one remote can control more than one robot. Our teacher will tell us which channel to use.
 
-    Blocks used: **forever**, **show icon** and **pause (ms)** (Basic).
+## Drive the robot
 
-=== "Python"
+1. Put the robot on the floor and press the power button on its chin once.
+    - Why: the robot needs to be on a flat surface for its calibration.
+    - Result: the robot moves its joints and then stands still.
+2. Switch the remote on with its power switch.
+    - Result: the remote's micro:bit display shows the channel number.
+3. Set the channel our teacher gave us, using buttons A and B on the remote's micro:bit.
+    - Why: this stops our remote controlling another pair's robot.
+4. Push the joystick gently forwards, then let go.
+    - Result: the robot walks forward slowly, then stops.
+5. Try each of B1 to B4, waiting for each action to finish.
+    - Result: the robot explores by itself, jumps, dances and kicks.
 
-    ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_02/forever_loop/main.py"
-    ```
+## Imitation show
 
-In Python, the forever block becomes a **function** called `on_forever`. The last line tells the micro:bit to run that function over and over.
+Robots like the PU Robot are designed by copying how people and animals move. Let's turn that around and see how well the robot can copy us.
 
-!!! primm "PRIMM"
-    1. **Predict** what you think will appear on the display. Be specific.
-    2. **Run** the program.
-    3. Time to **investigate** the code. What does each line do?
+1. One person does a simple move, such as walking forward three steps, nodding, looking left and right, or kicking.
+2. Their partner uses the remote to make the robot copy the move.
+3. Swap roles, and try a move that combines two actions, such as walking then kicking.
 
-??? note "Code explanation"
-    - **line 1** → defines a function called `on_forever` that holds the code to repeat.
-    - **line 2** → shows a happy face on the display.
-    - **line 3** → waits for 1000 milliseconds (1 second).
-    - **line 4** → shows a heart on the display.
-    - **line 5** → waits for another second.
-    - **line 6** → tells the micro:bit to run `on_forever` again and again.
-
-!!! warning "Indent the code inside a function"
-    In Python, the lines inside `on_forever` must start with 4 spaces. That's how Python knows they belong to the function. If a line isn't indented, it's not part of the loop.
+As we watch, think about which of the robot's servo motors move for each action, and what the robot can't copy because it doesn't have the joints.
 
 ## Exercises
 
-!!! primm "PRIMM"
-    Time to **modify** the code and see what happens.
-
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
-
 ### Exercise 1
 
-Can you make the robot show a heart, walk forward 5 steps, then show a happy face?
-
-Starter code:
-
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_02/ex1_heart_walk/main.py"
-```
+Without looking at the tables, can you point to the ultrasonic sensor, the head servo motor and the lamp heads? Check each one with a partner.
 
 ### Exercise 2
 
-Can you make the display show a countdown of 3, 2, 1 before the robot walks forward? Use the **show number** block (Basic).
-
-Starter code:
-
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_02/ex2_countdown/main.py"
-```
+Can you drive the robot across the room, turn it around, and drive it back to where it started?
 
 ### Exercise 3
 
-Can you make a forever loop that shows a happy face, then a sad face, then a surprised face, with half a second between each one?
+Choose one move the robot copied well and one it couldn't copy. For each one, explain why, using the words servo motor and degrees of freedom.
 
-Starter code:
+### Exercise 4
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_02/ex3_faces/main.py"
-```
+Can you plan a 30-second show that uses walking, turning, a head movement and at least two of B1 to B4? Write the steps down in order, then perform it for the class.

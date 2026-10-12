@@ -28,7 +28,7 @@ The PU Robot walks on two legs. Each leg has two **servo motors**, and two more 
 - To charge the robot, plug a USB cable into the charging port on its chin. Charging takes about 20 to 30 minutes and gives about 20 minutes of use.
 
 !!! warning "Before we start"
-    - Downloading our own program replaces the robot's **factory program**. The remote controller then stops working until our teacher puts the factory program back.
+    - Downloading our own program replaces the robot's **factory program**. The remote controller then stops working until our teacher puts the factory program back, so we use the remote in [Lesson 2](lesson_02.md) before downloading anything.
     - Never twist the robot's joints by hand while it's switched on. This damages the servo motors.
     - Test the robot on the floor or a low, clear surface. It walks, jumps and can fall off a desk.
 

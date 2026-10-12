@@ -1,105 +1,76 @@
-# Lesson 7: Ultrasonic Sensor
+# Lesson 7: Moving Joints
 
 !!! learn "In this lesson we will learn"
-    - how the ultrasonic sensor measures distance
-    - how to use an **if** statement to react to a hand wave
-    - how to use **if … else** to choose between two actions
+    - how to turn one servo motor to an exact angle
+    - how to move a servo motor smoothly
+    - how to make the robot nod and shake its head
 
 !!! terms "Terminology"
-    - **ultrasound** – sound that is too high-pitched for people to hear.
-    - **ultrasonic sensor** – a sensor that measures distance by sending out ultrasound and timing how long its echo takes to come back.
-    - **condition** – a check that gives back either `True` or `False`.
-    - **comparison operator** – a symbol such as `==`, `!=`, `>` or `<` that compares two values and gives back `True` or `False`.
-    - **if statement** – code that makes a decision by running its indented block only when its condition is `True`.
-    - **else** – the part of an `if` statement that runs when none of the conditions are `True`.
+    - **degree** – the unit for measuring angles, where a full turn is 360 degrees and a quarter turn is 90 degrees.
+    - **running in the background** – carrying on by itself once started while the rest of the program keeps running.
 
-The robot's "eyes" are really an **ultrasonic sensor**. One side sends out a burst of **ultrasound**, and the other side listens for the echo. The longer the echo takes to come back, the further away the object is.
+So far, the robot's built-in blocks have moved all its servo motors for us. Now let's move one joint at a time. The robot has six joints we can move: left foot, left leg, right foot, right leg, head offset (turning the head side to side) and head pitch (tilting the head up and down).
 
-Since we can't press the micro:bit buttons inside the head, the ultrasonic sensor gives us a way to start actions: we wave our hand in front of the robot.
+## Set a servo angle
 
-## Read the distance
+Each servo motor turns to an angle from 0 to 180 **degrees**. For every joint, 90 is the centre position.
 
 === "Blocks"
 
-    ![Blocks for the show distance example](../../assets/blocks/pu-robot/lesson_07_show_distance.png){ .blocks }
+    ![Blocks for the set servo example](../../assets/blocks/pu-robot/lesson_07_set_servo.png){ .blocks }
 
-    Blocks used: **forever**, **show number** (Basic), **ultrasonic sensor distance in cm** (robot PU > Sensors).
+    Blocks used: **set servo to** (robot PU > Actions), **pause (ms)** (Basic).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_07/show_distance/main.py"
+    --8<-- "examples/other/pu_robot/lesson_07/set_servo/main.py"
     ```
 
 !!! primm "PRIMM"
-    1. **Predict** what the display will show as you move your hand towards the robot.
+    1. **Predict** what the robot's head will do. Be specific.
     2. **Run** the program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → measures the distance to the nearest object in centimetres and shows it on the display.
-    - **line 3** → tells the micro:bit to run `on_forever` again and again.
+    - **line 1** → tilts the head to 70 degrees.
+    - **line 2** → waits for half a second.
+    - **line 3** → tilts the head the other way, to 110 degrees.
+    - **line 4** → waits for half a second.
+    - **line 5** → moves the head back to the centre, 90 degrees.
 
-## React to a hand wave
+!!! warning "Stay between 60 and 120"
+    The servo motors can turn from 0 to 180 degrees, but the robot's body gets in the way at the ends. Keep angles between 60 and 120 to protect the servo motors.
 
-An **if statement** checks a **condition**. If the condition is `True`, the code inside the if runs. If it's `False`, that code is skipped. Here the condition uses the `<` **comparison operator** to check whether the distance is less than 10 cm.
+## Smooth movement
+
+**Set servo** jumps straight to the new angle. **Smooth move** turns the servo a few degrees at a time, so the movement looks more natural. The step value (1 to 20) sets how many degrees it moves each time: small steps are slow and smooth, big steps are quick.
+
+Smooth move is **running in the background**. It starts the servo moving and the program carries straight on, so we add a pause to give the head time to get there.
 
 === "Blocks"
 
-    ![Blocks for the hand wave example](../../assets/blocks/pu-robot/lesson_07_hand_wave.png){ .blocks }
+    ![Blocks for the smooth move example](../../assets/blocks/pu-robot/lesson_07_smooth_move.png){ .blocks }
 
-    Blocks used: **forever**, **pause (ms)** (Basic), **if then** and **0 < 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **set mode** (robot PU > Actions).
+    Blocks used: **smooth move servo to with step** (robot PU > Actions), **pause (ms)** (Basic).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_07/hand_wave/main.py"
+    --8<-- "examples/other/pu_robot/lesson_07/smooth_move/main.py"
     ```
 
 !!! primm "PRIMM"
-    1. **Predict** what will happen when you hold your hand about 5 cm in front of the robot's eyes.
+    1. **Predict** how this movement will look different from the first example.
     2. **Run** the program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → checks whether something is closer than 10 cm…
-    - **line 3** → …and if it is, starts the greet mode.
-    - **line 4** → waits 1 second, so one wave doesn't start the greeting several times.
-    - **line 5** → tells the micro:bit to run `on_forever` again and again.
-
-!!! tip "Why the pause?"
-    The forever loop checks the distance many times each second. Without the pause, one wave of our hand would be seen several times and start the greeting again and again.
-
-## If … else
-
-Adding **else** gives the if statement a second path. When the condition is `False`, the code under else runs instead.
-
-=== "Blocks"
-
-    ![Blocks for the obstacle alarm example](../../assets/blocks/pu-robot/lesson_07_obstacle_alarm.png){ .blocks }
-
-    Blocks used: **forever** (Basic), **if then else** and **0 < 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **set ambience light to RGB** (robot PU > Actuators).
-
-=== "Python"
-
-    ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_07/obstacle_alarm/main.py"
-    ```
-
-!!! primm "PRIMM"
-    1. **Predict** what colour the lights will be when nothing is near, and when your hand is close.
-    2. **Run** the program.
-    3. Time to **investigate** the code. What does each line do?
-
-??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → checks whether something is closer than 15 cm…
-    - **line 3** → …and if it is, turns all the lights red.
-    - **line 4** → otherwise…
-    - **line 5** → …turns all the lights green.
-    - **line 6** → tells the micro:bit to run `on_forever` again and again.
+    - **line 1** → starts turning the head to 60 degrees, 2 degrees at a time.
+    - **line 2** → waits 2 seconds while the head turns.
+    - **line 3** → starts turning the head the other way, to 120 degrees.
+    - **line 4** → waits 2 seconds while the head turns.
+    - **line 5** → turns the head back to the centre, 90 degrees.
 
 ## Exercises
 
@@ -110,40 +81,40 @@ Each exercise has starter code. Copy it into MakeCode's Python view, or build th
 
 ### Exercise 1
 
-How accurate is the ultrasonic sensor? Hold a book at 10, 20 and 30 cm from the robot (measure with a ruler) and record what the display shows each time.
+Can you make the robot nod "yes" 3 times using a repeat loop?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_07/ex1_accuracy/main.py"
+--8<-- "examples/other/pu_robot/lesson_07/ex1_nod/main.py"
 ```
 
 ### Exercise 2
 
-Can you make the robot nod its head when you wave your hand in front of it?
+Can you make the robot shake its head "no" by moving the head offset joint?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_07/ex2_wave_nod/main.py"
+--8<-- "examples/other/pu_robot/lesson_07/ex2_shake/main.py"
 ```
 
 ### Exercise 3
 
-Can you make the lights show three colours: red when something is closer than 10 cm, amber between 10 and 20 cm, and green when it's further away? Hint: an if block can have more than one condition. Select the plus sign on the if block to add an **else if**.
+What difference does the step value make in smooth move? Try steps of 1, 5 and 20, and describe how each one looks.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_07/ex3_three_colours/main.py"
+--8<-- "examples/other/pu_robot/lesson_07/ex3_step_value/main.py"
 ```
 
 ### Exercise 4
 
-Can you make the robot walk forward until something is closer than 15 cm, then stop? Hint: start the robot walking with **set robot move direction** before the forever loop.
+What happens if we take the pauses out of the smooth move example? Why do you think this happens?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_07/ex4_stop_at_wall/main.py"
+--8<-- "examples/other/pu_robot/lesson_07/ex4_no_pauses/main.py"
 ```

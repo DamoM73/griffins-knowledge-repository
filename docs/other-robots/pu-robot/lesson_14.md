@@ -1,145 +1,129 @@
-# Lesson 14: Parking Challenge
+# Lesson 14: Radio Remote
 
-!!! learn "On this page we will learn"
-    - how to plan a program with an input, process, output table
-    - how to use variables for values we will tune
-    - how to improve a program by testing it, changing one value and testing again
+!!! learn "In this lesson we will learn"
+    - how two micro:bits send messages to each other by radio
+    - how to program a second micro:bit as a joystick remote control
+    - how to make the robot respond to messages from the remote
 
 !!! terms "Terminology"
-    - **IPO table** – an Input, Process, Output table that maps out what a system takes in, what it decides and what it does.
-    - **tuning** – adjusting a value such as a distance or a speed, testing it, and adjusting it again until the program works well.
+    - **radio** – a way of sending and receiving messages without wires, using invisible radio waves.
+    - **radio group** – a number from 0 to 255 that sets which micro:bits can hear each other's radio messages.
 
-The challenge: program the robot to walk towards a wall and stop as close to it as possible, without touching it. The closest robot in the class wins.
+In Lesson 2 we drove the robot using the remote controller's factory program. Now we program the remote ourselves. The two micro:bits talk to each other by **radio**. In this lesson we write two programs: one for the remote and one for the robot.
 
 ## What we need
 
 - the PU Robot
-- a wall, or a heavy book standing on its end
-- a ruler or tape measure
-- Lesson 7 (ultrasonic sensor), Lesson 8 (variables) and Lesson 9 (elif)
+- the remote controller shell, with a second micro:bit V2 inside it
 
-## Plan
+!!! warning "Each pair needs its own radio group"
+    Every micro:bit on the same **radio group** hears the same messages. If two pairs in the class use the same group, one remote will control both robots. Each pair needs a different group number, used in both programs.
 
-| Input | Process | Output |
-| --- | --- | --- |
-| distance to the wall (ultrasonic sensor) | Is the wall further away than the stopping distance? | yes: walk forward 1 step |
-| | | no: stop and show a tick |
+## The remote
 
-## Build it
-
-### Step 1: walk until close
-
-The stopping distance is stored in a variable, `stop_distance`, because it's the number we'll tune. The robot walks one step at a time, checking the distance before each step.
+The remote reads how far the joystick is pushed forwards or backwards, and sends that number to the robot. The number goes from -1 to 1, with 0 in the middle.
 
 === "Blocks"
 
-    ![Blocks for the park example](../../assets/blocks/pu-robot/lesson_14_park.png){ .blocks }
+    ![Blocks for the remote controller](../../assets/blocks/pu-robot/lesson_14_controller.png){ .blocks }
 
-    Blocks used: **forever** and **show icon** (Basic), **if then else** and **0 > 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **walk for steps at speed** (robot PU > Actions), **set stop_distance to** and **stop_distance** (Variables).
+    Blocks used: **set controller radio group**, **send value** and **read joystick value** (robot PU > Controller), **forever** and **pause (ms)** (Basic).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_14/park/main.py"
+    --8<-- "examples/other/pu_robot/lesson_14/controller/main.py"
     ```
 
-Place the robot about 1 metre from the wall, facing it, then switch it on.
-
-!!! primm "PRIMM"
-    1. **Predict** how far from the wall the robot will stop.
-    2. **Run** the program, then measure the gap between the robot and the wall.
-    3. Time to **investigate** the code. What does each line do?
-
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → checks whether the wall is further away than `stop_distance`…
-    - **line 3** → …and if it is, walks forward 1 step at speed 4.
-    - **line 4** → otherwise…
-    - **line 5** → …shows a tick, because the robot has parked.
+    - **line 1** → sets the remote's radio group to 160 and shows the number on the display.
+    - **line 3** → defines the function that the forever loop repeats.
+    - **line 4** → reads how far the joystick is pushed forwards or backwards and sends that number to the robot as a speed value.
+    - **line 5** → waits 50 milliseconds, so the remote sends about 20 messages a second.
     - **line 6** → tells the micro:bit to run `on_forever` again and again.
-    - **line 8** → creates the `stop_distance` variable and sets it to 15 cm.
 
-### Step 2: slow down near the wall
+## The robot
 
-A fast robot can overshoot, because it measures, then takes a whole step. Real cars slow down as they park, so let's do the same: walk fast when the wall is far away, and slowly when it's close.
+The robot listens for speed values. Each time one arrives, an event handler decides what to do with it.
 
 === "Blocks"
 
-    ![Blocks for the slow down example](../../assets/blocks/pu-robot/lesson_14_slow_down.png){ .blocks }
+    ![Blocks for the robot receiver](../../assets/blocks/pu-robot/lesson_14_robot.png){ .blocks }
 
-    Blocks used: **forever** and **show icon** (Basic), **if then else if then else** and **0 > 0** (Logic), **ultrasonic sensor distance in cm** (robot PU > Sensors), **walk for steps at speed** (robot PU > Actions), **set distance to**, **set slow_distance to**, **set stop_distance to** and their variable blocks (Variables).
+    Blocks used: **enable remote control on group** and **on value received** (robot PU > Remote Control), **if then else** and **0 > 0** (Logic), **set robot move direction** and **stop action** (robot PU > Actions).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_14/slow_down/main.py"
+    --8<-- "examples/other/pu_robot/lesson_14/robot/main.py"
     ```
 
+Download each program to its own micro:bit. Put one in the robot and one in the remote, then switch both on.
+
 !!! primm "PRIMM"
-    1. **Predict** whether this version will stop closer to the wall than step 1.
-    2. **Run** the program and measure the gap.
+    1. **Predict** what the robot will do when you push the joystick forwards, and when you let go.
+    2. **Run** both programs.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → tells Python to use the `distance` variable from the main program.
-    - **line 3** → measures the distance once and stores it in `distance`.
-    - **line 4** → checks whether the wall is further away than `slow_distance`…
-    - **line 5** → …and if it is, walks forward 1 step at speed 6.
-    - **line 6** → otherwise, checks whether the wall is further away than `stop_distance`…
-    - **line 7** → …and if it is, walks forward 1 step at speed 2.
-    - **line 8** → otherwise…
-    - **line 9** → …shows a tick, because the robot has parked.
-    - **line 10** → tells the micro:bit to run `on_forever` again and again.
-    - **line 12** → creates the `distance` variable and sets it to 0.
-    - **line 13** → sets the distance where the robot starts to slow down to 30 cm.
-    - **line 14** → sets the stopping distance to 8 cm.
+    - **line 1** → turns on remote control and sets the robot's radio group to 160.
+    - **line 3** → defines a function called `on_speed_received`, which gets the speed value in `value`.
+    - **line 4** → checks whether the joystick is pushed more than halfway forwards…
+    - **line 5** → …and if it is, starts the robot walking forward.
+    - **line 6** → otherwise…
+    - **line 7** → …stops the robot.
+    - **line 8** → connects `on_speed_received` to the event of a speed value arriving.
 
-## Test it
+!!! tip "Putting the factory program back"
+    Once we download our own program, the remote's buttons no longer do what the PU Robot's instructions say. Our teacher can put the factory program back on both micro:bits.
 
-Run each version 3 times from the same starting spot, and record the gap each time.
-
-| Version | Stop distance | Run 1 | Run 2 | Run 3 | Touched the wall? |
-| --- | --- | --- | --- | --- | --- |
-| step 1 | 15 cm | | | | |
-| step 2 | 8 cm | | | | |
-
-!!! tip "Change one value at a time"
-    When **tuning**, change only one variable between tests. If we change two at once and the result gets better, we can't tell which change helped.
-
-## Extend it
+## Exercises
 
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each challenge has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
 
 ### Exercise 1
 
-Can you tune `slow_distance`, `stop_distance` and the two speeds to stop as close to the wall as possible without touching it? Record each change and its result.
+Can you change 160 to your pair's radio group in both programs, and test that your remote only controls your robot?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_14/ex1_tune/main.py"
+--8<-- "examples/other/pu_robot/lesson_14/ex1_group/main.py"
 ```
 
 ### Exercise 2
 
-Can you make the lights show how close the robot is: green when far, amber when slowing down, and red when parked?
+What happens if you pull the joystick backwards? If the robot walks forward when you pull back, the joystick values are the other way around. Can you fix it?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_14/ex2_lights/main.py"
+--8<-- "examples/other/pu_robot/lesson_14/ex2_reverse/main.py"
 ```
 
 ### Exercise 3
 
-Can you make the robot back away if it ends up too close (less than 4 cm), then park again?
+Can you add walking backward, and turning left and right? It should:
+
+- walk backward when the joystick is pulled more than halfway back
+- send the joystick's turn value from the remote as well
+- turn left or right when the turn value is past halfway
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_14/ex3_reverse/main.py"
+--8<-- "examples/other/pu_robot/lesson_14/ex3_full_control/main.py"
+```
+
+### Exercise 4
+
+Can you use the remote's B1 to B4 buttons to start modes such as dance and kick? Hint: on the remote, use **initialize controller buttons** and **B1 pressed** (robot PU > Controller), and send a button value. On the robot, use **on button value received**.
+
+Starter code:
+
+```python linenums="1"
+--8<-- "examples/other/pu_robot/lesson_14/ex4_buttons/main.py"
 ```

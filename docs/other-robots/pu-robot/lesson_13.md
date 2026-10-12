@@ -1,82 +1,77 @@
-# Lesson 13: Radio Remote
+# Lesson 13: Moods
 
 !!! learn "In this lesson we will learn"
-    - how two micro:bits send messages to each other by radio
-    - how to program a second micro:bit as a joystick remote control
-    - how to make the robot respond to messages from the remote
+    - how a variable can store the state a program is in
+    - how a state machine chooses behaviour from the current state
+    - how an event can switch the robot from one mood to the next
 
 !!! terms "Terminology"
-    - **radio** – a way of sending and receiving messages without wires, using invisible radio waves.
-    - **radio group** – a number from 0 to 255 that sets which micro:bits can hear each other's radio messages.
-    - **joystick** – a stick that we push in different directions to control something, which gives a number for how far it's pushed.
+    - **state** – the situation a program is in at a particular moment, such as which mood the robot is in.
+    - **state machine** – a way of thinking about a program as always being in one state, with rules that decide the next state when an event happens.
 
-The PU Robot kit comes with a remote controller shell that holds a second micro:bit V2. The two micro:bits talk to each other by **radio**. In this lesson we write two programs: one for the remote and one for the robot.
+Let's give the robot moods. It will always be in one of three moods: happy, sleepy or grumpy. Each mood has its own lights, eyes and head movement. Clapping switches the robot to the next mood.
 
-## What we need
+This kind of program is called a **state machine**. The robot is always in one **state** (its mood), the state decides what it does, and an event (a clap) moves it to the next state.
 
-- the PU Robot
-- the remote controller shell, with a second micro:bit V2 inside it
+| Mood | Number | Lights | What the robot does |
+| --- | --- | --- | --- |
+| happy | 1 | yellow | eyes on, head tilted up |
+| sleepy | 2 | blue | eyes dimmed, head tilted down |
+| grumpy | 3 | red | eyes on, shakes its head |
 
-!!! warning "Each pair needs its own radio group"
-    Every micro:bit on the same **radio group** hears the same messages. If two pairs in the class use the same group, one remote will control both robots. Each pair needs a different group number, used in both programs.
-
-## The remote
-
-The remote reads how far the **joystick** is pushed forwards or backwards, and sends that number to the robot. The number goes from -1 to 1, with 0 in the middle.
+## A mood state machine
 
 === "Blocks"
 
-    ![Blocks for the remote controller](../../assets/blocks/pu-robot/lesson_13_controller.png){ .blocks }
+    ![Blocks for the moods example](../../assets/blocks/pu-robot/lesson_13_moods.png){ .blocks }
 
-    Blocks used: **set controller radio group**, **send value** and **read joystick value** (robot PU > Controller), **forever** and **pause (ms)** (Basic).
+    Blocks used: **on loud sound** (Input), **set mood to**, **change mood by** and **mood** (Variables), **if then**, **if then else if then else**, **0 > 0** and **0 = 0** (Logic), **forever**, **show number** and **pause (ms)** (Basic), **set ambience light to RGB**, **set left eye right eye** and **set eye brightness** (robot PU > Actuators), **set servo to** (robot PU > Actions).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_13/controller/main.py"
+    --8<-- "examples/other/pu_robot/lesson_13/moods/main.py"
     ```
-
-??? note "Code explanation"
-    - **line 1** → sets the remote's radio group to 160 and shows the number on the display.
-    - **line 3** → defines the function that the forever loop repeats.
-    - **line 4** → reads how far the joystick is pushed forwards or backwards and sends that number to the robot as a speed value.
-    - **line 5** → waits 50 milliseconds, so the remote sends about 20 messages a second.
-    - **line 6** → tells the micro:bit to run `on_forever` again and again.
-
-## The robot
-
-The robot listens for speed values. Each time one arrives, an event handler decides what to do with it.
-
-=== "Blocks"
-
-    ![Blocks for the robot receiver](../../assets/blocks/pu-robot/lesson_13_robot.png){ .blocks }
-
-    Blocks used: **enable remote control on group** and **on value received** (robot PU > Remote Control), **if then else** and **0 > 0** (Logic), **set robot move direction** and **stop action** (robot PU > Actions).
-
-=== "Python"
-
-    ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_13/robot/main.py"
-    ```
-
-Download each program to its own micro:bit. Put one in the robot and one in the remote, then switch both on.
 
 !!! primm "PRIMM"
-    1. **Predict** what the robot will do when you push the joystick forwards, and when you let go.
-    2. **Run** both programs.
+    1. **Predict** what the robot will do when it starts, and after each clap.
+    2. **Run** the program. Clap four times, waiting a few seconds between claps.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → turns on remote control and sets the robot's radio group to 160.
-    - **line 3** → defines a function called `on_speed_received`, which gets the speed value in `value`.
-    - **line 4** → checks whether the joystick is pushed more than halfway forwards…
-    - **line 5** → …and if it is, starts the robot walking forward.
-    - **line 6** → otherwise…
-    - **line 7** → …stops the robot.
-    - **line 8** → connects `on_speed_received` to the event of a speed value arriving.
+    - **line 1** → defines a function called `on_sound_loud`, which will run when there's a loud sound.
+    - **line 2** → tells Python to use the `mood` variable from the main program.
+    - **line 3** → moves to the next mood by adding 1.
+    - **line 4** → checks whether the mood has gone past 3…
+    - **line 5** → …and if it has, goes back to mood 1.
+    - **line 6** → shows the new mood number on the display.
+    - **line 7** → connects `on_sound_loud` to the loud sound event.
+    - **line 9** → defines the function that the forever loop repeats.
+    - **line 10** → checks whether the robot is happy (mood 1)…
+    - **line 11** → …and if it is, turns the lights yellow…
+    - **line 12** → …turns both eyes on…
+    - **line 13** → …and tilts the head to 110 degrees.
+    - **line 14** → otherwise, checks whether the robot is sleepy (mood 2)…
+    - **line 15** → …and if it is, turns the lights blue…
+    - **lines 16–17** → …dims both eyes to brightness 10…
+    - **line 18** → …and tilts the head to 70 degrees.
+    - **line 19** → otherwise (mood 3, grumpy)…
+    - **line 20** → …turns the lights red…
+    - **line 21** → …turns the head to one side.
+    - **line 22** → waits 150 milliseconds.
+    - **line 23** → turns the head to the other side.
+    - **line 24** → waits 150 milliseconds.
+    - **line 25** → turns the head back to the centre.
+    - **line 26** → waits half a second before checking the mood again.
+    - **line 27** → tells the micro:bit to run `on_forever` again and again.
+    - **line 29** → creates the `mood` variable and starts the robot happy.
+    - **line 30** → shows the starting mood number.
 
-!!! tip "Putting the factory program back"
-    Once we download our own program, the remote's buttons no longer do what the PU Robot's instructions say. Our teacher can put the factory program back on both micro:bits.
+!!! tip "Two jobs, two parts"
+    The event handler (lines 1 to 7) only changes the state. The forever loop (lines 9 to 27) only acts on the state. Keeping these jobs separate makes it easy to add more moods later.
+
+!!! warning "Test the clap first"
+    Remember from Lesson 11: the head cover can muffle sound, and the servo motors make noise. If the grumpy head shake keeps switching the mood by itself, make the clap louder or move the head more slowly.
 
 ## Exercises
 
@@ -87,44 +82,30 @@ Each exercise has starter code. Copy it into MakeCode's Python view, or build th
 
 ### Exercise 1
 
-Can you change 160 to your pair's radio group in both programs, and test that your remote only controls your robot?
+Can you add a fourth mood, surprised, with its own lights, eyes and head movement?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_13/ex1_group/main.py"
+--8<-- "examples/other/pu_robot/lesson_13/ex1_fourth_mood/main.py"
 ```
 
 ### Exercise 2
 
-What happens if you pull the joystick backwards? If the robot walks forward when you pull back, the joystick values are the other way around. Can you fix it?
+Can you switch moods with a hand wave instead of a clap? Hint: check the distance in the forever loop, and remember to pause after a wave.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_13/ex2_reverse/main.py"
+--8<-- "examples/other/pu_robot/lesson_13/ex2_wave_switch/main.py"
 ```
 
 ### Exercise 3
 
-Can you add walking backward, and turning left and right? It should:
-
-- walk backward when the joystick is pulled more than halfway back
-- send the joystick's turn value from the remote as well
-- turn left or right when the turn value is past halfway
+Can you play a different sound each time the robot changes mood? Hint: look in the Music category for **play sound** or **play melody**.
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_13/ex3_full_control/main.py"
-```
-
-### Exercise 4
-
-Can you use the remote's B1 to B4 buttons to start modes such as dance and kick? Hint: on the remote, use **initialize controller buttons** and **B1 pressed** (robot PU > Controller), and send a button value. On the robot, use **on button value received**.
-
-Starter code:
-
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_13/ex4_buttons/main.py"
+--8<-- "examples/other/pu_robot/lesson_13/ex3_mood_sounds/main.py"
 ```

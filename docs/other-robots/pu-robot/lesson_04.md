@@ -1,66 +1,113 @@
-# Lesson 4: Built-in Modes
+# Lesson 4: Lights and Eyes
 
 !!! learn "In this lesson we will learn"
-    - what the PU Robot's six built-in modes do
-    - how to start a mode with the **set mode** block
-    - how to stop a mode with the **stop action** block
+    - how to set the colour of the robot's ambience lights
+    - how to turn the robot's eyes on and off and change their brightness
+    - how to repeat code a set number of times with a repeat loop
 
-The PU Robot has six built-in modes: greet, rest, explore, jump, dance and kick. Each one is a whole routine that ELECFREAKS has already programmed, so one block makes the robot do something quite complicated.
+!!! terms "Terminology"
+    - **LED** – a light-emitting diode, which is a small electronic light; the micro:bit display is a 5 × 5 grid of them.
+    - **RGB** – a way of describing a colour by how much red, green and blue light it contains.
+    - **brightness** – how strongly a light shines, from `0` (off) to `100` (fully on).
+    - **repeat loop** – a loop that runs its code a set number of times, written as a `for` loop in Python.
+    - **indentation** – spaces at the start of a line (four in Python) that show which code belongs to a loop or other block.
 
-## Set mode
+The PU Robot has four coloured ambience lights and two eyes. Each light is an **LED**. Lights are a great way for the robot to show us what it's doing, so we'll use them a lot in later lessons.
+
+## Ambience lights
+
+We set each light's colour with three **RGB** numbers: how much red, green and blue to mix, each from 0 to 255. For example, `(255, 0, 0)` is full red and `(255, 255, 0)` is yellow. We can set one light (1 to 4) or all of them at once.
 
 === "Blocks"
 
-    ![Blocks for the greet example](../../assets/blocks/pu-robot/lesson_04_greet.png){ .blocks }
+    ![Blocks for the ambience light example](../../assets/blocks/pu-robot/lesson_04_ambience_light.png){ .blocks }
 
-    Blocks used: **set mode** (robot PU > Actions).
+    Blocks used: **set ambience light to RGB** (robot PU > Actuators), **pause (ms)** (Basic).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_04/greet/main.py"
+    --8<-- "examples/other/pu_robot/lesson_04/ambience_light/main.py"
     ```
 
 !!! primm "PRIMM"
-    1. **Predict** what you think the robot will do when it greets us. Be specific.
+    1. **Predict** which lights will change, and to what colour. Be specific.
     2. **Run** the program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → starts the robot's greet mode.
+    - **line 1** → sets all four ambience lights to red (255 red, 0 green, 0 blue).
+    - **line 2** → waits for 1 second.
+    - **line 3** → sets light 1 to blue, while the other three stay red.
 
-In Python, each mode is an option of `robotPu.Action`, written in capitals: `GREET`, `REST`, `EXPLORE`, `JUMP`, `DANCE` and `KICK`.
+!!! tip "Mixing colours"
+    | Colour | Red | Green | Blue |
+    | --- | --- | --- | --- |
+    | red | 255 | 0 | 0 |
+    | green | 0 | 255 | 0 |
+    | blue | 0 | 0 | 255 |
+    | yellow | 255 | 255 | 0 |
+    | purple | 255 | 0 | 255 |
+    | white | 255 | 255 | 255 |
+    | off | 0 | 0 | 0 |
 
-## Stop action
+## Eyes
 
-Some modes keep going until we tell the robot to stop. Dance keeps dancing, for example. The **stop action** block ends the mode and puts the robot back to standing still.
+Each eye can be on or off, and we can change its **brightness** from 0 to 100.
 
 === "Blocks"
 
-    ![Blocks for the dance and stop example](../../assets/blocks/pu-robot/lesson_04_dance_and_stop.png){ .blocks }
+    ![Blocks for the eyes example](../../assets/blocks/pu-robot/lesson_04_eyes.png){ .blocks }
 
-    Blocks used: **set mode** and **stop action** (robot PU > Actions), **pause (ms)** (Basic).
+    Blocks used: **set left eye right eye** and **set left eye brightness** (robot PU > Actuators), **pause (ms)** (Basic).
 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_04/dance_and_stop/main.py"
+    --8<-- "examples/other/pu_robot/lesson_04/eyes/main.py"
     ```
 
-Dance reacts to sound, so play some music nearby before running this program.
-
 !!! primm "PRIMM"
-    1. **Predict** how long the robot will dance, and what it will do afterwards.
+    1. **Predict** what the robot's eyes will do. Be specific.
     2. **Run** the program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → starts the robot's dance mode.
-    - **line 2** → waits 10 seconds while the robot dances.
-    - **line 3** → stops the dance.
+    - **line 1** → turns the left eye on and the right eye off, like a wink.
+    - **line 2** → waits for 1 second.
+    - **line 3** → turns both eyes on.
+    - **line 4** → waits for 1 second.
+    - **line 5** → dims the left eye to brightness 10.
 
-!!! warning "Give the robot space"
-    Explore and jump move the robot around. Test them on the floor, with clear space around the robot.
+## Repeat loop
+
+To flash the lights five times, we could copy the same blocks five times. That's a lot of blocks, and if we want to change the colour we have to change it five times. A **repeat loop** runs the code inside it a set number of times instead.
+
+=== "Blocks"
+
+    ![Blocks for the repeat flash example](../../assets/blocks/pu-robot/lesson_04_repeat_flash.png){ .blocks }
+
+    Blocks used: **repeat 5 times** (Loops), **set ambience light to RGB** (robot PU > Actuators), **pause (ms)** (Basic).
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_04/repeat_flash/main.py"
+    ```
+
+!!! primm "PRIMM"
+    1. **Predict** what the lights will do, and how many times. Be specific.
+    2. **Run** the program.
+    3. Time to **investigate** the code. What does each line do?
+
+??? note "Code explanation"
+    - **line 1** → starts a loop that runs the indented code 5 times.
+    - **line 2** → sets all the lights to red.
+    - **line 3** → waits for half a second.
+    - **line 4** → sets all the lights to blue.
+    - **line 5** → waits for half a second, then the loop goes back to line 2 until it has run 5 times.
+
+In Python, the repeat block becomes `for index in range(5):`. The **indentation** of lines 2 to 5 shows that they're inside the loop.
 
 ## Exercises
 
@@ -71,30 +118,44 @@ Each exercise has starter code. Copy it into MakeCode's Python view, or build th
 
 ### Exercise 1
 
-Can you test all six modes, one at a time, by changing the mode in the starter code? Record what each mode does in a table with the columns Mode, What the robot did and How it stopped.
+Can you make a traffic light sequence on all four lights? It should:
+
+1. show green for 3 seconds
+2. show amber (255, 120, 0) for 1 second
+3. show red for 3 seconds
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_04/ex1_test_modes/main.py"
+--8<-- "examples/other/pu_robot/lesson_04/ex1_traffic_light/main.py"
 ```
 
 ### Exercise 2
 
-Can you make a routine that greets us, dances for 5 seconds, stops, then kicks?
+Can you make each of the four lights a different colour, then turn them off one at a time, one per second?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_04/ex2_routine/main.py"
+--8<-- "examples/other/pu_robot/lesson_04/ex2_lights_off/main.py"
 ```
 
 ### Exercise 3
 
-What happens if we use **set mode** to start a new mode while another mode is still running? Why do you think this happens?
+Can you make the robot wink 3 times with its left eye, using a repeat loop?
 
 Starter code:
 
 ```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_04/ex3_change_mode/main.py"
+--8<-- "examples/other/pu_robot/lesson_04/ex3_wink/main.py"
+```
+
+### Exercise 4
+
+Can you make the left eye slowly get brighter, from 0 to 100, using a repeat loop? Hint: in a repeat loop, `index` counts up 0, 1, 2 and so on, so `index * 10` counts up in tens.
+
+Starter code:
+
+```python linenums="1"
+--8<-- "examples/other/pu_robot/lesson_04/ex4_fade/main.py"
 ```
