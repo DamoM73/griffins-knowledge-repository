@@ -7,7 +7,7 @@ The first build of this site was made in a cloud session that could write files 
 - **Generator:** Zensical 0.0.69 (pinned in `requirements.txt`). Preview with `zensical serve`, build with `zensical build --clean`.
 - **Hosting:** GitHub Pages at <https://damom73.github.io/griffins-knowledge-repository/>, deployed by `.github/workflows/docs.yml` (created in task 5) on every push to `main`.
 - **Audience:** Years 7–10, written at a Year 7/8 level. Australian English.
-- **Sections:** OnStage, Rescue Line, Rescue Maze, Soccer and Tips are stubs for now. Other Robots holds the Using MakeCode guide and sequential lessons for the PU Robot (16), XGO Robot Dog (13) and WuKong Manipulator (11). PU Lessons 2, 9, 10, 12, 13, 15 and 16 are based on ELECFREAKS PU wiki cases (with hand-wave or clap triggers instead of button A, which can't be reached inside the head). PU Lesson 2 (Remote Control Show) has no code and uses three ELECFREAKS diagrams in `docs/assets/pu-robot/`, credited in their captions. XGO Lessons 8, 9, 10 and 13 are based on the original XGO kit's wiki cases, updated for the V2 dog. The site plan is the `site-plan.md` doc in the user's "RobocupJr Website" Claude project.
+- **Sections:** OnStage, Rescue Line, Rescue Maze, Soccer and Tips are stubs for now. Other Robots holds the Using MakeCode guide and sequential lessons for the PU Robot (16), XGO Robot Dog (13) and WuKong Manipulator (11). PU Lessons 2, 9, 10, 12, 13, 15 and 16 are based on ELECFREAKS PU wiki cases (with hand-wave or clap triggers instead of button A, which can't be reached inside the head). PU Lessons 1 and 2 use three ELECFREAKS diagrams in `docs/assets/pu-robot/` (the robot's parts in Lesson 1, the remote controller in Lesson 2), credited in their captions. Lesson 2 (Remote Control Show) has no code. XGO Lessons 8, 9, 10 and 13 are based on the original XGO kit's wiki cases, updated for the V2 dog. The site plan is the `site-plan.md` doc in the user's "RobocupJr Website" Claude project.
 - **Colour scheme** (from the Griffins logo, in `docs/stylesheets/extra.css`):
     - slate `#545F65`: banner (header and tabs) in both modes, with white text (6.6:1) and a white griffin logo
     - pale cyan `#B3E9FC`: text of the active or hovered tab (only the text colour changes, like the other tutorial sites)
@@ -52,7 +52,7 @@ The user has given permission to delete these files without asking again. A new 
 
 1. Run `python scripts/find_unused_files.py`. It lists every example folder that no page includes and every Blocks screenshot that no page shows. Expect about 103 paths, all under `docs/examples/other/pu_robot/` or `docs/assets/blocks/pu-robot/`.
 2. If any listed path is outside those two folders, stop and report it instead of deleting it.
-3. `git rm -r` each listed path, then run the script again (expect `0 unused path(s) found`).
+3. `git rm -r` each listed path, then run the script again (expect `0 unused path(s) found`). Also `git rm` `docs/assets/pu-robot/lesson_02_parts.png` and `docs/assets/pu-robot/lesson_02_inside_parts.png` if they exist: they were renamed to `lesson_01_parts.png` and `lesson_01_inside_parts.png` when the parts section moved to Lesson 1, and the script only checks `docs/assets/blocks/`.
 4. Run both checks, then commit with the message `Remove leftover files from PU lesson renumbering` and push.
 
 Don't delete the lesson folders themselves (`pu_robot/lesson_03` to `lesson_16`): they hold the renumbered lessons' examples. `pu_robot/lesson_02` should end up empty and disappear, because Lesson 2 has no code.

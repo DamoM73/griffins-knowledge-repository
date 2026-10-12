@@ -6,8 +6,8 @@ Work through the lessons in order. Each lesson adds one new part of the robot.
 
 | Lesson | What we do |
 | --- | --- |
-| [Lesson 1: Meet the PU Robot](lesson_01.md) | switch the robot on and off, take out the micro:bit and set up MakeCode |
-| [Lesson 2: Remote Control Show](lesson_02.md) | learn the robot's parts and drive it with the remote controller |
+| [Lesson 1: Meet the PU Robot](lesson_01.md) | learn the robot's parts, switch it on and off, take out the micro:bit and set up MakeCode |
+| [Lesson 2: Remote Control Show](lesson_02.md) | drive the robot with the remote controller and put on an imitation show |
 | [Lesson 3: First Program](lesson_03.md) | make the robot show a face and walk |
 | [Lesson 4: Lights and Eyes](lesson_04.md) | control the coloured lights and eyes |
 | [Lesson 5: Built-in Modes](lesson_05.md) | use the robot's greet, dance, jump and other modes |
@@ -23,7 +23,7 @@ Work through the lessons in order. Each lesson adds one new part of the robot.
 | [Lesson 15: Parking Challenge](lesson_15.md) | stop as close to a wall as possible |
 | [Lesson 16: Final Project](lesson_16.md) | design, build and test our own robot behaviour |
 
-Lessons 2, 9, 10, 12, 13, 15 and 16 are based on activities from the [ELECFREAKS PU Robot wiki](https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/).
+Lessons 1, 2, 9, 10, 12, 13, 15 and 16 are based on activities from the [ELECFREAKS PU Robot wiki](https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/).
 
 !!! warning "The micro:bit buttons are inside the head"
     Once the micro:bit is closed inside the robot's head, we can't press buttons A and B. So PU Robot programs start in **on start**, or react to the robot's sensors (a hand wave or a clap) instead of the buttons.

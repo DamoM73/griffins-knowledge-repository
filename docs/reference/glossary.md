@@ -35,7 +35,7 @@ This glossary lists every technical term introduced on this site, in alphabetica
 - **data logging** – recording sensor readings over time so we can study them later. ([Lesson 13: Sense the Feelings (XGO Robot Dog)](../other-robots/xgo/lesson_13.md))
 - **define** – to create a function with `def`, giving it a name and a code block that Python remembers but doesn't run yet. ([Lesson 6: Hand Gestures (WuKong Manipulator)](../other-robots/wukong/lesson_06.md))
 - **degree** – the unit for measuring angles, where a full turn is 360 degrees and a quarter turn is 90 degrees. ([Lesson 7: Moving Joints (PU Robot)](../other-robots/pu-robot/lesson_07.md))
-- **degrees of freedom** – the number of separate ways a robot can move. Each servo motor adds one, so the PU Robot has six. ([Lesson 2: Remote Control Show (PU Robot)](../other-robots/pu-robot/lesson_02.md))
+- **degrees of freedom** – the number of separate ways a robot can move. Each servo motor adds one, so the PU Robot has six. ([Lesson 1: Meet the PU Robot (PU Robot)](../other-robots/pu-robot/lesson_01.md))
 - **download** – to copy our program from MakeCode onto the micro:bit so it can run there. ([Using MakeCode](../other-robots/using-makecode.md))
 
 ## E

@@ -1,6 +1,7 @@
 # Lesson 1: Meet the PU Robot
 
 !!! learn "In this lesson we will learn"
+    - the names of the PU Robot's main parts and what each one does
     - how to switch the PU Robot on, off and charge it
     - how to take the micro:bit out of the robot's head and put it back
     - how to set up a MakeCode project for the PU Robot
@@ -8,6 +9,7 @@
 
 !!! terms "Terminology"
     - **servo motor** – a motor that can be controlled to turn to an exact angle or spin at a set speed.
+    - **degrees of freedom** – the number of separate ways a robot can move. Each servo motor adds one, so the PU Robot has six.
     - **calibration** – when the robot moves its joints to a set starting position after switching on, so it knows where each joint is.
     - **factory program** – the program the robot comes with from the maker, which lets it work with the remote controller.
 
@@ -20,6 +22,54 @@ The PU Robot walks on two legs. Each leg has two **servo motors**, and two more 
 - a micro USB data cable
 - a small screwdriver to open the robot's head cover
 - a computer with Chrome or Edge
+
+## Parts of the robot
+
+Altogether the robot has six servo motors, and each one moves one joint, so the robot has six **degrees of freedom**. Our arms and legs work the same way, with joints that bend and turn, but we have many more degrees of freedom than the robot.
+
+<figure markdown="span">
+  ![The outside parts of the PU Robot, numbered 1 to 16](../../assets/pu-robot/lesson_01_parts.png){ width="420" }
+  <figcaption>The outside of the PU Robot. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-case-01">ELECFREAKS</a>.</figcaption>
+</figure>
+
+| No. | Part | What it does |
+| --- | --- | --- |
+| 1 | head shell | holds the circuit board, battery and head servo motor, and has holes for building block pins |
+| 2 | lamp holder brackets (2) | hold the lamp heads on the head shell |
+| 3 | lamp heads (2) | light up in different colours |
+| 4 | shoulder bracket | holds the neck servo motor and joins the neck to the chest |
+| 5 | chest bracket | holds the leg servo motors and joins the shoulders to the legs |
+| 6 | front cover | holds the ultrasonic sensor on the chest |
+| 7 | rear cover | keeps the wires tidy, and has pin holes for the backpack and other building blocks |
+| 8 | left leg bracket | holds the left foot servo motor |
+| 9 | left leg cover | protects the left foot servo motor and joins the leg to the foot |
+| 10 | right leg bracket | holds the right foot servo motor |
+| 11 | right leg cover | protects the right foot servo motor and joins the leg to the foot |
+| 12 | left foot | turned by the left foot servo motor |
+| 13 | right foot | turned by the right foot servo motor |
+| 14 | backpack | clips onto the rear cover and can carry small things |
+| 15 | ultrasonic sensor | measures how far away things are |
+| 16 | building block pin adapters (5) | join building block parts to the top of the head |
+
+Inside the head we find the parts that control the robot.
+
+<figure markdown="span">
+  ![Inside the PU Robot's head, with parts numbered 1 to 10](../../assets/pu-robot/lesson_01_inside_parts.png){ width="420" }
+  <figcaption>Inside the head, with the cover off. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-case-01">ELECFREAKS</a>.</figcaption>
+</figure>
+
+| No. | Part | What it does |
+| --- | --- | --- |
+| 1 | head shell | holds everything inside the head |
+| 2 | micro:bit | the robot's brain, which runs the program |
+| 3 | head servo motor | tilts the head up and down |
+| 4 | head servo bracket | holds the head servo motor in place |
+| 5 | neck bracket | joins the neck and head servo motors to the head shell |
+| 6 | rear cover | keeps the wires tidy |
+| 7 | left leg bracket | holds the left foot servo motor |
+| 8 | right leg bracket | holds the right foot servo motor |
+| 9 | left foot | turned by the left foot servo motor |
+| 10 | right foot | turned by the right foot servo motor |
 
 ## Power and charging
 
@@ -75,8 +125,12 @@ After we download a program, we put the micro:bit back in the robot.
 
 ### Exercise 1
 
-Can you switch the robot on, wait for its calibration, then switch it off again? Describe what the robot does during calibration.
+Without looking at the tables, can you point to the ultrasonic sensor, the head servo motor and the lamp heads? Check each one with a partner.
 
 ### Exercise 2
+
+Can you switch the robot on, wait for its calibration, then switch it off again? Describe what the robot does during calibration.
+
+### Exercise 3
 
 Can you take the micro:bit out of the head and put it back in, facing the right way? Check with a partner before closing the cover.
