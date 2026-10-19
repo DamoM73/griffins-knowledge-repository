@@ -33,9 +33,9 @@
 
 ## Images
 - [ ] Replace every Blocks screenshot placeholder in `docs/assets/blocks/` (each placeholder names its program).
-- [ ] Replace the three WuKong build photo placeholders in `docs/assets/wukong/`.
+- [x] Replace the three WuKong build photo placeholders in `docs/assets/wukong/` (replaced with ELECFREAKS wiki photos).
 
 ## Decisions
 - [ ] Licence: MIT (current `LICENSE`) or GPLv3 code plus CC BY-NC-SA 4.0 content (current footer).
 - [ ] Terminology definitions written new or adapted for this site: calibration, event, event handler, port, random number, threshold, radio group, state, requirement.
-- [ ] Credit ELECFREAKS on wiki images, and confirm the images can be reused on the site (PU Lessons 1 and 2, XGO Lessons 1, 2, 4, 5 and 6, and the Using MakeCode page now use ELECFREAKS wiki images, credited in their captions).
+- [ ] Credit ELECFREAKS on wiki images, and confirm the images can be reused on the site (PU Lessons 1 and 2, XGO Lessons 1, 2, 4, 5 and 6, WuKong Lessons 1 and 3 and the WuKong index, and the Using MakeCode page now use ELECFREAKS wiki images, credited in their captions).

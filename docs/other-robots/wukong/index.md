@@ -2,6 +2,11 @@
 
 The ELECFREAKS WuKong Manipulator is a robotic hand that we build ourselves from straws, thread and five servo motors. Each servo motor pulls a thread that curls one straw finger. A micro:bit plugs into the WuKong board, which powers the servo motors from its own battery.
 
+<figure markdown="span">
+  ![Animation of the finished WuKong hand curling and straightening its straw fingers](../../assets/wukong/finished_hand.webp){ width="480" }
+  <figcaption>The finished hand. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+</figure>
+
 Work through the lessons in order. Lessons 1 to 3 build the hand, and the rest program it.
 
 | Lesson | What we do |

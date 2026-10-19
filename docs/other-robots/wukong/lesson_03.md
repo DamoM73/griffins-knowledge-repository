@@ -15,12 +15,32 @@ Now that every servo motor is at 0 degrees, we fit the arms and threads so that 
 2. Cut 5 pieces of thread, each a little longer than a finger plus the distance to its servo motor.
 3. Tie one end of a thread to the first hole on a servo arm.
 4. Thread it through a straw, then fix the bottom of the straw to its finger position on the palm with a connector.
+
+    <figure markdown="span">
+      ![Five coloured straws, each with notches where the finger joints bend](../../assets/wukong/lesson_03_straws.png){ width="380" }
+      <figcaption>The straw fingers. The notches let each finger bend. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+    </figure>
+
+    <figure markdown="span">
+      ![Pushing a thread through a red straw](../../assets/wukong/lesson_03_threading.png){ width="380" }
+      <figcaption>Threading a straw. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+    </figure>
+
 5. Gently pull the thread until it's just straight (not tight), then tie a knot at the top and fix the knot in the slot at the top of the straw.
     - Why: if the thread is too tight, the servo motor can't reach 0 degrees and strains. If it's too loose, the finger won't curl all the way.
     - Result: the finger is straight and the thread has no slack.
+
+    <figure markdown="span">
+      ![Tying the thread at the top of a straw](../../assets/wukong/lesson_03_knot.png){ width="380" }
+      <figcaption>Tie the knot at the top of the straw. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+    </figure>
+
 6. Repeat steps 3 to 5 for the other 4 fingers.
 
-![Thread tied to the servo arm and fixed at the fingertip](../../assets/wukong/thread_fitted.png){ .blocks }
+<figure markdown="span">
+  ![The finished hand with all five straw fingers threaded and fixed to the palm](../../assets/wukong/thread_fitted.png){ width="400" }
+  <figcaption>The finished hand, with all 5 fingers fitted. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+</figure>
 
 ## Test the finished hand
 

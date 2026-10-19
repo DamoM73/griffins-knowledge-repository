@@ -44,7 +44,7 @@ If a name changes, update the example, then search the pages for the old name (t
 
 ### 2. Take the Blocks screenshots (with the user)
 
-Each placeholder image names its program. For each one, the user builds or pastes the program in MakeCode, switches to Blocks, and takes a screenshot of just the blocks. Save it over the placeholder with the same file name. List any placeholders still left at the end of each session. The three WuKong build photos in `docs/assets/wukong/` are also placeholders.
+Each placeholder image names its program. For each one, the user builds or pastes the program in MakeCode, switches to Blocks, and takes a screenshot of just the blocks. Save it over the placeholder with the same file name. List any placeholders still left at the end of each session.
 
 ### 3. Delete leftover files from the renumbering
 
