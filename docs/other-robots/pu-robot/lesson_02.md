@@ -19,7 +19,7 @@ Before we write our own programs, let's see what the robot can already do. In th
 !!! warning "Do this lesson before downloading our own program"
     The remote controller only works with the factory program. Once we download our own program to the robot, the remote stops working until our teacher puts the factory program back.
 
-!!! note "Putting the factory program back"
+!!! tip "Putting the factory program back"
     The robot and the remote controller each need their own factory program. If either one has been changed, download its file and copy it onto that micro:bit:
 
     - robot: [pu-robot-0.6.0.hex](../../assets/pu-robot/firmware/pu-robot-0.6.0.hex)
