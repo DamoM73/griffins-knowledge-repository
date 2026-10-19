@@ -1,5 +1,0 @@
-robotPu.set_servo_angle(robotPu.ServoJoint.HEAD_PITCH, 70)
-basic.pause(500)
-robotPu.set_servo_angle(robotPu.ServoJoint.HEAD_PITCH, 110)
-basic.pause(500)
-robotPu.set_servo_angle(robotPu.ServoJoint.HEAD_PITCH, 90)

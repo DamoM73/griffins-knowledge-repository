@@ -1,5 +1,0 @@
-robotPu.set_eyes_state(robotPu.EyeState.ON, robotPu.EyeState.OFF)
-basic.pause(1000)
-robotPu.set_eyes_state(robotPu.EyeState.ON, robotPu.EyeState.ON)
-basic.pause(1000)
-robotPu.set_left_eye_brightness(10)
