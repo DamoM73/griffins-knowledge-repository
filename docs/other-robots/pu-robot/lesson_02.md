@@ -19,6 +19,14 @@ Before we write our own programs, let's see what the robot can already do. In th
 !!! warning "Do this lesson before downloading our own program"
     The remote controller only works with the factory program. Once we download our own program to the robot, the remote stops working until our teacher puts the factory program back.
 
+!!! note "Putting the factory program back"
+    The robot and the remote controller each need their own factory program. If either one has been changed, download its file and copy it onto that micro:bit:
+
+    - robot: [pu-robot-0.6.0.hex](../../assets/pu-robot/firmware/pu-robot-0.6.0.hex)
+    - remote controller: [pu-remote-0.5.3.hex](../../assets/pu-robot/firmware/pu-remote-0.5.3.hex)
+
+    Take the micro:bit out of the robot or the remote, plug it into the computer, then drag the file onto the **MICROBIT** drive (see [Using MakeCode](../using-makecode.md#option-b-drag-and-drop-a-hex-file)). Keep the two micro:bits apart: the robot won't start with the remote's program. The [ELECFREAKS firmware page](https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-flashing-firmware) has the full steps, including opening the remote to fit its micro:bit.
+
 ## The remote controller
 
 The remote controller holds a second micro:bit, which sends commands to the robot by radio. We drive with the **joystick** and start actions with buttons B1 to B4. B1 makes the robot **autonomous**: it walks and explores by itself until we take control again.
