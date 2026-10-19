@@ -28,7 +28,7 @@ We also need a micro:bit, a micro USB data cable, scissors for the thread, and a
 
 <figure markdown="span">
   ![The kit parts laid out: acrylic palm, coloured straws, servo motors, WuKong board, thread and tools](../../assets/wukong/lesson_01_materials.png){ width="480" }
-  <figcaption>The parts in the kit. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+  <figcaption>The parts in the kit. Image: ELECFREAKS.</figcaption>
 </figure>
 
 !!! warning "Safety and care"
@@ -44,7 +44,7 @@ We also need a micro:bit, a micro USB data cable, scissors for the thread, and a
 
     <figure markdown="span">
       ![Screwing a servo motor to the back of the acrylic palm](../../assets/wukong/lesson_01_screw_servo.png){ width="380" }
-      <figcaption>Screw each servo motor on, with its cable pointing down. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+      <figcaption>Screw each servo motor on, with its cable pointing down. Image: ELECFREAKS.</figcaption>
     </figure>
 
 2. Fix the WuKong board to the bottom of the acrylic palm.
@@ -52,13 +52,13 @@ We also need a micro:bit, a micro USB data cable, scissors for the thread, and a
 
     <figure markdown="span">
       ![The WuKong board fitted on its grey beam frame](../../assets/wukong/lesson_01_board_frame.png){ width="380" }
-      <figcaption>The WuKong board on its beam frame, ready to fix to the palm. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+      <figcaption>The WuKong board on its beam frame, ready to fix to the palm. Image: ELECFREAKS.</figcaption>
     </figure>
 
 
 <figure markdown="span">
   ![All five servo motors screwed to the palm, with their cables hanging down](../../assets/wukong/servos_mounted.png){ width="400" }
-  <figcaption>All 5 servo motors mounted on the palm. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+  <figcaption>All 5 servo motors mounted on the palm. Image: ELECFREAKS.</figcaption>
 </figure>
 
 ## Plug in the servo cables
@@ -69,12 +69,12 @@ We also need a micro:bit, a micro USB data cable, scissors for the thread, and a
 
     <figure markdown="span">
       ![The WuKong board from above, showing servo ports S0 to S7 with black, red and blue pin rows](../../assets/wukong/lesson_01_ports.png){ width="480" }
-      <figcaption>Servo ports S0 to S7. Each port has a black, a red and a blue pin. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+      <figcaption>Servo ports S0 to S7. Each port has a black, a red and a blue pin. Image: ELECFREAKS.</figcaption>
     </figure>
 
     <figure markdown="span">
       ![Servo cables plugged into the ports on the WuKong board](../../assets/wukong/lesson_01_cables.png){ width="380" }
-      <figcaption>The servo cables plugged in. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+      <figcaption>The servo cables plugged in. Image: ELECFREAKS.</figcaption>
     </figure>
 
 2. Trace each cable from its servo motor to the board, and record which port each finger uses in a table like this:
@@ -94,7 +94,7 @@ We also need a micro:bit, a micro USB data cable, scissors for the thread, and a
 
 <figure markdown="span">
   ![The palm with the WuKong board fixed underneath and the micro:bit fitted](../../assets/wukong/board_connected.png){ width="400" }
-  <figcaption>The board fitted, the servo motors connected and the micro:bit in place. Image: <a href="https://wiki.elecfreaks.com/en/microbit/interesting-case/straw-manipulator/How-to-use-the-microbit-to-control-the-straw-manipulator/">ELECFREAKS</a>.</figcaption>
+  <figcaption>The board fitted, the servo motors connected and the micro:bit in place. Image: ELECFREAKS.</figcaption>
 </figure>
 
 ## Power

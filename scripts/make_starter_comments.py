@@ -11,7 +11,7 @@ Each exercise on a lesson page looks like this:
     Starter code:
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_03/ex1_heart_walk/main.py"
+    --8<-- "examples/other/pu_robot/lesson_03_ex1_heart_walk.py"
     ```
 
 This script copies the exercise text (from the heading to "Starter code:")

@@ -22,7 +22,7 @@ Instead of working out joint angles in code, we can teach the dog a position by 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_11/teach_pose/main.py"
+    --8<-- "examples/other/xgo/lesson_11_teach_pose.py"
     ```
 
 Run the program in this order:
@@ -77,7 +77,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_11/ex1_two_legs/main.py"
+    --8<-- "examples/other/xgo/lesson_11_ex1_two_legs.py"
     ```
 
 ### Exercise 2
@@ -93,7 +93,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_11/ex2_animation/main.py"
+    --8<-- "examples/other/xgo/lesson_11_ex2_animation.py"
     ```
 
 ### Exercise 3
@@ -109,5 +109,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_11/ex3_memory/main.py"
+    --8<-- "examples/other/xgo/lesson_11_ex3_memory.py"
     ```

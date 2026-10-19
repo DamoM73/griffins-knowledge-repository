@@ -24,7 +24,7 @@ The temperature sensor is built into the micro:bit's **processor**, so it measur
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_08/show_temperature/main.py"
+    --8<-- "examples/other/xgo/lesson_08_show_temperature.py"
     ```
 
 !!! primm "PRIMM"
@@ -52,7 +52,7 @@ The dog trembles by tilting its body quickly from side to side. We store the col
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_08/tremble/main.py"
+    --8<-- "examples/other/xgo/lesson_08_tremble.py"
     ```
 
 Set `cold` to 1 degree above the reading from the first example. Then cool the micro:bit down, for example by moving the dog near an air-conditioner vent or an ice pack (never touching it).
@@ -99,7 +99,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_08/ex1_threshold/main.py"
+    --8<-- "examples/other/xgo/lesson_08_ex1_threshold.py"
     ```
 
 ### Exercise 2
@@ -115,7 +115,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_08/ex2_lie_down/main.py"
+    --8<-- "examples/other/xgo/lesson_08_ex2_lie_down.py"
     ```
 
 ### Exercise 3
@@ -131,5 +131,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_08/ex3_too_hot/main.py"
+    --8<-- "examples/other/xgo/lesson_08_ex3_too_hot.py"
     ```

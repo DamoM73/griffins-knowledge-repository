@@ -40,7 +40,7 @@ The stopping distance is stored in a variable, `stop_distance`, because it's the
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_15/park/main.py"
+    --8<-- "examples/other/pu_robot/lesson_15_park.py"
     ```
 
 Place the robot about 1 metre from the wall, facing it, then switch it on.
@@ -72,7 +72,7 @@ A fast robot can overshoot, because it measures, then takes a whole step. Real c
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_15/slow_down/main.py"
+    --8<-- "examples/other/pu_robot/lesson_15_slow_down.py"
     ```
 
 !!! primm "PRIMM"
@@ -127,7 +127,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_15/ex1_tune/main.py"
+    --8<-- "examples/other/pu_robot/lesson_15_ex1_tune.py"
     ```
 
 ### Exercise 2
@@ -143,7 +143,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_15/ex2_lights/main.py"
+    --8<-- "examples/other/pu_robot/lesson_15_ex2_lights.py"
     ```
 
 ### Exercise 3
@@ -159,5 +159,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_15/ex3_reverse/main.py"
+    --8<-- "examples/other/pu_robot/lesson_15_ex3_reverse.py"
     ```

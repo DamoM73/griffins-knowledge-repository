@@ -26,7 +26,7 @@ Just like the XGO in its Radio Remote lesson, we use the micro:bit's **Radio** b
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_11/remote/main.py"
+    --8<-- "examples/other/wukong/lesson_11_remote.py"
     ```
 
 ??? note "Code explanation"
@@ -49,7 +49,7 @@ Just like the XGO in its Radio Remote lesson, we use the micro:bit's **Radio** b
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_11/hand/main.py"
+    --8<-- "examples/other/wukong/lesson_11_hand.py"
     ```
 
 Download each program to its own micro:bit, then switch the WuKong board on.
@@ -92,7 +92,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_11/ex1_group/main.py"
+    --8<-- "examples/other/wukong/lesson_11_ex1_group.py"
     ```
 
 ### Exercise 2
@@ -108,7 +108,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_11/ex2_more_gestures/main.py"
+    --8<-- "examples/other/wukong/lesson_11_ex2_more_gestures.py"
     ```
 
 ### Exercise 3
@@ -128,5 +128,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_11/ex3_copy_tilt/main.py"
+    --8<-- "examples/other/wukong/lesson_11_ex3_copy_tilt.py"
     ```

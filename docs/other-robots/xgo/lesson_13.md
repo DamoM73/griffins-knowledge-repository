@@ -33,7 +33,7 @@ The dog sends its x, y and z acceleration ten times a second. Buttons A and B st
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_13/dog_sender/main.py"
+    --8<-- "examples/other/xgo/lesson_13_dog_sender.py"
     ```
 
 ??? note "Code explanation"
@@ -65,7 +65,7 @@ The receiver passes each reading it hears on to the computer through the USB cab
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_13/receiver/main.py"
+    --8<-- "examples/other/xgo/lesson_13_receiver.py"
     ```
 
 Download each program to its own micro:bit. Keep the receiver plugged in, and connect it to MakeCode with WebUSB (see [Using MakeCode](../using-makecode.md#option-a-connect-with-webusb)).
@@ -114,7 +114,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_13/ex1_speeds/main.py"
+    --8<-- "examples/other/xgo/lesson_13_ex1_speeds.py"
     ```
 
 ### Exercise 2
@@ -130,7 +130,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_13/ex2_actions/main.py"
+    --8<-- "examples/other/xgo/lesson_13_ex2_actions.py"
     ```
 
 ### Exercise 3
@@ -146,5 +146,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_13/ex3_strength/main.py"
+    --8<-- "examples/other/xgo/lesson_13_ex3_strength.py"
     ```

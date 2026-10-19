@@ -21,7 +21,7 @@ So far, we've controlled the dog with buttons. The micro:bit also has sensors, s
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_07/clap/main.py"
+    --8<-- "examples/other/xgo/lesson_07_clap.py"
     ```
 
 !!! primm "PRIMM"
@@ -49,7 +49,7 @@ The micro:bit's display LEDs can also work as a **light sensor**. The **light le
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_07/light_level/main.py"
+    --8<-- "examples/other/xgo/lesson_07_light_level.py"
     ```
 
 !!! primm "PRIMM"
@@ -90,7 +90,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_07/ex1_clap_distance/main.py"
+    --8<-- "examples/other/xgo/lesson_07_ex1_clap_distance.py"
     ```
 
 ### Exercise 2
@@ -106,5 +106,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_07/ex2_bedtime/main.py"
+    --8<-- "examples/other/xgo/lesson_07_ex2_bedtime.py"
     ```

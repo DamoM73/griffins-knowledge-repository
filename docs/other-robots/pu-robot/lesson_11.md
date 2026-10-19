@@ -27,7 +27,7 @@ The robot measures two kinds of tilt. **Body pitch** is tilting forwards and bac
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_11/body_pitch/main.py"
+    --8<-- "examples/other/pu_robot/lesson_11_body_pitch.py"
     ```
 
 Switch the robot on, then gently tilt the whole robot forwards and backwards. Don't bend its joints.
@@ -56,7 +56,7 @@ A clap is an **event**. Instead of checking for it in a forever loop, we give Ma
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_11/clap/main.py"
+    --8<-- "examples/other/pu_robot/lesson_11_clap.py"
     ```
 
 !!! primm "PRIMM"
@@ -85,7 +85,7 @@ The robot can listen to music and work out its **tempo** in beats per minute (BP
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_11/music_tempo/main.py"
+    --8<-- "examples/other/pu_robot/lesson_11_music_tempo.py"
     ```
 
 !!! primm "PRIMM"
@@ -119,7 +119,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_11/ex1_body_roll/main.py"
+    --8<-- "examples/other/pu_robot/lesson_11_ex1_body_roll.py"
     ```
 
 ### Exercise 2
@@ -135,7 +135,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_11/ex2_tilt_alarm/main.py"
+    --8<-- "examples/other/pu_robot/lesson_11_ex2_tilt_alarm.py"
     ```
 
 ### Exercise 3
@@ -151,7 +151,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_11/ex3_wave_and_clap/main.py"
+    --8<-- "examples/other/pu_robot/lesson_11_ex3_wave_and_clap.py"
     ```
 
 ### Exercise 4
@@ -167,5 +167,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_11/ex4_tempo_test/main.py"
+    --8<-- "examples/other/pu_robot/lesson_11_ex4_tempo_test.py"
     ```

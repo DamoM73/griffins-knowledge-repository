@@ -24,7 +24,7 @@ We **define** two functions: `make_fist` and `open_hand`. Then each button **cal
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_06/gestures/main.py"
+    --8<-- "examples/other/wukong/lesson_06_gestures.py"
     ```
 
 !!! primm "PRIMM"
@@ -67,7 +67,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_06/ex1_more_gestures/main.py"
+    --8<-- "examples/other/wukong/lesson_06_ex1_more_gestures.py"
     ```
 
 ### Exercise 2
@@ -83,7 +83,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_06/ex2_change_angle/main.py"
+    --8<-- "examples/other/wukong/lesson_06_ex2_change_angle.py"
     ```
 
 ### Exercise 3

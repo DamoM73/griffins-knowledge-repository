@@ -24,7 +24,7 @@ Each servo motor turns to an angle from 0 to 180 **degrees**. For every joint, 9
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_07/set_servo/main.py"
+    --8<-- "examples/other/pu_robot/lesson_07_set_servo.py"
     ```
 
 !!! primm "PRIMM"
@@ -57,7 +57,7 @@ Smooth move is **running in the background**. It starts the servo moving and the
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_07/smooth_move/main.py"
+    --8<-- "examples/other/pu_robot/lesson_07_smooth_move.py"
     ```
 
 !!! primm "PRIMM"
@@ -92,7 +92,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_07/ex1_nod/main.py"
+    --8<-- "examples/other/pu_robot/lesson_07_ex1_nod.py"
     ```
 
 ### Exercise 2
@@ -108,7 +108,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_07/ex2_shake/main.py"
+    --8<-- "examples/other/pu_robot/lesson_07_ex2_shake.py"
     ```
 
 ### Exercise 3
@@ -124,7 +124,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_07/ex3_step_value/main.py"
+    --8<-- "examples/other/pu_robot/lesson_07_ex3_step_value.py"
     ```
 
 ### Exercise 4
@@ -140,5 +140,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_07/ex4_no_pauses/main.py"
+    --8<-- "examples/other/pu_robot/lesson_07_ex4_no_pauses.py"
     ```

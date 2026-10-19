@@ -33,7 +33,7 @@ Code in the **on start** block runs once, as soon as the micro:bit is switched o
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_03/first_program/main.py"
+    --8<-- "examples/other/pu_robot/lesson_03_first_program.py"
     ```
 
 Download the program and put the micro:bit back in the robot. Place the robot on the floor with clear space in front of it, because it walks as soon as its calibration is finished. Then switch it on.
@@ -64,7 +64,7 @@ The **forever** block repeats the code inside it for as long as the micro:bit is
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_03/forever_loop/main.py"
+    --8<-- "examples/other/pu_robot/lesson_03_forever_loop.py"
     ```
 
 In Python, the forever block becomes a **function** called `on_forever`. The last line tells the micro:bit to run that function over and over.
@@ -105,7 +105,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_03/ex1_heart_walk/main.py"
+    --8<-- "examples/other/pu_robot/lesson_03_ex1_heart_walk.py"
     ```
 
 ### Exercise 2
@@ -121,7 +121,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_03/ex2_countdown/main.py"
+    --8<-- "examples/other/pu_robot/lesson_03_ex2_countdown.py"
     ```
 
 ### Exercise 3
@@ -137,5 +137,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_03/ex3_faces/main.py"
+    --8<-- "examples/other/pu_robot/lesson_03_ex3_faces.py"
     ```

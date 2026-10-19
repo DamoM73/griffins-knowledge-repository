@@ -30,7 +30,7 @@ The **magnetic force** block gives the strength of the magnetic field in **micro
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_09/show_strength/main.py"
+    --8<-- "examples/other/xgo/lesson_09_show_strength.py"
     ```
 
 !!! primm "PRIMM"
@@ -61,7 +61,7 @@ When the reading goes above a threshold, the dog walks backward, away from the m
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_09/scared_of_magnet/main.py"
+    --8<-- "examples/other/xgo/lesson_09_scared_of_magnet.py"
     ```
 
 !!! primm "PRIMM"
@@ -102,7 +102,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_09/ex1_baseline/main.py"
+    --8<-- "examples/other/xgo/lesson_09_ex1_baseline.py"
     ```
 
 ### Exercise 2
@@ -118,7 +118,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_09/ex2_follow/main.py"
+    --8<-- "examples/other/xgo/lesson_09_ex2_follow.py"
     ```
 
 ### Exercise 3
@@ -134,5 +134,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_09/ex3_sides/main.py"
+    --8<-- "examples/other/xgo/lesson_09_ex3_sides.py"
     ```

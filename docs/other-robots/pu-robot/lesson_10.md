@@ -32,7 +32,7 @@ To choose between three actions, we add **elif** between the if and the else. Py
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_10/shy_pu/main.py"
+    --8<-- "examples/other/pu_robot/lesson_10_shy_pu.py"
     ```
 
 Place the robot on the floor with clear space in front, then slowly walk towards it.
@@ -88,7 +88,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_10/ex1_zones/main.py"
+    --8<-- "examples/other/pu_robot/lesson_10_ex1_zones.py"
     ```
 
 ### Exercise 2
@@ -104,7 +104,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_10/ex2_eyes/main.py"
+    --8<-- "examples/other/pu_robot/lesson_10_ex2_eyes.py"
     ```
 
 ### Exercise 3
@@ -120,5 +120,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_10/ex3_four_zones/main.py"
+    --8<-- "examples/other/pu_robot/lesson_10_ex3_four_zones.py"
     ```

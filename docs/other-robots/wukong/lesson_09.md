@@ -23,7 +23,7 @@ The micro:bit's **accelerometer** measures how it's tilted. When we tilt the boa
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_09/tilt_control/main.py"
+    --8<-- "examples/other/wukong/lesson_09_tilt_control.py"
     ```
 
 !!! primm "PRIMM"
@@ -62,7 +62,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_09/ex1_jitter/main.py"
+    --8<-- "examples/other/wukong/lesson_09_ex1_jitter.py"
     ```
 
 ### Exercise 2
@@ -78,7 +78,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_09/ex2_tilt_y/main.py"
+    --8<-- "examples/other/wukong/lesson_09_ex2_tilt_y.py"
     ```
 
 ### Exercise 3
@@ -94,5 +94,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_09/ex3_wave_curl/main.py"
+    --8<-- "examples/other/wukong/lesson_09_ex3_wave_curl.py"
     ```

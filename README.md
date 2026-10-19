@@ -38,7 +38,7 @@ docs/
   onstage/ rescue-line/ rescue-maze/ soccer/ tips/   RoboCup Junior sections
   other-robots/                     Using MakeCode, PU Robot, XGO, WuKong lessons
   reference/glossary.md             built by scripts/build_glossary.py
-  examples/other/<kit>/lesson_NN/<example>/main.py   MakeCode Python examples and exercise starters
+  examples/other/<kit>/lesson_NN_<example>.py       MakeCode Python examples and exercise starters
   assets/blocks/<kit>/              Blocks screenshots (placeholders until replaced)
   stylesheets/extra.css             colour scheme and callout styles
 scripts/                            check and build scripts

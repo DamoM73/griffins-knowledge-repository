@@ -17,7 +17,7 @@ How to read each list:
 
 ### lesson_03_first_program.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_03/first_program/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_03_first_program.py`
 
 - on start — Basic
   - set walk speed range forward (2) backward (2) — robot PU › Setup
@@ -26,7 +26,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_03/first_program/main.p
 
 ### lesson_03_forever_loop.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_03/forever_loop/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_03_forever_loop.py`
 
 - forever — Basic
   - show icon [happy] — Basic
@@ -36,7 +36,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_03/forever_loop/main.py
 
 ### lesson_03_ex1_heart_walk.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_03/ex1_heart_walk/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_03_ex1_heart_walk.py`
 
 - on start — Basic
   - set walk speed range forward (2) backward (2) — robot PU › Setup
@@ -45,7 +45,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_03/ex1_heart_w
 
 ### lesson_03_ex2_countdown.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_03/ex2_countdown/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_03_ex2_countdown.py`
 
 - on start — Basic
   - set walk speed range forward (2) backward (2) — robot PU › Setup
@@ -54,7 +54,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_03/ex2_countdo
 
 ### lesson_03_ex3_faces.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_03/ex3_faces/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_03_ex3_faces.py`
 
 - forever — Basic
   - show icon [happy] — Basic
@@ -66,7 +66,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_03/ex3_faces/m
 
 ### lesson_04_ambience_light.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_04/ambience_light/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_04_ambience_light.py`
 
 - on start — Basic
   - set ambience light [all] to RGB (255, 0, 0) — robot PU › Actuators
@@ -75,7 +75,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_04/ambience_light/main.
 
 ### lesson_04_eyes.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_04/eyes/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_04_eyes.py`
 
 - on start — Basic
   - set left eye [on] right eye [off] — robot PU › Actuators
@@ -86,7 +86,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_04/eyes/main.py`
 
 ### lesson_04_repeat_flash.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_04/repeat_flash/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_04_repeat_flash.py`
 
 - on start — Basic
   - repeat (5) times — Loops
@@ -97,7 +97,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_04/repeat_flash/main.py
 
 ### lesson_04_ex1_traffic_light.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_04/ex1_traffic_light/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_04_ex1_traffic_light.py`
 
 - on start — Basic
   - set ambience light [all] to RGB (255, 0, 0) — robot PU › Actuators
@@ -106,7 +106,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_04/ex1_traffic
 
 ### lesson_04_ex2_lights_off.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_04/ex2_lights_off/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_04_ex2_lights_off.py`
 
 - on start — Basic
   - set ambience light [all] to RGB (255, 0, 0) — robot PU › Actuators
@@ -115,7 +115,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_04/ex2_lights_
 
 ### lesson_04_ex3_wink.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_04/ex3_wink/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_04_ex3_wink.py`
 
 - on start — Basic
   - repeat (5) times — Loops
@@ -126,7 +126,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_04/ex3_wink/ma
 
 ### lesson_04_ex4_fade.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_04/ex4_fade/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_04_ex4_fade.py`
 
 - on start — Basic
   - repeat (11) times — Loops
@@ -136,14 +136,14 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_04/ex4_fade/ma
 
 ### lesson_05_greet.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_05/greet/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_05_greet.py`
 
 - on start — Basic
   - set mode [greet] — robot PU › Actions
 
 ### lesson_05_dance_and_stop.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_05/dance_and_stop/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_05_dance_and_stop.py`
 
 - on start — Basic
   - set mode [dance] — robot PU › Actions
@@ -152,14 +152,14 @@ Example — code in `docs/examples/other/pu_robot/lesson_05/dance_and_stop/main.
 
 ### lesson_05_ex1_test_modes.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_05/ex1_test_modes/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_05_ex1_test_modes.py`
 
 - on start — Basic
   - set mode [greet] — robot PU › Actions
 
 ### lesson_05_ex2_routine.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_05/ex2_routine/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_05_ex2_routine.py`
 
 - on start — Basic
   - set mode [dance] — robot PU › Actions
@@ -168,7 +168,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_05/ex2_routine
 
 ### lesson_05_ex3_change_mode.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_05/ex3_change_mode/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_05_ex3_change_mode.py`
 
 - on start — Basic
   - set mode [dance] — robot PU › Actions
@@ -179,7 +179,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_05/ex3_change_
 
 ### lesson_06_walk_steps.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_06/walk_steps/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_06_walk_steps.py`
 
 - on start — Basic
   - walk [forward] for (5) steps at speed (5) — robot PU › Actions
@@ -188,7 +188,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_06/walk_steps/main.py`
 
 ### lesson_06_continuous_walk.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_06/continuous_walk/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_06_continuous_walk.py`
 
 - on start — Basic
   - set walk speed range forward (2) backward (2) — robot PU › Setup
@@ -198,21 +198,21 @@ Example — code in `docs/examples/other/pu_robot/lesson_06/continuous_walk/main
 
 ### lesson_06_ex1_speed_test.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_06/ex1_speed_test/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_06_ex1_speed_test.py`
 
 - on start — Basic
   - walk [forward] for (5) steps at speed (2) — robot PU › Actions
 
 ### lesson_06_ex2_side_steps.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_06/ex2_side_steps/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_06_ex2_side_steps.py`
 
 - on start — Basic
   - walk [side left] for (5) steps at speed (5) — robot PU › Actions
 
 ### lesson_06_ex3_square.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_06/ex3_square/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_06_ex3_square.py`
 
 - on start — Basic
   - repeat (4) times — Loops
@@ -220,7 +220,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_06/ex3_square/
 
 ### lesson_06_ex4_speed_range.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_06/ex4_speed_range/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_06_ex4_speed_range.py`
 
 - on start — Basic
   - set walk speed range forward (2) backward (2) — robot PU › Setup
@@ -232,7 +232,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_06/ex4_speed_r
 
 ### lesson_07_set_servo.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_07/set_servo/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_07_set_servo.py`
 
 - on start — Basic
   - set [head pitch] servo to (70) — robot PU › Actions
@@ -243,7 +243,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_07/set_servo/main.py`
 
 ### lesson_07_smooth_move.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_07/smooth_move/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_07_smooth_move.py`
 
 - on start — Basic
   - smooth move [head offset] servo to (60) with step (2) — robot PU › Actions
@@ -254,7 +254,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_07/smooth_move/main.py`
 
 ### lesson_07_ex1_nod.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_07/ex1_nod/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_07_ex1_nod.py`
 
 - on start — Basic
   - set [head pitch] servo to (70) — robot PU › Actions
@@ -265,7 +265,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_07/ex1_nod/mai
 
 ### lesson_07_ex2_shake.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_07/ex2_shake/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_07_ex2_shake.py`
 
 - on start — Basic
   - set [head pitch] servo to (70) — robot PU › Actions
@@ -276,7 +276,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_07/ex2_shake/m
 
 ### lesson_07_ex3_step_value.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_07/ex3_step_value/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_07_ex3_step_value.py`
 
 - on start — Basic
   - smooth move [head offset] servo to (60) with step (2) — robot PU › Actions
@@ -287,7 +287,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_07/ex3_step_va
 
 ### lesson_07_ex4_no_pauses.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_07/ex4_no_pauses/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_07_ex4_no_pauses.py`
 
 - on start — Basic
   - smooth move [head offset] servo to (60) with step (2) — robot PU › Actions
@@ -300,14 +300,14 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_07/ex4_no_paus
 
 ### lesson_08_show_distance.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_08/show_distance/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_08_show_distance.py`
 
 - forever — Basic
   - show number (⟨ultrasonic sensor distance in [cm]⟩) — Basic
 
 ### lesson_08_hand_wave.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_08/hand_wave/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_08_hand_wave.py`
 
 - forever — Basic
   - if ⟨⟨ultrasonic sensor distance in [cm]⟩ < 10⟩ then — Logic
@@ -316,7 +316,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_08/hand_wave/main.py`
 
 ### lesson_08_obstacle_alarm.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_08/obstacle_alarm/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_08_obstacle_alarm.py`
 
 - forever — Basic
   - if ⟨⟨ultrasonic sensor distance in [cm]⟩ < 15⟩ then — Logic
@@ -326,14 +326,14 @@ Example — code in `docs/examples/other/pu_robot/lesson_08/obstacle_alarm/main.
 
 ### lesson_08_ex1_accuracy.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_08/ex1_accuracy/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_08_ex1_accuracy.py`
 
 - forever — Basic
   - show number (⟨ultrasonic sensor distance in [cm]⟩) — Basic
 
 ### lesson_08_ex2_wave_nod.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_08/ex2_wave_nod/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_08_ex2_wave_nod.py`
 
 - forever — Basic
   - if ⟨⟨ultrasonic sensor distance in [cm]⟩ < 10⟩ then — Logic
@@ -342,7 +342,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_08/ex2_wave_no
 
 ### lesson_08_ex3_three_colours.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_08/ex3_three_colours/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_08_ex3_three_colours.py`
 
 - forever — Basic
   - if ⟨⟨ultrasonic sensor distance in [cm]⟩ < 15⟩ then — Logic
@@ -352,7 +352,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_08/ex3_three_c
 
 ### lesson_08_ex4_stop_at_wall.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_08/ex4_stop_at_wall/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_08_ex4_stop_at_wall.py`
 
 - on start — Basic
   - set walk speed range forward (2) backward (2) — robot PU › Setup
@@ -363,7 +363,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_08/ex4_stop_at
 
 ### lesson_09_walk_settings.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_09/walk_settings/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_09_walk_settings.py`
 
 - on start — Basic
   - set [steps] to (4) — Variables
@@ -374,7 +374,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_09/walk_settings/main.p
 
 ### lesson_09_count_waves.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_09/count_waves/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_09_count_waves.py`
 
 - on start — Basic
   - set [waves] to (0) — Variables
@@ -386,14 +386,14 @@ Example — code in `docs/examples/other/pu_robot/lesson_09/count_waves/main.py`
 
 ### lesson_09_ex1_kicks.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_09/ex1_kicks/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_09_ex1_kicks.py`
 
 - on start — Basic
   - set [kicks] to (3) — Variables
 
 ### lesson_09_ex2_settings.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_09/ex2_settings/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_09_ex2_settings.py`
 
 - on start — Basic
   - set [steps] to (4) — Variables
@@ -404,7 +404,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_09/ex2_setting
 
 ### lesson_09_ex3_countdown.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_09/ex3_countdown/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_09_ex3_countdown.py`
 
 - on start — Basic
   - set [waves] to (0) — Variables
@@ -418,7 +418,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_09/ex3_countdo
 
 ### lesson_10_shy_pu.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_10/shy_pu/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_10_shy_pu.py`
 
 - on start — Basic
   - set [distance] to (0) — Variables
@@ -440,7 +440,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_10/shy_pu/main.py`
 
 ### lesson_10_ex1_zones.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_10/ex1_zones/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_10_ex1_zones.py`
 
 - on start — Basic
   - set [distance] to (0) — Variables
@@ -462,7 +462,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_10/ex1_zones/m
 
 ### lesson_10_ex2_eyes.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_10/ex2_eyes/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_10_ex2_eyes.py`
 
 - on start — Basic
   - set [distance] to (0) — Variables
@@ -484,7 +484,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_10/ex2_eyes/ma
 
 ### lesson_10_ex3_four_zones.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_10/ex3_four_zones/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_10_ex3_four_zones.py`
 
 - on start — Basic
   - set [distance] to (0) — Variables
@@ -508,7 +508,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_10/ex3_four_zo
 
 ### lesson_11_body_pitch.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_11/body_pitch/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_11_body_pitch.py`
 
 - forever — Basic
   - show number (⟨body pitch⟩) — Basic
@@ -516,14 +516,14 @@ Example — code in `docs/examples/other/pu_robot/lesson_11/body_pitch/main.py`
 
 ### lesson_11_clap.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_11/clap/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_11_clap.py`
 
 - on [loud] sound — Input
   - set mode [jump] — robot PU › Actions
 
 ### lesson_11_music_tempo.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_11/music_tempo/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_11_music_tempo.py`
 
 - forever — Basic
   - show number (⟨music tempo⟩) — Basic
@@ -531,7 +531,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_11/music_tempo/main.py`
 
 ### lesson_11_ex1_body_roll.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_11/ex1_body_roll/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_11_ex1_body_roll.py`
 
 - forever — Basic
   - show number (⟨body pitch⟩) — Basic
@@ -539,7 +539,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_11/ex1_body_ro
 
 ### lesson_11_ex2_tilt_alarm.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_11/ex2_tilt_alarm/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_11_ex2_tilt_alarm.py`
 
 - forever — Basic
   - show number (⟨body pitch⟩) — Basic
@@ -547,14 +547,14 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_11/ex2_tilt_al
 
 ### lesson_11_ex3_wave_and_clap.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_11/ex3_wave_and_clap/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_11_ex3_wave_and_clap.py`
 
 - on [loud] sound — Input
   - set mode [jump] — robot PU › Actions
 
 ### lesson_11_ex4_tempo_test.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_11/ex4_tempo_test/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_11_ex4_tempo_test.py`
 
 - forever — Basic
   - show number (⟨music tempo⟩) — Basic
@@ -564,7 +564,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_11/ex4_tempo_t
 
 ### lesson_12_beat_nod.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_12/beat_nod/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_12_beat_nod.py`
 
 - on start — Basic
   - set tempo to (bpm) (120) — Music
@@ -577,7 +577,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_12/beat_nod/main.py`
 
 ### lesson_12_dance_with_music.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_12/dance_with_music/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_12_dance_with_music.py`
 
 - on start — Basic
   - set tempo to (bpm) (120) — Music
@@ -593,7 +593,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_12/dance_with_music/mai
 
 ### lesson_12_ex1_tempo.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_12/ex1_tempo/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_12_ex1_tempo.py`
 
 - on start — Basic
   - set tempo to (bpm) (120) — Music
@@ -609,7 +609,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_12/ex1_tempo/m
 
 ### lesson_12_ex2_beat_chart.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_12/ex2_beat_chart/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_12_ex2_beat_chart.py`
 
 - on start — Basic
   - set tempo to (bpm) (120) — Music
@@ -622,7 +622,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_12/ex2_beat_ch
 
 ### lesson_12_ex3_my_dance.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_12/ex3_my_dance/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_12_ex3_my_dance.py`
 
 - on start — Basic
   - set tempo to (bpm) (120) — Music
@@ -640,7 +640,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_12/ex3_my_danc
 
 ### lesson_13_moods.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_13/moods/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_13_moods.py`
 
 - on start — Basic
   - set [mood] to (1) — Variables
@@ -671,7 +671,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_13/moods/main.py`
 
 ### lesson_13_ex1_fourth_mood.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_13/ex1_fourth_mood/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_13_ex1_fourth_mood.py`
 
 - on start — Basic
   - set [mood] to (1) — Variables
@@ -702,7 +702,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_13/ex1_fourth_
 
 ### lesson_13_ex2_wave_switch.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_13/ex2_wave_switch/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_13_ex2_wave_switch.py`
 
 - on start — Basic
   - set [mood] to (1) — Variables
@@ -733,7 +733,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_13/ex2_wave_sw
 
 ### lesson_13_ex3_mood_sounds.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_13/ex3_mood_sounds/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_13_ex3_mood_sounds.py`
 
 - on start — Basic
   - set [mood] to (1) — Variables
@@ -766,7 +766,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_13/ex3_mood_so
 
 ### lesson_14_controller.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_14/controller/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_14_controller.py`
 
 - on start — Basic
   - set controller radio group (160) — robot PU › Controller
@@ -776,7 +776,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_14/controller/main.py`
 
 ### lesson_14_robot.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_14/robot/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_14_robot.py`
 
 - on start — Basic
   - enable remote control on group (160) — robot PU › Receiver
@@ -788,7 +788,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_14/robot/main.py`
 
 ### lesson_14_ex1_group.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_14/ex1_group/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_14_ex1_group.py`
 
 - on start — Basic
   - enable remote control on group (160) — robot PU › Receiver
@@ -800,7 +800,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_14/ex1_group/m
 
 ### lesson_14_ex2_reverse.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_14/ex2_reverse/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_14_ex2_reverse.py`
 
 - on start — Basic
   - enable remote control on group (160) — robot PU › Receiver
@@ -812,7 +812,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_14/ex2_reverse
 
 ### lesson_14_ex3_full_control.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_14/ex3_full_control/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_14_ex3_full_control.py`
 
 - on start — Basic
   - enable remote control on group (160) — robot PU › Receiver
@@ -824,7 +824,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_14/ex3_full_co
 
 ### lesson_14_ex4_buttons.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_14/ex4_buttons/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_14_ex4_buttons.py`
 
 - on start — Basic
   - set controller radio group (160) — robot PU › Controller
@@ -836,7 +836,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_14/ex4_buttons
 
 ### lesson_15_park.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_15/park/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_15_park.py`
 
 - on start — Basic
   - set [stop_distance] to (15) — Variables
@@ -848,7 +848,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_15/park/main.py`
 
 ### lesson_15_slow_down.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_15/slow_down/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_15_slow_down.py`
 
 - on start — Basic
   - set [distance] to (0) — Variables
@@ -865,7 +865,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_15/slow_down/main.py`
 
 ### lesson_15_ex1_tune.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_15/ex1_tune/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_15_ex1_tune.py`
 
 - on start — Basic
   - set [distance] to (0) — Variables
@@ -882,7 +882,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_15/ex1_tune/ma
 
 ### lesson_15_ex2_lights.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_15/ex2_lights/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_15_ex2_lights.py`
 
 - on start — Basic
   - set [distance] to (0) — Variables
@@ -899,7 +899,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_15/ex2_lights/
 
 ### lesson_15_ex3_reverse.png
 
-Exercise starter — code in `docs/examples/other/pu_robot/lesson_15/ex3_reverse/main.py`
+Exercise starter — code in `docs/examples/other/pu_robot/lesson_15_ex3_reverse.py`
 
 - on start — Basic
   - set [distance] to (0) — Variables
@@ -918,7 +918,7 @@ Exercise starter — code in `docs/examples/other/pu_robot/lesson_15/ex3_reverse
 
 ### lesson_16_step1.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_16/step1/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_16_step1.py`
 
 - forever — Basic
   - if ⟨⟨ultrasonic sensor distance in [cm]⟩ < 20⟩ then — Logic
@@ -930,7 +930,7 @@ Example — code in `docs/examples/other/pu_robot/lesson_16/step1/main.py`
 
 ### lesson_16_step2.png
 
-Example — code in `docs/examples/other/pu_robot/lesson_16/step2/main.py`
+Example — code in `docs/examples/other/pu_robot/lesson_16_step2.py`
 
 - on start — Basic
   - set [visitors] to (0) — Variables

@@ -17,7 +17,7 @@ The micro:bit sends commands to the dog's control board using **serial communica
 
 <figure markdown="span">
   ![The XGO Adapter board with labels: 4-pin signal interface, GPIO interface, speaker connector, micro:bit slot, I2C interface and screw holes](../../assets/xgo/lesson_02_adapter_board.png){ width="420" }
-  <figcaption>The micro:bit plugs into the XGO Adapter board. The 4-pin signal interface connects the board to the dog's control board. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/hardware-introduction/">ELECFREAKS</a>.</figcaption>
+  <figcaption>The micro:bit plugs into the XGO Adapter board. The 4-pin signal interface connects the board to the dog's control board. Image: ELECFREAKS.</figcaption>
 </figure>
 
 === "Blocks"
@@ -29,7 +29,7 @@ The micro:bit sends commands to the dog's control board using **serial communica
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_02/first_program/main.py"
+    --8<-- "examples/other/xgo/lesson_02_first_program.py"
     ```
 
 !!! primm "PRIMM"
@@ -57,7 +57,7 @@ Unlike the PU Robot, the XGO's micro:bit buttons are easy to reach, so we can us
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_02/sit_and_battery/main.py"
+    --8<-- "examples/other/xgo/lesson_02_sit_and_battery.py"
     ```
 
 Download the program, lay the dog down and switch it on. Wait until the ring light stays on and the dog has stood up before pressing any buttons.
@@ -100,7 +100,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_02/ex1_no_set_xgo/main.py"
+    --8<-- "examples/other/xgo/lesson_02_ex1_no_set_xgo.py"
     ```
 
 ### Exercise 2
@@ -116,7 +116,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_02/ex2_stand/main.py"
+    --8<-- "examples/other/xgo/lesson_02_ex2_stand.py"
     ```
 
 ### Exercise 3
@@ -132,5 +132,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_02/ex3_battery_face/main.py"
+    --8<-- "examples/other/xgo/lesson_02_ex3_battery_face.py"
     ```

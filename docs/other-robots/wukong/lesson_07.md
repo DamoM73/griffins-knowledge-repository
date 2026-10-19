@@ -23,7 +23,7 @@ The hand picks a **random number** from 1 to 3, then uses an if statement to cho
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_07/rock_paper_scissors/main.py"
+    --8<-- "examples/other/wukong/lesson_07_rock_paper_scissors.py"
     ```
 
 !!! primm "PRIMM"
@@ -73,7 +73,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_07/ex1_icons/main.py"
+    --8<-- "examples/other/wukong/lesson_07_ex1_icons.py"
     ```
 
 ### Exercise 2
@@ -89,7 +89,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_07/ex2_tally/main.py"
+    --8<-- "examples/other/wukong/lesson_07_ex2_tally.py"
     ```
 
 ### Exercise 3
@@ -105,5 +105,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_07/ex3_score/main.py"
+    --8<-- "examples/other/wukong/lesson_07_ex3_score.py"
     ```

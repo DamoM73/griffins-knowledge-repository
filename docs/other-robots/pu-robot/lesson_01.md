@@ -29,7 +29,7 @@ Altogether the robot has six servo motors, and each one moves one joint, so the 
 
 <figure markdown="span">
   ![The outside parts of the PU Robot, numbered 1 to 16](../../assets/pu-robot/lesson_01_parts.png){ width="420" }
-  <figcaption>The outside of the PU Robot. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-case-01">ELECFREAKS</a>.</figcaption>
+  <figcaption>The outside of the PU Robot. Image: ELECFREAKS.</figcaption>
 </figure>
 
 | No. | Part | What it does |
@@ -55,7 +55,7 @@ Inside the head we find the parts that control the robot.
 
 <figure markdown="span">
   ![Inside the PU Robot's head, with parts numbered 1 to 10](../../assets/pu-robot/lesson_01_inside_parts.png){ width="420" }
-  <figcaption>Inside the head, with the cover off. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-case-01">ELECFREAKS</a>.</figcaption>
+  <figcaption>Inside the head, with the cover off. Image: ELECFREAKS.</figcaption>
 </figure>
 
 | No. | Part | What it does |
@@ -79,12 +79,12 @@ Inside the head we find the parts that control the robot.
 
 <figure markdown="span">
   ![Pressing the black power button on the robot's chin](../../assets/pu-robot/lesson_01_power.png){ width="480" }
-  <figcaption>The power button is on the front of the chin. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-quick-start">ELECFREAKS</a>.</figcaption>
+  <figcaption>The power button is on the front of the chin. Image: ELECFREAKS.</figcaption>
 </figure>
 
 <figure markdown="span">
   ![Plugging a USB cable into the charging port on the robot's chin](../../assets/pu-robot/lesson_01_charging.png){ width="480" }
-  <figcaption>The charging port is also on the chin. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-quick-start">ELECFREAKS</a>.</figcaption>
+  <figcaption>The charging port is also on the chin. Image: ELECFREAKS.</figcaption>
 </figure>
 
 !!! warning "Before we start"
@@ -103,21 +103,21 @@ The micro:bit sits inside the robot's head, so we take it out to connect it to t
 
     <figure markdown="span">
       ![Turning the robot's body 90 degrees](../../assets/pu-robot/lesson_01_remove_1.png){ width="380" }
-      <figcaption>Turn the body 90°. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+      <figcaption>Turn the body 90°. Image: ELECFREAKS.</figcaption>
     </figure>
 
 3. Undo the screws and put them somewhere safe, such as a small container.
 
     <figure markdown="span">
       ![Undoing the head cover screws with a screwdriver](../../assets/pu-robot/lesson_01_remove_2.png){ width="380" }
-      <figcaption>Undo the screws. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+      <figcaption>Undo the screws. Image: ELECFREAKS.</figcaption>
     </figure>
 
 4. Open the head cover.
 
     <figure markdown="span">
       ![Lifting the head cover open](../../assets/pu-robot/lesson_01_remove_3.png){ width="380" }
-      <figcaption>Lift the head cover open. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+      <figcaption>Lift the head cover open. Image: ELECFREAKS.</figcaption>
     </figure>
 
 5. Look at which way the micro:bit faces, then lift it out.

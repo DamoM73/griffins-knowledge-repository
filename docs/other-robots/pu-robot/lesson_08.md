@@ -28,7 +28,7 @@ Since we can't press the micro:bit buttons inside the head, the ultrasonic senso
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_08/show_distance/main.py"
+    --8<-- "examples/other/pu_robot/lesson_08_show_distance.py"
     ```
 
 !!! primm "PRIMM"
@@ -54,7 +54,7 @@ An **if statement** checks a **condition**. If the condition is `True`, the code
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_08/hand_wave/main.py"
+    --8<-- "examples/other/pu_robot/lesson_08_hand_wave.py"
     ```
 
 !!! primm "PRIMM"
@@ -85,7 +85,7 @@ Adding **else** gives the if statement a second path. When the condition is `Fal
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_08/obstacle_alarm/main.py"
+    --8<-- "examples/other/pu_robot/lesson_08_obstacle_alarm.py"
     ```
 
 !!! primm "PRIMM"
@@ -121,7 +121,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_08/ex1_accuracy/main.py"
+    --8<-- "examples/other/pu_robot/lesson_08_ex1_accuracy.py"
     ```
 
 ### Exercise 2
@@ -137,7 +137,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_08/ex2_wave_nod/main.py"
+    --8<-- "examples/other/pu_robot/lesson_08_ex2_wave_nod.py"
     ```
 
 ### Exercise 3
@@ -153,7 +153,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_08/ex3_three_colours/main.py"
+    --8<-- "examples/other/pu_robot/lesson_08_ex3_three_colours.py"
     ```
 
 ### Exercise 4
@@ -169,5 +169,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_08/ex4_stop_at_wall/main.py"
+    --8<-- "examples/other/pu_robot/lesson_08_ex4_stop_at_wall.py"
     ```

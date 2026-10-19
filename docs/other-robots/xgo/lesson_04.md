@@ -14,7 +14,7 @@ The **move** block sets a direction and a speed from 0 to 100%. The dog keeps wa
 
 <figure markdown="span">
   ![Animation of the XGO walking on a table](../../assets/xgo/lesson_04_walking.webp){ width="480" }
-  <figcaption>The XGO walking. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/xgo-lite-v2-products-instruction/">ELECFREAKS</a>.</figcaption>
+  <figcaption>The XGO walking. Image: ELECFREAKS.</figcaption>
 </figure>
 
 === "Blocks"
@@ -26,7 +26,7 @@ The **move** block sets a direction and a speed from 0 to 100%. The dog keeps wa
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_04/walk_forward/main.py"
+    --8<-- "examples/other/xgo/lesson_04_walk_forward.py"
     ```
 
 !!! primm "PRIMM"
@@ -58,7 +58,7 @@ The **rotate** block works the same way, but turns the dog on the spot.
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_04/turn/main.py"
+    --8<-- "examples/other/xgo/lesson_04_turn.py"
     ```
 
 !!! primm "PRIMM"
@@ -87,7 +87,7 @@ The **translational motion** block with a time walks for that many seconds and t
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_04/timed_steps/main.py"
+    --8<-- "examples/other/xgo/lesson_04_timed_steps.py"
     ```
 
 !!! primm "PRIMM"
@@ -121,7 +121,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_04/ex1_no_stop/main.py"
+    --8<-- "examples/other/xgo/lesson_04_ex1_no_stop.py"
     ```
 
 ### Exercise 2
@@ -141,7 +141,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_04/ex2_step_size/main.py"
+    --8<-- "examples/other/xgo/lesson_04_ex2_step_size.py"
     ```
 
 ### Exercise 3
@@ -157,5 +157,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_04/ex3_square/main.py"
+    --8<-- "examples/other/xgo/lesson_04_ex3_square.py"
     ```

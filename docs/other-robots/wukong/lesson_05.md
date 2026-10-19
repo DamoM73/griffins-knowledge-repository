@@ -20,7 +20,7 @@ The examples use 150 degrees as fully curled. Change it to the angles from our t
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_05/count/main.py"
+    --8<-- "examples/other/wukong/lesson_05_count.py"
     ```
 
 !!! primm "PRIMM"
@@ -67,7 +67,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_05/ex1_count_to_five/main.py"
+    --8<-- "examples/other/wukong/lesson_05_ex1_count_to_five.py"
     ```
 
 ### Exercise 2
@@ -83,7 +83,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_05/ex2_count_open/main.py"
+    --8<-- "examples/other/wukong/lesson_05_ex2_count_open.py"
     ```
 
 ### Exercise 3
@@ -99,5 +99,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_05/ex3_breathing_light/main.py"
+    --8<-- "examples/other/wukong/lesson_05_ex3_breathing_light.py"
     ```

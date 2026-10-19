@@ -13,7 +13,7 @@ The robotic arm on the XGO's back has three servo motors. Two move the arm (clam
 
 <figure markdown="span">
   ![Animation of the XGO reaching with its arm and gripping a pom-pom](../../assets/xgo/lesson_06_arm.webp){ width="480" }
-  <figcaption>The arm reaching and gripping a pom-pom. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/xgo-lite-v2-products-instruction/">ELECFREAKS</a>.</figcaption>
+  <figcaption>The arm reaching and gripping a pom-pom. Image: ELECFREAKS.</figcaption>
 </figure>
 
 !!! warning "20 g or less"
@@ -32,7 +32,7 @@ Before the arm can move, we **load** its servo motors. Then we set clampX and cl
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_06/arm_position/main.py"
+    --8<-- "examples/other/xgo/lesson_06_arm_position.py"
     ```
 
 !!! primm "PRIMM"
@@ -68,7 +68,7 @@ The **clamp** block sets the gripper from 0 to 255.
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_06/gripper/main.py"
+    --8<-- "examples/other/xgo/lesson_06_gripper.py"
     ```
 
 !!! primm "PRIMM"
@@ -106,7 +106,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_06/ex1_clamp_range/main.py"
+    --8<-- "examples/other/xgo/lesson_06_ex1_clamp_range.py"
     ```
 
 ### Exercise 2
@@ -122,7 +122,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_06/ex2_pick_up/main.py"
+    --8<-- "examples/other/xgo/lesson_06_ex2_pick_up.py"
     ```
 
 ### Exercise 3
@@ -138,5 +138,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_06/ex3_stable/main.py"
+    --8<-- "examples/other/xgo/lesson_06_ex3_stable.py"
     ```

@@ -13,7 +13,7 @@ The XGO can move its body without moving its feet. It can crouch down, stand tal
 
 <figure markdown="span">
   ![Animation of the XGO raising, lowering, leaning and twisting its body while its feet stay still](../../assets/xgo/lesson_05_posture.webp){ width="480" }
-  <figcaption>The XGO moving its body without moving its feet. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/xgo-lite-v2-products-instruction/">ELECFREAKS</a>.</figcaption>
+  <figcaption>The XGO moving its body without moving its feet. Image: ELECFREAKS.</figcaption>
 </figure>
 
 ## Body height
@@ -29,7 +29,7 @@ The **body height** block sets how tall the dog stands, from 0% (crouched) to 10
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_05/body_height/main.py"
+    --8<-- "examples/other/xgo/lesson_05_body_height.py"
     ```
 
 !!! primm "PRIMM"
@@ -55,7 +55,7 @@ The **rotate … degrees about the … axis** block tilts the body from -20 to 2
 
 <figure markdown="span">
   ![Animation of the XGO standing on a board that is tilted, keeping its body level](../../assets/xgo/lesson_05_balance.webp){ width="480" }
-  <figcaption>The XGO can also keep its body level by itself when the ground tilts. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/xgo-lite-v2-products-instruction/">ELECFREAKS</a>.</figcaption>
+  <figcaption>The XGO can also keep its body level by itself when the ground tilts. Image: ELECFREAKS.</figcaption>
 </figure>
 
 === "Blocks"
@@ -67,7 +67,7 @@ The **rotate … degrees about the … axis** block tilts the body from -20 to 2
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_05/rotate_body/main.py"
+    --8<-- "examples/other/xgo/lesson_05_rotate_body.py"
     ```
 
 !!! primm "PRIMM"
@@ -108,7 +108,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_05/ex1_axes/main.py"
+    --8<-- "examples/other/xgo/lesson_05_ex1_axes.py"
     ```
 
 ### Exercise 2
@@ -124,7 +124,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_05/ex2_limits/main.py"
+    --8<-- "examples/other/xgo/lesson_05_ex2_limits.py"
     ```
 
 ### Exercise 3
@@ -140,5 +140,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_05/ex3_dance/main.py"
+    --8<-- "examples/other/xgo/lesson_05_ex3_dance.py"
     ```

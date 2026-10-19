@@ -29,7 +29,7 @@ The micro:bit stays in the WuKong board while we download. Plug the USB cable in
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_02/zero_servos/main.py"
+    --8<-- "examples/other/wukong/lesson_02_zero_servos.py"
     ```
 
 !!! primm "PRIMM"
@@ -57,7 +57,7 @@ The arms aren't fitted yet, so it's hard to see a servo motor turn. To check, pu
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_02/test_thumb/main.py"
+    --8<-- "examples/other/wukong/lesson_02_test_thumb.py"
     ```
 
 !!! primm "PRIMM"
@@ -97,7 +97,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_02/ex1_my_thumb/main.py"
+    --8<-- "examples/other/wukong/lesson_02_ex1_my_thumb.py"
     ```
 
 ### Exercise 2
@@ -113,5 +113,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_02/ex2_each_finger/main.py"
+    --8<-- "examples/other/wukong/lesson_02_ex2_each_finger.py"
     ```

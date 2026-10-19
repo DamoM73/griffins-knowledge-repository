@@ -46,7 +46,7 @@ The robots in Other Robots can be programmed with Blocks or with Python. Each ex
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/home/show_icon/main.py"
+    --8<-- "examples/home/show_icon.py"
     ```
 
 When we choose a tab, every other example on the site switches to the same tab, so we only need to choose once.

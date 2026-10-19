@@ -23,7 +23,7 @@ At a tempo of 120 beats per minute, there are 2 beats every second, so each beat
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_12/beat_nod/main.py"
+    --8<-- "examples/other/pu_robot/lesson_12_beat_nod.py"
     ```
 
 !!! primm "PRIMM"
@@ -56,7 +56,7 @@ The **play** block can play a melody in the background. The music starts, and th
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_12/dance_with_music/main.py"
+    --8<-- "examples/other/pu_robot/lesson_12_dance_with_music.py"
     ```
 
 !!! primm "PRIMM"
@@ -100,7 +100,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_12/ex1_tempo/main.py"
+    --8<-- "examples/other/pu_robot/lesson_12_ex1_tempo.py"
     ```
 
 ### Exercise 2
@@ -116,7 +116,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_12/ex2_beat_chart/main.py"
+    --8<-- "examples/other/pu_robot/lesson_12_ex2_beat_chart.py"
     ```
 
 ### Exercise 3
@@ -132,5 +132,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_12/ex3_my_dance/main.py"
+    --8<-- "examples/other/pu_robot/lesson_12_ex3_my_dance.py"
     ```

@@ -21,7 +21,7 @@ Our hand can make gestures, but can it hold something? Our hand is a **prototype
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_10/grip_test/main.py"
+    --8<-- "examples/other/wukong/lesson_10_grip_test.py"
     ```
 
 !!! primm "PRIMM"
@@ -72,7 +72,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_10/ex1_trials/main.py"
+    --8<-- "examples/other/wukong/lesson_10_ex1_trials.py"
     ```
 
 ### Exercise 2
@@ -88,7 +88,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_10/ex2_improve/main.py"
+    --8<-- "examples/other/wukong/lesson_10_ex2_improve.py"
     ```
 
 ### Exercise 3

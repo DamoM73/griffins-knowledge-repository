@@ -20,7 +20,7 @@ Work through the lessons in order. Each lesson adds one new part of the dog.
 | [Lesson 12: Radio Remote](lesson_12.md) | drive the dog from a second micro:bit |
 | [Lesson 13: Sense the Feelings](lesson_13.md) | log and graph the dog's movement data (extension) |
 
-Lessons 8, 9, 10 and 13 are based on activities from the [ELECFREAKS XGO Robot Kit wiki](https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit/), written for the first XGO kit and updated here for the V2 dog.
+Lessons 8, 9, 10 and 13 are based on activities from the ELECFREAKS XGO Robot Kit wiki, written for the first XGO kit and updated here for the V2 dog.
 
 !!! warning "Every program starts with set XGO"
     Every XGO program must start with **set XGO TX P14 RX P13** in **on start**. Without it, the dog ignores every command. Lesson 2 explains why.

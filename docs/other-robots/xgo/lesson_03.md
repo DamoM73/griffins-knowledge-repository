@@ -18,7 +18,7 @@ The XGO has 19 built-in actions, such as Sit_down, Wave, Handshake and Stretch_o
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_03/wave/main.py"
+    --8<-- "examples/other/xgo/lesson_03_wave.py"
     ```
 
 !!! primm "PRIMM"
@@ -47,7 +47,7 @@ Most XGO blocks wait until the dog finishes moving (up to about 10 seconds) befo
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_03/routine/main.py"
+    --8<-- "examples/other/xgo/lesson_03_routine.py"
     ```
 
 !!! primm "PRIMM"
@@ -86,7 +86,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_03/ex1_test_actions/main.py"
+    --8<-- "examples/other/xgo/lesson_03_ex1_test_actions.py"
     ```
 
 ### Exercise 2
@@ -102,7 +102,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_03/ex2_story/main.py"
+    --8<-- "examples/other/xgo/lesson_03_ex2_story.py"
     ```
 
 ### Exercise 3
@@ -118,5 +118,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_03/ex3_icons/main.py"
+    --8<-- "examples/other/xgo/lesson_03_ex3_icons.py"
     ```

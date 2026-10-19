@@ -25,7 +25,7 @@ Before we write our own programs, let's see what the robot can already do. In th
     - robot: [pu-robot-0.6.0.hex](../../assets/pu-robot/firmware/pu-robot-0.6.0.hex)
     - remote controller: [pu-remote-0.5.3.hex](../../assets/pu-robot/firmware/pu-remote-0.5.3.hex)
 
-    Take the micro:bit out of the robot or the remote, plug it into the computer, then drag the file onto the **MICROBIT** drive (see [Using MakeCode](../using-makecode.md#option-b-drag-and-drop-a-hex-file)). Keep the two micro:bits apart: the robot won't start with the remote's program. The [ELECFREAKS firmware page](https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-flashing-firmware) has the full steps, including opening the remote to fit its micro:bit.
+    Take the micro:bit out of the robot or the remote, plug it into the computer, then drag the file onto the **MICROBIT** drive (see [Using MakeCode](../using-makecode.md#option-b-drag-and-drop-a-hex-file)). Keep the two micro:bits apart: the robot won't start with the remote's program. To take the micro:bit out of the remote, undo the screws on the back of the remote.
 
 ## The remote controller
 
@@ -33,7 +33,7 @@ The remote controller holds a second micro:bit, which sends commands to the robo
 
 <figure markdown="span">
   ![The front and back of the remote controller, with controls numbered 1 to 12](../../assets/pu-robot/lesson_02_remote.png)
-  <figcaption>The front and back of the remote controller. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-case-01">ELECFREAKS</a>.</figcaption>
+  <figcaption>The front and back of the remote controller. Image: ELECFREAKS.</figcaption>
 </figure>
 
 | No. | Control | What it does |

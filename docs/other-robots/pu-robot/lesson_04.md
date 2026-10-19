@@ -27,7 +27,7 @@ We set each light's colour with three **RGB** numbers: how much red, green and b
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_04/ambience_light/main.py"
+    --8<-- "examples/other/pu_robot/lesson_04_ambience_light.py"
     ```
 
 !!! primm "PRIMM"
@@ -64,7 +64,7 @@ Each eye can be on or off, and we can change its **brightness** from 0 to 100.
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_04/eyes/main.py"
+    --8<-- "examples/other/pu_robot/lesson_04_eyes.py"
     ```
 
 !!! primm "PRIMM"
@@ -92,7 +92,7 @@ To flash the lights five times, we could copy the same blocks five times. That's
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_04/repeat_flash/main.py"
+    --8<-- "examples/other/pu_robot/lesson_04_repeat_flash.py"
     ```
 
 !!! primm "PRIMM"
@@ -133,7 +133,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_04/ex1_traffic_light/main.py"
+    --8<-- "examples/other/pu_robot/lesson_04_ex1_traffic_light.py"
     ```
 
 ### Exercise 2
@@ -149,7 +149,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_04/ex2_lights_off/main.py"
+    --8<-- "examples/other/pu_robot/lesson_04_ex2_lights_off.py"
     ```
 
 ### Exercise 3
@@ -165,7 +165,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_04/ex3_wink/main.py"
+    --8<-- "examples/other/pu_robot/lesson_04_ex3_wink.py"
     ```
 
 ### Exercise 4
@@ -181,5 +181,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_04/ex4_fade/main.py"
+    --8<-- "examples/other/pu_robot/lesson_04_ex4_fade.py"
     ```

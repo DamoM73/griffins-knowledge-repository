@@ -26,7 +26,7 @@ In the PU Robot lessons, the extension had its own remote control blocks. The XG
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_12/remote/main.py"
+    --8<-- "examples/other/xgo/lesson_12_remote.py"
     ```
 
 ??? note "Code explanation"
@@ -49,7 +49,7 @@ In the PU Robot lessons, the extension had its own remote control blocks. The XG
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_12/dog/main.py"
+    --8<-- "examples/other/xgo/lesson_12_dog.py"
     ```
 
 Download each program to its own micro:bit, then switch the dog on.
@@ -89,7 +89,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_12/ex1_group/main.py"
+    --8<-- "examples/other/xgo/lesson_12_ex1_group.py"
     ```
 
 ### Exercise 2
@@ -105,7 +105,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_12/ex2_turning/main.py"
+    --8<-- "examples/other/xgo/lesson_12_ex2_turning.py"
     ```
 
 ### Exercise 3
@@ -121,7 +121,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_12/ex3_tilt/main.py"
+    --8<-- "examples/other/xgo/lesson_12_ex3_tilt.py"
     ```
 
 ### Exercise 4
@@ -137,5 +137,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_12/ex4_action/main.py"
+    --8<-- "examples/other/xgo/lesson_12_ex4_action.py"
     ```

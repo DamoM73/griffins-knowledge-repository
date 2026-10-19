@@ -24,7 +24,7 @@ Here the number of steps and the speed are stored in two variables, then both wa
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_09/walk_settings/main.py"
+    --8<-- "examples/other/pu_robot/lesson_09_walk_settings.py"
     ```
 
 !!! primm "PRIMM"
@@ -55,7 +55,7 @@ A variable can also change while the program runs. Here `waves` starts at 0, and
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_09/count_waves/main.py"
+    --8<-- "examples/other/pu_robot/lesson_09_count_waves.py"
     ```
 
 !!! primm "PRIMM"
@@ -96,7 +96,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_09/ex1_kicks/main.py"
+    --8<-- "examples/other/pu_robot/lesson_09_ex1_kicks.py"
     ```
 
 ### Exercise 2
@@ -112,7 +112,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_09/ex2_settings/main.py"
+    --8<-- "examples/other/pu_robot/lesson_09_ex2_settings.py"
     ```
 
 ### Exercise 3
@@ -128,5 +128,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_09/ex3_countdown/main.py"
+    --8<-- "examples/other/pu_robot/lesson_09_ex3_countdown.py"
     ```

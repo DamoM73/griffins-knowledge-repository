@@ -30,7 +30,7 @@ This kind of program is called a **state machine**. The robot is always in one *
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_13/moods/main.py"
+    --8<-- "examples/other/pu_robot/lesson_13_moods.py"
     ```
 
 !!! primm "PRIMM"
@@ -93,7 +93,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_13/ex1_fourth_mood/main.py"
+    --8<-- "examples/other/pu_robot/lesson_13_ex1_fourth_mood.py"
     ```
 
 ### Exercise 2
@@ -109,7 +109,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_13/ex2_wave_switch/main.py"
+    --8<-- "examples/other/pu_robot/lesson_13_ex2_wave_switch.py"
     ```
 
 ### Exercise 3
@@ -125,5 +125,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_13/ex3_mood_sounds/main.py"
+    --8<-- "examples/other/pu_robot/lesson_13_ex3_mood_sounds.py"
     ```

@@ -25,7 +25,7 @@ The **compass heading** block gives the dog's **heading**: 0 is north, 90 is eas
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_10/show_heading/main.py"
+    --8<-- "examples/other/xgo/lesson_10_show_heading.py"
     ```
 
 !!! primm "PRIMM"
@@ -53,7 +53,7 @@ North is a heading of 0, but the heading jumps from 359 straight to 0, so north 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_10/face_north/main.py"
+    --8<-- "examples/other/xgo/lesson_10_face_north.py"
     ```
 
 !!! primm "PRIMM"
@@ -99,7 +99,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_10/ex1_face_east/main.py"
+    --8<-- "examples/other/xgo/lesson_10_ex1_face_east.py"
     ```
 
 ### Exercise 2
@@ -115,7 +115,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_10/ex2_shortest_turn/main.py"
+    --8<-- "examples/other/xgo/lesson_10_ex2_shortest_turn.py"
     ```
 
 ### Exercise 3
@@ -137,5 +137,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/xgo/lesson_10/ex3_treasure_hunt/main.py"
+    --8<-- "examples/other/xgo/lesson_10_ex3_treasure_hunt.py"
     ```

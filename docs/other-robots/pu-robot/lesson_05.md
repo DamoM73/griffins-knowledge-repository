@@ -18,7 +18,7 @@ The PU Robot has six built-in modes: greet, rest, explore, jump, dance and kick.
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_05/greet/main.py"
+    --8<-- "examples/other/pu_robot/lesson_05_greet.py"
     ```
 
 !!! primm "PRIMM"
@@ -44,7 +44,7 @@ Some modes keep going until we tell the robot to stop. Dance keeps dancing, for 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_05/dance_and_stop/main.py"
+    --8<-- "examples/other/pu_robot/lesson_05_dance_and_stop.py"
     ```
 
 Dance reacts to sound, so play some music nearby before running this program.
@@ -82,7 +82,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_05/ex1_test_modes/main.py"
+    --8<-- "examples/other/pu_robot/lesson_05_ex1_test_modes.py"
     ```
 
 ### Exercise 2
@@ -98,7 +98,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_05/ex2_routine/main.py"
+    --8<-- "examples/other/pu_robot/lesson_05_ex2_routine.py"
     ```
 
 ### Exercise 3
@@ -114,5 +114,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_05/ex3_change_mode/main.py"
+    --8<-- "examples/other/pu_robot/lesson_05_ex3_change_mode.py"
     ```

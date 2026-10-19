@@ -32,7 +32,7 @@ The remote reads how far the joystick is pushed forwards or backwards, and sends
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_14/controller/main.py"
+    --8<-- "examples/other/pu_robot/lesson_14_controller.py"
     ```
 
 ??? note "Code explanation"
@@ -55,7 +55,7 @@ The robot listens for speed values. Each time one arrives, an event handler deci
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_14/robot/main.py"
+    --8<-- "examples/other/pu_robot/lesson_14_robot.py"
     ```
 
 Download each program to its own micro:bit. Put one in the robot and one in the remote, then switch both on.
@@ -97,7 +97,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_14/ex1_group/main.py"
+    --8<-- "examples/other/pu_robot/lesson_14_ex1_group.py"
     ```
 
 ### Exercise 2
@@ -113,7 +113,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_14/ex2_reverse/main.py"
+    --8<-- "examples/other/pu_robot/lesson_14_ex2_reverse.py"
     ```
 
 ### Exercise 3
@@ -133,7 +133,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_14/ex3_full_control/main.py"
+    --8<-- "examples/other/pu_robot/lesson_14_ex3_full_control.py"
     ```
 
 ### Exercise 4
@@ -149,5 +149,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_14/ex4_buttons/main.py"
+    --8<-- "examples/other/pu_robot/lesson_14_ex4_buttons.py"
     ```

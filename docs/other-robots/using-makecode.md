@@ -31,7 +31,7 @@ Every robot in Other Robots is programmed the same way, so this page covers the 
 
     <figure markdown="span">
       ![The MakeCode home page with the New Project button](../assets/makecode/new_project.png){ width="560" }
-      <figcaption>Select New Project under My Projects. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+      <figcaption>Select New Project under My Projects. Image: ELECFREAKS.</figcaption>
     </figure>
 
 2. Type a name that says what the program does, for example `PU first program`, and select **Create**.
@@ -39,7 +39,7 @@ Every robot in Other Robots is programmed the same way, so this page covers the 
 
     <figure markdown="span">
       ![The Create a Project box with a name field and a Create button](../assets/makecode/create_project.png){ width="400" }
-      <figcaption>Name the project, then select Create. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+      <figcaption>Name the project, then select Create. Image: ELECFREAKS.</figcaption>
     </figure>
 
 
@@ -55,7 +55,7 @@ MakeCode only has the standard micro:bit blocks to start with. Each robot needs 
 
     <figure markdown="span">
       ![The list of block categories with Extensions near the bottom](../assets/makecode/extensions.png){ width="160" }
-      <figcaption>Extensions is near the bottom of the block categories. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+      <figcaption>Extensions is near the bottom of the block categories. Image: ELECFREAKS.</figcaption>
     </figure>
 
 2. Type the robot's search word in the search box and press ++enter++.
@@ -116,7 +116,7 @@ There are two ways to get our program onto the micro:bit. Connecting with WebUSB
 
     <figure markdown="span">
       ![The menu next to the Download button, with Connect Device at the top](../assets/makecode/connect_device.png){ width="400" }
-      <figcaption>Connect Device is in the menu next to Download. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+      <figcaption>Connect Device is in the menu next to Download. Image: ELECFREAKS.</figcaption>
     </figure>
 
 3. Follow the prompts, select **BBC micro:bit CMSIS-DAP**, then select **Connect**.
@@ -125,12 +125,12 @@ There are two ways to get our program onto the micro:bit. Connecting with WebUSB
 
     <figure markdown="span">
       ![Step 1 of connecting: plug in the micro:bit, then select Next](../assets/makecode/connect_step1.png){ width="400" }
-      <figcaption>First, check the micro:bit is plugged in and select Next. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+      <figcaption>First, check the micro:bit is plugged in and select Next. Image: ELECFREAKS.</figcaption>
     </figure>
 
     <figure markdown="span">
       ![Step 2 of connecting: select Pair, then choose the micro:bit in the browser's pop-up](../assets/makecode/pair.png){ width="400" }
-      <figcaption>Then select Pair and choose the micro:bit in the pop-up. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+      <figcaption>Then select Pair and choose the micro:bit in the pop-up. Image: ELECFREAKS.</figcaption>
     </figure>
 
 4. Select **Download**.

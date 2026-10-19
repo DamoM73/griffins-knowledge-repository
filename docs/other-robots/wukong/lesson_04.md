@@ -20,7 +20,7 @@ We store the angle in a **variable** called `angle`. Button A adds 10 to it and 
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_04/finger_range/main.py"
+    --8<-- "examples/other/wukong/lesson_04_finger_range.py"
     ```
 
 !!! primm "PRIMM"
@@ -75,7 +75,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_04/ex1_record_range/main.py"
+    --8<-- "examples/other/wukong/lesson_04_ex1_record_range.py"
     ```
 
 ### Exercise 2
@@ -91,7 +91,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_04/ex2_smaller_steps/main.py"
+    --8<-- "examples/other/wukong/lesson_04_ex2_smaller_steps.py"
     ```
 
 ### Exercise 3
@@ -107,5 +107,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_04/ex3_no_limits/main.py"
+    --8<-- "examples/other/wukong/lesson_04_ex3_no_limits.py"
     ```

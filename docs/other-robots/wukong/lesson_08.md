@@ -23,7 +23,7 @@ A **while loop** checks its condition before each repeat. Here it keeps going wh
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_08/smooth_curl/main.py"
+    --8<-- "examples/other/wukong/lesson_08_smooth_curl.py"
     ```
 
 !!! primm "PRIMM"
@@ -69,7 +69,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_08/ex1_pause_test/main.py"
+    --8<-- "examples/other/wukong/lesson_08_ex1_pause_test.py"
     ```
 
 ### Exercise 2
@@ -85,7 +85,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_08/ex2_step_size/main.py"
+    --8<-- "examples/other/wukong/lesson_08_ex2_step_size.py"
     ```
 
 ### Exercise 3
@@ -101,7 +101,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_08/ex3_slow_open/main.py"
+    --8<-- "examples/other/wukong/lesson_08_ex3_slow_open.py"
     ```
 
 ### Exercise 4
@@ -117,5 +117,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/wukong/lesson_08/ex4_smooth_fist/main.py"
+    --8<-- "examples/other/wukong/lesson_08_ex4_smooth_fist.py"
     ```

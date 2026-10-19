@@ -20,7 +20,7 @@ The **walk** block takes three things: the direction, the number of steps and th
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_06/walk_steps/main.py"
+    --8<-- "examples/other/pu_robot/lesson_06_walk_steps.py"
     ```
 
 !!! primm "PRIMM"
@@ -48,7 +48,7 @@ The **set robot move direction** block starts the robot walking and lets the pro
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_06/continuous_walk/main.py"
+    --8<-- "examples/other/pu_robot/lesson_06_continuous_walk.py"
     ```
 
 !!! primm "PRIMM"
@@ -92,7 +92,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_06/ex1_speed_test/main.py"
+    --8<-- "examples/other/pu_robot/lesson_06_ex1_speed_test.py"
     ```
 
 ### Exercise 2
@@ -108,7 +108,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_06/ex2_side_steps/main.py"
+    --8<-- "examples/other/pu_robot/lesson_06_ex2_side_steps.py"
     ```
 
 ### Exercise 3
@@ -124,7 +124,7 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_06/ex3_square/main.py"
+    --8<-- "examples/other/pu_robot/lesson_06_ex3_square.py"
     ```
 
 ### Exercise 4
@@ -140,5 +140,5 @@ Starter code:
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_06/ex4_speed_range/main.py"
+    --8<-- "examples/other/pu_robot/lesson_06_ex4_speed_range.py"
     ```

@@ -23,7 +23,7 @@ Work through the lessons in order. Each lesson adds one new part of the robot.
 | [Lesson 15: Parking Challenge](lesson_15.md) | stop as close to a wall as possible |
 | [Lesson 16: Final Project](lesson_16.md) | design, build and test our own robot behaviour |
 
-Lessons 1, 2, 9, 10, 12, 13, 15 and 16 are based on activities from the [ELECFREAKS PU Robot wiki](https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/).
+Lessons 1, 2, 9, 10, 12, 13, 15 and 16 are based on activities from the ELECFREAKS PU Robot wiki.
 
 !!! warning "The micro:bit buttons are inside the head"
     Once the micro:bit is closed inside the robot's head, we can't press buttons A and B. So PU Robot programs start in **on start**, or react to the robot's sensors (a hand wave or a clap) instead of the buttons.

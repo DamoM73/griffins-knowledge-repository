@@ -49,7 +49,7 @@ We'll build it in two stages: first R1 and R2, then R3.
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_16/step1/main.py"
+    --8<-- "examples/other/pu_robot/lesson_16_step1.py"
     ```
 
 !!! primm "PRIMM"
@@ -80,7 +80,7 @@ Now we add a variable, `visitors`, that goes up by 1 for each greeting.
 === "Python"
 
     ```python linenums="1"
-    --8<-- "examples/other/pu_robot/lesson_16/step2/main.py"
+    --8<-- "examples/other/pu_robot/lesson_16_step2.py"
     ```
 
 !!! primm "PRIMM"

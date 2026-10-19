@@ -13,7 +13,7 @@ The XGO has 15 servo motors: three in each leg, plus three in the robotic arm. T
 
 <figure markdown="span">
   ![The XGO V2 with its parts labelled: clamping jaws, mechanical arm, switch button, aluminium body, speaker, XGO Adapter, servo joints and legs](../../assets/xgo/lesson_01_parts.png){ width="560" }
-  <figcaption>The main parts of the XGO Robot Dog V2. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/hardware-introduction/">ELECFREAKS</a>.</figcaption>
+  <figcaption>The main parts of the XGO Robot Dog V2. Image: ELECFREAKS.</figcaption>
 </figure>
 
 ## What we need
@@ -33,7 +33,7 @@ The XGO has 15 servo motors: three in each leg, plus three in the robotic arm. T
 
 <figure markdown="span">
   ![Four drawings showing not to block the dog, not to pull its legs, not to let it fall, and to keep it away from water](../../assets/xgo/lesson_01_safety.png){ width="480" }
-  <figcaption>Don't block or press on the dog, don't pull its legs, don't let it fall, and keep it away from liquids. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/safety-instruction/">ELECFREAKS</a>.</figcaption>
+  <figcaption>Don't block or press on the dog, don't pull its legs, don't let it fall, and keep it away from liquids. Image: ELECFREAKS.</figcaption>
 </figure>
 
 ## Switch on
@@ -47,7 +47,7 @@ The XGO has 15 servo motors: three in each leg, plus three in the robotic arm. T
 
 <figure markdown="span">
   ![Animation of the XGO switching on: it stands up and the arm opens and folds back](../../assets/xgo/lesson_01_switch_on.webp){ width="480" }
-  <figcaption>Switching on. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/preparation/">ELECFREAKS</a>.</figcaption>
+  <figcaption>Switching on. Image: ELECFREAKS.</figcaption>
 </figure>
 
 ## Switch off
@@ -57,7 +57,7 @@ The XGO has 15 servo motors: three in each leg, plus three in the robotic arm. T
 
 <figure markdown="span">
   ![Animation of the XGO switching off: it lies down and folds its arm](../../assets/xgo/lesson_01_switch_off.webp){ width="480" }
-  <figcaption>Switching off. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/preparation/">ELECFREAKS</a>.</figcaption>
+  <figcaption>Switching off. Image: ELECFREAKS.</figcaption>
 </figure>
 
 ## Charging
@@ -66,7 +66,7 @@ If the ring light flashes and the dog lies down by itself, the battery is low. S
 
 <figure markdown="span">
   ![Animation of the charger being plugged into the port on the dog's belly](../../assets/xgo/lesson_01_charging.webp){ width="480" }
-  <figcaption>The charging port is on the dog's belly. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/preparation/">ELECFREAKS</a>.</figcaption>
+  <figcaption>The charging port is on the dog's belly. Image: ELECFREAKS.</figcaption>
 </figure>
 
 ## The micro:bit slot
