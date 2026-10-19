@@ -31,7 +31,17 @@
       "Bash(gh run *)",
       "Bash([ -f \"$M\" ])",
       "Read(//c/Users/DamoM/.claude/projects/d--GIT-griffins-knowledge-repository/memory/**)",
-      "Bash(echo '- [MakeCode local compiler check]\\(makecode-local-compiler-check.md\\) — check MakeCode Python names from Node without a browser')"
+      "Bash(echo '- [MakeCode local compiler check]\\(makecode-local-compiler-check.md\\) — check MakeCode Python names from Node without a browser')",
+      "PowerShell(python scripts/find_unused_files.py > \"$env:TEMP\\\\unused.txt\"; Get-Content \"$env:TEMP\\\\unused.txt\" | Select-Object -Last 5; \\(Get-Content \"$env:TEMP\\\\unused.txt\"\\).Count)",
+      "PowerShell($p = Get-Content \"$env:TEMP\\\\unused.txt\" | Where-Object { $_ -notmatch 'unused path' -and $_.Trim\\(\\) -ne '' }; $p.Count; $p | Where-Object { $_ -notmatch '^docs/examples/.+/main\\\\.py$' }; \"---\"; Get-Content \"$env:TEMP\\\\unused.txt\" | Select-Object -First 3)",
+      "PowerShell($p = Get-Content \"$env:TEMP\\\\unused.txt\" | Where-Object { $_ -match '^docs/examples/.+/main\\\\.py$' }; $p | Set-Content -Encoding ascii \"$env:TEMP\\\\rm.txt\"; git rm -q --pathspec-from-file=\"$env:TEMP\\\\rm.txt\"; git status --short | Measure-Object | Select-Object -ExpandProperty Count; python scripts/find_unused_files.py)",
+      "PowerShell(git status --short | Where-Object { $_ -notmatch '^D  docs/examples/.+/main\\\\.py$' })",
+      "PowerShell($n=0; do { $e = Get-ChildItem docs/examples -Directory -Recurse | Where-Object { -not \\(Get-ChildItem $_.FullName -Force\\) }; $e | ForEach-Object { Remove-Item $_.FullName -Confirm:$false; $n++ } } while \\($e\\); \"removed $n empty folders\"; Get-ChildItem docs/examples -Directory -Recurse | Select-Object -ExpandProperty FullName)",
+      "PowerShell(python scripts/check_explanations.py)",
+      "PowerShell(zensical build --clean 2>&1)",
+      "PowerShell(Get-ChildItem -Directory -Force | Where-Object { $_.Name -match 'venv' } | Select-Object Name; python -m zensical --version)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\zensical.exe build --clean 2>&1)",
+      "PowerShell(git push origin main)"
     ]
   }
 }
