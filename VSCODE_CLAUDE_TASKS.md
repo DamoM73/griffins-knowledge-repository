@@ -53,13 +53,44 @@ The user has given permission to delete these files without asking again. Two ch
 - A new PU Lesson 2 was added, so PU Lessons 2–15 became Lessons 3–16, with their Blocks screenshots.
 - Every example was moved from `docs/examples/other/<kit>/lesson_NN/<example>/main.py` to `docs/examples/other/<kit>/lesson_NN_<example>.py` (and `docs/examples/home/show_icon/main.py` to `docs/examples/home/show_icon.py`).
 
-1. Run `python scripts/find_unused_files.py`. It lists every Python file under `docs/examples/` that no page includes, and every Blocks screenshot that no page shows. Expect every old `main.py` (about 170) plus about 29 old PU screenshots in `docs/assets/blocks/pu-robot/`.
+1. Run `python scripts/find_unused_files.py`. It lists every Python file under `docs/examples/` that no page includes, and every Blocks screenshot that no page shows. Expect every old `main.py` (about 170) plus exactly these 30 PNGs in `docs/assets/blocks/pu-robot/`:
+
+    - `docs/assets/blocks/pu-robot/lesson_02_first_program.png`
+    - `docs/assets/blocks/pu-robot/lesson_02_forever_loop.png`
+    - `docs/assets/blocks/pu-robot/lesson_03_ambience_light.png`
+    - `docs/assets/blocks/pu-robot/lesson_03_eyes.png`
+    - `docs/assets/blocks/pu-robot/lesson_03_repeat_flash.png`
+    - `docs/assets/blocks/pu-robot/lesson_04_dance_and_stop.png`
+    - `docs/assets/blocks/pu-robot/lesson_04_greet.png`
+    - `docs/assets/blocks/pu-robot/lesson_05_continuous_walk.png`
+    - `docs/assets/blocks/pu-robot/lesson_05_walk_steps.png`
+    - `docs/assets/blocks/pu-robot/lesson_06_set_servo.png`
+    - `docs/assets/blocks/pu-robot/lesson_06_smooth_move.png`
+    - `docs/assets/blocks/pu-robot/lesson_07_hand_wave.png`
+    - `docs/assets/blocks/pu-robot/lesson_07_obstacle_alarm.png`
+    - `docs/assets/blocks/pu-robot/lesson_07_show_distance.png`
+    - `docs/assets/blocks/pu-robot/lesson_08_count_waves.png`
+    - `docs/assets/blocks/pu-robot/lesson_08_walk_settings.png`
+    - `docs/assets/blocks/pu-robot/lesson_09_shy_pu.png`
+    - `docs/assets/blocks/pu-robot/lesson_10_body_pitch.png`
+    - `docs/assets/blocks/pu-robot/lesson_10_clap.png`
+    - `docs/assets/blocks/pu-robot/lesson_10_music_tempo.png`
+    - `docs/assets/blocks/pu-robot/lesson_11_beat_nod.png`
+    - `docs/assets/blocks/pu-robot/lesson_11_dance_with_music.png`
+    - `docs/assets/blocks/pu-robot/lesson_12_moods.png`
+    - `docs/assets/blocks/pu-robot/lesson_13_controller.png`
+    - `docs/assets/blocks/pu-robot/lesson_13_robot.png`
+    - `docs/assets/blocks/pu-robot/lesson_14_park.png`
+    - `docs/assets/blocks/pu-robot/lesson_14_slow_down.png`
+    - `docs/assets/blocks/pu-robot/lesson_15_step1.png`
+    - `docs/assets/blocks/pu-robot/lesson_15_step2.png`
+    - `docs/assets/blocks/pu-robot/Screenshot 2026-10-19 161643.png`
+
+    The user has checked this list and wants all 30 deleted, including the two real screenshots `lesson_02_first_program.png` and `lesson_02_forever_loop.png` (they will retake them as lesson_03) and the stray `Screenshot 2026-10-19 161643.png`. If the script lists any other PNG, stop and report it instead of deleting it.
 2. If any listed path is outside `docs/examples/` and `docs/assets/blocks/`, stop and report it instead of deleting it.
-3. `git rm` each listed path, then run the script again (expect `0 unused path(s) found`). Also `git rm` `docs/assets/pu-robot/lesson_02_parts.png` and `docs/assets/pu-robot/lesson_02_inside_parts.png` if they exist (they were renamed to `lesson_01_parts.png` and `lesson_01_inside_parts.png`, and the script only checks `docs/assets/blocks/`).
+3. `git rm -f` each listed path (`-f` because some PNGs have been changed since the last commit). If a file isn't tracked by git, such as the `Screenshot …` file, delete it normally. Quote paths that contain spaces. Then run the script again (expect `0 unused path(s) found`). Also `git rm` `docs/assets/pu-robot/lesson_02_parts.png` and `docs/assets/pu-robot/lesson_02_inside_parts.png` if they exist (they were renamed to `lesson_01_parts.png` and `lesson_01_inside_parts.png`, and the script only checks `docs/assets/blocks/`).
 4. Remove any folders left empty under `docs/examples/`.
 5. Run both checks, then commit with the message `Remove leftover files` and push.
-
-If the user has saved real Blocks screenshots over any old-numbered PU placeholders, check the listed PNGs before deleting: a real screenshot there belongs to the lesson one number higher.
 
 ### 4. Check the licence (Confirm first)
 
