@@ -15,6 +15,11 @@ Our first program checks that the micro:bit can talk to the dog.
 
 The micro:bit sends commands to the dog's control board using **serial communication**. The commands travel through two **pins**: P14 sends (TX, short for transmit) and P13 receives (RX). **Set XGO TX P14 RX P13** tells the micro:bit which pins to use, so it has to be the first block in **on start**.
 
+<figure markdown="span">
+  ![The XGO Adapter board with labels: 4-pin signal interface, GPIO interface, speaker connector, micro:bit slot, I2C interface and screw holes](../../assets/xgo/lesson_02_adapter_board.png){ width="420" }
+  <figcaption>The micro:bit plugs into the XGO Adapter board. The 4-pin signal interface connects the board to the dog's control board. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/hardware-introduction/">ELECFREAKS</a>.</figcaption>
+</figure>
+
 === "Blocks"
 
     ![Blocks for the XGO first program](../../assets/blocks/xgo/lesson_02_first_program.png){ .blocks }

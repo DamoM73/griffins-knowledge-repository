@@ -11,6 +11,11 @@
 
 The robotic arm on the XGO's back has three servo motors. Two move the arm (clampX forwards and backwards, clampZ up and down), and one opens and closes the **gripper**.
 
+<figure markdown="span">
+  ![Animation of the XGO reaching with its arm and gripping a pom-pom](../../assets/xgo/lesson_06_arm.webp){ width="480" }
+  <figcaption>The arm reaching and gripping a pom-pom. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/xgo-lite-v2-products-instruction/">ELECFREAKS</a>.</figcaption>
+</figure>
+
 !!! warning "20 g or less"
     The arm can only lift objects up to 20 g, such as a scrunched-up paper ball or a pom-pom. Heavier objects damage its servo motors.
 
@@ -47,8 +52,8 @@ Before the arm can move, we **load** its servo motors. Then we set clampX and cl
     - **line 10** → tells the micro:bit which pins to use to talk to the dog.
     - **line 11** → loads the arm's servo motors so they can move.
 
-!!! warning "Watch the capital letters"
-    The Python names of the arm blocks have capital letters in unusual places: `Manipulator_clampX`, `Manipulator_clampZ`, `Manipulator_clamp` and `servo_setting_robotArm`. Python treats capital and lower-case letters as different letters, so we need to type these names exactly as shown.
+!!! warning "Check the Python names in MakeCode"
+    The Python names of the arm blocks (such as `manipulator_clamp_x`) haven't been checked in MakeCode yet. Build the program in Blocks, then switch to Python to see the exact names.
 
 ## Open and close the gripper
 

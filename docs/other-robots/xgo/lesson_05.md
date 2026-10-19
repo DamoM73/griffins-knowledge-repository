@@ -11,6 +11,11 @@
 
 The XGO can move its body without moving its feet. It can crouch down, stand tall, lean and twist. These moves are great for dances and for making the dog look alive.
 
+<figure markdown="span">
+  ![Animation of the XGO raising, lowering, leaning and twisting its body while its feet stay still](../../assets/xgo/lesson_05_posture.webp){ width="480" }
+  <figcaption>The XGO moving its body without moving its feet. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/xgo-lite-v2-products-instruction/">ELECFREAKS</a>.</figcaption>
+</figure>
+
 ## Body height
 
 The **body height** block sets how tall the dog stands, from 0% (crouched) to 100% (as tall as it can go).
@@ -47,6 +52,11 @@ The **body height** block sets how tall the dog stands, from 0% (crouched) to 10
 The body can tilt around three **axes**. Think of three sticks pushed through the dog's body: one from nose to tail (X), one from side to side (Y) and one from top to bottom (Z). Turning around each stick tilts the dog a different way. Turning around the Z axis is called **yaw**.
 
 The **rotate … degrees about the … axis** block tilts the body from -20 to 20 degrees.
+
+<figure markdown="span">
+  ![Animation of the XGO standing on a board that is tilted, keeping its body level](../../assets/xgo/lesson_05_balance.webp){ width="480" }
+  <figcaption>The XGO can also keep its body level by itself when the ground tilts. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/xgo-lite-v2-products-instruction/">ELECFREAKS</a>.</figcaption>
+</figure>
 
 === "Blocks"
 

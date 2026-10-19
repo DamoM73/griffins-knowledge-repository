@@ -38,4 +38,4 @@
 ## Decisions
 - [ ] Licence: MIT (current `LICENSE`) or GPLv3 code plus CC BY-NC-SA 4.0 content (current footer).
 - [ ] Terminology definitions written new or adapted for this site: calibration, event, event handler, port, random number, threshold, radio group, state, requirement.
-- [ ] Credit ELECFREAKS on wiki images, and confirm the images can be reused on the site (PU Lesson 2 now uses three wiki diagrams, credited in their captions).
+- [ ] Credit ELECFREAKS on wiki images, and confirm the images can be reused on the site (PU Lessons 1 and 2, XGO Lessons 1, 2, 4, 5 and 6, and the Using MakeCode page now use ELECFREAKS wiki images, credited in their captions).

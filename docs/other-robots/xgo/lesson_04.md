@@ -12,6 +12,11 @@ The XGO walks in four directions (forward, backward, left and right) and turns o
 
 The **move** block sets a direction and a speed from 0 to 100%. The dog keeps walking until it gets another command, so we stop it by setting the speed to 0.
 
+<figure markdown="span">
+  ![Animation of the XGO walking on a table](../../assets/xgo/lesson_04_walking.webp){ width="480" }
+  <figcaption>The XGO walking. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/xgo-lite-v2-products-instruction/">ELECFREAKS</a>.</figcaption>
+</figure>
+
 === "Blocks"
 
     ![Blocks for the walk forward example](../../assets/blocks/xgo/lesson_04_walk_forward.png){ .blocks }

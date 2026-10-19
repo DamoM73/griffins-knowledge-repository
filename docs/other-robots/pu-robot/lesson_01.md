@@ -77,6 +77,16 @@ Inside the head we find the parts that control the robot.
 - After switching on, the robot takes about 2 seconds to do its **calibration**. Wait until it stands still before we touch it.
 - To charge the robot, plug a USB cable into the charging port on its chin. Charging takes about 20 to 30 minutes and gives about 20 minutes of use.
 
+<figure markdown="span">
+  ![Pressing the black power button on the robot's chin](../../assets/pu-robot/lesson_01_power.png){ width="480" }
+  <figcaption>The power button is on the front of the chin. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-quick-start">ELECFREAKS</a>.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Plugging a USB cable into the charging port on the robot's chin](../../assets/pu-robot/lesson_01_charging.png){ width="480" }
+  <figcaption>The charging port is also on the chin. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-quick-start">ELECFREAKS</a>.</figcaption>
+</figure>
+
 !!! warning "Before we start"
     - Downloading our own program replaces the robot's **factory program**. The remote controller then stops working until our teacher puts the factory program back, so we use the remote in [Lesson 2](lesson_02.md) before downloading anything.
     - Never twist the robot's joints by hand while it's switched on. This damages the servo motors.
@@ -90,8 +100,26 @@ The micro:bit sits inside the robot's head, so we take it out to connect it to t
     - Why: moving the joints while the robot is on damages the servo motors.
 2. Gently turn the robot's body by 90°.
     - Why: this lets us reach the screws that hold the head cover on.
+
+    <figure markdown="span">
+      ![Turning the robot's body 90 degrees](../../assets/pu-robot/lesson_01_remove_1.png){ width="380" }
+      <figcaption>Turn the body 90°. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+    </figure>
+
 3. Undo the screws and put them somewhere safe, such as a small container.
+
+    <figure markdown="span">
+      ![Undoing the head cover screws with a screwdriver](../../assets/pu-robot/lesson_01_remove_2.png){ width="380" }
+      <figcaption>Undo the screws. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+    </figure>
+
 4. Open the head cover.
+
+    <figure markdown="span">
+      ![Lifting the head cover open](../../assets/pu-robot/lesson_01_remove_3.png){ width="380" }
+      <figcaption>Lift the head cover open. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+    </figure>
+
 5. Look at which way the micro:bit faces, then lift it out.
     - Result: we're holding the micro:bit and we know which way it goes back in.
 

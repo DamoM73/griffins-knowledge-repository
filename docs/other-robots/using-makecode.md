@@ -28,8 +28,20 @@ Every robot in Other Robots is programmed the same way, so this page covers the 
 1. Go to [makecode.microbit.org](https://makecode.microbit.org) and select **New Project**.
     - Why: each program we write lives in its own project, which MakeCode saves in the browser.
     - Result: a box opens asking for a project name.
+
+    <figure markdown="span">
+      ![The MakeCode home page with the New Project button](../assets/makecode/new_project.png){ width="560" }
+      <figcaption>Select New Project under My Projects. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+    </figure>
+
 2. Type a name that says what the program does, for example `PU first program`, and select **Create**.
     - Result: the editor opens with an **on start** block and a **forever** block already in place.
+
+    <figure markdown="span">
+      ![The Create a Project box with a name field and a Create button](../assets/makecode/create_project.png){ width="400" }
+      <figcaption>Name the project, then select Create. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+    </figure>
+
 
 !!! tip "Where our projects are saved"
     MakeCode saves our projects in the web browser on the computer we're using. To find a project again, go back to the MakeCode home page and look under **My Projects**. If we use a different computer, our projects won't be there.
@@ -40,6 +52,12 @@ MakeCode only has the standard micro:bit blocks to start with. Each robot needs 
 
 1. In the list of block categories, select **Extensions**. If we can't see it, select **Advanced** first.
     - Result: the Extensions page opens with a search box.
+
+    <figure markdown="span">
+      ![The list of block categories with Extensions near the bottom](../assets/makecode/extensions.png){ width="160" }
+      <figcaption>Extensions is near the bottom of the block categories. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+    </figure>
+
 2. Type the robot's search word in the search box and press ++enter++.
 
     | Robot | Search for | Category that appears |
@@ -95,9 +113,26 @@ There are two ways to get our program onto the micro:bit. Connecting with WebUSB
 1. Plug the micro:bit into the computer with the USB cable.
     - Result: a drive called **MICROBIT** appears on the computer.
 2. In MakeCode, select the three dots next to the **Download** button, then **Connect Device**.
+
+    <figure markdown="span">
+      ![The menu next to the Download button, with Connect Device at the top](../assets/makecode/connect_device.png){ width="400" }
+      <figcaption>Connect Device is in the menu next to Download. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+    </figure>
+
 3. Follow the prompts, select **BBC micro:bit CMSIS-DAP**, then select **Connect**.
     - Why: this lets MakeCode send programs straight to the micro:bit.
     - Result: MakeCode says the micro:bit is connected.
+
+    <figure markdown="span">
+      ![Step 1 of connecting: plug in the micro:bit, then select Next](../assets/makecode/connect_step1.png){ width="400" }
+      <figcaption>First, check the micro:bit is plugged in and select Next. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+    </figure>
+
+    <figure markdown="span">
+      ![Step 2 of connecting: select Pair, then choose the micro:bit in the browser's pop-up](../assets/makecode/pair.png){ width="400" }
+      <figcaption>Then select Pair and choose the micro:bit in the pop-up. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/pu-robot-kit/pu-robot-kit-program-download">ELECFREAKS</a>.</figcaption>
+    </figure>
+
 4. Select **Download**.
     - Result: the yellow light on the back of the micro:bit flashes, then our program starts.
 

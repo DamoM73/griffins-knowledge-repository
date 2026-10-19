@@ -11,6 +11,11 @@
 
 The XGO has 15 servo motors: three in each leg, plus three in the robotic arm. The micro:bit doesn't move them directly. Instead, it sends commands to the dog's own **control board**, which moves the servo motors.
 
+<figure markdown="span">
+  ![The XGO V2 with its parts labelled: clamping jaws, mechanical arm, switch button, aluminium body, speaker, XGO Adapter, servo joints and legs](../../assets/xgo/lesson_01_parts.png){ width="560" }
+  <figcaption>The main parts of the XGO Robot Dog V2. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/hardware-introduction/">ELECFREAKS</a>.</figcaption>
+</figure>
+
 ## What we need
 
 - an XGO Robot Dog V2, charged (a full charge takes about 2 hours)
@@ -26,6 +31,11 @@ The XGO has 15 servo motors: three in each leg, plus three in the robotic arm. T
     - Before each use, check that the leg, arm and gripper screws are tight. Tell our teacher if any are loose.
     - Keep fingers clear of the joints and gripper while the dog is switched on.
 
+<figure markdown="span">
+  ![Four drawings showing not to block the dog, not to pull its legs, not to let it fall, and to keep it away from water](../../assets/xgo/lesson_01_safety.png){ width="480" }
+  <figcaption>Don't block or press on the dog, don't pull its legs, don't let it fall, and keep it away from liquids. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/safety-instruction/">ELECFREAKS</a>.</figcaption>
+</figure>
+
 ## Switch on
 
 1. Place the dog on the floor or table, lying down.
@@ -35,14 +45,29 @@ The XGO has 15 servo motors: three in each leg, plus three in the robotic arm. T
 3. Don't touch the dog until it has finished starting up.
     - Result: the dog stands up slowly, and the arm opens and then folds back in.
 
+<figure markdown="span">
+  ![Animation of the XGO switching on: it stands up and the arm opens and folds back](../../assets/xgo/lesson_01_switch_on.webp){ width="480" }
+  <figcaption>Switching on. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/preparation/">ELECFREAKS</a>.</figcaption>
+</figure>
+
 ## Switch off
 
 1. Press the power switch again.
     - Result: the ring light flashes slowly, the dog lies down, the arm folds in, then the light goes out.
 
+<figure markdown="span">
+  ![Animation of the XGO switching off: it lies down and folds its arm](../../assets/xgo/lesson_01_switch_off.webp){ width="480" }
+  <figcaption>Switching off. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/preparation/">ELECFREAKS</a>.</figcaption>
+</figure>
+
 ## Charging
 
 If the ring light flashes and the dog lies down by itself, the battery is low. Switch it off and plug the charger into the port on the dog's belly. The charger's light is red while charging and green when the battery is full.
+
+<figure markdown="span">
+  ![Animation of the charger being plugged into the port on the dog's belly](../../assets/xgo/lesson_01_charging.webp){ width="480" }
+  <figcaption>The charging port is on the dog's belly. Image: <a href="https://wiki.elecfreaks.com/en/microbit/robot/xgo-robot-kit-v2/preparation/">ELECFREAKS</a>.</figcaption>
+</figure>
 
 ## The micro:bit slot
 
