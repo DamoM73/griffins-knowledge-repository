@@ -85,7 +85,7 @@ The **play** block can play a melody in the background. The music starts, and th
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -93,9 +93,15 @@ What happens to the dance if we change the tempo to 60, then to 180? Why does on
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_12/ex1_tempo/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/pu-robot/lesson_12_ex1_tempo.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_12/ex1_tempo/main.py"
+    ```
 
 ### Exercise 2
 
@@ -103,9 +109,15 @@ Can you draw a beat chart for 8 beats of moves (nod, shake, wink and so on), the
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_12/ex2_beat_chart/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/pu-robot/lesson_12_ex2_beat_chart.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_12/ex2_beat_chart/main.py"
+    ```
 
 ### Exercise 3
 
@@ -113,6 +125,12 @@ Can you make a dance with at least three different moves and changing light colo
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_12/ex3_my_dance/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/pu-robot/lesson_12_ex3_my_dance.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_12/ex3_my_dance/main.py"
+    ```

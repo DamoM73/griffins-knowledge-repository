@@ -104,7 +104,7 @@ The robot can listen to music and work out its **tempo** in beats per minute (BP
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -112,9 +112,15 @@ What range of values does body roll give? Change the example to show body roll, 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_11/ex1_body_roll/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/pu-robot/lesson_11_ex1_body_roll.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_11/ex1_body_roll/main.py"
+    ```
 
 ### Exercise 2
 
@@ -122,9 +128,15 @@ Can you make the lights turn red when the robot is tilted too far forwards or ba
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_11/ex2_tilt_alarm/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/pu-robot/lesson_11_ex2_tilt_alarm.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_11/ex2_tilt_alarm/main.py"
+    ```
 
 ### Exercise 3
 
@@ -132,9 +144,15 @@ Can you make the robot greet you when you wave your hand, and jump when you clap
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_11/ex3_wave_and_clap/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/pu-robot/lesson_11_ex3_wave_and_clap.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_11/ex3_wave_and_clap/main.py"
+    ```
 
 ### Exercise 4
 
@@ -142,6 +160,12 @@ How accurate is the music tempo? Play three songs whose BPM you can look up onli
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_11/ex4_tempo_test/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 4](../../assets/blocks/pu-robot/lesson_11_ex4_tempo_test.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_11/ex4_tempo_test/main.py"
+    ```

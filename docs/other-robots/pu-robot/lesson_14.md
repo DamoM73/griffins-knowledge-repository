@@ -82,7 +82,7 @@ Download each program to its own micro:bit. Put one in the robot and one in the 
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -90,9 +90,15 @@ Can you change 160 to your pair's radio group in both programs, and test that yo
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_14/ex1_group/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/pu-robot/lesson_14_ex1_group.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_14/ex1_group/main.py"
+    ```
 
 ### Exercise 2
 
@@ -100,9 +106,15 @@ What happens if you pull the joystick backwards? If the robot walks forward when
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_14/ex2_reverse/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/pu-robot/lesson_14_ex2_reverse.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_14/ex2_reverse/main.py"
+    ```
 
 ### Exercise 3
 
@@ -114,9 +126,15 @@ Can you add walking backward, and turning left and right? It should:
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_14/ex3_full_control/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/pu-robot/lesson_14_ex3_full_control.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_14/ex3_full_control/main.py"
+    ```
 
 ### Exercise 4
 
@@ -124,6 +142,12 @@ Can you use the remote's B1 to B4 buttons to start modes such as dance and kick?
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_14/ex4_buttons/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 4](../../assets/blocks/pu-robot/lesson_14_ex4_buttons.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_14/ex4_buttons/main.py"
+    ```

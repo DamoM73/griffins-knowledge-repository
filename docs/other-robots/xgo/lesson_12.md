@@ -74,7 +74,7 @@ Download each program to its own micro:bit, then switch the dog on.
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -82,9 +82,15 @@ Can you change 42 to your pair's radio group in both programs, and test that you
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_12/ex1_group/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/xgo/lesson_12_ex1_group.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_12/ex1_group/main.py"
+    ```
 
 ### Exercise 2
 
@@ -92,9 +98,15 @@ Can you add turning left and right? Send 2 when A and B are pressed together, an
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_12/ex2_turning/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/xgo/lesson_12_ex2_turning.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_12/ex2_turning/main.py"
+    ```
 
 ### Exercise 3
 
@@ -102,9 +114,15 @@ Can you steer the dog by tilting the remote? Hint: send the remote's **accelerat
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_12/ex3_tilt/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/xgo/lesson_12_ex3_tilt.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_12/ex3_tilt/main.py"
+    ```
 
 ### Exercise 4
 
@@ -112,6 +130,12 @@ Can you add a gesture on the remote, such as shaking it, that makes the dog do a
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_12/ex4_action/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 4](../../assets/blocks/xgo/lesson_12_ex4_action.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_12/ex4_action/main.py"
+    ```

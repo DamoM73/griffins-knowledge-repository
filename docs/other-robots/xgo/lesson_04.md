@@ -106,7 +106,7 @@ The **translational motion** block with a time walks for that many seconds and t
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -114,9 +114,15 @@ What happens if we take out the last move line (speed 0)? Predict first, then te
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_04/ex1_no_stop/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/xgo/lesson_04_ex1_no_stop.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_04/ex1_no_stop/main.py"
+    ```
 
 ### Exercise 2
 
@@ -128,9 +134,15 @@ How does step size change how far the dog walks? It should:
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_04/ex2_step_size/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/xgo/lesson_04_ex2_step_size.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_04/ex2_step_size/main.py"
+    ```
 
 ### Exercise 3
 
@@ -138,6 +150,12 @@ Can you program the dog to walk in a square and finish where it started?
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_04/ex3_square/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/xgo/lesson_04_ex3_square.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_04/ex3_square/main.py"
+    ```

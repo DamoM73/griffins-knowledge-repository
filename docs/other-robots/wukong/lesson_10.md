@@ -57,7 +57,7 @@ Run 5 trials with the original design, so one lucky grip doesn't fool us.
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -65,9 +65,15 @@ Can you choose a light object, such as a paper cup or a scrunched paper ball, an
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_10/ex1_trials/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/wukong/lesson_10_ex1_trials.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_10/ex1_trials/main.py"
+    ```
 
 ### Exercise 2
 
@@ -75,9 +81,15 @@ Can you make one design change to improve the grip, then run 5 more trials? For 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_10/ex2_improve/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/wukong/lesson_10_ex2_improve.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_10/ex2_improve/main.py"
+    ```
 
 ### Exercise 3
 

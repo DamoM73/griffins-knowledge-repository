@@ -71,7 +71,7 @@ Most XGO blocks wait until the dog finishes moving (up to about 10 seconds) befo
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -79,9 +79,15 @@ Can you test at least 8 actions, one at a time? Record each one in a table with 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_03/ex1_test_actions/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/xgo/lesson_03_ex1_test_actions.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_03/ex1_test_actions/main.py"
+    ```
 
 ### Exercise 2
 
@@ -89,9 +95,15 @@ Can you make a 3-action routine that tells a short story, such as a dog asking f
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_03/ex2_story/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/xgo/lesson_03_ex2_story.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_03/ex2_story/main.py"
+    ```
 
 ### Exercise 3
 
@@ -99,6 +111,12 @@ Can you show a different icon on the display during each action of your routine?
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_03/ex3_icons/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/xgo/lesson_03_ex3_icons.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_03/ex3_icons/main.py"
+    ```

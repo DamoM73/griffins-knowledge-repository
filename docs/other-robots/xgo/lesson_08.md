@@ -84,7 +84,7 @@ Set `cold` to 1 degree above the reading from the first example. Then cool the m
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -92,9 +92,15 @@ How warm does your hand make the micro:bit? Record the temperature before, and a
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_08/ex1_threshold/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/xgo/lesson_08_ex1_threshold.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_08/ex1_threshold/main.py"
+    ```
 
 ### Exercise 2
 
@@ -102,9 +108,15 @@ Can you make the dog lie down (Go_prone) if it's still cold after trembling, and
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_08/ex2_lie_down/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/xgo/lesson_08_ex2_lie_down.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_08/ex2_lie_down/main.py"
+    ```
 
 ### Exercise 3
 
@@ -112,6 +124,12 @@ Can you add a second threshold, `hot`, so the dog pants (shows an icon of your c
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_08/ex3_too_hot/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/xgo/lesson_08_ex3_too_hot.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_08/ex3_too_hot/main.py"
+    ```

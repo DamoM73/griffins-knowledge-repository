@@ -58,7 +58,7 @@ The hand picks a **random number** from 1 to 3, then uses an if statement to cho
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -66,9 +66,15 @@ Can you show an icon on the display for each choice as well, so we can check the
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_07/ex1_icons/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/wukong/lesson_07_ex1_icons.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_07/ex1_icons/main.py"
+    ```
 
 ### Exercise 2
 
@@ -76,9 +82,15 @@ Is the hand really random? Shake it 30 times and tally how many times it picks e
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_07/ex2_tally/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/wukong/lesson_07_ex2_tally.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_07/ex2_tally/main.py"
+    ```
 
 ### Exercise 3
 
@@ -86,6 +98,12 @@ Can you keep score? Press A when the hand wins and B when you win, using two var
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_07/ex3_score/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/wukong/lesson_07_ex3_score.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_07/ex3_score/main.py"
+    ```

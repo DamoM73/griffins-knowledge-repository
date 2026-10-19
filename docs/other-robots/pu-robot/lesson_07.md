@@ -77,7 +77,7 @@ Smooth move is **running in the background**. It starts the servo moving and the
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -85,9 +85,15 @@ Can you make the robot nod "yes" 3 times using a repeat loop?
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_07/ex1_nod/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/pu-robot/lesson_07_ex1_nod.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_07/ex1_nod/main.py"
+    ```
 
 ### Exercise 2
 
@@ -95,9 +101,15 @@ Can you make the robot shake its head "no" by moving the head offset joint?
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_07/ex2_shake/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/pu-robot/lesson_07_ex2_shake.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_07/ex2_shake/main.py"
+    ```
 
 ### Exercise 3
 
@@ -105,9 +117,15 @@ What difference does the step value make in smooth move? Try steps of 1, 5 and 2
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_07/ex3_step_value/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/pu-robot/lesson_07_ex3_step_value.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_07/ex3_step_value/main.py"
+    ```
 
 ### Exercise 4
 
@@ -115,6 +133,12 @@ What happens if we take the pauses out of the smooth move example? Why do you th
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_07/ex4_no_pauses/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 4](../../assets/blocks/pu-robot/lesson_07_ex4_no_pauses.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_07/ex4_no_pauses/main.py"
+    ```

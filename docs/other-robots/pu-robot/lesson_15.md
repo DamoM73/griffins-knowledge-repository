@@ -112,7 +112,7 @@ Run each version 3 times from the same starting spot, and record the gap each ti
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each challenge has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each challenge has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -120,9 +120,15 @@ Can you tune `slow_distance`, `stop_distance` and the two speeds to stop as clos
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_15/ex1_tune/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/pu-robot/lesson_15_ex1_tune.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_15/ex1_tune/main.py"
+    ```
 
 ### Exercise 2
 
@@ -130,9 +136,15 @@ Can you make the lights show how close the robot is: green when far, amber when 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_15/ex2_lights/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/pu-robot/lesson_15_ex2_lights.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_15/ex2_lights/main.py"
+    ```
 
 ### Exercise 3
 
@@ -140,6 +152,12 @@ Can you make the robot back away if it ends up too close (less than 4 cm), then 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_15/ex3_reverse/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/pu-robot/lesson_15_ex3_reverse.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_15/ex3_reverse/main.py"
+    ```

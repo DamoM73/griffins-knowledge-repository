@@ -73,7 +73,7 @@ Place the robot on the floor with clear space in front, then slowly walk towards
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -81,9 +81,15 @@ Can you change the thresholds to make the robot braver (it only gets nervous whe
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_10/ex1_zones/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/pu-robot/lesson_10_ex1_zones.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_10/ex1_zones/main.py"
+    ```
 
 ### Exercise 2
 
@@ -91,9 +97,15 @@ Can you make the robot's eyes show its mood too: both on when brave, one on when
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_10/ex2_eyes/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/pu-robot/lesson_10_ex2_eyes.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_10/ex2_eyes/main.py"
+    ```
 
 ### Exercise 3
 
@@ -101,6 +113,12 @@ Can you add a fourth zone, closer than 5 cm, where the robot covers its eyes by 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_10/ex3_four_zones/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/pu-robot/lesson_10_ex3_four_zones.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_10/ex3_four_zones/main.py"
+    ```

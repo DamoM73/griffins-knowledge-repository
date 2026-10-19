@@ -82,7 +82,7 @@ The arms aren't fitted yet, so it's hard to see a servo motor turn. To check, pu
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -90,9 +90,15 @@ Can you change the test program to use your thumb's port from your table in Less
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_02/ex1_my_thumb/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/wukong/lesson_02_ex1_my_thumb.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_02/ex1_my_thumb/main.py"
+    ```
 
 ### Exercise 2
 
@@ -100,6 +106,12 @@ Can you test each finger's servo motor in turn by changing the port, pushing the
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_02/ex2_each_finger/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/wukong/lesson_02_ex2_each_finger.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_02/ex2_each_finger/main.py"
+    ```

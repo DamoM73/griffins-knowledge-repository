@@ -54,7 +54,7 @@ We store the angle in a **variable** called `angle`. Button A adds 10 to it and 
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -68,9 +68,15 @@ We use these angles instead of 180 in all the later lessons.
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_04/ex1_record_range/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/wukong/lesson_04_ex1_record_range.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_04/ex1_record_range/main.py"
+    ```
 
 ### Exercise 2
 
@@ -78,9 +84,15 @@ Can you change the program so each button press moves the finger by 5 degrees in
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_04/ex2_smaller_steps/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/wukong/lesson_04_ex2_smaller_steps.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_04/ex2_smaller_steps/main.py"
+    ```
 
 ### Exercise 3
 
@@ -88,6 +100,12 @@ What happens if we take the `if` lines out and keep pressing B? Why do you think
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_04/ex3_no_limits/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/wukong/lesson_04_ex3_no_limits.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_04/ex3_no_limits/main.py"
+    ```

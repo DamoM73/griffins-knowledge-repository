@@ -91,7 +91,7 @@ The **clamp** block sets the gripper from 0 to 255.
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -99,9 +99,15 @@ What clamp values make the gripper fully open and fully closed? Test values from
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_06/ex1_clamp_range/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/xgo/lesson_06_ex1_clamp_range.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_06/ex1_clamp_range/main.py"
+    ```
 
 ### Exercise 2
 
@@ -109,9 +115,15 @@ Can you program the dog to pick up a scrunched paper ball placed in front of it,
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_06/ex2_pick_up/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/xgo/lesson_06_ex2_pick_up.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_06/ex2_pick_up/main.py"
+    ```
 
 ### Exercise 3
 
@@ -119,6 +131,12 @@ What does **clmap stable is stable** do? Set it to stable, then change the body 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_06/ex3_stable/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/xgo/lesson_06_ex3_stable.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_06/ex3_stable/main.py"
+    ```

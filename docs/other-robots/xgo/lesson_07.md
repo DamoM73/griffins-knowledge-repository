@@ -75,7 +75,7 @@ The micro:bit's display LEDs can also work as a **light sensor**. The **light le
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -83,9 +83,15 @@ How loud does a clap need to be? Try clapping from 1, 2 and 3 metres away, and r
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_07/ex1_clap_distance/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/xgo/lesson_07_ex1_clap_distance.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_07/ex1_clap_distance/main.py"
+    ```
 
 ### Exercise 2
 
@@ -93,6 +99,12 @@ Can you make the dog lie down (Go_prone) when it's dark, and stand up when it's 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_07/ex2_bedtime/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/xgo/lesson_07_ex2_bedtime.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_07/ex2_bedtime/main.py"
+    ```

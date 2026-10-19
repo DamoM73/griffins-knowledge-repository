@@ -77,7 +77,7 @@ Download each program to its own micro:bit, then switch the WuKong board on.
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -85,9 +85,15 @@ Can you change 42 to your pair's radio group in both programs, and test that you
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_11/ex1_group/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/wukong/lesson_11_ex1_group.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_11/ex1_group/main.py"
+    ```
 
 ### Exercise 2
 
@@ -95,9 +101,15 @@ Can you add more gestures from Lesson 6? Send 3 for A and B together and 4 for s
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_11/ex2_more_gestures/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/wukong/lesson_11_ex2_more_gestures.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_11/ex2_more_gestures/main.py"
+    ```
 
 ### Exercise 3
 
@@ -109,6 +121,12 @@ Can you make the hand copy how far the remote is tilted? It should:
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_11/ex3_copy_tilt/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/wukong/lesson_11_ex3_copy_tilt.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_11/ex3_copy_tilt/main.py"
+    ```

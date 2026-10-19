@@ -90,7 +90,7 @@ In Python, the forever block becomes a **function** called `on_forever`. The las
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -98,9 +98,15 @@ Can you make the robot show a heart, walk forward 5 steps, then show a happy fac
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_03/ex1_heart_walk/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/pu-robot/lesson_03_ex1_heart_walk.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_03/ex1_heart_walk/main.py"
+    ```
 
 ### Exercise 2
 
@@ -108,9 +114,15 @@ Can you make the display show a countdown of 3, 2, 1 before the robot walks forw
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_03/ex2_countdown/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/pu-robot/lesson_03_ex2_countdown.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_03/ex2_countdown/main.py"
+    ```
 
 ### Exercise 3
 
@@ -118,6 +130,12 @@ Can you make a forever loop that shows a happy face, then a sad face, then a sur
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_03/ex3_faces/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/pu-robot/lesson_03_ex3_faces.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_03/ex3_faces/main.py"
+    ```

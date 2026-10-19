@@ -71,7 +71,7 @@ The **set robot move direction** block starts the robot walking and lets the pro
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -85,9 +85,15 @@ What's the relationship between speed and distance travelled?
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_06/ex1_speed_test/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/pu-robot/lesson_06_ex1_speed_test.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_06/ex1_speed_test/main.py"
+    ```
 
 ### Exercise 2
 
@@ -95,9 +101,15 @@ Does the robot move the same distance when it steps side left as when it steps s
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_06/ex2_side_steps/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/pu-robot/lesson_06_ex2_side_steps.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_06/ex2_side_steps/main.py"
+    ```
 
 ### Exercise 3
 
@@ -105,9 +117,15 @@ Can you make the robot walk in a square and finish close to where it started? Hi
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_06/ex3_square/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/pu-robot/lesson_06_ex3_square.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_06/ex3_square/main.py"
+    ```
 
 ### Exercise 4
 
@@ -115,6 +133,12 @@ Can you change the walk speed range so the robot walks faster forward than backw
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_06/ex4_speed_range/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 4](../../assets/blocks/pu-robot/lesson_06_ex4_speed_range.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_06/ex4_speed_range/main.py"
+    ```

@@ -52,7 +52,7 @@ The examples use 150 degrees as fully curled. Change it to the angles from our t
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -60,9 +60,15 @@ Can you finish the count so the hand counts all the way to 5, and button B strai
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_05/ex1_count_to_five/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/wukong/lesson_05_ex1_count_to_five.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_05/ex1_count_to_five/main.py"
+    ```
 
 ### Exercise 2
 
@@ -70,9 +76,15 @@ Can you make the hand count the other way? It should start as a fist and straigh
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_05/ex2_count_open/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/wukong/lesson_05_ex2_count_open.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_05/ex2_count_open/main.py"
+    ```
 
 ### Exercise 3
 
@@ -80,6 +92,12 @@ Can you turn on the WuKong board's breathing light (**Set light mode to BREATH**
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_05/ex3_breathing_light/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/wukong/lesson_05_ex3_breathing_light.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_05/ex3_breathing_light/main.py"
+    ```

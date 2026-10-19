@@ -114,7 +114,7 @@ In Python, the repeat block becomes `for index in range(5):`. The **indentation*
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -126,9 +126,15 @@ Can you make a traffic light sequence on all four lights? It should:
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_04/ex1_traffic_light/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/pu-robot/lesson_04_ex1_traffic_light.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_04/ex1_traffic_light/main.py"
+    ```
 
 ### Exercise 2
 
@@ -136,9 +142,15 @@ Can you make each of the four lights a different colour, then turn them off one 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_04/ex2_lights_off/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/pu-robot/lesson_04_ex2_lights_off.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_04/ex2_lights_off/main.py"
+    ```
 
 ### Exercise 3
 
@@ -146,9 +158,15 @@ Can you make the robot wink 3 times with its left eye, using a repeat loop?
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_04/ex3_wink/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/pu-robot/lesson_04_ex3_wink.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_04/ex3_wink/main.py"
+    ```
 
 ### Exercise 4
 
@@ -156,6 +174,12 @@ Can you make the left eye slowly get brighter, from 0 to 100, using a repeat loo
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_04/ex4_fade/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 4](../../assets/blocks/pu-robot/lesson_04_ex4_fade.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_04/ex4_fade/main.py"
+    ```

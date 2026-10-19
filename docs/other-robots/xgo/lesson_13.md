@@ -99,7 +99,7 @@ Download each program to its own micro:bit. Keep the receiver plugged in, and co
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -107,9 +107,15 @@ How does walking speed change the readings? Log the dog walking at 20%, 50% and 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_13/ex1_speeds/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/xgo/lesson_13_ex1_speeds.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_13/ex1_speeds/main.py"
+    ```
 
 ### Exercise 2
 
@@ -117,9 +123,15 @@ Can you log the dog doing three built-in actions (such as Wave, Squat and Twirl_
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_13/ex2_actions/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/xgo/lesson_13_ex2_actions.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_13/ex2_actions/main.py"
+    ```
 
 ### Exercise 3
 
@@ -127,6 +139,12 @@ Can you send one combined reading instead of three, using **acceleration (mg) st
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_13/ex3_strength/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/xgo/lesson_13_ex3_strength.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_13/ex3_strength/main.py"
+    ```

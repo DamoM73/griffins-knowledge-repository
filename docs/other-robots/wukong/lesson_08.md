@@ -54,7 +54,7 @@ A **while loop** checks its condition before each repeat. Here it keeps going wh
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -62,9 +62,15 @@ How does the pause change the speed? Change the pause to 5, 50 and 100 ms, time 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_08/ex1_pause_test/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/wukong/lesson_08_ex1_pause_test.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_08/ex1_pause_test/main.py"
+    ```
 
 ### Exercise 2
 
@@ -72,9 +78,15 @@ What's the relationship between the pause, the step size and the total time? Wor
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_08/ex2_step_size/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/wukong/lesson_08_ex2_step_size.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_08/ex2_step_size/main.py"
+    ```
 
 ### Exercise 3
 
@@ -82,9 +94,15 @@ Can you change button B so it straightens the finger slowly too? Hint: start at 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_08/ex3_slow_open/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/wukong/lesson_08_ex3_slow_open.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_08/ex3_slow_open/main.py"
+    ```
 
 ### Exercise 4
 
@@ -92,6 +110,12 @@ Can you make all 5 fingers curl slowly together, to make a smooth fist?
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_08/ex4_smooth_fist/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 4](../../assets/blocks/wukong/lesson_08_ex4_smooth_fist.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_08/ex4_smooth_fist/main.py"
+    ```

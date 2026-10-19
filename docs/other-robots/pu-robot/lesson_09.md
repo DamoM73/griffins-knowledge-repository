@@ -81,7 +81,7 @@ A variable can also change while the program runs. Here `waves` starts at 0, and
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -89,9 +89,15 @@ Can you make the robot kick the number of times stored in a variable called `kic
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_09/ex1_kicks/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/pu-robot/lesson_09_ex1_kicks.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_09/ex1_kicks/main.py"
+    ```
 
 ### Exercise 2
 
@@ -99,9 +105,15 @@ Can you add a third variable called `rest` for the length of the pause, and use 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_09/ex2_settings/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/pu-robot/lesson_09_ex2_settings.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_09/ex2_settings/main.py"
+    ```
 
 ### Exercise 3
 
@@ -109,6 +121,12 @@ Can you change the wave counter so it counts down from 5, and the robot greets u
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_09/ex3_countdown/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/pu-robot/lesson_09_ex3_countdown.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_09/ex3_countdown/main.py"
+    ```

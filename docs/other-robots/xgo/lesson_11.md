@@ -54,12 +54,15 @@ Run the program in this order:
 !!! warning "Move the leg gently"
     An unloaded leg moves freely, but it's still connected to gears inside the servo motor. Move it slowly and don't force it past where it wants to stop.
 
+!!! tip "Check the Python names in MakeCode"
+    The Python names of the pose blocks (`get_posestate` and `set_posestate`) haven't been checked in MakeCode yet. If MakeCode shows a different name, use MakeCode's.
+
 ## Exercises
 
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -67,9 +70,15 @@ Can you teach the dog a pose that uses two legs? Unload both front legs, move th
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_11/ex1_two_legs/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/xgo/lesson_11_ex1_two_legs.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_11/ex1_two_legs/main.py"
+    ```
 
 ### Exercise 2
 
@@ -77,9 +86,15 @@ Can you record 3 different poses and play them one after another as an animation
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_11/ex2_animation/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/xgo/lesson_11_ex2_animation.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_11/ex2_animation/main.py"
+    ```
 
 ### Exercise 3
 
@@ -87,6 +102,12 @@ What happens to a recorded pose when the dog is switched off and on again? Test 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_11/ex3_memory/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/xgo/lesson_11_ex3_memory.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_11/ex3_memory/main.py"
+    ```

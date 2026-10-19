@@ -87,7 +87,7 @@ When the reading goes above a threshold, the dog walks backward, away from the m
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -95,9 +95,15 @@ What's the reading with no magnet near, and how much does it change while the do
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_09/ex1_baseline/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/xgo/lesson_09_ex1_baseline.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_09/ex1_baseline/main.py"
+    ```
 
 ### Exercise 2
 
@@ -105,9 +111,15 @@ Can you make the dog sit down when the magnet is held above its head, and stand 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_09/ex2_follow/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/xgo/lesson_09_ex2_follow.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_09/ex2_follow/main.py"
+    ```
 
 ### Exercise 3
 
@@ -115,6 +127,12 @@ The magnetic force block can also measure in the x and y directions. Can you mak
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_09/ex3_sides/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/xgo/lesson_09_ex3_sides.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_09/ex3_sides/main.py"
+    ```

@@ -84,7 +84,7 @@ North is a heading of 0, but the heading jumps from 359 straight to 0, so north 
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -92,9 +92,15 @@ Can you change the program so the dog turns to face east (90 degrees) instead? H
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_10/ex1_face_east/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/xgo/lesson_10_ex1_face_east.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_10/ex1_face_east/main.py"
+    ```
 
 ### Exercise 2
 
@@ -102,9 +108,15 @@ The dog always turns left, even when turning right would be quicker. Can you mak
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_10/ex2_shortest_turn/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/xgo/lesson_10_ex2_shortest_turn.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_10/ex2_shortest_turn/main.py"
+    ```
 
 ### Exercise 3
 
@@ -118,6 +130,12 @@ Swap directions with another group and see whether their dog finds your treasure
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_10/ex3_treasure_hunt/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/xgo/lesson_10_ex3_treasure_hunt.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_10/ex3_treasure_hunt/main.py"
+    ```

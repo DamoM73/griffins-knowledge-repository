@@ -78,7 +78,7 @@ This kind of program is called a **state machine**. The robot is always in one *
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -86,9 +86,15 @@ Can you add a fourth mood, surprised, with its own lights, eyes and head movemen
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_13/ex1_fourth_mood/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/pu-robot/lesson_13_ex1_fourth_mood.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_13/ex1_fourth_mood/main.py"
+    ```
 
 ### Exercise 2
 
@@ -96,9 +102,15 @@ Can you switch moods with a hand wave instead of a clap? Hint: check the distanc
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_13/ex2_wave_switch/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/pu-robot/lesson_13_ex2_wave_switch.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_13/ex2_wave_switch/main.py"
+    ```
 
 ### Exercise 3
 
@@ -106,6 +118,12 @@ Can you play a different sound each time the robot changes mood? Hint: look in t
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/pu_robot/lesson_13/ex3_mood_sounds/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/pu-robot/lesson_13_ex3_mood_sounds.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/pu_robot/lesson_13/ex3_mood_sounds/main.py"
+    ```

@@ -47,7 +47,7 @@ The micro:bit's **accelerometer** measures how it's tilted. When we tilt the boa
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -55,9 +55,15 @@ Does the hand open and close smoothly as you tilt? Why might it jitter? Try chan
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_09/ex1_jitter/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/wukong/lesson_09_ex1_jitter.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_09/ex1_jitter/main.py"
+    ```
 
 ### Exercise 2
 
@@ -65,9 +71,15 @@ Can you control the hand by tilting forwards and backwards instead? Hint: use **
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_09/ex2_tilt_y/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/wukong/lesson_09_ex2_tilt_y.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_09/ex2_tilt_y/main.py"
+    ```
 
 ### Exercise 3
 
@@ -75,6 +87,12 @@ Can you give each finger a different range, so the fingers curl one after anothe
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/wukong/lesson_09/ex3_wave_curl/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/wukong/lesson_09_ex3_wave_curl.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/wukong/lesson_09/ex3_wave_curl/main.py"
+    ```

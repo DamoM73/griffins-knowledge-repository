@@ -85,7 +85,7 @@ Download the program, lay the dog down and switch it on. Wait until the ring lig
 !!! primm "PRIMM"
     Time to **modify** the code and see what happens.
 
-Each exercise has starter code. Copy it into MakeCode's Python view, or build the same program in Blocks, then change it.
+Each exercise has starter code in Blocks and Python. Build the blocks in MakeCode, or copy the Python into MakeCode's Python view, then change it.
 
 ### Exercise 1
 
@@ -93,9 +93,15 @@ What happens if we take out the **set XGO** block and press A? Why do you think 
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_02/ex1_no_set_xgo/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 1](../../assets/blocks/xgo/lesson_02_ex1_no_set_xgo.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_02/ex1_no_set_xgo/main.py"
+    ```
 
 ### Exercise 2
 
@@ -103,9 +109,15 @@ Can you add a program for pressing A and B together that makes the dog stand bac
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_02/ex2_stand/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 2](../../assets/blocks/xgo/lesson_02_ex2_stand.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_02/ex2_stand/main.py"
+    ```
 
 ### Exercise 3
 
@@ -113,6 +125,12 @@ Can you make the display show a sad face when the battery level is below 20, and
 
 Starter code:
 
-```python linenums="1"
---8<-- "examples/other/xgo/lesson_02/ex3_battery_face/main.py"
-```
+=== "Blocks"
+
+    ![Blocks starter code for Exercise 3](../../assets/blocks/xgo/lesson_02_ex3_battery_face.png){ .blocks }
+
+=== "Python"
+
+    ```python linenums="1"
+    --8<-- "examples/other/xgo/lesson_02/ex3_battery_face/main.py"
+    ```
