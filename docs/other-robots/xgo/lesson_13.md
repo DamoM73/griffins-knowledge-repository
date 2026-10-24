@@ -37,20 +37,37 @@ The dog sends its x, y and z acceleration ten times a second. Buttons A and B st
     ```
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → starts the dog walking forward at 50% speed.
-    - **line 3** → connects `on_button_pressed_a` to button A.
-    - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 6** → stops the dog.
-    - **line 7** → connects `on_button_pressed_b` to button B.
-    - **line 9** → defines the function that the forever loop repeats.
-    - **line 10** → sends the x acceleration by radio, labelled "x".
-    - **line 11** → sends the y acceleration, labelled "y".
-    - **line 12** → sends the z acceleration, labelled "z".
-    - **line 13** → waits 100 milliseconds, so it sends about 10 readings a second.
-    - **line 14** → tells the micro:bit to run `on_forever` again and again.
-    - **line 16** → tells the micro:bit which pins to use to talk to the dog.
-    - **line 17** → sets the radio group to 42.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+            - **radio set group 42** → sets the radio group to 42.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **move Forward speed 50 %** → starts the dog walking forward at 50% speed.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **move Forward speed 0 %** → stops the dog.
+        - **forever** → runs the blocks inside again and again.
+            - **radio send value "x" = acceleration (mg) x** → sends the x acceleration by radio, labelled "x".
+            - **radio send value "y" = acceleration (mg) y** → sends the y acceleration, labelled "y".
+            - **radio send value "z" = acceleration (mg) z** → sends the z acceleration, labelled "z".
+            - **pause (ms) 100** → waits 100 milliseconds, so it sends about 10 readings a second.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → starts the dog walking forward at 50% speed.
+        - **line 3** → connects `on_button_pressed_a` to button A.
+        - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 6** → stops the dog.
+        - **line 7** → connects `on_button_pressed_b` to button B.
+        - **line 9** → defines the function that the forever loop repeats.
+        - **line 10** → sends the x acceleration by radio, labelled "x".
+        - **line 11** → sends the y acceleration, labelled "y".
+        - **line 12** → sends the z acceleration, labelled "z".
+        - **line 13** → waits 100 milliseconds, so it sends about 10 readings a second.
+        - **line 14** → tells the micro:bit to run `on_forever` again and again.
+        - **line 16** → tells the micro:bit which pins to use to talk to the dog.
+        - **line 17** → sets the radio group to 42.
 
 ## The receiver
 
@@ -76,10 +93,19 @@ Download each program to its own micro:bit. Keep the receiver plugged in, and co
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_received_value`, which gets the label in `name` and the reading in `value`.
-    - **line 2** → sends the label and the reading to the computer through the USB cable.
-    - **line 3** → connects `on_received_value` to the event of a labelled value arriving by radio.
-    - **line 5** → sets the radio group to 42, the same as the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **radio set group 42** → sets the radio group to 42, the same as the dog.
+        - **on radio received name value** → runs the blocks inside when a name and a value arrive by radio, and stores them in `name` and `value`.
+            - **serial write value name = value** → sends the label and the reading to the computer through the USB cable.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_received_value`, which gets the label in `name` and the reading in `value`.
+        - **line 2** → sends the label and the reading to the computer through the USB cable.
+        - **line 3** → connects `on_received_value` to the event of a labelled value arriving by radio.
+        - **line 5** → sets the radio group to 42, the same as the dog.
 
 ## Download and graph the data
 

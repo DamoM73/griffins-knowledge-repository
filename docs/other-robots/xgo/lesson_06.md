@@ -41,16 +41,31 @@ Before the arm can move, we **load** its servo motors. Then we set clampX and cl
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → moves the arm's clampX position to 80 mm.
-    - **line 3** → waits for 1 second.
-    - **line 4** → moves the arm's clampZ position to 80 mm.
-    - **line 5** → waits for 1 second.
-    - **line 6** → moves clampX back to 20 mm.
-    - **line 7** → moves clampZ back to 20 mm.
-    - **line 8** → connects `on_button_pressed_a` to button A.
-    - **line 10** → tells the micro:bit which pins to use to talk to the dog.
-    - **line 11** → loads the arm's servo motors so they can move.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+            - **Set the state of robot arm servo as load** → loads the arm's servo motors so they can move.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **Set the position of the manipulator clampX 80 mm** → moves the arm's clampX position to 80 mm.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **Set the position of the manipulator clampZ 80 mm** → moves the arm's clampZ position to 80 mm.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **Set the position of the manipulator clampX 20 mm** → moves clampX back to 20 mm.
+            - **Set the position of the manipulator clampZ 20 mm** → moves clampZ back to 20 mm.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → moves the arm's clampX position to 80 mm.
+        - **line 3** → waits for 1 second.
+        - **line 4** → moves the arm's clampZ position to 80 mm.
+        - **line 5** → waits for 1 second.
+        - **line 6** → moves clampX back to 20 mm.
+        - **line 7** → moves clampZ back to 20 mm.
+        - **line 8** → connects `on_button_pressed_a` to button A.
+        - **line 10** → tells the micro:bit which pins to use to talk to the dog.
+        - **line 11** → loads the arm's servo motors so they can move.
 
 !!! warning "Check the Python names in MakeCode"
     The Python names of the arm blocks (such as `manipulator_clamp_x`) haven't been checked in MakeCode yet. Build the program in Blocks, then switch to Python to see the exact names.
@@ -77,14 +92,26 @@ The **clamp** block sets the gripper from 0 to 255.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → sets the gripper to position 50.
-    - **line 3** → connects `on_button_pressed_a` to button A.
-    - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 6** → sets the gripper to position 200.
-    - **line 7** → connects `on_button_pressed_b` to button B.
-    - **line 9** → tells the micro:bit which pins to use to talk to the dog.
-    - **line 10** → loads the arm's servo motors so they can move.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+            - **Set the state of robot arm servo as load** → loads the arm's servo motors so they can move.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **Set the position of the manipulator clamp 50 mm** → sets the gripper to position 50.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **Set the position of the manipulator clamp 200 mm** → sets the gripper to position 200.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → sets the gripper to position 50.
+        - **line 3** → connects `on_button_pressed_a` to button A.
+        - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 6** → sets the gripper to position 200.
+        - **line 7** → connects `on_button_pressed_b` to button B.
+        - **line 9** → tells the micro:bit which pins to use to talk to the dog.
+        - **line 10** → loads the arm's servo motors so they can move.
 
 ## Exercises
 

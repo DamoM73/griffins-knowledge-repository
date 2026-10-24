@@ -33,11 +33,22 @@ Each servo motor turns to an angle from 0 to 180 **degrees**. For every joint, 9
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → tilts the head to 70 degrees.
-    - **line 2** → waits for half a second.
-    - **line 3** → tilts the head the other way, to 110 degrees.
-    - **line 4** → waits for half a second.
-    - **line 5** → moves the head back to the centre, 90 degrees.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set head pitch servo to 70** → tilts the head to 70 degrees.
+            - **pause (ms) 500** → waits for half a second.
+            - **set head pitch servo to 110** → tilts the head the other way, to 110 degrees.
+            - **pause (ms) 500** → waits for half a second.
+            - **set head pitch servo to 90** → moves the head back to the centre, 90 degrees.
+
+    === "Python"
+
+        - **line 1** → tilts the head to 70 degrees.
+        - **line 2** → waits for half a second.
+        - **line 3** → tilts the head the other way, to 110 degrees.
+        - **line 4** → waits for half a second.
+        - **line 5** → moves the head back to the centre, 90 degrees.
 
 !!! warning "Stay between 60 and 120"
     The servo motors can turn from 0 to 180 degrees, but the robot's body gets in the way at the ends. Keep angles between 60 and 120 to protect the servo motors.
@@ -66,11 +77,22 @@ Smooth move is **running in the background**. It starts the servo moving and the
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → starts turning the head to 60 degrees, 2 degrees at a time.
-    - **line 2** → waits 2 seconds while the head turns.
-    - **line 3** → starts turning the head the other way, to 120 degrees.
-    - **line 4** → waits 2 seconds while the head turns.
-    - **line 5** → turns the head back to the centre, 90 degrees.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **smooth move head offset servo to 60 with step 2** → starts turning the head to 60 degrees, 2 degrees at a time.
+            - **pause (ms) 2000** → waits 2 seconds while the head turns.
+            - **smooth move head offset servo to 120 with step 2** → starts turning the head the other way, to 120 degrees.
+            - **pause (ms) 2000** → waits 2 seconds while the head turns.
+            - **smooth move head offset servo to 90 with step 2** → turns the head back to the centre, 90 degrees.
+
+    === "Python"
+
+        - **line 1** → starts turning the head to 60 degrees, 2 degrees at a time.
+        - **line 2** → waits 2 seconds while the head turns.
+        - **line 3** → starts turning the head the other way, to 120 degrees.
+        - **line 4** → waits 2 seconds while the head turns.
+        - **line 5** → turns the head back to the centre, 90 degrees.
 
 ## Exercises
 

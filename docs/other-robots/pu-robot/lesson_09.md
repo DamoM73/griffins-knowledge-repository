@@ -33,11 +33,22 @@ Here the number of steps and the speed are stored in two variables, then both wa
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → creates a variable called `steps` and stores 4 in it.
-    - **line 2** → creates a variable called `speed` and stores 5 in it.
-    - **line 3** → walks the robot forward, using the values in `steps` and `speed`.
-    - **line 4** → waits for 1 second.
-    - **line 5** → walks the robot backward, using the same two variables.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set steps to 4** → creates a variable called `steps` and stores 4 in it.
+            - **set speed to 5** → creates a variable called `speed` and stores 5 in it.
+            - **walk forward for steps steps at speed speed** → walks the robot forward, using the values in `steps` and `speed`.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **walk backward for steps steps at speed speed** → walks the robot backward, using the same two variables.
+
+    === "Python"
+
+        - **line 1** → creates a variable called `steps` and stores 4 in it.
+        - **line 2** → creates a variable called `speed` and stores 5 in it.
+        - **line 3** → walks the robot forward, using the values in `steps` and `speed`.
+        - **line 4** → waits for 1 second.
+        - **line 5** → walks the robot backward, using the same two variables.
 
 !!! tip "Change one place, change the whole program"
     To make the robot walk further both ways, we only change line 1. Every block that uses `steps` gets the new value.
@@ -64,14 +75,26 @@ A variable can also change while the program runs. Here `waves` starts at 0, and
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → tells Python to use the `waves` variable from the main program, not a new one.
-    - **line 3** → checks whether something is closer than 10 cm…
-    - **line 4** → …and if it is, adds 1 to `waves`.
-    - **line 5** → shows the number of waves on the display.
-    - **line 6** → waits 1 second, so one wave is only counted once.
-    - **line 7** → tells the micro:bit to run `on_forever` again and again.
-    - **line 9** → creates the `waves` variable and sets it to 0 when the program starts.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set waves to 0** → creates the `waves` variable and sets it to 0 when the program starts.
+        - **forever** → runs the blocks inside again and again.
+            - **if ultrasonic sensor distance in cm < 10 then** → checks whether something is closer than 10 cm…
+                - **change waves by 1** → …and if it is, adds 1 to `waves`.
+                - **show number waves** → shows the number of waves on the display.
+                - **pause (ms) 1000** → waits 1 second, so one wave is only counted once.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → tells Python to use the `waves` variable from the main program, not a new one.
+        - **line 3** → checks whether something is closer than 10 cm…
+        - **line 4** → …and if it is, adds 1 to `waves`.
+        - **line 5** → shows the number of waves on the display.
+        - **line 6** → waits 1 second, so one wave is only counted once.
+        - **line 7** → tells the micro:bit to run `on_forever` again and again.
+        - **line 9** → creates the `waves` variable and sets it to 0 when the program starts.
 
 !!! tip "What does global do?"
     `waves` is created in the main program (line 9), so it's a **global variable**. Inside a function, Python needs the line `global waves` before it can change it. In Blocks, MakeCode adds this for us.

@@ -29,23 +29,43 @@ The examples use 150 degrees as fully curled. Change it to the angles from our t
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → shows 1 on the display.
-    - **line 3** → curls the thumb.
-    - **line 4** → waits for 1 second.
-    - **line 5** → shows 2 on the display.
-    - **line 6** → curls the index finger.
-    - **line 7** → waits for 1 second.
-    - **line 8** → shows 3 on the display.
-    - **line 9** → curls the middle finger.
-    - **line 10** → waits for 1 second.
-    - **line 11** → connects `on_button_pressed_a` to button A.
-    - **line 13** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 14** → straightens the thumb.
-    - **line 15** → straightens the index finger.
-    - **line 16** → straightens the middle finger.
-    - **line 17** → clears the display.
-    - **line 18** → connects `on_button_pressed_b` to button B.
+    === "Blocks"
+
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **show number 1** → shows 1 on the display.
+            - **Set 180° servo S0 angle to 150** → curls the thumb.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **show number 2** → shows 2 on the display.
+            - **Set 180° servo S1 angle to 150** → curls the index finger.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **show number 3** → shows 3 on the display.
+            - **Set 180° servo S3 angle to 150** → curls the middle finger.
+            - **pause (ms) 1000** → waits for 1 second.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **Set 180° servo S0 angle to 0** → straightens the thumb.
+            - **Set 180° servo S1 angle to 0** → straightens the index finger.
+            - **Set 180° servo S3 angle to 0** → straightens the middle finger.
+            - **clear screen** → clears the display.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → shows 1 on the display.
+        - **line 3** → curls the thumb.
+        - **line 4** → waits for 1 second.
+        - **line 5** → shows 2 on the display.
+        - **line 6** → curls the index finger.
+        - **line 7** → waits for 1 second.
+        - **line 8** → shows 3 on the display.
+        - **line 9** → curls the middle finger.
+        - **line 10** → waits for 1 second.
+        - **line 11** → connects `on_button_pressed_a` to button A.
+        - **line 13** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 14** → straightens the thumb.
+        - **line 15** → straightens the index finger.
+        - **line 16** → straightens the middle finger.
+        - **line 17** → clears the display.
+        - **line 18** → connects `on_button_pressed_b` to button B.
 
 ## Exercises
 

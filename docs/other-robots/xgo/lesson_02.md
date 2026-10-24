@@ -38,8 +38,16 @@ The micro:bit sends commands to the dog's control board using **serial communica
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → tells the micro:bit to send commands to the dog on pin P14 and receive replies on pin P13.
-    - **line 2** → shows a happy face on the display.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit to send commands to the dog on pin P14 and receive replies on pin P13.
+            - **show icon happy** → shows a happy face on the display.
+
+    === "Python"
+
+        - **line 1** → tells the micro:bit to send commands to the dog on pin P14 and receive replies on pin P13.
+        - **line 2** → shows a happy face on the display.
 
 !!! warning "P14 and P13, not P1 and P2"
     Older XGO examples online use pins P1 and P2. Those are for the first XGO kit. The V2 dog uses P14 and P13. With the wrong pins, the dog ignores every command.
@@ -68,14 +76,26 @@ Download the program, lay the dog down and switch it on. Wait until the ring lig
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → makes the dog sit down.
-    - **line 3** → connects `on_button_pressed_a` to button A.
-    - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 6** → reads the dog's battery level and shows it on the display.
-    - **line 7** → connects `on_button_pressed_b` to button B.
-    - **line 9** → tells the micro:bit which pins to use to talk to the dog.
-    - **line 10** → shows a happy face.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+            - **show icon happy** → shows a happy face.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **Execution action Sit_down** → makes the dog sit down.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **show number get XGO's current power** → reads the dog's battery level and shows it on the display.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → makes the dog sit down.
+        - **line 3** → connects `on_button_pressed_a` to button A.
+        - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 6** → reads the dog's battery level and shows it on the display.
+        - **line 7** → connects `on_button_pressed_b` to button B.
+        - **line 9** → tells the micro:bit which pins to use to talk to the dog.
+        - **line 10** → shows a happy face.
 
 !!! tip "Why is on start at the bottom?"
     MakeCode puts the event handlers at the top of the Python program and the **on start** code at the bottom. The on start code still runs first, when the micro:bit switches on. The event handlers wait until their button is pressed.

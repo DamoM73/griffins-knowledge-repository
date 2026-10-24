@@ -38,18 +38,33 @@ Run the program in this order:
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → unloads the left front leg's servo motors, so we can move the leg by hand.
-    - **line 3** → connects `on_button_pressed_a` to button A.
-    - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 6** → records the position of every joint as pose 1.
-    - **line 7** → loads the left front leg's servo motors again.
-    - **line 8** → puts the dog back in its starting position.
-    - **line 9** → connects `on_button_pressed_b` to button B.
-    - **line 11** → defines a function called `on_logo_pressed`, which will run when the logo is touched.
-    - **line 12** → moves every joint to the positions saved in pose 1.
-    - **line 13** → connects `on_logo_pressed` to touching the logo.
-    - **line 15** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **set XGO left front leg servo unload** → unloads the left front leg's servo motors, so we can move the leg by hand.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **Record the current status of the XGO as pose1** → records the position of every joint as pose 1.
+            - **set XGO left front leg servo load** → loads the left front leg's servo motors again.
+            - **restore initial action** → puts the dog back in its starting position.
+        - **on logo pressed** → runs the blocks inside when we touch the micro:bit's logo.
+            - **Setting the XGO to pose1 state** → moves every joint to the positions saved in pose 1.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → unloads the left front leg's servo motors, so we can move the leg by hand.
+        - **line 3** → connects `on_button_pressed_a` to button A.
+        - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 6** → records the position of every joint as pose 1.
+        - **line 7** → loads the left front leg's servo motors again.
+        - **line 8** → puts the dog back in its starting position.
+        - **line 9** → connects `on_button_pressed_b` to button B.
+        - **line 11** → defines a function called `on_logo_pressed`, which will run when the logo is touched.
+        - **line 12** → moves every joint to the positions saved in pose 1.
+        - **line 13** → connects `on_logo_pressed` to touching the logo.
+        - **line 15** → tells the micro:bit which pins to use to talk to the dog.
 
 !!! warning "Move the leg gently"
     An unloaded leg moves freely, but it's still connected to gears inside the servo motor. Move it slowly and don't force it past where it wants to stop.

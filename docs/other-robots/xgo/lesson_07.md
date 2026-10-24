@@ -30,11 +30,21 @@ So far, we've controlled the dog with buttons. The micro:bit also has sensors, s
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_sound_loud`, which will run when there's a loud sound.
-    - **line 2** → makes the dog sit down.
-    - **line 3** → makes the dog stand up again.
-    - **line 4** → connects `on_sound_loud` to the loud sound event.
-    - **line 6** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **on loud sound** → runs the blocks inside when the micro:bit hears a loud sound.
+            - **Execution action Sit_down** → makes the dog sit down.
+            - **Execution action Stand** → makes the dog stand up again.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_sound_loud`, which will run when there's a loud sound.
+        - **line 2** → makes the dog sit down.
+        - **line 3** → makes the dog stand up again.
+        - **line 4** → connects `on_sound_loud` to the loud sound event.
+        - **line 6** → tells the micro:bit which pins to use to talk to the dog.
 
 ## Light level
 
@@ -58,14 +68,27 @@ The micro:bit's display LEDs can also work as a **light sensor**. The **light le
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → checks whether the light level is above 100…
-    - **line 3** → …and if it is, walks the dog forward at 30% speed.
-    - **line 4** → otherwise…
-    - **line 5** → …stops the dog.
-    - **line 6** → waits 200 milliseconds before checking again.
-    - **line 7** → tells the micro:bit to run `on_forever` again and again.
-    - **line 9** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **forever** → runs the blocks inside again and again.
+            - **if light level > 100 then** → checks whether the light level is above 100…
+                - **move Forward speed 30 %** → …and if it is, walks the dog forward at 30% speed.
+            - **else** → otherwise…
+                - **move Forward speed 0 %** → …stops the dog.
+            - **pause (ms) 200** → waits 200 milliseconds before checking again.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → checks whether the light level is above 100…
+        - **line 3** → …and if it is, walks the dog forward at 30% speed.
+        - **line 4** → otherwise…
+        - **line 5** → …stops the dog.
+        - **line 6** → waits 200 milliseconds before checking again.
+        - **line 7** → tells the micro:bit to run `on_forever` again and again.
+        - **line 9** → tells the micro:bit which pins to use to talk to the dog.
 
 !!! tip "Choosing a threshold"
     Every room is different. Show the light level on the display first, in the light and in the dark, then choose a threshold halfway between the two readings.

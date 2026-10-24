@@ -27,7 +27,14 @@ The PU Robot has six built-in modes: greet, rest, explore, jump, dance and kick.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → starts the robot's greet mode.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set mode greet** → starts the robot's greet mode.
+
+    === "Python"
+
+        - **line 1** → starts the robot's greet mode.
 
 In Python, each mode is an option of `robotPu.Action`, written in capitals: `GREET`, `REST`, `EXPLORE`, `JUMP`, `DANCE` and `KICK`.
 
@@ -55,9 +62,18 @@ Dance reacts to sound, so play some music nearby before running this program.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → starts the robot's dance mode.
-    - **line 2** → waits 10 seconds while the robot dances.
-    - **line 3** → stops the dance.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set mode dance** → starts the robot's dance mode.
+            - **pause (ms) 10000** → waits 10 seconds while the robot dances.
+            - **stop action** → stops the dance.
+
+    === "Python"
+
+        - **line 1** → starts the robot's dance mode.
+        - **line 2** → waits 10 seconds while the robot dances.
+        - **line 3** → stops the dance.
 
 !!! warning "Give the robot space"
     Explore and jump move the robot around. Test them on the floor, with clear space around the robot.

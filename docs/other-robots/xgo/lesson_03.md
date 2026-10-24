@@ -27,10 +27,19 @@ The XGO has 19 built-in actions, such as Sit_down, Wave, Handshake and Stretch_o
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → makes the dog do its wave action.
-    - **line 3** → connects `on_button_pressed_a` to button A.
-    - **line 5** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **Execution action Wave** → makes the dog do its wave action.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → makes the dog do its wave action.
+        - **line 3** → connects `on_button_pressed_a` to button A.
+        - **line 5** → tells the micro:bit which pins to use to talk to the dog.
 
 In Python, each action is an option of `xgo.action_enum`, written in capitals, such as `WAVE`, `SIT_DOWN` and `HANDSHAKE`.
 
@@ -56,12 +65,23 @@ Most XGO blocks wait until the dog finishes moving (up to about 10 seconds) befo
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_logo_pressed`, which will run when the logo is touched.
-    - **line 2** → makes the dog stretch, and waits until it's finished.
-    - **line 3** → makes the dog hold out a paw to shake hands.
-    - **line 4** → puts the dog back in its starting position.
-    - **line 5** → connects `on_logo_pressed` to touching the logo.
-    - **line 7** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **on logo pressed** → runs the blocks inside when we touch the micro:bit's logo.
+            - **Execution action Stretch_oneself** → makes the dog stretch, and waits until it's finished.
+            - **Execution action Handshake** → makes the dog hold out a paw to shake hands.
+            - **restore initial action** → puts the dog back in its starting position.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_logo_pressed`, which will run when the logo is touched.
+        - **line 2** → makes the dog stretch, and waits until it's finished.
+        - **line 3** → makes the dog hold out a paw to shake hands.
+        - **line 4** → puts the dog back in its starting position.
+        - **line 5** → connects `on_logo_pressed` to touching the logo.
+        - **line 7** → tells the micro:bit which pins to use to talk to the dog.
 
 !!! tip "Restore initial action"
     **Restore initial action** puts every joint back where it was when the dog started up. Ending a routine with it means the next action always starts from the same position.

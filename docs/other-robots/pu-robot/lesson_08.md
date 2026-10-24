@@ -37,9 +37,16 @@ Since we can't press the micro:bit buttons inside the head, the ultrasonic senso
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → measures the distance to the nearest object in centimetres and shows it on the display.
-    - **line 3** → tells the micro:bit to run `on_forever` again and again.
+    === "Blocks"
+
+        - **forever** → runs the blocks inside again and again.
+            - **show number ultrasonic sensor distance in cm** → measures the distance to the nearest object in centimetres and shows it on the display.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → measures the distance to the nearest object in centimetres and shows it on the display.
+        - **line 3** → tells the micro:bit to run `on_forever` again and again.
 
 ## React to a hand wave
 
@@ -63,11 +70,20 @@ An **if statement** checks a **condition**. If the condition is `True`, the code
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → checks whether something is closer than 10 cm…
-    - **line 3** → …and if it is, starts the greet mode.
-    - **line 4** → waits 1 second, so one wave doesn't start the greeting several times.
-    - **line 5** → tells the micro:bit to run `on_forever` again and again.
+    === "Blocks"
+
+        - **forever** → runs the blocks inside again and again.
+            - **if ultrasonic sensor distance in cm < 10 then** → checks whether something is closer than 10 cm…
+                - **set mode greet** → …and if it is, starts the greet mode.
+                - **pause (ms) 1000** → waits 1 second, so one wave doesn't start the greeting several times.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → checks whether something is closer than 10 cm…
+        - **line 3** → …and if it is, starts the greet mode.
+        - **line 4** → waits 1 second, so one wave doesn't start the greeting several times.
+        - **line 5** → tells the micro:bit to run `on_forever` again and again.
 
 !!! tip "Why the pause?"
     The forever loop checks the distance many times each second. Without the pause, one wave of our hand would be seen several times and start the greeting again and again.
@@ -94,12 +110,22 @@ Adding **else** gives the if statement a second path. When the condition is `Fal
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → checks whether something is closer than 15 cm…
-    - **line 3** → …and if it is, turns all the lights red.
-    - **line 4** → otherwise…
-    - **line 5** → …turns all the lights green.
-    - **line 6** → tells the micro:bit to run `on_forever` again and again.
+    === "Blocks"
+
+        - **forever** → runs the blocks inside again and again.
+            - **if ultrasonic sensor distance in cm < 15 then** → checks whether something is closer than 15 cm…
+                - **set ambience light all to RGB (255, 0, 0)** → …and if it is, turns all the lights red.
+            - **else** → otherwise…
+                - **set ambience light all to RGB (0, 255, 0)** → …turns all the lights green.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → checks whether something is closer than 15 cm…
+        - **line 3** → …and if it is, turns all the lights red.
+        - **line 4** → otherwise…
+        - **line 5** → …turns all the lights green.
+        - **line 6** → tells the micro:bit to run `on_forever` again and again.
 
 ## Exercises
 

@@ -44,9 +44,18 @@ Download the program and put the micro:bit back in the robot. Place the robot on
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → sets the fastest forward and backward walking speeds to level 2.
-    - **line 2** → shows a happy face on the micro:bit's display.
-    - **line 3** → makes the robot walk forward 3 steps at speed 5.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set walk speed range forward 2 backward 2** → sets the fastest forward and backward walking speeds to level 2.
+            - **show icon happy** → shows a happy face on the micro:bit's display.
+            - **walk forward for 3 steps at speed 5** → makes the robot walk forward 3 steps at speed 5.
+
+    === "Python"
+
+        - **line 1** → sets the fastest forward and backward walking speeds to level 2.
+        - **line 2** → shows a happy face on the micro:bit's display.
+        - **line 3** → makes the robot walk forward 3 steps at speed 5.
 
 !!! tip "Why set the walk speed range?"
     The walk speed range sets how fast the robot is allowed to walk. Setting it at the start of every program means the robot always walks at a speed we know, instead of whatever was used last.
@@ -75,12 +84,22 @@ In Python, the forever block becomes a **function** called `on_forever`. The las
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_forever` that holds the code to repeat.
-    - **line 2** → shows a happy face on the display.
-    - **line 3** → waits for 1000 milliseconds (1 second).
-    - **line 4** → shows a heart on the display.
-    - **line 5** → waits for another second.
-    - **line 6** → tells the micro:bit to run `on_forever` again and again.
+    === "Blocks"
+
+        - **forever** → runs the blocks inside again and again.
+            - **show icon happy** → shows a happy face on the display.
+            - **pause (ms) 1000** → waits for 1000 milliseconds (1 second).
+            - **show icon heart** → shows a heart on the display.
+            - **pause (ms) 1000** → waits for another second.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_forever` that holds the code to repeat.
+        - **line 2** → shows a happy face on the display.
+        - **line 3** → waits for 1000 milliseconds (1 second).
+        - **line 4** → shows a heart on the display.
+        - **line 5** → waits for another second.
+        - **line 6** → tells the micro:bit to run `on_forever` again and again.
 
 !!! warning "Indent the code inside a function"
     In Python, the lines inside `on_forever` must start with 4 spaces. That's how Python knows they belong to the function. If a line isn't indented, it's not part of the loop.

@@ -32,16 +32,29 @@ A **while loop** checks its condition before each repeat. Here it keeps going wh
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → creates the `angle` variable and sets it to 0.
-    - **line 3** → starts a loop that repeats while the angle is 150 or less.
-    - **line 4** → turns the index finger's servo motor to the current angle.
-    - **line 5** → adds 5 to the angle.
-    - **line 6** → waits 20 milliseconds before the next small move.
-    - **line 7** → connects `on_button_pressed_a` to button A.
-    - **line 9** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 10** → straightens the index finger straight away.
-    - **line 11** → connects `on_button_pressed_b` to button B.
+    === "Blocks"
+
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **set angle to 0** → creates the `angle` variable and sets it to 0.
+            - **while angle ≤ 150** → starts a loop that repeats while the angle is 150 or less.
+                - **Set 180° servo S1 angle to angle** → turns the index finger's servo motor to the current angle.
+                - **change angle by 5** → adds 5 to the angle.
+                - **pause (ms) 20** → waits 20 milliseconds before the next small move.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **Set 180° servo S1 angle to 0** → straightens the index finger straight away.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → creates the `angle` variable and sets it to 0.
+        - **line 3** → starts a loop that repeats while the angle is 150 or less.
+        - **line 4** → turns the index finger's servo motor to the current angle.
+        - **line 5** → adds 5 to the angle.
+        - **line 6** → waits 20 milliseconds before the next small move.
+        - **line 7** → connects `on_button_pressed_a` to button A.
+        - **line 9** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 10** → straightens the index finger straight away.
+        - **line 11** → connects `on_button_pressed_b` to button B.
 
 !!! tip "Repeat loop or while loop?"
     A repeat loop runs a set number of times. A while loop runs until its condition becomes `False`, so we use it when we know where to stop, rather than how many times to repeat.

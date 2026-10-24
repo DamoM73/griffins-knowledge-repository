@@ -38,14 +38,27 @@ The **body height** block sets how tall the dog stands, from 0% (crouched) to 10
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → lowers the body to 20% height.
-    - **line 3** → waits for 1 second.
-    - **line 4** → raises the body to its full height.
-    - **line 5** → waits for 1 second.
-    - **line 6** → moves the body back to half height.
-    - **line 7** → connects `on_button_pressed_a` to button A.
-    - **line 9** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **body height 20 %** → lowers the body to 20% height.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **body height 100 %** → raises the body to its full height.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **body height 50 %** → moves the body back to half height.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → lowers the body to 20% height.
+        - **line 3** → waits for 1 second.
+        - **line 4** → raises the body to its full height.
+        - **line 5** → waits for 1 second.
+        - **line 6** → moves the body back to half height.
+        - **line 7** → connects `on_button_pressed_a` to button A.
+        - **line 9** → tells the micro:bit which pins to use to talk to the dog.
 
 ## Tilt the body
 
@@ -79,14 +92,27 @@ The **rotate … degrees about the … axis** block tilts the body from -20 to 2
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → tilts the body 15 degrees around the X axis.
-    - **line 3** → waits for 1 second.
-    - **line 4** → tilts the body 15 degrees the other way.
-    - **line 5** → waits for 1 second.
-    - **line 6** → tilts the body back to level.
-    - **line 7** → connects `on_button_pressed_a` to button A.
-    - **line 9** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **set XGO to be rotated X degrees about the 15 axis** → tilts the body 15 degrees around the X axis.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **set XGO to be rotated X degrees about the -15 axis** → tilts the body 15 degrees the other way.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **set XGO to be rotated X degrees about the 0 axis** → tilts the body back to level.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → tilts the body 15 degrees around the X axis.
+        - **line 3** → waits for 1 second.
+        - **line 4** → tilts the body 15 degrees the other way.
+        - **line 5** → waits for 1 second.
+        - **line 6** → tilts the body back to level.
+        - **line 7** → connects `on_button_pressed_a` to button A.
+        - **line 9** → tells the micro:bit which pins to use to talk to the dog.
 
 !!! tip "Rotating keeps going"
     Like walking, a tilt stays in place until the dog gets another command. That's why we finish with an angle of 0, which puts the body back to level.

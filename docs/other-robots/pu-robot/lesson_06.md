@@ -29,9 +29,18 @@ The **walk** block takes three things: the direction, the number of steps and th
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → walks the robot forward 5 steps at speed 5.
-    - **line 2** → waits for 1 second.
-    - **line 3** → turns the robot right on the spot for 4 steps at speed 5.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **walk forward for 5 steps at speed 5** → walks the robot forward 5 steps at speed 5.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **walk right turn for 4 steps at speed 5** → turns the robot right on the spot for 4 steps at speed 5.
+
+    === "Python"
+
+        - **line 1** → walks the robot forward 5 steps at speed 5.
+        - **line 2** → waits for 1 second.
+        - **line 3** → turns the robot right on the spot for 4 steps at speed 5.
 
 The directions are `FORWARD`, `BACKWARD`, `SIDE_LEFT`, `SIDE_RIGHT`, `LEFT_TURN` and `RIGHT_TURN`.
 
@@ -57,10 +66,20 @@ The **set robot move direction** block starts the robot walking and lets the pro
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → sets the fastest forward and backward walking speeds to level 2.
-    - **line 2** → starts the robot walking forward.
-    - **line 3** → waits 3 seconds while the robot keeps walking.
-    - **line 4** → stops the robot.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set walk speed range forward 2 backward 2** → sets the fastest forward and backward walking speeds to level 2.
+            - **set robot move direction forward** → starts the robot walking forward.
+            - **pause (ms) 3000** → waits 3 seconds while the robot keeps walking.
+            - **stop action** → stops the robot.
+
+    === "Python"
+
+        - **line 1** → sets the fastest forward and backward walking speeds to level 2.
+        - **line 2** → starts the robot walking forward.
+        - **line 3** → waits 3 seconds while the robot keeps walking.
+        - **line 4** → stops the robot.
 
 !!! tip "Which walking block should we use?"
     - Use **walk for steps** when we know how far we want to go. The program waits until the steps are done.

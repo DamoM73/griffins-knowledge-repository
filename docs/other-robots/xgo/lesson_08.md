@@ -33,11 +33,21 @@ The temperature sensor is built into the micro:bit's **processor**, so it measur
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → reads the temperature in degrees Celsius and shows it on the display.
-    - **line 3** → waits 1 second before reading it again.
-    - **line 4** → tells the micro:bit to run `on_forever` again and again.
-    - **line 6** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **forever** → runs the blocks inside again and again.
+            - **show number temperature (°C)** → reads the temperature in degrees Celsius and shows it on the display.
+            - **pause (ms) 1000** → waits 1 second before reading it again.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → reads the temperature in degrees Celsius and shows it on the display.
+        - **line 3** → waits 1 second before reading it again.
+        - **line 4** → tells the micro:bit to run `on_forever` again and again.
+        - **line 6** → tells the micro:bit which pins to use to talk to the dog.
 
 ## Tremble when cold
 
@@ -66,18 +76,35 @@ Set `cold` to 1 degree above the reading from the first example. Then cool the m
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → checks whether the temperature is below `cold`…
-    - **line 3** → …and if it is, starts a loop that runs 5 times.
-    - **line 4** → tilts the body 5 degrees one way around the Y axis.
-    - **line 5** → waits 100 milliseconds.
-    - **line 6** → tilts the body 5 degrees the other way.
-    - **line 7** → waits 100 milliseconds.
-    - **line 8** → puts the body back to level when the trembling finishes.
-    - **line 9** → waits 1 second before checking the temperature again.
-    - **line 10** → tells the micro:bit to run `on_forever` again and again.
-    - **line 12** → tells the micro:bit which pins to use to talk to the dog.
-    - **line 13** → creates the `cold` variable and sets the threshold to 22 °C.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+            - **set cold to 22** → creates the `cold` variable and sets the threshold to 22 °C.
+        - **forever** → runs the blocks inside again and again.
+            - **if temperature (°C) < cold then** → checks whether the temperature is below `cold`…
+                - **repeat 5 times** → …and if it is, starts a loop that runs 5 times.
+                    - **set XGO to be rotated Y degrees about the 5 axis** → tilts the body 5 degrees one way around the Y axis.
+                    - **pause (ms) 100** → waits 100 milliseconds.
+                    - **set XGO to be rotated Y degrees about the -5 axis** → tilts the body 5 degrees the other way.
+                    - **pause (ms) 100** → waits 100 milliseconds.
+                - **set XGO to be rotated Y degrees about the 0 axis** → puts the body back to level when the trembling finishes.
+            - **pause (ms) 1000** → waits 1 second before checking the temperature again.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → checks whether the temperature is below `cold`…
+        - **line 3** → …and if it is, starts a loop that runs 5 times.
+        - **line 4** → tilts the body 5 degrees one way around the Y axis.
+        - **line 5** → waits 100 milliseconds.
+        - **line 6** → tilts the body 5 degrees the other way.
+        - **line 7** → waits 100 milliseconds.
+        - **line 8** → puts the body back to level when the trembling finishes.
+        - **line 9** → waits 1 second before checking the temperature again.
+        - **line 10** → tells the micro:bit to run `on_forever` again and again.
+        - **line 12** → tells the micro:bit which pins to use to talk to the dog.
+        - **line 13** → creates the `cold` variable and sets the threshold to 22 °C.
 
 !!! warning "Keep the electronics dry"
     Never put the dog in a fridge or touch the micro:bit with ice. Water from condensation can damage the electronics.

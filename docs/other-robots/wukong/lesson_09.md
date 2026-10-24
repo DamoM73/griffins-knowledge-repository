@@ -32,12 +32,22 @@ The micro:bit's **accelerometer** measures how it's tilted. When we tilt the boa
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → reads the x tilt and maps it from the range -1023 to 1023 into the range 0 to 150.
-    - **line 3** → keeps the angle between 0 and 150, in case the reading goes past 1023.
-    - **lines 4–8** → set all 5 fingers to the angle.
-    - **line 9** → waits 50 milliseconds before reading the tilt again.
-    - **line 10** → tells the micro:bit to run `on_forever` again and again.
+    === "Blocks"
+
+        - **forever** → runs the blocks inside again and again.
+            - **set angle to map acceleration (mg) x from low -1023 high 1023 to low 0 high 150** → reads the x tilt and maps it from the range -1023 to 1023 into the range 0 to 150.
+            - **set angle to constrain angle between low 0 and high 150** → keeps the angle between 0 and 150, in case the reading goes past 1023.
+            - **Set 180° servo S0 angle to angle** to **Set 180° servo S7 angle to angle** (5 blocks) → set all 5 fingers to the angle.
+            - **pause (ms) 50** → waits 50 milliseconds before reading the tilt again.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → reads the x tilt and maps it from the range -1023 to 1023 into the range 0 to 150.
+        - **line 3** → keeps the angle between 0 and 150, in case the reading goes past 1023.
+        - **lines 4–8** → set all 5 fingers to the angle.
+        - **line 9** → waits 50 milliseconds before reading the tilt again.
+        - **line 10** → tells the micro:bit to run `on_forever` again and again.
 
 !!! tip "Why constrain?"
     If we tilt or shake the board quickly, the accelerometer can read more than 1023. Then map gives an angle bigger than 150, which could strain the servo motors. **Constrain** keeps the angle inside the range we choose.

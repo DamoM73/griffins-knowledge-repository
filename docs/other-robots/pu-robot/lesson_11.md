@@ -38,10 +38,18 @@ Switch the robot on, then gently tilt the whole robot forwards and backwards. Do
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → reads the body pitch and shows it on the display.
-    - **line 3** → waits half a second, so the number is easier to read.
-    - **line 4** → tells the micro:bit to run `on_forever` again and again.
+    === "Blocks"
+
+        - **forever** → runs the blocks inside again and again.
+            - **show number body pitch** → reads the body pitch and shows it on the display.
+            - **pause (ms) 500** → waits half a second, so the number is easier to read.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → reads the body pitch and shows it on the display.
+        - **line 3** → waits half a second, so the number is easier to read.
+        - **line 4** → tells the micro:bit to run `on_forever` again and again.
 
 ## React to a clap
 
@@ -65,9 +73,16 @@ A clap is an **event**. Instead of checking for it in a forever loop, we give Ma
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_sound_loud`, which will run when there's a loud sound.
-    - **line 2** → starts the robot's jump mode.
-    - **line 3** → connects `on_sound_loud` to the loud sound event.
+    === "Blocks"
+
+        - **on loud sound** → runs the blocks inside when the micro:bit hears a loud sound.
+            - **set mode jump** → starts the robot's jump mode.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_sound_loud`, which will run when there's a loud sound.
+        - **line 2** → starts the robot's jump mode.
+        - **line 3** → connects `on_sound_loud` to the loud sound event.
 
 !!! warning "Test the clap first"
     The head cover can muffle sound, and the robot's own servo motors make noise. Test how loud a clap needs to be, and check that the robot moving doesn't set off the event by itself.
@@ -94,10 +109,18 @@ The robot can listen to music and work out its **tempo** in beats per minute (BP
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → reads the music tempo and shows it on the display.
-    - **line 3** → waits 1 second before reading it again.
-    - **line 4** → tells the micro:bit to run `on_forever` again and again.
+    === "Blocks"
+
+        - **forever** → runs the blocks inside again and again.
+            - **show number music tempo** → reads the music tempo and shows it on the display.
+            - **pause (ms) 1000** → waits 1 second before reading it again.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → reads the music tempo and shows it on the display.
+        - **line 3** → waits 1 second before reading it again.
+        - **line 4** → tells the micro:bit to run `on_forever` again and again.
 
 ## Exercises
 

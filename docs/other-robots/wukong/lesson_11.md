@@ -30,13 +30,24 @@ Just like the XGO in its Radio Remote lesson, we use the micro:bit's **Radio** b
     ```
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → sends the number 1 by radio.
-    - **line 3** → connects `on_button_pressed_a` to button A.
-    - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 6** → sends the number 2 by radio.
-    - **line 7** → connects `on_button_pressed_b` to button B.
-    - **line 9** → sets the remote's radio group to 42.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **radio set group 42** → sets the remote's radio group to 42.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **radio send number 1** → sends the number 1 by radio.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **radio send number 2** → sends the number 2 by radio.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → sends the number 1 by radio.
+        - **line 3** → connects `on_button_pressed_a` to button A.
+        - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 6** → sends the number 2 by radio.
+        - **line 7** → connects `on_button_pressed_b` to button B.
+        - **line 9** → sets the remote's radio group to 42.
 
 ## The hand
 
@@ -60,17 +71,33 @@ Download each program to its own micro:bit, then switch the WuKong board on.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `make_fist`.
-    - **lines 2–6** → curl all 5 fingers.
-    - **line 8** → defines a function called `open_hand`.
-    - **lines 9–13** → straighten all 5 fingers.
-    - **line 15** → defines a function called `on_received_number`, which gets the number that arrived in `receivedNumber`.
-    - **line 16** → checks whether the number is 1…
-    - **line 17** → …and if it is, makes a fist.
-    - **line 18** → otherwise…
-    - **line 19** → …opens the hand.
-    - **line 20** → connects `on_received_number` to the event of a number arriving by radio.
-    - **line 22** → sets the hand's radio group to 42, the same as the remote.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **radio set group 42** → sets the hand's radio group to 42, the same as the remote.
+        - **function make_fist** → defines a function called `make_fist`.
+            - **Set 180° servo S0 angle to 150** to **Set 180° servo S7 angle to 150** (5 blocks) → curl all 5 fingers.
+        - **function open_hand** → defines a function called `open_hand`.
+            - **Set 180° servo S0 angle to 0** to **Set 180° servo S7 angle to 0** (5 blocks) → straighten all 5 fingers.
+        - **on radio received receivedNumber** → runs the blocks inside when a number arrives by radio, and stores it in `receivedNumber`.
+            - **if receivedNumber = 1 then** → checks whether the number is 1…
+                - **call make_fist** → …and if it is, makes a fist.
+            - **else** → otherwise…
+                - **call open_hand** → …opens the hand.
+
+    === "Python"
+
+        - **line 1** → defines a function called `make_fist`.
+        - **lines 2–6** → curl all 5 fingers.
+        - **line 8** → defines a function called `open_hand`.
+        - **lines 9–13** → straighten all 5 fingers.
+        - **line 15** → defines a function called `on_received_number`, which gets the number that arrived in `receivedNumber`.
+        - **line 16** → checks whether the number is 1…
+        - **line 17** → …and if it is, makes a fist.
+        - **line 18** → otherwise…
+        - **line 19** → …opens the hand.
+        - **line 20** → connects `on_received_number` to the event of a number arriving by radio.
+        - **line 22** → sets the hand's radio group to 42, the same as the remote.
 
 ## Exercises
 

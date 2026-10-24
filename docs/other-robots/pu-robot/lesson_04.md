@@ -36,9 +36,18 @@ We set each light's colour with three **RGB** numbers: how much red, green and b
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → sets all four ambience lights to red (255 red, 0 green, 0 blue).
-    - **line 2** → waits for 1 second.
-    - **line 3** → sets light 1 to blue, while the other three stay red.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set ambience light all to RGB (255, 0, 0)** → sets all four ambience lights to red (255 red, 0 green, 0 blue).
+            - **pause (ms) 1000** → waits for 1 second.
+            - **set ambience light 1 to RGB (0, 0, 255)** → sets light 1 to blue, while the other three stay red.
+
+    === "Python"
+
+        - **line 1** → sets all four ambience lights to red (255 red, 0 green, 0 blue).
+        - **line 2** → waits for 1 second.
+        - **line 3** → sets light 1 to blue, while the other three stay red.
 
 !!! tip "Mixing colours"
     | Colour | Red | Green | Blue |
@@ -73,11 +82,22 @@ Each eye can be on or off, and we can change its **brightness** from 0 to 100.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → turns the left eye on and the right eye off, like a wink.
-    - **line 2** → waits for 1 second.
-    - **line 3** → turns both eyes on.
-    - **line 4** → waits for 1 second.
-    - **line 5** → dims the left eye to brightness 10.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set left eye on right eye off** → turns the left eye on and the right eye off, like a wink.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **set left eye on right eye on** → turns both eyes on.
+            - **pause (ms) 1000** → waits for 1 second.
+            - **set left eye brightness 10** → dims the left eye to brightness 10.
+
+    === "Python"
+
+        - **line 1** → turns the left eye on and the right eye off, like a wink.
+        - **line 2** → waits for 1 second.
+        - **line 3** → turns both eyes on.
+        - **line 4** → waits for 1 second.
+        - **line 5** → dims the left eye to brightness 10.
 
 ## Repeat loop
 
@@ -101,11 +121,22 @@ To flash the lights five times, we could copy the same blocks five times. That's
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → starts a loop that runs the indented code 5 times.
-    - **line 2** → sets all the lights to red.
-    - **line 3** → waits for half a second.
-    - **line 4** → sets all the lights to blue.
-    - **line 5** → waits for half a second, then the loop goes back to line 2 until it has run 5 times.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **repeat 5 times** → starts a loop that runs the blocks inside 5 times.
+                - **set ambience light all to RGB (255, 0, 0)** → sets all the lights to red.
+                - **pause (ms) 500** → waits for half a second.
+                - **set ambience light all to RGB (0, 0, 255)** → sets all the lights to blue.
+                - **pause (ms) 500** → waits for half a second, then the loop goes back to the start until it has run 5 times.
+
+    === "Python"
+
+        - **line 1** → starts a loop that runs the indented code 5 times.
+        - **line 2** → sets all the lights to red.
+        - **line 3** → waits for half a second.
+        - **line 4** → sets all the lights to blue.
+        - **line 5** → waits for half a second, then the loop goes back to line 2 until it has run 5 times.
 
 In Python, the repeat block becomes `for index in range(5):`. The **indentation** of lines 2 to 5 shows that they're inside the loop.
 

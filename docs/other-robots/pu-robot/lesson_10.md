@@ -43,24 +43,46 @@ Place the robot on the floor with clear space in front, then slowly walk towards
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → tells Python to use the `distance` variable from the main program.
-    - **line 3** → measures the distance once and stores it in `distance`.
-    - **line 4** → checks whether we're further than 30 cm away…
-    - **line 5** → …and if we are, turns the lights green…
-    - **line 6** → …and walks forward 1 step.
-    - **line 7** → otherwise, checks whether we're further than 10 cm away…
-    - **line 8** → …and if we are, turns the lights amber…
-    - **line 9** → …and turns the head to one side.
-    - **line 10** → waits 300 milliseconds.
-    - **line 11** → turns the head to the other side.
-    - **line 12** → waits 300 milliseconds.
-    - **line 13** → turns the head back to the centre.
-    - **line 14** → otherwise (closer than 10 cm)…
-    - **line 15** → …turns the lights red…
-    - **line 16** → …and steps backward 2 steps.
-    - **line 17** → tells the micro:bit to run `on_forever` again and again.
-    - **line 19** → creates the `distance` variable and sets it to 0 when the program starts.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set distance to 0** → creates the `distance` variable and sets it to 0 when the program starts.
+        - **forever** → runs the blocks inside again and again.
+            - **set distance to ultrasonic sensor distance in cm** → measures the distance once and stores it in `distance`.
+            - **if distance > 30 then** → checks whether we're further than 30 cm away…
+                - **set ambience light all to RGB (0, 255, 0)** → …and if we are, turns the lights green…
+                - **walk forward for 1 steps at speed 5** → …and walks forward 1 step.
+            - **else if distance > 10 then** → otherwise, checks whether we're further than 10 cm away…
+                - **set ambience light all to RGB (255, 120, 0)** → …and if we are, turns the lights amber…
+                - **set head offset servo to 70** → …and turns the head to one side.
+                - **pause (ms) 300** → waits 300 milliseconds.
+                - **set head offset servo to 110** → turns the head to the other side.
+                - **pause (ms) 300** → waits 300 milliseconds.
+                - **set head offset servo to 90** → turns the head back to the centre.
+            - **else** → otherwise (closer than 10 cm)…
+                - **set ambience light all to RGB (255, 0, 0)** → …turns the lights red…
+                - **walk backward for 2 steps at speed 5** → …and steps backward 2 steps.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → tells Python to use the `distance` variable from the main program.
+        - **line 3** → measures the distance once and stores it in `distance`.
+        - **line 4** → checks whether we're further than 30 cm away…
+        - **line 5** → …and if we are, turns the lights green…
+        - **line 6** → …and walks forward 1 step.
+        - **line 7** → otherwise, checks whether we're further than 10 cm away…
+        - **line 8** → …and if we are, turns the lights amber…
+        - **line 9** → …and turns the head to one side.
+        - **line 10** → waits 300 milliseconds.
+        - **line 11** → turns the head to the other side.
+        - **line 12** → waits 300 milliseconds.
+        - **line 13** → turns the head back to the centre.
+        - **line 14** → otherwise (closer than 10 cm)…
+        - **line 15** → …turns the lights red…
+        - **line 16** → …and steps backward 2 steps.
+        - **line 17** → tells the micro:bit to run `on_forever` again and again.
+        - **line 19** → creates the `distance` variable and sets it to 0 when the program starts.
 
 !!! tip "Why store the distance in a variable?"
     If we read the sensor in each condition, the robot would measure three times, and each reading could be slightly different. Measuring once and storing the result means every condition checks the same number.

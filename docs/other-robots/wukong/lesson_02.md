@@ -38,8 +38,16 @@ The micro:bit stays in the WuKong board while we download. Plug the USB cable in
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **lines 1–8** → set the servo motors on all 8 ports, S0 to S7, to 0 degrees.
-    - **line 9** → shows a happy face, so we know the program has finished.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **Set 180° servo S0 angle to 0** to **Set 180° servo S7 angle to 0** (8 blocks) → set the servo motors on all 8 ports, S0 to S7, to 0 degrees.
+            - **show icon happy** → shows a happy face, so we know the program has finished.
+
+    === "Python"
+
+        - **lines 1–8** → set the servo motors on all 8 ports, S0 to S7, to 0 degrees.
+        - **line 9** → shows a happy face, so we know the program has finished.
 
 !!! tip "Why zero all 8 ports?"
     Setting all 8 ports means every servo motor is zeroed, whichever ports we plugged our fingers into.
@@ -66,13 +74,24 @@ The arms aren't fitted yet, so it's hard to see a servo motor turn. To check, pu
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → turns the thumb servo motor to 90 degrees, a quarter turn.
-    - **line 3** → connects `on_button_pressed_a` to button A.
-    - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 6** → turns the thumb servo motor back to 0 degrees.
-    - **line 7** → connects `on_button_pressed_b` to button B.
-    - **line 9** → sets the thumb servo motor to 0 degrees when the program starts.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **Set 180° servo S0 angle to 0** → sets the thumb servo motor to 0 degrees when the program starts.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **Set 180° servo S0 angle to 90** → turns the thumb servo motor to 90 degrees, a quarter turn.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **Set 180° servo S0 angle to 0** → turns the thumb servo motor back to 0 degrees.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → turns the thumb servo motor to 90 degrees, a quarter turn.
+        - **line 3** → connects `on_button_pressed_a` to button A.
+        - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 6** → turns the thumb servo motor back to 0 degrees.
+        - **line 7** → connects `on_button_pressed_b` to button B.
+        - **line 9** → sets the thumb servo motor to 0 degrees when the program starts.
 
 !!! warning "Finish at 0 degrees"
     When the test works, press B, then switch the board off. From now on, don't turn the servo spindles by hand, so they stay at 0 degrees until we fit the arms.

@@ -33,16 +33,29 @@ We **define** two functions: `make_fist` and `open_hand`. Then each button **cal
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `make_fist`.
-    - **lines 2–6** → curl all 5 fingers.
-    - **line 8** → defines a function called `open_hand`.
-    - **lines 9–13** → straighten all 5 fingers.
-    - **line 15** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 16** → calls `make_fist`, which curls all the fingers.
-    - **line 17** → connects `on_button_pressed_a` to button A.
-    - **line 19** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 20** → calls `open_hand`, which straightens all the fingers.
-    - **line 21** → connects `on_button_pressed_b` to button B.
+    === "Blocks"
+
+        - **function make_fist** → defines a function called `make_fist`.
+            - **Set 180° servo S0 angle to 150** to **Set 180° servo S7 angle to 150** (5 blocks) → curl all 5 fingers.
+        - **function open_hand** → defines a function called `open_hand`.
+            - **Set 180° servo S0 angle to 0** to **Set 180° servo S7 angle to 0** (5 blocks) → straighten all 5 fingers.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **call make_fist** → calls `make_fist`, which curls all the fingers.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **call open_hand** → calls `open_hand`, which straightens all the fingers.
+
+    === "Python"
+
+        - **line 1** → defines a function called `make_fist`.
+        - **lines 2–6** → curl all 5 fingers.
+        - **line 8** → defines a function called `open_hand`.
+        - **lines 9–13** → straighten all 5 fingers.
+        - **line 15** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 16** → calls `make_fist`, which curls all the fingers.
+        - **line 17** → connects `on_button_pressed_a` to button A.
+        - **line 19** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 20** → calls `open_hand`, which straightens all the fingers.
+        - **line 21** → connects `on_button_pressed_b` to button B.
 
 !!! tip "Defining doesn't run the code"
     Lines 1 to 13 don't move the hand when the program starts. Python only remembers the functions. The fingers move when a button calls one of them.

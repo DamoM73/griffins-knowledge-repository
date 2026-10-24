@@ -36,11 +36,21 @@ The remote reads how far the joystick is pushed forwards or backwards, and sends
     ```
 
 ??? note "Code explanation"
-    - **line 1** → sets the remote's radio group to 160 and shows the number on the display.
-    - **line 3** → defines the function that the forever loop repeats.
-    - **line 4** → reads how far the joystick is pushed forwards or backwards and sends that number to the robot as a speed value.
-    - **line 5** → waits 50 milliseconds, so the remote sends about 20 messages a second.
-    - **line 6** → tells the micro:bit to run `on_forever` again and again.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set controller radio group 160** → sets the remote's radio group to 160 and shows the number on the display.
+        - **forever** → runs the blocks inside again and again.
+            - **send speed value read joystick value speed** → reads how far the joystick is pushed forwards or backwards and sends that number to the robot as a speed value.
+            - **pause (ms) 50** → waits 50 milliseconds, so the remote sends about 20 messages a second.
+
+    === "Python"
+
+        - **line 1** → sets the remote's radio group to 160 and shows the number on the display.
+        - **line 3** → defines the function that the forever loop repeats.
+        - **line 4** → reads how far the joystick is pushed forwards or backwards and sends that number to the robot as a speed value.
+        - **line 5** → waits 50 milliseconds, so the remote sends about 20 messages a second.
+        - **line 6** → tells the micro:bit to run `on_forever` again and again.
 
 ## The robot
 
@@ -66,13 +76,25 @@ Download each program to its own micro:bit. Put one in the robot and one in the 
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → turns on remote control and sets the robot's radio group to 160.
-    - **line 3** → defines a function called `on_speed_received`, which gets the speed value in `value`.
-    - **line 4** → checks whether the joystick is pushed more than halfway forwards…
-    - **line 5** → …and if it is, starts the robot walking forward.
-    - **line 6** → otherwise…
-    - **line 7** → …stops the robot.
-    - **line 8** → connects `on_speed_received` to the event of a speed value arriving.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **enable remote control on group 160** → turns on remote control and sets the robot's radio group to 160.
+        - **on speed value received value** → runs the blocks inside when the robot receives a speed from the controller, and stores it in `value`.
+            - **if value > 0.5 then** → checks whether the joystick is pushed more than halfway forwards…
+                - **set robot move direction forward** → …and if it is, starts the robot walking forward.
+            - **else** → otherwise…
+                - **stop action** → …stops the robot.
+
+    === "Python"
+
+        - **line 1** → turns on remote control and sets the robot's radio group to 160.
+        - **line 3** → defines a function called `on_speed_received`, which gets the speed value in `value`.
+        - **line 4** → checks whether the joystick is pushed more than halfway forwards…
+        - **line 5** → …and if it is, starts the robot walking forward.
+        - **line 6** → otherwise…
+        - **line 7** → …stops the robot.
+        - **line 8** → connects `on_speed_received` to the event of a speed value arriving.
 
 !!! tip "Putting the factory program back"
     Once we download our own program, the remote's buttons no longer do what the PU Robot's instructions say. Our teacher can put the factory program back on both micro:bits.

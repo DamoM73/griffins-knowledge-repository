@@ -32,23 +32,44 @@ The hand picks a **random number** from 1 to 3, then uses an if statement to cho
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `rock`.
-    - **lines 2–6** → curl all 5 fingers into a fist.
-    - **line 8** → defines a function called `paper`.
-    - **lines 9–13** → straighten all 5 fingers.
-    - **line 15** → defines a function called `scissors`.
-    - **line 16** → curls the thumb.
-    - **lines 17–18** → straighten the index and middle fingers.
-    - **lines 19–20** → curl the ring and little fingers.
-    - **line 22** → defines a function called `on_gesture_shake`, which will run when the micro:bit is shaken.
-    - **line 23** → picks a random whole number from 1 to 3 and stores it in `choice`.
-    - **line 24** → checks whether `choice` is 1…
-    - **line 25** → …and if it is, makes rock.
-    - **line 26** → otherwise, checks whether `choice` is 2…
-    - **line 27** → …and if it is, makes paper.
-    - **line 28** → otherwise…
-    - **line 29** → …makes scissors.
-    - **line 30** → connects `on_gesture_shake` to shaking the micro:bit.
+    === "Blocks"
+
+        - **function rock** → defines a function called `rock`.
+            - **Set 180° servo S0 angle to 150** to **Set 180° servo S7 angle to 150** (5 blocks) → curl all 5 fingers into a fist.
+        - **function paper** → defines a function called `paper`.
+            - **Set 180° servo S0 angle to 0** to **Set 180° servo S7 angle to 0** (5 blocks) → straighten all 5 fingers.
+        - **function scissors** → defines a function called `scissors`.
+            - **Set 180° servo S0 angle to 150** → curls the thumb.
+            - **Set 180° servo S1 angle to 0** to **Set 180° servo S3 angle to 0** (2 blocks) → straighten the index and middle fingers.
+            - **Set 180° servo S5 angle to 150** to **Set 180° servo S7 angle to 150** (2 blocks) → curl the ring and little fingers.
+        - **on shake** → runs the blocks inside when we shake the micro:bit.
+            - **set choice to pick random 1 to 3** → picks a random whole number from 1 to 3 and stores it in `choice`.
+            - **if choice = 1 then** → checks whether `choice` is 1…
+                - **call rock** → …and if it is, makes rock.
+            - **else if choice = 2 then** → otherwise, checks whether `choice` is 2…
+                - **call paper** → …and if it is, makes paper.
+            - **else** → otherwise…
+                - **call scissors** → …makes scissors.
+
+    === "Python"
+
+        - **line 1** → defines a function called `rock`.
+        - **lines 2–6** → curl all 5 fingers into a fist.
+        - **line 8** → defines a function called `paper`.
+        - **lines 9–13** → straighten all 5 fingers.
+        - **line 15** → defines a function called `scissors`.
+        - **line 16** → curls the thumb.
+        - **lines 17–18** → straighten the index and middle fingers.
+        - **lines 19–20** → curl the ring and little fingers.
+        - **line 22** → defines a function called `on_gesture_shake`, which will run when the micro:bit is shaken.
+        - **line 23** → picks a random whole number from 1 to 3 and stores it in `choice`.
+        - **line 24** → checks whether `choice` is 1…
+        - **line 25** → …and if it is, makes rock.
+        - **line 26** → otherwise, checks whether `choice` is 2…
+        - **line 27** → …and if it is, makes paper.
+        - **line 28** → otherwise…
+        - **line 29** → …makes scissors.
+        - **line 30** → connects `on_gesture_shake` to shaking the micro:bit.
 
 !!! tip "Why doesn't else need a condition?"
     If `choice` isn't 1 and isn't 2, it must be 3. So the else doesn't need to check anything: it catches every case left over.

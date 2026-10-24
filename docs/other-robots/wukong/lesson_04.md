@@ -29,22 +29,40 @@ We store the angle in a **variable** called `angle`. Button A adds 10 to it and 
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → tells Python to use the `angle` variable from the main program, not a new one.
-    - **line 3** → checks whether the angle is still less than 180…
-    - **line 4** → …and if it is, adds 10 to it.
-    - **line 5** → turns the thumb servo motor to the new angle.
-    - **line 6** → shows the angle on the display.
-    - **line 7** → connects `on_button_pressed_a` to button A.
-    - **line 9** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 10** → tells Python to use the `angle` variable from the main program.
-    - **line 11** → checks whether the angle is more than 0…
-    - **line 12** → …and if it is, takes 10 away from it.
-    - **line 13** → turns the thumb servo motor to the new angle.
-    - **line 14** → shows the angle on the display.
-    - **line 15** → connects `on_button_pressed_b` to button B.
-    - **line 17** → creates the `angle` variable and sets it to 0.
-    - **line 18** → turns the thumb servo motor to 0 degrees.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set angle to 0** → creates the `angle` variable and sets it to 0.
+            - **Set 180° servo S0 angle to angle** → turns the thumb servo motor to 0 degrees.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **if angle < 180 then** → checks whether the angle is still less than 180…
+                - **change angle by 10** → …and if it is, adds 10 to it.
+            - **Set 180° servo S0 angle to angle** → turns the thumb servo motor to the new angle.
+            - **show number angle** → shows the angle on the display.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **if angle > 0 then** → checks whether the angle is more than 0…
+                - **change angle by -10** → …and if it is, takes 10 away from it.
+            - **Set 180° servo S0 angle to angle** → turns the thumb servo motor to the new angle.
+            - **show number angle** → shows the angle on the display.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → tells Python to use the `angle` variable from the main program, not a new one.
+        - **line 3** → checks whether the angle is still less than 180…
+        - **line 4** → …and if it is, adds 10 to it.
+        - **line 5** → turns the thumb servo motor to the new angle.
+        - **line 6** → shows the angle on the display.
+        - **line 7** → connects `on_button_pressed_a` to button A.
+        - **line 9** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 10** → tells Python to use the `angle` variable from the main program.
+        - **line 11** → checks whether the angle is more than 0…
+        - **line 12** → …and if it is, takes 10 away from it.
+        - **line 13** → turns the thumb servo motor to the new angle.
+        - **line 14** → shows the angle on the display.
+        - **line 15** → connects `on_button_pressed_b` to button B.
+        - **line 17** → creates the `angle` variable and sets it to 0.
+        - **line 18** → turns the thumb servo motor to 0 degrees.
 
 !!! tip "What does global do?"
     `angle` is created in the main program, so it's a **global variable**. Inside a function, Python needs the line `global angle` before it can change it. In Blocks, MakeCode adds this for us.

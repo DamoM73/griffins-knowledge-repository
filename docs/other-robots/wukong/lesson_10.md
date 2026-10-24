@@ -30,15 +30,28 @@ Our hand can make gestures, but can it hold something? Our hand is a **prototype
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `make_fist`.
-    - **lines 2–6** → curl all 5 fingers.
-    - **line 8** → defines a function called `open_hand`.
-    - **lines 9–13** → straighten all 5 fingers.
-    - **line 15** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 16** → calls `make_fist` to close the hand around the object.
-    - **line 17** → holds the grip for 5 seconds.
-    - **line 18** → calls `open_hand` to let go.
-    - **line 19** → connects `on_button_pressed_a` to button A.
+    === "Blocks"
+
+        - **function make_fist** → defines a function called `make_fist`.
+            - **Set 180° servo S0 angle to 150** to **Set 180° servo S7 angle to 150** (5 blocks) → curl all 5 fingers.
+        - **function open_hand** → defines a function called `open_hand`.
+            - **Set 180° servo S0 angle to 0** to **Set 180° servo S7 angle to 0** (5 blocks) → straighten all 5 fingers.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **call make_fist** → calls `make_fist` to close the hand around the object.
+            - **pause (ms) 5000** → holds the grip for 5 seconds.
+            - **call open_hand** → calls `open_hand` to let go.
+
+    === "Python"
+
+        - **line 1** → defines a function called `make_fist`.
+        - **lines 2–6** → curl all 5 fingers.
+        - **line 8** → defines a function called `open_hand`.
+        - **lines 9–13** → straighten all 5 fingers.
+        - **line 15** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 16** → calls `make_fist` to close the hand around the object.
+        - **line 17** → holds the grip for 5 seconds.
+        - **line 18** → calls `open_hand` to let go.
+        - **line 19** → connects `on_button_pressed_a` to button A.
 
 ## Testing table
 

@@ -21,6 +21,9 @@ The micro:bit has a **magnetometer**, which measures the **magnetic field** arou
 
 The **magnetic force** block gives the strength of the magnetic field in **microteslas** (µT).
 
+!!! tip "Can't find the magnetic force block?"
+    It isn't in the main **Input** list. In the list of block categories, select **…more** under **Input**, and the **magnetic force (µT)** block is there. After we drag it in, we change its drop-down from **x** to **strength**.
+
 === "Blocks"
 
     ![Blocks for the show strength example](../../assets/blocks/xgo/lesson_09_show_strength.png){ .blocks }
@@ -39,11 +42,21 @@ The **magnetic force** block gives the strength of the magnetic field in **micro
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → reads the strength of the magnetic field in microteslas and shows it on the display.
-    - **line 3** → waits half a second before reading it again.
-    - **line 4** → tells the micro:bit to run `on_forever` again and again.
-    - **line 6** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **forever** → runs the blocks inside again and again.
+            - **show number magnetic force (µT) strength** → reads the strength of the magnetic field in microteslas and shows it on the display.
+            - **pause (ms) 500** → waits half a second before reading it again.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → reads the strength of the magnetic field in microteslas and shows it on the display.
+        - **line 3** → waits half a second before reading it again.
+        - **line 4** → tells the micro:bit to run `on_forever` again and again.
+        - **line 6** → tells the micro:bit which pins to use to talk to the dog.
 
 !!! tip "Tilt to fill the screen"
     The first time a program uses the magnetometer, the micro:bit may ask us to tilt it until every LED lights up. This is calibration: it lets the micro:bit measure the Earth's magnetic field so its readings are accurate. With the micro:bit in the dog, tilt the whole dog gently, or calibrate the micro:bit before putting it in the slot.
@@ -70,14 +83,27 @@ When the reading goes above a threshold, the dog walks backward, away from the m
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → checks whether the magnetic field is stronger than 200 microteslas…
-    - **line 3** → …and if it is, walks the dog backward at 30% speed.
-    - **line 4** → otherwise…
-    - **line 5** → …stops the dog.
-    - **line 6** → waits 200 milliseconds before checking again.
-    - **line 7** → tells the micro:bit to run `on_forever` again and again.
-    - **line 9** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **forever** → runs the blocks inside again and again.
+            - **if magnetic force (µT) strength > 200 then** → checks whether the magnetic field is stronger than 200 microteslas…
+                - **move Backward speed 30 %** → …and if it is, walks the dog backward at 30% speed.
+            - **else** → otherwise…
+                - **move Forward speed 0 %** → …stops the dog.
+            - **pause (ms) 200** → waits 200 milliseconds before checking again.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → checks whether the magnetic field is stronger than 200 microteslas…
+        - **line 3** → …and if it is, walks the dog backward at 30% speed.
+        - **line 4** → otherwise…
+        - **line 5** → …stops the dog.
+        - **line 6** → waits 200 milliseconds before checking again.
+        - **line 7** → tells the micro:bit to run `on_forever` again and again.
+        - **line 9** → tells the micro:bit which pins to use to talk to the dog.
 
 !!! warning "Motors are magnets too"
     The dog's servo motors contain magnets, so the reading changes when the dog moves. Measure the reading with the dog standing still and walking, then choose a threshold well above both.

@@ -35,12 +35,23 @@ The **move** block sets a direction and a speed from 0 to 100%. The dog keeps wa
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → starts the dog walking forward at 50% speed.
-    - **line 3** → waits 3 seconds while the dog keeps walking.
-    - **line 4** → sets the speed to 0, which stops the dog.
-    - **line 5** → connects `on_button_pressed_a` to button A.
-    - **line 7** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **move Forward speed 50 %** → starts the dog walking forward at 50% speed.
+            - **pause (ms) 3000** → waits 3 seconds while the dog keeps walking.
+            - **move Forward speed 0 %** → sets the speed to 0, which stops the dog.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → starts the dog walking forward at 50% speed.
+        - **line 3** → waits 3 seconds while the dog keeps walking.
+        - **line 4** → sets the speed to 0, which stops the dog.
+        - **line 5** → connects `on_button_pressed_a` to button A.
+        - **line 7** → tells the micro:bit which pins to use to talk to the dog.
 
 !!! warning "Be ready to switch off"
     If we forget to set the speed back to 0, the dog keeps walking. Be ready to catch it or press the power switch, especially near the edge of a table.
@@ -67,12 +78,23 @@ The **rotate** block works the same way, but turns the dog on the spot.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 2** → starts the dog turning left at 50% speed.
-    - **line 3** → waits 2 seconds while the dog keeps turning.
-    - **line 4** → sets the turning speed to 0, which stops the dog.
-    - **line 5** → connects `on_button_pressed_b` to button B.
-    - **line 7** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **rotate Left, speed is 50 %** → starts the dog turning left at 50% speed.
+            - **pause (ms) 2000** → waits 2 seconds while the dog keeps turning.
+            - **rotate Left, speed is 0 %** → sets the turning speed to 0, which stops the dog.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 2** → starts the dog turning left at 50% speed.
+        - **line 3** → waits 2 seconds while the dog keeps turning.
+        - **line 4** → sets the turning speed to 0, which stops the dog.
+        - **line 5** → connects `on_button_pressed_b` to button B.
+        - **line 7** → tells the micro:bit which pins to use to talk to the dog.
 
 ## Walk for a set time
 
@@ -96,10 +118,19 @@ The **translational motion** block with a time walks for that many seconds and t
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → walks the dog forward with 15 mm steps for 3 seconds, then stops.
-    - **line 3** → connects `on_button_pressed_a` to button A.
-    - **line 5** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **set XGO to perform a forward(0mm~25mm) translational motion with a step size of 15 mm for 3 seconds** → walks the dog forward with 15 mm steps for 3 seconds, then stops.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → walks the dog forward with 15 mm steps for 3 seconds, then stops.
+        - **line 3** → connects `on_button_pressed_a` to button A.
+        - **line 5** → tells the micro:bit which pins to use to talk to the dog.
 
 ## Exercises
 

@@ -51,13 +51,25 @@ Place the robot about 1 metre from the wall, facing it, then switch it on.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → checks whether the wall is further away than `stop_distance`…
-    - **line 3** → …and if it is, walks forward 1 step at speed 4.
-    - **line 4** → otherwise…
-    - **line 5** → …shows a tick, because the robot has parked.
-    - **line 6** → tells the micro:bit to run `on_forever` again and again.
-    - **line 8** → creates the `stop_distance` variable and sets it to 15 cm.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set stop_distance to 15** → creates the `stop_distance` variable and sets it to 15 cm.
+        - **forever** → runs the blocks inside again and again.
+            - **if ultrasonic sensor distance in cm > stop_distance then** → checks whether the wall is further away than `stop_distance`…
+                - **walk forward for 1 steps at speed 4** → …and if it is, walks forward 1 step at speed 4.
+            - **else** → otherwise…
+                - **show icon yes** → …shows a tick, because the robot has parked.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → checks whether the wall is further away than `stop_distance`…
+        - **line 3** → …and if it is, walks forward 1 step at speed 4.
+        - **line 4** → otherwise…
+        - **line 5** → …shows a tick, because the robot has parked.
+        - **line 6** → tells the micro:bit to run `on_forever` again and again.
+        - **line 8** → creates the `stop_distance` variable and sets it to 15 cm.
 
 ### Step 2: slow down near the wall
 
@@ -81,19 +93,36 @@ A fast robot can overshoot, because it measures, then takes a whole step. Real c
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → tells Python to use the `distance` variable from the main program.
-    - **line 3** → measures the distance once and stores it in `distance`.
-    - **line 4** → checks whether the wall is further away than `slow_distance`…
-    - **line 5** → …and if it is, walks forward 1 step at speed 6.
-    - **line 6** → otherwise, checks whether the wall is further away than `stop_distance`…
-    - **line 7** → …and if it is, walks forward 1 step at speed 2.
-    - **line 8** → otherwise…
-    - **line 9** → …shows a tick, because the robot has parked.
-    - **line 10** → tells the micro:bit to run `on_forever` again and again.
-    - **line 12** → creates the `distance` variable and sets it to 0.
-    - **line 13** → sets the distance where the robot starts to slow down to 30 cm.
-    - **line 14** → sets the stopping distance to 8 cm.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set distance to 0** → creates the `distance` variable and sets it to 0.
+            - **set slow_distance to 30** → sets the distance where the robot starts to slow down to 30 cm.
+            - **set stop_distance to 8** → sets the stopping distance to 8 cm.
+        - **forever** → runs the blocks inside again and again.
+            - **set distance to ultrasonic sensor distance in cm** → measures the distance once and stores it in `distance`.
+            - **if distance > slow_distance then** → checks whether the wall is further away than `slow_distance`…
+                - **walk forward for 1 steps at speed 6** → …and if it is, walks forward 1 step at speed 6.
+            - **else if distance > stop_distance then** → otherwise, checks whether the wall is further away than `stop_distance`…
+                - **walk forward for 1 steps at speed 2** → …and if it is, walks forward 1 step at speed 2.
+            - **else** → otherwise…
+                - **show icon yes** → …shows a tick, because the robot has parked.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → tells Python to use the `distance` variable from the main program.
+        - **line 3** → measures the distance once and stores it in `distance`.
+        - **line 4** → checks whether the wall is further away than `slow_distance`…
+        - **line 5** → …and if it is, walks forward 1 step at speed 6.
+        - **line 6** → otherwise, checks whether the wall is further away than `stop_distance`…
+        - **line 7** → …and if it is, walks forward 1 step at speed 2.
+        - **line 8** → otherwise…
+        - **line 9** → …shows a tick, because the robot has parked.
+        - **line 10** → tells the micro:bit to run `on_forever` again and again.
+        - **line 12** → creates the `distance` variable and sets it to 0.
+        - **line 13** → sets the distance where the robot starts to slow down to 30 cm.
+        - **line 14** → sets the stopping distance to 8 cm.
 
 ## Test it
 

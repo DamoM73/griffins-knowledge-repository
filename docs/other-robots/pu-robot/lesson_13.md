@@ -39,33 +39,63 @@ This kind of program is called a **state machine**. The robot is always in one *
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_sound_loud`, which will run when there's a loud sound.
-    - **line 2** → tells Python to use the `mood` variable from the main program.
-    - **line 3** → moves to the next mood by adding 1.
-    - **line 4** → checks whether the mood has gone past 3…
-    - **line 5** → …and if it has, goes back to mood 1.
-    - **line 6** → shows the new mood number on the display.
-    - **line 7** → connects `on_sound_loud` to the loud sound event.
-    - **line 9** → defines the function that the forever loop repeats.
-    - **line 10** → checks whether the robot is happy (mood 1)…
-    - **line 11** → …and if it is, turns the lights yellow…
-    - **line 12** → …turns both eyes on…
-    - **line 13** → …and tilts the head to 110 degrees.
-    - **line 14** → otherwise, checks whether the robot is sleepy (mood 2)…
-    - **line 15** → …and if it is, turns the lights blue…
-    - **lines 16–17** → …dims both eyes to brightness 10…
-    - **line 18** → …and tilts the head to 70 degrees.
-    - **line 19** → otherwise (mood 3, grumpy)…
-    - **line 20** → …turns the lights red…
-    - **line 21** → …turns the head to one side.
-    - **line 22** → waits 150 milliseconds.
-    - **line 23** → turns the head to the other side.
-    - **line 24** → waits 150 milliseconds.
-    - **line 25** → turns the head back to the centre.
-    - **line 26** → waits half a second before checking the mood again.
-    - **line 27** → tells the micro:bit to run `on_forever` again and again.
-    - **line 29** → creates the `mood` variable and starts the robot happy.
-    - **line 30** → shows the starting mood number.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set mood to 1** → creates the `mood` variable and starts the robot happy.
+            - **show number mood** → shows the starting mood number.
+        - **on loud sound** → runs the blocks inside when the micro:bit hears a loud sound.
+            - **change mood by 1** → moves to the next mood by adding 1.
+            - **if mood > 3 then** → checks whether the mood has gone past 3…
+                - **set mood to 1** → …and if it has, goes back to mood 1.
+            - **show number mood** → shows the new mood number on the display.
+        - **forever** → runs the blocks inside again and again.
+            - **if mood = 1 then** → checks whether the robot is happy (mood 1)…
+                - **set ambience light all to RGB (255, 200, 0)** → …and if it is, turns the lights yellow…
+                - **set left eye on right eye on** → …turns both eyes on…
+                - **set head pitch servo to 110** → …and tilts the head to 110 degrees.
+            - **else if mood = 2 then** → otherwise, checks whether the robot is sleepy (mood 2)…
+                - **set ambience light all to RGB (0, 0, 255)** → …and if it is, turns the lights blue…
+                - **set left eye brightness 10** to **set right eye brightness 10** (2 blocks) → …dims both eyes to brightness 10…
+                - **set head pitch servo to 70** → …and tilts the head to 70 degrees.
+            - **else** → otherwise (mood 3, grumpy)…
+                - **set ambience light all to RGB (255, 0, 0)** → …turns the lights red…
+                - **set head offset servo to 70** → …turns the head to one side.
+                - **pause (ms) 150** → waits 150 milliseconds.
+                - **set head offset servo to 110** → turns the head to the other side.
+                - **pause (ms) 150** → waits 150 milliseconds.
+                - **set head offset servo to 90** → turns the head back to the centre.
+            - **pause (ms) 500** → waits half a second before checking the mood again.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_sound_loud`, which will run when there's a loud sound.
+        - **line 2** → tells Python to use the `mood` variable from the main program.
+        - **line 3** → moves to the next mood by adding 1.
+        - **line 4** → checks whether the mood has gone past 3…
+        - **line 5** → …and if it has, goes back to mood 1.
+        - **line 6** → shows the new mood number on the display.
+        - **line 7** → connects `on_sound_loud` to the loud sound event.
+        - **line 9** → defines the function that the forever loop repeats.
+        - **line 10** → checks whether the robot is happy (mood 1)…
+        - **line 11** → …and if it is, turns the lights yellow…
+        - **line 12** → …turns both eyes on…
+        - **line 13** → …and tilts the head to 110 degrees.
+        - **line 14** → otherwise, checks whether the robot is sleepy (mood 2)…
+        - **line 15** → …and if it is, turns the lights blue…
+        - **lines 16–17** → …dims both eyes to brightness 10…
+        - **line 18** → …and tilts the head to 70 degrees.
+        - **line 19** → otherwise (mood 3, grumpy)…
+        - **line 20** → …turns the lights red…
+        - **line 21** → …turns the head to one side.
+        - **line 22** → waits 150 milliseconds.
+        - **line 23** → turns the head to the other side.
+        - **line 24** → waits 150 milliseconds.
+        - **line 25** → turns the head back to the centre.
+        - **line 26** → waits half a second before checking the mood again.
+        - **line 27** → tells the micro:bit to run `on_forever` again and again.
+        - **line 29** → creates the `mood` variable and starts the robot happy.
+        - **line 30** → shows the starting mood number.
 
 !!! tip "Two jobs, two parts"
     The event handler (lines 1 to 7) only changes the state. The forever loop (lines 9 to 27) only acts on the state. Keeping these jobs separate makes it easy to add more moods later.

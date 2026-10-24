@@ -34,11 +34,21 @@ The **compass heading** block gives the dog's **heading**: 0 is north, 90 is eas
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → reads the compass heading in degrees and shows it on the display.
-    - **line 3** → waits half a second before reading it again.
-    - **line 4** → tells the micro:bit to run `on_forever` again and again.
-    - **line 6** → tells the micro:bit which pins to use to talk to the dog.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+        - **forever** → runs the blocks inside again and again.
+            - **show number compass heading (°)** → reads the compass heading in degrees and shows it on the display.
+            - **pause (ms) 500** → waits half a second before reading it again.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → reads the compass heading in degrees and shows it on the display.
+        - **line 3** → waits half a second before reading it again.
+        - **line 4** → tells the micro:bit to run `on_forever` again and again.
+        - **line 6** → tells the micro:bit which pins to use to talk to the dog.
 
 ## Face north
 
@@ -62,19 +72,36 @@ North is a heading of 0, but the heading jumps from 359 straight to 0, so north 
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines the function that the forever loop repeats.
-    - **line 2** → tells Python to use the `heading` variable from the main program.
-    - **line 3** → reads the compass heading once and stores it in `heading`.
-    - **line 4** → checks whether the heading is more than 15 and less than 345, which means the dog isn't facing north…
-    - **line 5** → …and if so, keeps turning left at 20% speed…
-    - **line 6** → …and clears the display.
-    - **line 7** → otherwise, the dog is facing north…
-    - **line 8** → …so it stops turning…
-    - **line 9** → …and shows N on the display.
-    - **line 10** → waits 100 milliseconds before checking again.
-    - **line 11** → tells the micro:bit to run `on_forever` again and again.
-    - **line 13** → tells the micro:bit which pins to use to talk to the dog.
-    - **line 14** → creates the `heading` variable and sets it to 0.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+            - **set heading to 0** → creates the `heading` variable and sets it to 0.
+        - **forever** → runs the blocks inside again and again.
+            - **set heading to compass heading (°)** → reads the compass heading once and stores it in `heading`.
+            - **if heading > 15 and heading < 345 then** → checks whether the heading is more than 15 and less than 345, which means the dog isn't facing north…
+                - **rotate Left, speed is 20 %** → …and if so, keeps turning left at 20% speed…
+                - **clear screen** → …and clears the display.
+            - **else** → otherwise, the dog is facing north…
+                - **rotate Left, speed is 0 %** → …so it stops turning…
+                - **show string "N"** → …and shows N on the display.
+            - **pause (ms) 100** → waits 100 milliseconds before checking again.
+
+    === "Python"
+
+        - **line 1** → defines the function that the forever loop repeats.
+        - **line 2** → tells Python to use the `heading` variable from the main program.
+        - **line 3** → reads the compass heading once and stores it in `heading`.
+        - **line 4** → checks whether the heading is more than 15 and less than 345, which means the dog isn't facing north…
+        - **line 5** → …and if so, keeps turning left at 20% speed…
+        - **line 6** → …and clears the display.
+        - **line 7** → otherwise, the dog is facing north…
+        - **line 8** → …so it stops turning…
+        - **line 9** → …and shows N on the display.
+        - **line 10** → waits 100 milliseconds before checking again.
+        - **line 11** → tells the micro:bit to run `on_forever` again and again.
+        - **line 13** → tells the micro:bit which pins to use to talk to the dog.
+        - **line 14** → creates the `heading` variable and sets it to 0.
 
 !!! warning "Metal confuses the compass"
     Steel table legs, laptops and the dog's own servo motors all affect the magnetometer. If the dog stops facing the wrong way, move it away from metal, calibrate again, and test on the floor.

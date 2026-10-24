@@ -30,13 +30,24 @@ In the PU Robot lessons, the extension had its own remote control blocks. The XG
     ```
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
-    - **line 2** → sends the number 1 by radio.
-    - **line 3** → connects `on_button_pressed_a` to button A.
-    - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
-    - **line 6** → sends the number 0 by radio.
-    - **line 7** → connects `on_button_pressed_b` to button B.
-    - **line 9** → sets the remote's radio group to 42.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **radio set group 42** → sets the remote's radio group to 42.
+        - **on button A pressed** → runs the blocks inside when we press button A.
+            - **radio send number 1** → sends the number 1 by radio.
+        - **on button B pressed** → runs the blocks inside when we press button B.
+            - **radio send number 0** → sends the number 0 by radio.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_button_pressed_a`, which will run when button A is pressed.
+        - **line 2** → sends the number 1 by radio.
+        - **line 3** → connects `on_button_pressed_a` to button A.
+        - **line 5** → defines a function called `on_button_pressed_b`, which will run when button B is pressed.
+        - **line 6** → sends the number 0 by radio.
+        - **line 7** → connects `on_button_pressed_b` to button B.
+        - **line 9** → sets the remote's radio group to 42.
 
 ## The dog
 
@@ -60,14 +71,27 @@ Download each program to its own micro:bit, then switch the dog on.
     3. Time to **investigate** the code. What does each line do?
 
 ??? note "Code explanation"
-    - **line 1** → defines a function called `on_received_number`, which gets the number that arrived in `receivedNumber`.
-    - **line 2** → checks whether the number is 1…
-    - **line 3** → …and if it is, walks the dog forward at 50% speed.
-    - **line 4** → otherwise…
-    - **line 5** → …stops the dog.
-    - **line 6** → connects `on_received_number` to the event of a number arriving by radio.
-    - **line 8** → tells the micro:bit which pins to use to talk to the dog.
-    - **line 9** → sets the dog's radio group to 42, the same as the remote.
+    === "Blocks"
+
+        - **on start** → runs the blocks inside once, when the program starts.
+            - **set XGO TX P14 RX P13** → tells the micro:bit which pins to use to talk to the dog.
+            - **radio set group 42** → sets the dog's radio group to 42, the same as the remote.
+        - **on radio received receivedNumber** → runs the blocks inside when a number arrives by radio, and stores it in `receivedNumber`.
+            - **if receivedNumber = 1 then** → checks whether the number is 1…
+                - **move Forward speed 50 %** → …and if it is, walks the dog forward at 50% speed.
+            - **else** → otherwise…
+                - **move Forward speed 0 %** → …stops the dog.
+
+    === "Python"
+
+        - **line 1** → defines a function called `on_received_number`, which gets the number that arrived in `receivedNumber`.
+        - **line 2** → checks whether the number is 1…
+        - **line 3** → …and if it is, walks the dog forward at 50% speed.
+        - **line 4** → otherwise…
+        - **line 5** → …stops the dog.
+        - **line 6** → connects `on_received_number` to the event of a number arriving by radio.
+        - **line 8** → tells the micro:bit which pins to use to talk to the dog.
+        - **line 9** → sets the dog's radio group to 42, the same as the remote.
 
 ## Exercises
 
