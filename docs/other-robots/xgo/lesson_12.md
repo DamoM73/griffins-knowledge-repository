@@ -13,7 +13,9 @@ In the PU Robot lessons, the extension had its own remote control blocks. The XG
 - a second micro:bit V2 to use as the remote, with a battery pack
 
 !!! warning "Each pair needs its own radio group"
-    Every pair needs a different radio group number, used in both programs. Otherwise one remote will control several dogs.
+    A radio remote needs two micro:bits: the one in the dog and a second micro:bit as the remote. They only hear each other when both programs use the same **radio group**.
+
+    Every micro:bit in the room that is on the same radio group hears every message sent on it, whatever robot it belongs to. With more than one robot running in the class, two pairs on the same group means one remote controls both dogs. Before we download, we check with the other pairs and choose a group number from 0 to 255 that nobody else is using. Then we change 42 to that number in both programs.
 
 ## The remote
 

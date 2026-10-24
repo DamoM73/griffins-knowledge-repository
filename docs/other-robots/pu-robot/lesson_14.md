@@ -17,7 +17,9 @@ In Lesson 2 we drove the robot using the remote controller's factory program. No
 - the remote controller shell, with a second micro:bit V2 inside it
 
 !!! warning "Each pair needs its own radio group"
-    Every micro:bit on the same **radio group** hears the same messages. If two pairs in the class use the same group, one remote will control both robots. Each pair needs a different group number, used in both programs.
+    A radio remote needs two micro:bits: the one in the robot and a second micro:bit as the remote. They only hear each other when both programs use the same **radio group**.
+
+    Every micro:bit in the room that is on the same radio group hears every message sent on it, whatever robot it belongs to. With more than one robot running in the class, two pairs on the same group means one remote controls both robots. Before we download, we check with the other pairs and choose a group number from 0 to 255 that nobody else is using. Then we change 160 to that number in both programs.
 
 ## The remote
 

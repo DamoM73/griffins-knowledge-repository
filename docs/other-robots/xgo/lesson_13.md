@@ -20,6 +20,11 @@ How does the dog "feel" when it walks, turns or does an action? We can't ask it,
 - a second micro:bit V2, connected to the computer by USB
 - a computer with Chrome or Edge, and a spreadsheet app such as Excel
 
+!!! warning "Each pair needs its own radio group"
+    This lesson uses two micro:bits: the one in the dog sends its readings, and a second micro:bit plugged into the computer receives them. They only hear each other when both programs use the same **radio group**.
+
+    Every micro:bit in the room that is on the same radio group hears every message sent on it, whatever robot it belongs to. If another dog sends on our group, our graph mixes both dogs' readings together. Before we download, we check with the other pairs and choose a group number from 0 to 255 that nobody else is using. Then we change 42 to that number in both programs.
+
 ## The dog
 
 The dog sends its x, y and z acceleration ten times a second. Buttons A and B start and stop it walking.

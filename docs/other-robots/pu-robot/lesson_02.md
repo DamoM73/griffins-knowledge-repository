@@ -55,7 +55,7 @@ The remote controller holds a second micro:bit, which sends commands to the robo
     Pressing B2 or B4 again before the robot finishes the last jump or kick can make it fall over. Wait until it stands still before pressing again.
 
 !!! warning "Each pair needs its own channel"
-    If several robots and remotes in the room are on the same channel, one remote can control more than one robot. Our teacher will tell us which channel to use.
+    The remote controller has its own micro:bit, separate from the one in the robot, and it sends its commands by radio. Every robot listening on the same channel follows those commands, so if two pairs in the room are on the same channel, one remote can control both robots. Every remote starts on channel 6, so before we drive, we check with the other pairs and choose a channel that nobody else is using.
 
 ## Drive the robot
 
@@ -64,7 +64,7 @@ The remote controller holds a second micro:bit, which sends commands to the robo
     - Result: the robot moves its joints and then stands still.
 2. Switch the remote on with its power switch.
     - Result: the remote's micro:bit display shows the channel number.
-3. Set the channel our teacher gave us, using buttons A and B on the remote's micro:bit.
+3. Set the channel we chose, using buttons A and B on the remote's micro:bit.
     - Why: this stops our remote controlling another pair's robot.
 4. Push the joystick gently forwards, then let go.
     - Result: the robot walks forward slowly, then stops.
