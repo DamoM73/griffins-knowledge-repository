@@ -53,6 +53,9 @@ The body can tilt around three **axes**. Think of three sticks pushed through th
 
 The **rotate … degrees about the … axis** block tilts the body from -20 to 20 degrees.
 
+!!! warning "The rotate block's words are mixed up"
+    In MakeCode, the block reads **set XGO to be rotated [X] degrees about the (0) axis**. The words are in the wrong place: the drop-down after "rotated" chooses the axis, and the number before "axis" is the angle in degrees. So **set XGO to be rotated [X] degrees about the (15) axis** tilts the body 15 degrees around the X axis.
+
 <figure markdown="span">
   ![Animation of the XGO standing on a board that is tilted, keeping its body level](../../assets/xgo/lesson_05_balance.webp){ width="480" }
   <figcaption>The XGO can also keep its body level by itself when the ground tilts. Image: ELECFREAKS.</figcaption>

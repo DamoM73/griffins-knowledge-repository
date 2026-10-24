@@ -43,6 +43,9 @@ The temperature sensor is built into the micro:bit's **processor**, so it measur
 
 The dog trembles by tilting its body quickly from side to side. We store the cold threshold in a variable, `cold`, so it's easy to change for our room.
 
+!!! warning "Remember the mixed-up rotate block"
+    The drop-down after "rotated" chooses the axis, and the number before "axis" is the angle in degrees (see [Lesson 5](lesson_05.md#tilt-the-body)).
+
 === "Blocks"
 
     ![Blocks for the tremble example](../../assets/blocks/xgo/lesson_08_tremble.png){ .blocks }

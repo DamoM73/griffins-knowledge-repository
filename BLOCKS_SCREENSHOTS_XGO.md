@@ -10,6 +10,7 @@ How to read each list:
 - [ ] [square brackets] are drop-down choices. (round brackets) are values we type. ⟨angle brackets⟩ are round or pointed blocks that slot into a space, such as a sensor reading or a comparison.
 - [ ] A variable name in round brackets, such as (power), means the variable's own round block from Variables.
 - [ ] The text after the long dash (—) is the block category (and group, for the xgo blocks).
+- [ ] The xgo rotate block's words are mixed up: the drop-down after "rotated" is the axis, and the number before "axis" is the angle.
 - [ ] For else if and else, select the + at the bottom of the if block.
 
 ## Lesson 2: First Program
@@ -111,11 +112,11 @@ Code: `docs/examples/other/xgo/lesson_05_rotate_body.py`
 - [ ] on start — Basic
   - [ ] set XGO TX [P14] RX [P13] — xgo › Basic
 - [ ] on button [A] pressed — Input
-  - [ ] set XGO to be rotated (15) degrees about the [X] axis — xgo › Sports
+  - [ ] set XGO to be rotated [X] degrees about the (15) axis — xgo › Sports
   - [ ] pause (ms) (1000) — Basic
-  - [ ] set XGO to be rotated (-15) degrees about the [X] axis — xgo › Sports
+  - [ ] set XGO to be rotated [X] degrees about the (-15) axis — xgo › Sports
   - [ ] pause (ms) (1000) — Basic
-  - [ ] set XGO to be rotated (0) degrees about the [X] axis — xgo › Sports
+  - [ ] set XGO to be rotated [X] degrees about the (0) axis — xgo › Sports
 
 ## Lesson 6: Robotic Arm
 
@@ -193,11 +194,11 @@ Code: `docs/examples/other/xgo/lesson_08_tremble.py`
 - [ ] forever — Basic
   - [ ] if ⟨⟨temperature (°C)⟩ < cold⟩ then — Logic
     - [ ] repeat (5) times — Loops
-      - [ ] set XGO to be rotated (5) degrees about the [Y] axis — xgo › Sports
+      - [ ] set XGO to be rotated [Y] degrees about the (5) axis — xgo › Sports
       - [ ] pause (ms) (100) — Basic
-      - [ ] set XGO to be rotated (-5) degrees about the [Y] axis — xgo › Sports
+      - [ ] set XGO to be rotated [Y] degrees about the (-5) axis — xgo › Sports
       - [ ] pause (ms) (100) — Basic
-    - [ ] set XGO to be rotated (0) degrees about the [Y] axis — xgo › Sports
+    - [ ] set XGO to be rotated [Y] degrees about the (0) axis — xgo › Sports
   - [ ] pause (ms) (1000) — Basic
 
 ## Lesson 9: Magnet-controlled Dog
