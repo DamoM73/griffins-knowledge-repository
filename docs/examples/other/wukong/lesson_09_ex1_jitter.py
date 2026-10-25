@@ -4,12 +4,12 @@
 # Try changing the pause and see whether it helps.
 #
 def on_forever():
-    angle = input.rotation(Rotation.ROLL) + 90
-    angle = Math.constrain(angle, 0, 150)
-    wuKong.set_servo_angle(wuKong.ServoTypeList._180, wuKong.ServoList.S0, angle)
-    wuKong.set_servo_angle(wuKong.ServoTypeList._180, wuKong.ServoList.S1, angle)
-    wuKong.set_servo_angle(wuKong.ServoTypeList._180, wuKong.ServoList.S3, angle)
-    wuKong.set_servo_angle(wuKong.ServoTypeList._180, wuKong.ServoList.S5, angle)
-    wuKong.set_servo_angle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, angle)
+    tilt_angle = input.rotation(Rotation.ROLL) + 90
+    finger_angle = Math.constrain(tilt_angle, 0, 150)
+    wuKong.set_servo_angle(wuKong.ServoTypeList._180, wuKong.ServoList.S0, finger_angle)
+    wuKong.set_servo_angle(wuKong.ServoTypeList._180, wuKong.ServoList.S1, finger_angle)
+    wuKong.set_servo_angle(wuKong.ServoTypeList._180, wuKong.ServoList.S3, finger_angle)
+    wuKong.set_servo_angle(wuKong.ServoTypeList._180, wuKong.ServoList.S5, finger_angle)
+    wuKong.set_servo_angle(wuKong.ServoTypeList._180, wuKong.ServoList.S7, finger_angle)
     basic.pause(50)
 basic.forever(on_forever)

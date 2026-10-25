@@ -8,7 +8,7 @@
 !!! terms "Terminology"
     - **accelerometer** – a sensor that measures movement and tilt in three directions and can recognise gestures such as shaking.
 
-The micro:bit's **accelerometer** measures how it's tilted, and the **rotation (°)** block turns that into degrees. When we tilt the board left and right, its roll (how far it dips to one side, like a plane dipping one wing) goes from about -90 to 90 degrees. Our fingers need an angle from 0 to 150. If we add 90 to the roll, -90 becomes 0 and 90 becomes 180, which is close to the range we need.
+The micro:bit's **accelerometer** measures how it's tilted, and the **rotation (°)** block turns that into degrees. When we tilt the board left and right, its roll (how far it dips to one side, like a plane dipping one wing) goes from about -90 to 90 degrees. Our fingers need an angle from 0 to 150. If we add 90 to the roll, -90 becomes 0 and 90 becomes 180, which is close to the range we need. We store that in a variable called `tilt_angle`, then keep it inside the fingers' range and store the result in `finger_angle`.
 
 !!! tip "Can't find the rotation block?"
     It isn't in the main **Input** list. In the list of block categories, select **…more** under **Input**, and the **rotation (°)** block is there. After we drag it in, we check its drop-down says **roll**.
@@ -19,7 +19,7 @@ The micro:bit's **accelerometer** measures how it's tilted, and the **rotation (
 
     ![Blocks for the tilt control example](../../assets/blocks/wukong/lesson_09_tilt_control.png){ .blocks }
 
-    Blocks used: **forever** and **pause (ms)** (Basic), **set angle to** and **angle** (Variables), **0 + 0** and **constrain** (Math), **rotation (°) roll** (Input > more), **Set servo angle to** (wuKong).
+    Blocks used: **forever** and **pause (ms)** (Basic), **set tilt_angle to**, **set finger_angle to**, **tilt_angle** and **finger_angle** (Variables), **0 + 0** and **constrain** (Math), **rotation (°) roll** (Input > more), **Set servo angle to** (wuKong).
 
 === "Python"
 
@@ -36,17 +36,17 @@ The micro:bit's **accelerometer** measures how it's tilted, and the **rotation (
     === "Blocks"
 
         - **forever** → runs the blocks inside again and again.
-            - **set angle to (rotation (°) roll + 90)** → reads how far the board is tilted left or right (its roll, from -90 to 90 degrees) and adds 90, giving an angle from 0 to 180.
-            - **set angle to constrain angle between low 0 and high 150** → keeps the angle between 0 and 150, so the fingers stay in their safe range.
-            - **Set 180° servo S0 angle to angle** to **Set 180° servo S7 angle to angle** (5 blocks) → set all 5 fingers to the angle.
+            - **set tilt_angle to (rotation (°) roll + 90)** → reads how far the board is tilted left or right (its roll, from -90 to 90 degrees), adds 90 and stores the result, from 0 to 180, in `tilt_angle`.
+            - **set finger_angle to constrain tilt_angle between low 0 and high 150** → keeps `tilt_angle` between 0 and 150 and stores the result in `finger_angle`, so the fingers stay in their safe range.
+            - **Set 180° servo S0 angle to finger_angle** to **Set 180° servo S7 angle to finger_angle** (5 blocks) → set all 5 fingers to `finger_angle`.
             - **pause (ms) 50** → waits 50 milliseconds before reading the tilt again.
 
     === "Python"
 
         - **line 1** → defines the function that the forever loop repeats.
-        - **line 2** → reads how far the board is tilted left or right (its roll, from -90 to 90 degrees) and adds 90, giving an angle from 0 to 180.
-        - **line 3** → keeps the angle between 0 and 150, so the fingers stay in their safe range.
-        - **lines 4–8** → set all 5 fingers to the angle.
+        - **line 2** → reads how far the board is tilted left or right (its roll, from -90 to 90 degrees), adds 90 and stores the result, from 0 to 180, in `tilt_angle`.
+        - **line 3** → keeps `tilt_angle` between 0 and 150 and stores the result in `finger_angle`, so the fingers stay in their safe range.
+        - **lines 4–8** → set all 5 fingers to `finger_angle`.
         - **line 9** → waits 50 milliseconds before reading the tilt again.
         - **line 10** → tells the micro:bit to run `on_forever` again and again.
 
