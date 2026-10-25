@@ -84,11 +84,9 @@ This glossary lists every technical term introduced on this site, in alphabetica
 - **magnetic field** – the invisible area of magnetic force around a magnet or the Earth. ([Lesson 9: Magnet-controlled Dog (XGO Robot Dog)](../other-robots/xgo/lesson_09.md))
 - **magnetometer** – a sensor that measures magnetic fields, used by the micro:bit as a compass. ([Lesson 9: Magnet-controlled Dog (XGO Robot Dog)](../other-robots/xgo/lesson_09.md))
 - **MakeCode** – a free online editor from Microsoft that lets us program the micro:bit using Blocks or Python. ([Using MakeCode](../other-robots/using-makecode.md))
-- **map** – to convert a number from one range to another, such as a tilt from -1023 to 1023 into an angle from 0 to 150. ([Lesson 9: Tilt Control (WuKong Manipulator)](../other-robots/wukong/lesson_09.md))
 - **micro:bit** – a small, pocket-sized educational computer with buttons, a display and sensors that we can program. ([Using MakeCode](../other-robots/using-makecode.md))
 - **microphone** – an input device that detects sound and measures how loud it is. ([Lesson 11: Balance and Sound (PU Robot)](../other-robots/pu-robot/lesson_11.md))
 - **microtesla** – a unit for measuring how strong a magnetic field is; the Earth's magnetic field is about 50 microteslas. ([Lesson 9: Magnet-controlled Dog (XGO Robot Dog)](../other-robots/xgo/lesson_09.md))
-- **milli-g** – the unit for accelerometer readings, where about 1024 milli-g equals the pull of gravity. ([Lesson 9: Tilt Control (WuKong Manipulator)](../other-robots/wukong/lesson_09.md))
 - **millisecond** – one thousandth of a second, so 1000 milliseconds make 1 second. ([Lesson 3: First Program (PU Robot)](../other-robots/pu-robot/lesson_03.md))
 
 ## O

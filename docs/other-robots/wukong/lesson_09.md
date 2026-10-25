@@ -1,24 +1,25 @@
 # Lesson 9: Tilt Control
 
 !!! learn "In this lesson we will learn"
-    - how the accelerometer measures tilt
-    - how to map a number from one range to another
+    - how the micro:bit measures tilt in degrees
+    - how to change a range of numbers by adding to it
     - how to control the fingers by tilting the micro:bit
 
 !!! terms "Terminology"
     - **accelerometer** – a sensor that measures movement and tilt in three directions and can recognise gestures such as shaking.
-    - **milli-g** – the unit for accelerometer readings, where about 1024 milli-g equals the pull of gravity.
-    - **map** – to convert a number from one range to another, such as a tilt from -1023 to 1023 into an angle from 0 to 150.
 
-The micro:bit's **accelerometer** measures how it's tilted. When we tilt the board left and right, the x reading goes from about -1023 to 1023 **milli-g**. Our fingers need an angle from 0 to 150, so we **map** one range onto the other.
+The micro:bit's **accelerometer** measures how it's tilted, and the **rotation (°)** block turns that into degrees. When we tilt the board left and right, its roll (how far it dips to one side, like a plane dipping one wing) goes from about -90 to 90 degrees. Our fingers need an angle from 0 to 150. If we add 90 to the roll, -90 becomes 0 and 90 becomes 180, which is close to the range we need.
 
-## Map the tilt to an angle
+!!! tip "Can't find the rotation block?"
+    It isn't in the main **Input** list. In the list of block categories, select **…more** under **Input**, and the **rotation (°)** block is there. After we drag it in, we check its drop-down says **roll**.
+
+## Turn the tilt into an angle
 
 === "Blocks"
 
     ![Blocks for the tilt control example](../../assets/blocks/wukong/lesson_09_tilt_control.png){ .blocks }
 
-    Blocks used: **forever** and **pause (ms)** (Basic), **set angle to** and **angle** (Variables), **map** and **constrain** (Math), **acceleration (mg) x** (Input), **Set servo angle to** (wuKong).
+    Blocks used: **forever** and **pause (ms)** (Basic), **set angle to** and **angle** (Variables), **0 + 0** and **constrain** (Math), **rotation (°) roll** (Input > more), **Set servo angle to** (wuKong).
 
 === "Python"
 
@@ -35,22 +36,22 @@ The micro:bit's **accelerometer** measures how it's tilted. When we tilt the boa
     === "Blocks"
 
         - **forever** → runs the blocks inside again and again.
-            - **set angle to map acceleration (mg) x from low -1023 high 1023 to low 0 high 150** → reads the x tilt and maps it from the range -1023 to 1023 into the range 0 to 150.
-            - **set angle to constrain angle between low 0 and high 150** → keeps the angle between 0 and 150, in case the reading goes past 1023.
+            - **set angle to (rotation (°) roll + 90)** → reads how far the board is tilted left or right (its roll, from -90 to 90 degrees) and adds 90, giving an angle from 0 to 180.
+            - **set angle to constrain angle between low 0 and high 150** → keeps the angle between 0 and 150, so the fingers stay in their safe range.
             - **Set 180° servo S0 angle to angle** to **Set 180° servo S7 angle to angle** (5 blocks) → set all 5 fingers to the angle.
             - **pause (ms) 50** → waits 50 milliseconds before reading the tilt again.
 
     === "Python"
 
         - **line 1** → defines the function that the forever loop repeats.
-        - **line 2** → reads the x tilt and maps it from the range -1023 to 1023 into the range 0 to 150.
-        - **line 3** → keeps the angle between 0 and 150, in case the reading goes past 1023.
+        - **line 2** → reads how far the board is tilted left or right (its roll, from -90 to 90 degrees) and adds 90, giving an angle from 0 to 180.
+        - **line 3** → keeps the angle between 0 and 150, so the fingers stay in their safe range.
         - **lines 4–8** → set all 5 fingers to the angle.
         - **line 9** → waits 50 milliseconds before reading the tilt again.
         - **line 10** → tells the micro:bit to run `on_forever` again and again.
 
 !!! tip "Why constrain?"
-    If we tilt or shake the board quickly, the accelerometer can read more than 1023. Then map gives an angle bigger than 150, which could strain the servo motors. **Constrain** keeps the angle inside the range we choose.
+    Adding 90 gives angles up to 180, and if we turn the board upside down the roll can go past 90 degrees too. Angles past 150 could strain the servo motors. **Constrain** keeps the angle inside the range we choose.
 
 ## Exercises
 
@@ -77,7 +78,7 @@ Starter code:
 
 ### Exercise 2
 
-Can you control the hand by tilting forwards and backwards instead? Hint: use **acceleration (mg) y**.
+Can you control the hand by tilting forwards and backwards instead? Hint: change the rotation block's drop-down to **pitch**.
 
 Starter code:
 

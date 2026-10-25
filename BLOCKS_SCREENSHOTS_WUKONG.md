@@ -161,7 +161,7 @@ Code: `docs/examples/other/wukong/lesson_08_smooth_curl.py`
 Code: `docs/examples/other/wukong/lesson_09_tilt_control.py`
 
 - [ ] forever — Basic
-  - [ ] set [angle] to (⟨map (⟨acceleration (mg) [x]⟩) from low (-1023) high (1023) to low (0) high (150)⟩) — Variables
+  - [ ] set [angle] to (⟨⟨rotation (°) [roll]⟩ + 90⟩) — Variables (the 0 + 0 block is in Math, and rotation (°) is in Input › more)
   - [ ] set [angle] to (⟨constrain (angle) between low (0) and high (150)⟩) — Variables
   - [ ] Set [180°] servo [S0] angle to (angle) — wuKong
   - [ ] Set [180°] servo [S1] angle to (angle) — wuKong
